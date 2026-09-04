@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>English Lessons — Plan for Denis</title>
+<meta name="description" content="Lesson plan and learning roadmap from Denis for his English classes.">
+<style>
+:root{
+  --paper:#F1EFEA; --card:#FAF9F6; --sunk:#E4E1D9;
+  --ink:#1A1714; --ink-soft:#57514A; --ink-faint:#8A837A;
+  --rule:#D8D4CA; --rule-soft:#E7E3DA;
+  --go:#2E5E4E; --go-wash:#DCE8E2;
+  --no:#A33A29; --no-wash:#F2DED9;
+  --serif:Charter,"Bitstream Charter","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#15130F; --card:#1E1B16; --sunk:#262219;
+  --ink:#EFEBE2; --ink-soft:#ACA398; --ink-faint:#847C71;
+  --rule:#332E25; --rule-soft:#282419;
+  --go:#7EBBA1; --go-wash:#1B2A24; --no:#DE8676; --no-wash:#2E1C18;
+}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17.5px;line-height:1.6;margin:0;padding:0 20px 90px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:800px;margin:0 auto}
+p{margin:0 0 .85em;max-width:66ch}
+ul{margin:0 0 1em;padding-left:1.25em;max-width:64ch}
+li{margin-bottom:.45em}
+a{color:var(--go)}
+.mono{font-family:var(--mono)}
+header{padding:70px 0 0}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 22px}
+h1{font-size:clamp(32px,6vw,52px);line-height:1.04;letter-spacing:-.028em;font-weight:700;margin:0 0 20px;text-wrap:balance;max-width:17ch}
+.lede{font-size:19.5px;color:var(--ink-soft);max-width:58ch;margin:0 0 34px}
+.hello{background:var(--card);border:1px solid var(--rule);padding:26px 30px;margin:0 0 34px}
+.hello p{margin-bottom:.7em}
+.hello p:last-child{margin-bottom:0}
+.fix{background:var(--card);border:1px solid var(--rule);padding:30px 32px;margin:0 0 12px;display:flex;flex-direction:column;gap:14px}
+.fix .cap{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint)}
+.fix .line{font-family:var(--mono);font-size:clamp(15px,3.2vw,23px);line-height:1.45}
+.fix .bad{color:var(--no);text-decoration:line-through;text-decoration-thickness:2px}
+.fix .good{color:var(--go);font-weight:600;border-bottom:3px solid var(--go)}
+.fix .cnt{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);border-top:1px solid var(--rule-soft);padding-top:13px}
+.fix .cnt b{color:var(--no);font-weight:600}
+.budget{margin:34px 0 8px}
+.budget .cap{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px}
+.bar{display:flex;height:26px;border:1px solid var(--rule);overflow:hidden}
+.bar span{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:10.5px;color:#fff;white-space:nowrap;overflow:hidden;border-right:1px solid rgba(255,255,255,.28)}
+.bar span:last-child{border-right:none}
+.barkey{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-top:9px}
+.barkey i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px;font-style:normal}
+section{margin-top:56px;padding-top:34px;border-top:2px solid var(--ink);page-break-inside:auto}
+section.soft{border-top:1px solid var(--rule)}
+h2{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);font-weight:400;margin:0 0 8px}
+h3{font-size:29px;line-height:1.15;letter-spacing:-.022em;font-weight:700;margin:0 0 22px;text-wrap:balance;max-width:24ch}
+.sched{display:flex;flex-direction:column;gap:14px;margin:26px 0 10px}
+.blk{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--go);padding:20px 24px;display:grid;grid-template-columns:88px 1fr;gap:20px;page-break-inside:avoid}
+.blk.hero{border-left-color:var(--no);background:var(--no-wash)}
+.blk .t{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.blk .t b{display:block;font-size:19px;font-weight:600;letter-spacing:-.02em;color:var(--go);line-height:1.2}
+.blk.hero .t b{color:var(--no)}
+.blk .t i{display:block;font-style:normal;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:5px}
+.blk h4{font-size:19px;font-weight:700;margin:0 0 7px;letter-spacing:-.012em;line-height:1.25}
+.blk p{font-size:15.5px;margin:0 0 .6em;max-width:58ch;color:var(--ink-soft)}
+.blk p:last-child{margin-bottom:0}
+.blk p strong{color:var(--ink)}
+.blk .flag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;margin-bottom:9px;background:var(--go-wash);color:var(--go)}
+.blk .flag.keep{background:var(--sunk);color:var(--ink-soft)}
+.blk .flag.stop{background:var(--no-wash);color:var(--no)}
+.ex{font-family:var(--mono);font-size:13.5px;background:var(--sunk);padding:11px 14px;margin:11px 0 0;line-height:1.75;overflow-x:auto;color:var(--ink);white-space:pre}
+.ex .ar{color:var(--ink-faint)}
+.tw{overflow-x:auto;border:1px solid var(--rule);margin:22px 0}
+table{border-collapse:collapse;width:100%;min-width:380px;background:var(--card)}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:400;text-align:left;padding:11px 16px;background:var(--sunk);border-bottom:1px solid var(--rule)}
+td{padding:11px 16px;border-bottom:1px solid var(--rule-soft);font-family:var(--mono);font-size:15px}
+tr:last-child td{border-bottom:none}
+td b{color:var(--go);font-weight:600}
+.asks{counter-reset:a;display:flex;flex-direction:column;margin:24px 0}
+.ask{display:grid;grid-template-columns:46px 1fr;gap:18px;padding:19px 0;border-bottom:1px solid var(--rule-soft);align-items:start;page-break-inside:avoid}
+.ask:last-child{border-bottom:none}
+.ask::before{counter-increment:a;content:counter(a);font-family:var(--mono);font-size:27px;font-weight:600;color:var(--go);line-height:.95;letter-spacing:-.03em}
+.ask b{display:block;font-size:17.5px;margin-bottom:5px}
+.ask span{font-size:15.5px;color:var(--ink-soft);max-width:56ch;display:block}
+.road{display:flex;flex-direction:column;margin:24px 0}
+.rd{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:17px 0;border-bottom:1px solid var(--rule-soft);align-items:start;page-break-inside:avoid}
+.rd:last-child{border-bottom:none}
+.rd.now{background:var(--go-wash);padding-left:14px;padding-right:14px;border-bottom-color:var(--go)}
+.rd .n{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);padding-top:4px}
+.rd.now .n{color:var(--go);font-weight:600}
+.rd b{display:block;font-size:17.5px;margin-bottom:4px;font-family:var(--mono);letter-spacing:-.01em}
+.rd span{font-size:15.5px;color:var(--ink-soft);display:block;max-width:56ch}
+.note{border-left:3px solid var(--ink-faint);padding:3px 0 3px 18px;margin:24px 0;max-width:62ch}
+.note b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:7px}
+.note p{font-size:15.5px;color:var(--ink-soft)}
+footer{margin-top:70px;padding-top:24px;border-top:2px solid var(--ink);font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);display:flex;flex-direction:column;gap:8px}
+footer a{color:var(--go)}
+@media (max-width:620px){
+ body{font-size:16.5px;padding:0 16px 60px}
+ .blk{grid-template-columns:1fr;gap:12px}
+ .blk .t{display:flex;align-items:baseline;gap:10px}.blk .t i{margin-top:0}
+ .ask,.rd{grid-template-columns:34px 1fr;gap:12px}
+ .ask::before{font-size:21px}
+ .rd .n{font-size:10px}
+ .bar span{font-size:0}
+}
+@media print{
+ body{background:#fff;font-size:11pt;padding:0}
+ section{page-break-before:auto}
+ .wrap{max-width:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="kicker">For Eliza · from Denis · lesson 3 and beyond</p>
+  <h1>What I would like us to work on next</h1>
+  <p class="lede">A detailed plan for our next class, and the direction I would like our lessons to take after that, so you know what to prepare.</p>
+
+  <div class="hello">
+    <p>Hi Eliza! Thank you for the last lesson — the pronunciation review at the beginning was really useful, and I liked the <em>Understand Your Heroes</em> and <em>Use Me</em> activities a lot. I wrote this page with a translator so that I could explain myself clearly.</p>
+    <p>I want to ask you to change the direction of our lessons a little.</p>
+    <p>In our first lesson I asked for an individual approach and told you that I play games, so we started learning gaming vocabulary. That was my fault — I gave you the wrong instruction. As you saw last time, I already knew all ten words and scored 10 out of 10, so that part does not teach me anything new. <strong>Please do not use Dota vocabulary anymore.</strong></p>
+    <p>My real problem is not vocabulary. My real problem is that I do not know the basic structure of English. I do not know when to say <span class="mono">is</span>, when to say <span class="mono">it's</span>, when to say <span class="mono">do</span>, <span class="mono">will</span>, <span class="mono">they</span>. I know many words, but I cannot put them together correctly.</p>
+    <p><strong>My goal is to speak with real people in real life</strong> — in shops, at work, when I travel. So I would like our lessons to be about basic English grammar, and I would like the practice sentences to be about my own life, not about games.</p>
+  </div>
+
+  <div class="fix">
+    <span class="cap">The target for our next lesson</span>
+    <div class="line"><span class="bad">My best friend it's Valery</span></div>
+    <div class="line"><span class="good">My best friend is Valery</span></div>
+    <p class="cnt">I say <b>it's</b> instead of <b>is</b> about <b>31 times in one lesson</b>. I also asked you about this directly in lesson 2 — <span class="mono">"Is, yes, is — or it's?"</span> — so it is the thing that confuses me most.</p>
+  </div>
+
+  <div class="budget">
+    <p class="cap">How the 60 minutes are divided</p>
+    <div class="bar">
+      <span style="width:8.33%;background:#8A837A">5</span>
+      <span style="width:8.33%;background:#8A837A">5</span>
+      <span style="width:25%;background:#A33A29">15 · am/is/are</span>
+      <span style="width:16.67%;background:#2E5E4E">10 · pronouns</span>
+      <span style="width:16.67%;background:#2E5E4E">10 · my life</span>
+      <span style="width:16.67%;background:#2E5E4E">10 · speaking</span>
+      <span style="width:8.33%;background:#8A837A">5</span>
+    </div>
+    <div class="barkey">
+      <span><i style="background:#A33A29"></i>new grammar — 15 min</span>
+      <span><i style="background:#2E5E4E"></i>me speaking — 30 min</span>
+      <span><i style="background:#8A837A"></i>warm-up and review — 15 min</span>
+    </div>
+  </div>
+</header>
+
+<section>
+<h2>Next lesson</h2>
+<h3>Seven blocks, and half the time I am the one talking</h3>
+<p>One grammar target only: the verb <strong>to be</strong> (am / is / are) and subject pronouns.</p>
+
+<div class="sched">
+
+<div class="blk">
+  <span class="t"><b>0–5</b><i>min</i></span>
+  <div>
+    <span class="flag keep">please keep this</span>
+    <h4>Pronunciation review</h4>
+    <p>Exactly like last lesson: review the words I pronounced wrong. This part works very well — please keep doing it at the start of every class.</p>
+  </div>
+</div>
+
+<div class="blk">
+  <span class="t"><b>5–10</b><i>min</i></span>
+  <div>
+    <span class="flag">new</span>
+    <h4>Warm-up questions — please do not correct me here</h4>
+    <p>Ask me four or five questions about my day. <strong>Please do NOT correct me during this part</strong> — just write my mistakes on your paper. We will use them at the end of the lesson.</p>
+  </div>
+</div>
+
+<div class="blk hero">
+  <span class="t"><b>10–25</b><i>min</i></span>
+  <div>
+    <span class="flag stop">core of the lesson</span>
+    <h4>Grammar block 1 — am / is / are</h4>
+    <p>Please show the full table on the screen with the Russian translation, then explain my mistake directly:</p>
+    <div class="ex">WRONG   My best friend <span class="ar">it's</span> Valery
+RIGHT   My best friend <span class="ar">is</span> Valery</div>
+    <p style="margin-top:12px">The rule I need to understand is that <span class="mono">it's</span> means <span class="mono">it is</span>. I can only use <span class="mono">it</span> when there is no other subject. If I already said "my best friend", I must not add "it".</p>
+    <p>Then give me ten sentences to build out loud. <strong>Please correct every single mistake here</strong> and make me repeat the correct sentence.</p>
+  </div>
+</div>
+
+<div class="blk">
+  <span class="t"><b>25–35</b><i>min</i></span>
+  <div>
+    <span class="flag">new</span>
+    <h4>Grammar block 2 — subject pronouns</h4>
+    <p>I / you / he / she / it / we / they, and when to use each one. You give me a sentence with a name and I replace the name with a pronoun:</p>
+    <div class="ex">Alexey Shevtsov is a streamer    <span class="ar">→</span>  He is a streamer
+Nail and Valery are my friends   <span class="ar">→</span>  They are my friends
+Cyprus is hot                    <span class="ar">→</span>  It is hot</div>
+    <p style="margin-top:12px">This matters for me because I often say "his publish photo" instead of "he publishes photos".</p>
+  </div>
+</div>
+
+<div class="blk">
+  <span class="t"><b>35–45</b><i>min</i></span>
+  <div>
+    <span class="flag">new</span>
+    <h4>Practice about my real life</h4>
+    <p>Ask me questions about myself and I answer in full sentences using am / is / are:</p>
+    <div class="ex">Where are you from?        Who is your best friend?
+What is your job?          Where are your parents?
+How old are you?           What is your favourite food?</div>
+    <p style="margin-top:12px">Please correct every wrong answer and make me say the correct version again.</p>
+  </div>
+</div>
+
+<div class="blk">
+  <span class="t"><b>45–55</b><i>min</i></span>
+  <div>
+    <span class="flag">new</span>
+    <h4>Free speaking, no script</h4>
+    <p>Give me three topics and I speak three to five sentences about each: <strong>my apartment · my working day · my friends</strong>.</p>
+    <p>Please do not interrupt me. Write my mistakes down and we will look at them after I finish.</p>
+  </div>
+</div>
+
+<div class="blk">
+  <span class="t"><b>55–60</b><i>min</i></span>
+  <div>
+    <span class="flag stop">the missing piece</span>
+    <h4>Feedback and homework</h4>
+    <p>1. Tell me my three biggest mistakes of the lesson, from your notes.</p>
+    <p>2. Give me homework: ten written sentences about my life using am / is / are. I will send them to you before the next lesson.</p>
+  </div>
+</div>
+
+</div>
+</section>
+
+<section class="soft">
+<h2>Material</h2>
+<h3>The table I would like on the screen</h3>
+<div class="tw"><table>
+<tr><th>Pronoun</th><th>Form</th><th>Example sentence</th></tr>
+<tr><td>I</td><td><b>am</b></td><td>I <b>am</b> from Kazakhstan</td></tr>
+<tr><td>you</td><td><b>are</b></td><td>You <b>are</b> my teacher</td></tr>
+<tr><td>he</td><td><b>is</b></td><td>He <b>is</b> a streamer</td></tr>
+<tr><td>she</td><td><b>is</b></td><td>She <b>is</b> in the Philippines</td></tr>
+<tr><td>it</td><td><b>is</b></td><td>It <b>is</b> hot today</td></tr>
+<tr><td>we</td><td><b>are</b></td><td>We <b>are</b> friends</td></tr>
+<tr><td>they</td><td><b>are</b></td><td>They <b>are</b> my friends</td></tr>
+</table></div>
+<p><strong>Please prepare:</strong> this table with the Russian translation · ten practice sentences for block 1 · ten name-to-pronoun sentences for block 2 · your list of the words I pronounced wrong in lesson 2.</p>
+</section>
+
+<section>
+<h2>The bigger picture</h2>
+<h3>Where I would like to go over the next lessons</h3>
+<p>This is the order I would like to follow. One grammar target per lesson, so that I really learn it instead of hearing about many things and remembering none. If you think a different order is better, please tell me — but please keep it to one target per lesson.</p>
+
+<div class="road">
+  <div class="rd now"><span class="n">Lesson 3<br>next</span><div><b>am / is / are + pronouns</b><span>The verb "to be" and I / you / he / she / it / we / they. Fixes my biggest mistake: "my best friend it's Valery".</span></div></div>
+  <div class="rd"><span class="n">Lesson 4</span><div><b>do / does / don't</b><span>Questions and negatives. I currently say "I not understand" and "I'm not like Mobile Legends" instead of "I don't understand" and "I don't like Mobile Legends". I also cannot ask questions — I say "you catch the stream?" instead of "did you catch the stream?"</span></div></div>
+  <div class="rd"><span class="n">Lesson 5</span><div><b>was / were / did — the past</b><span>How to tell you what happened. Right now I can only speak in the present, so I say "I win in my game" when I mean "I won".</span></div></div>
+  <div class="rd"><span class="n">Lesson 6</span><div><b>I work vs I am working</b><span>Present simple against present continuous. I say "I'm live now in Cyprus" because I mix these two.</span></div></div>
+  <div class="rd"><span class="n">Lesson 7</span><div><b>will / going to — the future</b><span>Plans and intentions: "I am going to Bali in two months", "I will send you the homework tomorrow".</span></div></div>
+  <div class="rd"><span class="n">Lesson 8</span><div><b>prepositions: in / on / at / to / for</b><span>This is a big problem for me. I say "attack for my opponent", "I answer for you", "he speaking for me" — I use "for" for almost everything.</span></div></div>
+  <div class="rd"><span class="n">Lesson 9</span><div><b>he told me / he said that</b><span>How to repeat what another person said. I currently say "my father speaking for me: get over here" instead of "my father told me to come here". I need this for real conversations.</span></div></div>
+  <div class="rd"><span class="n">Lesson 10</span><div><b>review and free conversation</b><span>Everything together, mostly me talking, you correcting. Then we plan the next block.</span></div></div>
+</div>
+
+<div class="note">
+<b>About games and books</b>
+<p>Please do not use Dota words anymore — I already know them. Later, if you want to use games, we can use story games such as GTA: I will tell you what happened in the story, which is good practice for the past tense. But this should be one short activity, not the whole lesson. Novels are too difficult for me right now.</p>
+</div>
+</section>
+
+<section>
+<h2>Four requests</h2>
+<h3>These matter more to me than the plan itself</h3>
+<div class="asks">
+  <div class="ask"><div><b>Please correct my grammar out loud</b><span>Say "you said X, we say Y", and then make me repeat the correct version. In our first two lessons you corrected my pronunciation very well, but you never corrected my grammar, so I keep making the same mistakes.</span></div></div>
+  <div class="ask"><div><b>Please keep a written list of the mistakes I repeat</b><span>And start every lesson with that list. You did exactly this with my pronunciation in lesson 2 and it worked really well — I would like the same thing for grammar.</span></div></div>
+  <div class="ask"><div><b>Please give me homework after every lesson</b><span>Even a small one. I want to practise between our classes.</span></div></div>
+  <div class="ask"><div><b>Please do not say "very good" when my sentence has a mistake</b><span>I would rather hear the mistake. When you say "very good" I believe the sentence was correct, and then I keep saying it the wrong way.</span></div></div>
+</div>
+<p>Thank you very much! I am happy with our lessons and I want to continue for a long time.</p>
+<p style="font-family:var(--mono);font-size:15px;margin-top:18px">— Denis</p>
+</section>
+
+<footer>
+  <span>Prepared for my English classes with Eliza · September 2026</span>
+  <span>Powered by <a href="https://t.me/Denrech" target="_blank" rel="noopener noreferrer">@Denrech</a></span>
+</footer>
+
+</div>
+</body>
+</html>
