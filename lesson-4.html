@@ -81,6 +81,311 @@ h3{font-size:25px;line-height:1.2;letter-spacing:-.02em;font-weight:700;margin:0
 
 footer{margin-top:60px;padding-top:22px;border-top:2px solid var(--ink);font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);display:flex;flex-direction:column;gap:8px}
 footer a{color:var(--go)}
+
+
+/* === EXPANDED 3X MODULES STYLES === */
+/* Additional scoped styling for Lesson 4 Expansion Modules */
+.roleplay-card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+.roleplay-header {
+  background: var(--sunk);
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.roleplay-title {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--ink);
+}
+.roleplay-desc {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  margin: 4px 0 0;
+}
+.roleplay-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.dialogue-turn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 15.5px;
+  line-height: 1.5;
+}
+.dialogue-turn.eliza {
+  background: var(--paper);
+  border-left: 3px solid var(--ink-faint);
+}
+.dialogue-turn.denis {
+  background: var(--go-wash);
+  border-left: 3px solid var(--go);
+}
+.dialogue-speaker {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dialogue-speaker.eliza { color: var(--ink-soft); }
+.dialogue-speaker.denis { color: var(--go); }
+.dialogue-text {
+  color: var(--ink);
+}
+.dialogue-text b {
+  color: var(--go);
+  font-weight: 700;
+}
+.vocab-box {
+  background: var(--card);
+  border: 1px dashed var(--rule);
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-top: 10px;
+}
+.vocab-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+}
+.vocab-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.vocab-chip {
+  background: var(--sunk);
+  font-family: var(--mono);
+  font-size: 12.5px;
+  padding: 4px 9px;
+  border-radius: 4px;
+  color: var(--ink);
+}
+.vocab-chip em {
+  color: var(--ink-soft);
+  font-style: normal;
+  font-size: 11.5px;
+  margin-left: 4px;
+}
+
+.improv-box {
+  background: var(--no-wash);
+  border: 1px solid var(--no);
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-top: 8px;
+  font-size: 14.5px;
+  color: var(--ink);
+}
+.improv-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--no);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.blitz-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+@media (min-width: 680px) {
+  .blitz-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.blitz-item {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--go);
+  border-radius: 6px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.blitz-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blitz-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-faint);
+  letter-spacing: .1em;
+}
+.blitz-timer {
+  font-family: var(--mono);
+  font-size: 10px;
+  background: var(--no-wash);
+  color: var(--no);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+.blitz-q {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+}
+.blitz-a {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  background: var(--sunk);
+  padding: 8px 12px;
+  border-radius: 4px;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+.blitz-a b {
+  color: var(--go);
+  font-weight: 700;
+}
+
+.bug-card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--no);
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+.bug-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.bug-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--no);
+}
+.bug-type {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+.bug-bad {
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--no);
+  text-decoration: line-through;
+  margin-bottom: 6px;
+}
+.bug-diag {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+.bug-good {
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--go);
+  font-weight: 700;
+  background: var(--go-wash);
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.topic-block {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--go);
+  border-radius: 8px;
+  padding: 22px 26px;
+  margin-bottom: 24px;
+}
+.topic-title {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+.topic-dilemma {
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.topic-starters {
+  background: var(--sunk);
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin: 14px 0;
+}
+.topic-starters .label {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 700;
+  color: var(--go);
+  display: block;
+  margin-bottom: 8px;
+}
+.topic-starters ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 15px;
+  color: var(--ink);
+}
+.topic-starters li {
+  margin-bottom: 6px;
+}
+.topic-starters li:last-child {
+  margin-bottom: 0;
+}
+.topic-starters b {
+  color: var(--go);
+}
+.topic-followup {
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+  margin-top: 14px;
+  font-size: 14.5px;
+  color: var(--ink-soft);
+}
+.topic-followup b {
+  color: var(--ink);
+}
 </style>
 </head>
 <body>
@@ -282,6 +587,1006 @@ footer a{color:var(--go)}
       <p style="font-size:15px;margin:0">Eliza reviews the 3 biggest mistakes from today's class, and gives homework: 10 sentences using <em>do / does / don't</em> for Lesson 5.</p>
     </div>
   </div>
+</section>
+
+
+
+<!-- === EXPANDED 3X MODULES CONTENT === -->
+<section id="roleplays">
+  <h2>Block 3.5 · Interactive Immersion</h2>
+  <h3>Interactive Roleplays for Real Life (4 Situations)</h3>
+  <p>In this block, Denis and Eliza act out 4 realistic expat and professional scenarios. Denis practices natural questions, negotiation, and clear explanations without textbook clichés.</p>
+
+  <div class="call-script">
+    <span class="label">🎭 How Denis and Eliza run these roleplays:</span>
+    <p>1. Eliza reads her lines naturally (not slowly like a robot).<br>
+    2. Denis replies out loud with emotion and conviction, focusing on clear pronunciation and using <b>is / are</b> correctly.<br>
+    3. After completing the script, Denis tries the <em>"Improv Challenge"</em> to test spontaneous speech!</p>
+  </div>
+
+  <!-- Scenario 1 -->
+  <div class="roleplay-card">
+    <div class="roleplay-header">
+      <div>
+        <h4 class="roleplay-title">Scenario 1: Bali Villa Check-in (Pererenan / Canggu)</h4>
+        <div class="roleplay-desc">Denis arrives with his bags and checks Wi-Fi, AC, drinking water, deposit, and scooter parking.</div>
+      </div>
+      <span class="stage-tag">Villa Host & Expat</span>
+    </div>
+    <div class="roleplay-body">
+      
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Villa Host / Manager)</div>
+        <div class="dialogue-text">"Welcome to Bali, Denis! Welcome to Villa Sari here in Pererenan. How was your drive from the airport? Everything <b>is</b> ready for your check-in."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Guest / Remote Designer)</div>
+        <div class="dialogue-text">"Thank you so much! The drive was smooth, though the traffic near Canggu <b>is</b> quite intense. Before I unpack my luggage, could we please check the internet connection? As a digital product designer, high-speed fiber internet <b>is</b> absolutely essential for uploading heavy Figma files and running client Zoom calls."</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Villa Host / Manager)</div>
+        <div class="dialogue-text">"I completely understand! We have a dedicated fiber optic line installed. The router <b>is</b> right here in the living room. The download speed <b>is</b> around 150 Mbps, and the upload speed <b>is</b> roughly 50 Mbps."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Guest / Remote Designer)</div>
+        <div class="dialogue-text">"That <b>is</b> plenty of bandwidth! <b>Is</b> the Wi-Fi signal equally strong inside the master bedroom, or <b>is</b> there a mesh repeater in the hallway?"</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Villa Host / Manager)</div>
+        <div class="dialogue-text">"Yes, there <b>is</b> a mesh repeater in the hallway, so the signal <b>is</b> stable everywhere. Here <b>are</b> the network name and password on this card."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Guest / Remote Designer)</div>
+        <div class="dialogue-text">"Great. What about the air conditioning? <b>Is</b> the bedroom AC unit whisper-quiet during the night? In Cyprus it gets hot, but I know Bali <b>is</b> very humid, so good AC <b>is</b> critical for deep sleep and focus."</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Villa Host / Manager)</div>
+        <div class="dialogue-text">"The bedroom AC <b>is</b> brand new and extremely quiet. You can set it to dry mode or cool mode with this remote control. It cools down the room in just five minutes."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Guest / Remote Designer)</div>
+        <div class="dialogue-text">"Awesome. And drinking water: I know tap water in Bali <b>isn't</b> potable. <b>Is</b> there a gallon water dispenser in the kitchen with both hot and cold water?"</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Villa Host / Manager)</div>
+        <div class="dialogue-text">"Yes, exactly. Never drink tap water. The water dispenser <b>is</b> right next to the fridge. When a bottle <b>is</b> empty, simply message our villa assistant on WhatsApp, and a replacement <b>is</b> delivered within an hour."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Guest / Remote Designer)</div>
+        <div class="dialogue-text">"Understood. Regarding the security deposit: how much <b>is</b> the deposit, and <b>is</b> it fully refundable on my checkout date?"</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Villa Host / Manager)</div>
+        <div class="dialogue-text">"The deposit <b>is</b> 3 million rupiah. On your departure day, our team inspects the villa, and the deposit <b>is</b> refunded immediately in cash or via Wise transfer."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Guest / Remote Designer)</div>
+        <div class="dialogue-text">"Perfect. And one last thing: <b>is</b> there covered parking for a scooter? I am renting a Yamaha NMAX tomorrow morning."</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Villa Host / Manager)</div>
+        <div class="dialogue-text">"Yes, our front gate <b>is</b> lockable, and the parking porch <b>is</b> fully covered from the tropical rain. Your scooter <b>is</b> totally safe there."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Guest / Remote Designer)</div>
+        <div class="dialogue-text">"Thank you, Eliza! Everything <b>is</b> crystal clear. I <b>am</b> very happy to be here."</div>
+      </div>
+
+      <div class="vocab-box">
+        <span class="vocab-label">Key Vocabulary to Remember:</span>
+        <div class="vocab-chips">
+          <span class="vocab-chip">fiber optic line <em>(оптоволокно)</em></span>
+          <span class="vocab-chip">bandwidth <em>(пропускная способность)</em></span>
+          <span class="vocab-chip">whisper-quiet <em>(бесшумный)</em></span>
+          <span class="vocab-chip">potable water <em>(питьевая вода)</em></span>
+          <span class="vocab-chip">gallon dispenser <em>(кулер с помпой)</em></span>
+          <span class="vocab-chip">security deposit <em>(залог/депозит)</em></span>
+          <span class="vocab-chip">refundable <em>(возвратный)</em></span>
+          <span class="vocab-chip">covered parking <em>(крытая парковка)</em></span>
+        </div>
+      </div>
+
+      <div class="improv-box">
+        <span class="improv-label">🔥 Denis's Improv Challenge:</span>
+        Run the scenario again without the script! This time, Denis discovers that the Wi-Fi speed is only 5 Mbps, and politely demands that the host call the internet provider right now.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scenario 2 -->
+  <div class="roleplay-card">
+    <div class="roleplay-header">
+      <div>
+        <h4 class="roleplay-title">Scenario 2: Canggu Coworking & Cafe (Zin Cafe / BWork)</h4>
+        <div class="roleplay-desc">Denis orders breakfast and coffee, asks about quiet Zoom rooms, and pays by card.</div>
+      </div>
+      <span class="stage-tag">Cafe & Coworking</span>
+    </div>
+    <div class="roleplay-body">
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Barista & Host)</div>
+        <div class="dialogue-text">"Good morning! Welcome to Zin Cafe. What can I get started for you today?"</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Customer / Designer)</div>
+        <div class="dialogue-text">"Good morning! Could I please get an iced flat white with oat milk, without any added syrup or sugar?"</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Barista & Host)</div>
+        <div class="dialogue-text">"Sure thing! An iced flat white with oat milk. Would you like our house espresso blend or single-origin Ethiopian beans? The Ethiopian beans <b>are</b> light with subtle floral notes."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Customer / Designer)</div>
+        <div class="dialogue-text">"Single-origin Ethiopian beans sound great, let's do that! And for food, I would like the sourdough avocado toast with two poached eggs."</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Barista & Host)</div>
+        <div class="dialogue-text">"Excellent choice. How would you like the poached eggs? Soft or medium?"</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Customer / Designer)</div>
+        <div class="dialogue-text">"Soft poached <b>is</b> ideal, with a pinch of chili flakes on top if possible."</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Barista & Host)</div>
+        <div class="dialogue-text">"You got it. <b>Are</b> you dining in today, or <b>is</b> this order for takeaway?"</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Customer / Designer)</div>
+        <div class="dialogue-text">"I <b>am</b> dining in, and I plan to work on my laptop for a few hours. I have two client Zoom calls this afternoon. <b>Is</b> there a quiet air-conditioned workspace upstairs, or <b>is</b> it noisy during peak hours?"</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Barista & Host)</div>
+        <div class="dialogue-text">"Our ground floor <b>is</b> a bit lively with music, but our second floor <b>is</b> a dedicated quiet focus zone. The chairs <b>are</b> ergonomic, power sockets <b>are</b> available at every single desk, and the air conditioning <b>is</b> very cool."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Customer / Designer)</div>
+        <div class="dialogue-text">"That <b>is</b> exactly what I need. <b>Is</b> the quiet zone included with cafe orders, or <b>is</b> a separate coworking pass required?"</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Barista & Host)</div>
+        <div class="dialogue-text">"As long as your food bill <b>is</b> above 100,000 rupiah, two hours in the quiet workspace <b>are</b> completely free! After two hours, a day pass <b>is</b> 80,000 rupiah."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Customer / Designer)</div>
+        <div class="dialogue-text">"That <b>is</b> very fair. Can I pay by contactless credit card, or <b>is</b> there an extra card surcharge?"</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Barista & Host)</div>
+        <div class="dialogue-text">"We accept Apple Pay and credit cards with zero surcharge! Your total <b>is</b> 135,000 rupiah."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Customer / Designer)</div>
+        <div class="dialogue-text">"Here <b>is</b> my Apple Pay. Could you please give me the receipt with the high-speed Wi-Fi password?"</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Barista & Host)</div>
+        <div class="dialogue-text">"Here you go! The password <b>is</b> printed at the bottom. Head upstairs to table number 12, and we will bring your iced flat white and toast right up!"</div>
+      </div>
+
+      <div class="vocab-box">
+        <span class="vocab-label">Key Vocabulary to Remember:</span>
+        <div class="vocab-chips">
+          <span class="vocab-chip">iced flat white <em>(холодный флэт уайт)</em></span>
+          <span class="vocab-chip">single-origin <em>(моносорт кофе)</em></span>
+          <span class="vocab-chip">sourdough toast <em>(тост на закваске)</em></span>
+          <span class="vocab-chip">soft poached <em>(яйцо пашот всмятку)</em></span>
+          <span class="vocab-chip">quiet focus zone <em>(тихая зона)</em></span>
+          <span class="vocab-chip">ergonomic chairs <em>(эргономичные кресла)</em></span>
+          <span class="vocab-chip">power sockets <em>(розетки)</em></span>
+          <span class="vocab-chip">contactless surcharge <em>(комиссия за безнал)</em></span>
+        </div>
+      </div>
+
+      <div class="improv-box">
+        <span class="improv-label">🔥 Denis's Improv Challenge:</span>
+        Denis wants to ask if there is an isolated, soundproof phone booth for a private 30-minute pitch call with a client from New York.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scenario 3 -->
+  <div class="roleplay-card">
+    <div class="roleplay-header">
+      <div>
+        <h4 class="roleplay-title">Scenario 3: Design Client Feedback Call</h4>
+        <div class="roleplay-desc">Denis explains mobile UI button placement, discusses scope revisions, and reviews user testing.</div>
+      </div>
+      <span class="stage-tag">Client Video Call</span>
+    </div>
+    <div class="roleplay-body">
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Product Manager / Client)</div>
+        <div class="dialogue-text">"Hi Denis! Thanks for jumping on Google Meet. I reviewed the latest Figma prototype for our mobile checkout flow. The visual polish <b>is</b> incredible, but our marketing team has a few concerns about the main button placement."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Lead UI/Product Designer)</div>
+        <div class="dialogue-text">"Hi Eliza, great to see you! Thank you for the compliments. Let's look at the mobile screen together. You <b>are</b> referring to the primary 'Complete Purchase' CTA button, correct?"</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Product Manager / Client)</div>
+        <div class="dialogue-text">"Yes, exactly. In the old layout, the button was inline right beneath the payment fields. In your new layout, the button <b>is</b> a fixed sticky bar docked at the bottom of the screen. Why <b>is</b> it placed there? Our marketing lead <b>is</b> worried users will miss it."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Lead UI/Product Designer)</div>
+        <div class="dialogue-text">"That <b>is</b> a natural concern, but there <b>is</b> strong ergonomic reasoning behind it. Modern mobile screens <b>are</b> very tall. The bottom area <b>is</b> directly inside the user's natural thumb zone. When users hold a phone with one hand, reaching the middle or top of the screen <b>is</b> physically awkward."</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Product Manager / Client)</div>
+        <div class="dialogue-text">"Ah, that makes total sense for mobile ergonomics. But what happens when the virtual keyboard pops up while entering card details?"</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Lead UI/Product Designer)</div>
+        <div class="dialogue-text">"When the virtual keyboard appears, inline buttons often get pushed completely off-screen below the fold. Our sticky button smoothly anchors right above the keyboard. The call-to-action <b>is</b> always visible, which directly reduces cart abandonment."</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Product Manager / Client)</div>
+        <div class="dialogue-text">"That <b>is</b> a brilliant solution! I will explain that to our team. Now about the revision requests in Slack: we also want a currency selector and a dark mode toggle. Can we deliver those before our Friday sprint deadline?"</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Lead UI/Product Designer)</div>
+        <div class="dialogue-text">"Our sprint deadline <b>is</b> this Friday at 5 PM. If we include both, the scope <b>is</b> a bit tight. Which feature <b>is</b> the highest priority for your developers right now?"</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Product Manager / Client)</div>
+        <div class="dialogue-text">"The currency selector <b>is</b> top priority because our European release <b>is</b> next week. Dark mode <b>is</b> just a nice-to-have."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Lead UI/Product Designer)</div>
+        <div class="dialogue-text">"Understood. The currency selector <b>is</b> realistic to finish by Thursday afternoon. I will build the dropdown component with all hover and active states. We can move dark mode into next week's sprint."</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Product Manager / Client)</div>
+        <div class="dialogue-text">"Agreed! Did you get a chance to check the qualitative feedback from our user testing sessions?"</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Lead UI/Product Designer)</div>
+        <div class="dialogue-text">"Yes! Five test users completed the checkout prototype on Maze. Four of them completed the flow in under eighty seconds. The navigation confusion rate <b>is</b> practically zero."</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Product Manager / Client)</div>
+        <div class="dialogue-text">"That <b>is</b> outstanding news! You <b>are</b> doing fantastic work, Denis. Send me the updated Figma link whenever you <b>are</b> ready."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Lead UI/Product Designer)</div>
+        <div class="dialogue-text">"Will do, Eliza! I will ping you on Slack by Thursday 3 PM CET. Have a great day!"</div>
+      </div>
+
+      <div class="vocab-box">
+        <span class="vocab-label">Key Vocabulary to Remember:</span>
+        <div class="vocab-chips">
+          <span class="vocab-chip">sticky CTA bar <em>(закрепленная кнопка)</em></span>
+          <span class="vocab-chip">thumb zone <em>(зона досягаемости пальца)</em></span>
+          <span class="vocab-chip">ergonomics <em>(эргономика)</em></span>
+          <span class="vocab-chip">virtual keyboard <em>(экранная клавиатура)</em></span>
+          <span class="vocab-chip">below the fold <em>(ниже первого экрана)</em></span>
+          <span class="vocab-chip">cart abandonment <em>(брошенные корзины)</em></span>
+          <span class="vocab-chip">sprint deadline <em>(дедлайн спринта)</em></span>
+          <span class="vocab-chip">confusion rate <em>(процент ошибок пользователей)</em></span>
+        </div>
+      </div>
+
+      <div class="improv-box">
+        <span class="improv-label">🔥 Denis's Improv Challenge:</span>
+        The client asks to add 3 new complex modal windows 24 hours before the deadline. Denis politely defends the timeline and explains why adding scope now risks introducing bugs.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scenario 4 -->
+  <div class="roleplay-card">
+    <div class="roleplay-header">
+      <div>
+        <h4 class="roleplay-title">Scenario 4: Gym & Expat Small Talk</h4>
+        <div class="roleplay-desc">Denis chats with an Australian expat software engineer between sets at the gym.</div>
+      </div>
+      <span class="stage-tag">Fitness & Lifestyle</span>
+    </div>
+    <div class="roleplay-body">
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Australian Software Engineer)</div>
+        <div class="dialogue-text">"Hey mate! Excuse me, <b>are</b> you using that incline bench press, or can I jump in for a set?"</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Expat / Product Designer)</div>
+        <div class="dialogue-text">"Hey! No, go right ahead, I just finished my final set. The bench <b>is</b> all yours."</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Australian Software Engineer)</div>
+        <div class="dialogue-text">"Appreciate it, mate! Good session today? The humidity in this gym <b>is</b> intense this afternoon."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Expat / Product Designer)</div>
+        <div class="dialogue-text">"Tell me about it! Back in Cyprus where I lived, the summer heat was strong, but the air was dry. Here in Bali, your t-shirt <b>is</b> completely soaked after ten minutes of lifting!"</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Australian Software Engineer)</div>
+        <div class="dialogue-text">"Haha, 100%! I moved from Melbourne three months ago, and my body <b>is</b> still adjusting. <b>Are</b> you here on holiday, or <b>are</b> you based in Bali long-term?"</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Expat / Product Designer)</div>
+        <div class="dialogue-text">"I <b>am</b> based here long-term, probably for at least six to twelve months. I work remotely as a digital product and UI designer. What line of work <b>are</b> you in?"</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Australian Software Engineer)</div>
+        <div class="dialogue-text">"Awesome! I'm a full-stack engineer working remotely for an Australian startup. It feels like half the people in Canggu <b>are</b> tech expats! What <b>is</b> your workout routine like?"</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Expat / Product Designer)</div>
+        <div class="dialogue-text">"I follow an upper body and lower body split, four days a week. Morning workouts <b>are</b> best for me because my design work requires deep mental focus in the afternoon."</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Australian Software Engineer)</div>
+        <div class="dialogue-text">"Same here. Since you <b>are</b> settling into the area, have you found any good spots for high-protein food?"</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Expat / Product Designer)</div>
+        <div class="dialogue-text">"I <b>am</b> actually looking for recommendations right now! Where <b>are</b> your favorite places for clean nutrition around here?"</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Australian Software Engineer)</div>
+        <div class="dialogue-text">"You must check out Motion Cafe on Batu Bolong — their protein pancakes and chicken bowls <b>are</b> incredible. And for local food, Warung Bu Mi <b>is</b> delicious, cheap, and fresh."</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Expat / Product Designer)</div>
+        <div class="dialogue-text">"That sounds perfect! Let's exchange contacts. <b>Are</b> you on Telegram or Instagram? We can grab a post-workout coffee sometime or train together."</div>
+      </div>
+
+      <div class="dialogue-turn eliza">
+        <div class="dialogue-speaker eliza">Eliza (Australian Software Engineer)</div>
+        <div class="dialogue-text">"Yeah, brilliant idea! My Telegram <b>is</b> @eliza_dev. Shoot me a message, and catch you around the gym, Denis!"</div>
+      </div>
+
+      <div class="dialogue-turn denis">
+        <div class="dialogue-speaker denis">Denis (Expat / Product Designer)</div>
+        <div class="dialogue-text">"Sounds good, Eliza! Have a great workout!"</div>
+      </div>
+
+      <div class="vocab-box">
+        <span class="vocab-label">Key Vocabulary to Remember:</span>
+        <div class="vocab-chips">
+          <span class="vocab-chip">incline bench press <em>(наклонный жим)</em></span>
+          <span class="vocab-chip">humidity <em>(влажность)</em></span>
+          <span class="vocab-chip">soaked with sweat <em>(насквозь мокрый от пота)</em></span>
+          <span class="vocab-chip">adjusting <em>(адаптируюсь)</em></span>
+          <span class="vocab-chip">upper/lower split <em>(сплит верх/низ)</em></span>
+          <span class="vocab-chip">deep mental focus <em>(глубокий фокус)</em></span>
+          <span class="vocab-chip">clean nutrition <em>(чистое питание)</em></span>
+          <span class="vocab-chip">shoot me a message <em>(черкани мне в мессенджер)</em></span>
+        </div>
+      </div>
+
+      <div class="improv-box">
+        <span class="improv-label">🔥 Denis's Improv Challenge:</span>
+        Denis tells Eliza about his fitness goals for his first 6 months in Bali (trying surf lessons, maintaining bench press numbers, and eating clean despite local restaurants).
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ================================================================= -->
+<!-- 2. SECTION: THE 20-QUESTION RAPID-FIRE BLITZ (ANSWER IN 3 SECONDS)-->
+<!-- ================================================================= -->
+<section id="blitz">
+  <h2>Block 3.6 · Reflex Speed Drill</h2>
+  <h3>The 20-Question Rapid-Fire Blitz (Answer in 3 Seconds)</h3>
+  <p>Eliza asks these questions quickly one by one. Denis has <strong>3 seconds</strong> to start his answer.</p>
+
+  <div class="fix-box" style="margin-bottom:18px">
+    <span class="title">⚡ THE STRICT RULES OF THE BLITZ:</span>
+    <div class="row">
+      <span class="bad">❌ "Yes, it's hot." &nbsp;|&nbsp; ❌ "No, it's cheap." &nbsp;|&nbsp; ❌ "Yes, it's better."</span>
+      <span class="good">✅ "The coffee IS hot." &nbsp;|&nbsp; ✅ "Bali IS affordable." &nbsp;|&nbsp; ✅ "Figma IS better."</span>
+    </div>
+    <p class="rule-text"><strong>Zero "it's" allowed!</strong> Denis must name the full subject noun and connect it with <b>is</b>, <b>are</b>, <b>isn't</b>, or <b>aren't</b>. Eliza immediately buzzes if Denis slips and says <em>"it's"</em>!</p>
+  </div>
+
+  <div class="blitz-grid">
+
+    <!-- Q1 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #01</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Is the coffee hot?"</div>
+      <div class="blitz-a">Denis: "Yes, the coffee <b>is</b> very hot and fresh."</div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #02</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Are your clients demanding?"</div>
+      <div class="blitz-a">Denis: "Yes, my clients <b>are</b> demanding, but they <b>are</b> very respectful."</div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #03</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Is Figma better than Photoshop for UI design?"</div>
+      <div class="blitz-a">Denis: "Yes, Figma <b>is</b> much faster and more modern than Photoshop for UI."</div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #04</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Are the beaches in Bali crowded?"</div>
+      <div class="blitz-a">Denis: "Some popular beaches <b>are</b> crowded, but northern beaches <b>are</b> quiet."</div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #05</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Is Bali expensive right now?"</div>
+      <div class="blitz-a">Denis: "No, Bali <b>is</b> still relatively affordable compared to Europe."</div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #06</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Is your MacBook fast enough for heavy rendering?"</div>
+      <div class="blitz-a">Denis: "Yes, my MacBook <b>is</b> extremely fast and handles complex graphics easily."</div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #07</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Are the roads in Canggu dangerous for beginners?"</div>
+      <div class="blitz-a">Denis: "Yes, the roads <b>are</b> narrow, and the scooter traffic <b>is</b> unpredictable."</div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #08</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Is remote work more productive than working in an office?"</div>
+      <div class="blitz-a">Denis: "Yes, remote work <b>is</b> more productive because unnecessary interruptions <b>are</b> rare."</div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #09</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Are design systems necessary for early-stage startups?"</div>
+      <div class="blitz-a">Denis: "Design systems <b>are</b> helpful, but speed <b>is</b> usually more important early on."</div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #10</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Is English grammar difficult for Russian speakers?"</div>
+      <div class="blitz-a">Denis: "English grammar <b>is</b> logical, but spoken confidence <b>is</b> the real challenge."</div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #11</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Are your close friends in Cyprus right now?"</div>
+      <div class="blitz-a">Denis: "Yes, several of my close friends <b>are</b> living and working in Cyprus."</div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #12</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Is the swimming pool in your villa clean?"</div>
+      <div class="blitz-a">Denis: "Yes, the swimming pool <b>is</b> crystal clear and properly maintained."</div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #13</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Are Indonesian locals friendly to foreign digital nomads?"</div>
+      <div class="blitz-a">Denis: "Yes, Balinese locals <b>are</b> exceptionally kind and welcoming to everyone."</div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #14</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Is your gym close to your accommodation?"</div>
+      <div class="blitz-a">Denis: "Yes, the fitness club <b>is</b> only five minutes away by motorbike."</div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #15</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Are mobile apps more popular than desktop websites today?"</div>
+      <div class="blitz-a">Denis: "In consumer markets, mobile apps <b>are</b> dominant, but desktop <b>is</b> essential for deep work."</div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #16</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Is dark mode really healthier for your eyes?"</div>
+      <div class="blitz-a">Denis: "Dark mode <b>is</b> comfortable in the dark, but text contrast <b>is</b> what really protects eyesight."</div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #17</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Are freelance deadlines stressful when requirements change?"</div>
+      <div class="blitz-a">Denis: "Yes, sudden client changes <b>are</b> stressful unless clear boundaries <b>are</b> established."</div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #18</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Is clean typography the most important element of UI?"</div>
+      <div class="blitz-a">Denis: "Yes, typography <b>is</b> the backbone of great design because content <b>is</b> why users visit."</div>
+    </div>
+
+    <!-- Q19 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #19</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Are sunset views in Uluwatu breathtaking?"</div>
+      <div class="blitz-a">Denis: "Yes, the cliff sunsets in Uluwatu <b>are</b> world-famous and truly spectacular."</div>
+    </div>
+
+    <!-- Q20 -->
+    <div class="blitz-item">
+      <div class="blitz-head">
+        <span class="blitz-num">DRILL #20</span>
+        <span class="blitz-timer">⏱ 3 SECONDS</span>
+      </div>
+      <div class="blitz-q">Eliza: "Is this speaking blitz effective for building your reflexes?"</div>
+      <div class="blitz-a">Denis: "Yes, this rapid drill <b>is</b> intense, and my speaking reflexes <b>are</b> getting faster!"</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================================================================= -->
+<!-- 3. SECTION: SPOT THE MISTAKE (DENIS CATCHES THE BUG)             -->
+<!-- ================================================================= -->
+<section id="bugs">
+  <h2>Block 3.7 · Code Review for English</h2>
+  <h3>Spot the Mistake: Denis Catches the Bug (10 Sentences)</h3>
+  <p>Denis acts as the QA Lead or Code Reviewer. Each sentence contains a real mistake that Russian-speaking designers make. Denis must spot the bug, explain why it fails, and say the clean sentence out loud.</p>
+
+  <div class="rules-list" style="margin-bottom:20px">
+    <div class="rule-item">
+      <div>
+        <b>How Denis solves each bug card:</b>
+        <span>1. Read the buggy sentence.<br>
+        2. Explain the error: <em>"The bug here is using 'it's' when the subject is already mentioned..."</em><br>
+        3. Say the clean, corrected sentence out loud with solid confidence!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bug 1 -->
+  <div class="bug-card">
+    <div class="bug-head">
+      <span class="bug-tag">Bug #01</span>
+      <span class="bug-type">Error: Double Subject ("it's" vs "is")</span>
+    </div>
+    <div class="bug-bad">❌ "My MacBook it's brand new and very powerful for 3D graphics."</div>
+    <div class="bug-diag">
+      <strong>The Bug:</strong> You already named the subject (<em>My MacBook</em>). Saying <em>"it's"</em> adds an unnecessary pronoun <em>it</em> (<em>"My MacBook it is..."</em>).
+    </div>
+    <div class="bug-good">✅ Denis says: "My MacBook <b>is</b> brand new and very powerful for 3D graphics."</div>
+  </div>
+
+  <!-- Bug 2 -->
+  <div class="bug-card">
+    <div class="bug-head">
+      <span class="bug-tag">Bug #02</span>
+      <span class="bug-type">Error: Double Subject ("it's" vs "is")</span>
+    </div>
+    <div class="bug-bad">❌ "Figma it's the industry standard tool for digital product designers."</div>
+    <div class="bug-diag">
+      <strong>The Bug:</strong> <em>Figma</em> is the proper noun subject. Drop the extra <em>it</em> and connect directly with <b>is</b>.
+    </div>
+    <div class="bug-good">✅ Denis says: "Figma <b>is</b> the industry standard tool for digital product designers."</div>
+  </div>
+
+  <!-- Bug 3 -->
+  <div class="bug-card">
+    <div class="bug-head">
+      <span class="bug-tag">Bug #03</span>
+      <span class="bug-type">Error: Double Subject ("it's" vs "is")</span>
+    </div>
+    <div class="bug-bad">❌ "The villa in Pererenan it's quiet and surrounded by green rice fields."</div>
+    <div class="bug-diag">
+      <strong>The Bug:</strong> The entire noun phrase <em>"The villa in Pererenan"</em> is the subject. Do not attach <em>it's</em>.
+    </div>
+    <div class="bug-good">✅ Denis says: "The villa in Pererenan <b>is</b> quiet and surrounded by green rice fields."</div>
+  </div>
+
+  <!-- Bug 4 -->
+  <div class="bug-card">
+    <div class="bug-head">
+      <span class="bug-tag">Bug #04</span>
+      <span class="bug-type">Error: Double Subject ("it's" vs "is")</span>
+    </div>
+    <div class="bug-bad">❌ "His design portfolio it's full of modern mobile applications."</div>
+    <div class="bug-diag">
+      <strong>The Bug:</strong> Redundant pronoun <em>it</em> after <em>His design portfolio</em>.
+    </div>
+    <div class="bug-good">✅ Denis says: "His design portfolio <b>is</b> full of modern mobile applications."</div>
+  </div>
+
+  <!-- Bug 5 -->
+  <div class="bug-card">
+    <div class="bug-head">
+      <span class="bug-tag">Bug #05</span>
+      <span class="bug-type">Error: Double Subject ("it's" vs "is")</span>
+    </div>
+    <div class="bug-bad">❌ "The weather in Canggu it's hot and tropical today."</div>
+    <div class="bug-diag">
+      <strong>The Bug:</strong> <em>The weather in Canggu</em> is the subject. Connect directly to the adjective with <b>is</b>.
+    </div>
+    <div class="bug-good">✅ Denis says: "The weather in Canggu <b>is</b> hot and tropical today."</div>
+  </div>
+
+  <!-- Bug 6 -->
+  <div class="bug-card">
+    <div class="bug-head">
+      <span class="bug-tag">Bug #06</span>
+      <span class="bug-type">Error: Missing Plural -S</span>
+    </div>
+    <div class="bug-bad">❌ "Denis manages three active client from California and two project this month."</div>
+    <div class="bug-diag">
+      <strong>The Bug:</strong> Quantifiers <em>three</em> and <em>two</em> require plural noun endings (<b>clients</b>, <b>projects</b>).
+    </div>
+    <div class="bug-good">✅ Denis says: "Denis manages three active <b>clients</b> from California and two <b>projects</b> this month."</div>
+  </div>
+
+  <!-- Bug 7 -->
+  <div class="bug-card">
+    <div class="bug-head">
+      <span class="bug-tag">Bug #07</span>
+      <span class="bug-type">Error: Missing Plural -S</span>
+    </div>
+    <div class="bug-bad">❌ "There are four modern coworking space and five good gym in this neighborhood."</div>
+    <div class="bug-diag">
+      <strong>The Bug:</strong> Plural count requires <b>spaces</b> and <b>gyms</b>.
+    </div>
+    <div class="bug-good">✅ Denis says: "There are four modern coworking <b>spaces</b> and five good <b>gyms</b> in this neighborhood."</div>
+  </div>
+
+  <!-- Bug 8 -->
+  <div class="bug-card">
+    <div class="bug-head">
+      <span class="bug-tag">Bug #08</span>
+      <span class="bug-type">Error: Missing Plural -S & Subject-Verb Agreement</span>
+    </div>
+    <div class="bug-bad">❌ "Many foreign expat love living in Bali because the island offer many benefit."</div>
+    <div class="bug-diag">
+      <strong>The Bug:</strong> <em>Many expats</em> requires plural -s; <em>the island</em> is 3rd person singular so the verb needs -s (<em>offers</em>); and <em>many benefits</em> needs plural -s.
+    </div>
+    <div class="bug-good">✅ Denis says: "Many foreign <b>expats</b> love living in Bali because the island <b>offers</b> many <b>benefits</b>."</div>
+  </div>
+
+  <!-- Bug 9 -->
+  <div class="bug-card">
+    <div class="bug-head">
+      <span class="bug-tag">Bug #09</span>
+      <span class="bug-type">Error: Wrong Negative ("I'm not like")</span>
+    </div>
+    <div class="bug-bad">❌ "I'm not like crowded tourist clubs because I'm prefer quiet beach sunsets."</div>
+    <div class="bug-diag">
+      <strong>The Bug:</strong> <em>Like</em> and <em>prefer</em> are active verbs, not adjectives! In English, we negate Present Simple action verbs with <b>don't</b> (never <em>"I'm not like"</em> or <em>"I'm prefer"</em>).
+    </div>
+    <div class="bug-good">✅ Denis says: "I <b>don't like</b> crowded tourist clubs because I <b>prefer</b> quiet beach sunsets."</div>
+  </div>
+
+  <!-- Bug 10 -->
+  <div class="bug-card">
+    <div class="bug-head">
+      <span class="bug-tag">Bug #10</span>
+      <span class="bug-type">Error: Wrong Negative ("he not have" + pronoun duplication)</span>
+    </div>
+    <div class="bug-bad">❌ "My backend developer he not have the API credentials for the production server."</div>
+    <div class="bug-diag">
+      <strong>The Bug:</strong> Drop the extra <em>he</em>, and negate 3rd person singular action verbs with <b>doesn't have</b> (never <em>"not have"</em>).
+    </div>
+    <div class="bug-good">✅ Denis says: "My backend developer <b>doesn't have</b> the API credentials for the production server."</div>
+  </div>
+
+</section>
+
+
+<!-- ================================================================= -->
+<!-- 4. SECTION: EMERGENCY RESERVE (5 EXTENDED CONVERSATION TOPICS)   -->
+<!-- ================================================================= -->
+<section id="reserve" class="soft">
+  <h2>Block 3.8 · Emergency Reserve (No Awkward Silence)</h2>
+  <h3>Emergency Reserve: 5 Extended Conversation Topics</h3>
+  <p>If any drill finishes early, Eliza picks one of these deep conversation cards. Denis speaks freely for 3 to 5 minutes using the suggested vocabulary and sentence starters.</p>
+
+  <!-- Topic 1 -->
+  <div class="topic-block">
+    <div class="stage-tag" style="margin-bottom:8px">Topic 01 · Tech & Industry</div>
+    <h4 class="topic-title">The Future of Generative AI in Product & UI Design</h4>
+    <div class="topic-dilemma">
+      <strong>The Core Question:</strong> Will AI plugins and prompt tools replace UI designers, or will they simply eliminate mundane layout work and turn designers into strategic Art Directors and Systems Thinkers?
+    </div>
+
+    <div class="vocab-box" style="margin-bottom:12px">
+      <span class="vocab-label">Power Vocabulary for Denis:</span>
+      <div class="vocab-chips">
+        <span class="vocab-chip">generative UI workflows</span>
+        <span class="vocab-chip">commoditization of basic layouts</span>
+        <span class="vocab-chip">design system tokens</span>
+        <span class="vocab-chip">human empathy & taste</span>
+        <span class="vocab-chip">edge cases & accessibility</span>
+        <span class="vocab-chip">strategic product thinking</span>
+      </div>
+    </div>
+
+    <div class="topic-starters">
+      <span class="label">Sentence Starters for Denis:</span>
+      <ul>
+        <li>"In my opinion, basic layout generation <b>is</b> already becoming commoditized by AI tools."</li>
+        <li>"However, genuine human taste and empathy <b>are</b> irreplaceable because algorithms don't understand emotional nuances."</li>
+        <li>"For senior designers, AI <b>is</b> a massive force multiplier rather than a replacement."</li>
+      </ul>
+    </div>
+
+    <div class="topic-followup">
+      <b>Eliza's Follow-up Questions:</b><br>
+      • <em>"How do you personally use AI in your daily design routine right now?"</em><br>
+      • <em>"Do you think clients will ever trust an AI tool to design an entire mobile banking app without human oversight?"</em>
+    </div>
+  </div>
+
+  <!-- Topic 2 -->
+  <div class="topic-block">
+    <div class="stage-tag" style="margin-bottom:8px">Topic 02 · Narrative & Gaming</div>
+    <h4 class="topic-title">Why Deep Story Games (Like GTA and Cyberpunk) Succeed Worldwide</h4>
+    <div class="topic-dilemma">
+      <strong>The Core Question:</strong> What makes open-world narrative masterpieces so emotionally memorable, and how does game UI contribute to player immersion without cluttering the world?
+    </div>
+
+    <div class="vocab-box" style="margin-bottom:12px">
+      <span class="vocab-label">Power Vocabulary for Denis:</span>
+      <div class="vocab-chips">
+        <span class="vocab-chip">immersive storytelling</span>
+        <span class="vocab-chip">environmental narrative</span>
+        <span class="vocab-chip">player agency & choices</span>
+        <span class="vocab-chip">diegetic user interfaces</span>
+        <span class="vocab-chip">satire of modern culture</span>
+        <span class="vocab-chip">suspension of disbelief</span>
+      </div>
+    </div>
+
+    <div class="topic-starters">
+      <span class="label">Sentence Starters for Denis:</span>
+      <ul>
+        <li>"My favorite game series <b>is</b> Grand Theft Auto because the attention to world detail <b>is</b> second to none."</li>
+        <li>"Open-world games <b>are</b> compelling because player agency and freedom <b>are</b> at the heart of the experience."</li>
+        <li>"From a designer's perspective, diegetic game interfaces <b>are</b> fascinating because they blend seamlessly into the virtual universe."</li>
+      </ul>
+    </div>
+
+    <div class="topic-followup">
+      <b>Eliza's Follow-up Questions:</b><br>
+      • <em>"What makes the storytelling in GTA 5 or Red Dead Redemption 2 feel like a Hollywood movie?"</em><br>
+      • <em>"What are you most excited to experience in GTA 6 when it finally launches?"</em>
+    </div>
+  </div>
+
+  <!-- Topic 3 -->
+  <div class="topic-block">
+    <div class="stage-tag" style="margin-bottom:8px">Topic 03 · Remote Work & Boundaries</div>
+    <h4 class="topic-title">Balancing Demanding Freelance Clients and Island Life</h4>
+    <div class="topic-dilemma">
+      <strong>The Core Question:</strong> How do you maintain ironclad professional discipline and meet strict Western deadlines when living in a tropical paradise where everyone is chilling on the beach?
+    </div>
+
+    <div class="vocab-box" style="margin-bottom:12px">
+      <span class="vocab-label">Power Vocabulary for Denis:</span>
+      <div class="vocab-chips">
+        <span class="vocab-chip">asynchronous communication</span>
+        <span class="vocab-chip">preventing scope creep</span>
+        <span class="vocab-chip">time zone overlap (GMT+8)</span>
+        <span class="vocab-chip">deep work uninterrupted blocks</span>
+        <span class="vocab-chip">burnout prevention</span>
+        <span class="vocab-chip">setting strict client boundaries</span>
+      </div>
+    </div>
+
+    <div class="topic-starters">
+      <span class="label">Sentence Starters for Denis:</span>
+      <ul>
+        <li>"Freelance freedom <b>is</b> liberating, but self-discipline <b>is</b> twice as important on a tropical island."</li>
+        <li>"Client management <b>is</b> 80% about clear expectation setting before the sprint starts."</li>
+        <li>"Async communication <b>is</b> the only sustainable way to work across European and American time zones."</li>
+      </ul>
+    </div>
+
+    <div class="topic-followup">
+      <b>Eliza's Follow-up Questions:</b><br>
+      • <em>"How do you handle demanding clients who send urgent Slack messages on weekends?"</em><br>
+      • <em>"What is your daily rule for knowing when your working day is officially over?"</em>
+    </div>
+  </div>
+
+  <!-- Topic 4 -->
+  <div class="topic-block">
+    <div class="stage-tag" style="margin-bottom:8px">Topic 04 · Real Estate & Expat Strategy</div>
+    <h4 class="topic-title">Renting vs Buying Property on Bali (The Expat Dilemma)</h4>
+    <div class="topic-dilemma">
+      <strong>The Core Question:</strong> Is buying a 25-30 year leasehold villa on Bali a smart financial investment, or is flexible monthly/annual renting far superior for digital creators?
+    </div>
+
+    <div class="vocab-box" style="margin-bottom:12px">
+      <span class="vocab-label">Power Vocabulary for Denis:</span>
+      <div class="vocab-chips">
+        <span class="vocab-chip">leasehold vs freehold</span>
+        <span class="vocab-chip">foreign ownership regulations (PMA)</span>
+        <span class="vocab-chip">tropical moisture & maintenance</span>
+        <span class="vocab-chip">return on investment (ROI)</span>
+        <span class="vocab-chip">capital liquidity</span>
+        <span class="vocab-chip">lifestyle flexibility</span>
+      </div>
+    </div>
+
+    <div class="topic-starters">
+      <span class="label">Sentence Starters for Denis:</span>
+      <ul>
+        <li>"For remote tech entrepreneurs, renting <b>is</b> far more sensible because mobility <b>is</b> our biggest asset."</li>
+        <li>"Leasehold agreements <b>are</b> basically long-term prepaid rentals, not real property ownership."</li>
+        <li>"Tropical wear and tear <b>is</b> serious; humidity and construction defects <b>are</b> common issues in Bali villas."</li>
+      </ul>
+    </div>
+
+    <div class="topic-followup">
+      <b>Eliza's Follow-up Questions:</b><br>
+      • <em>"If you had $300,000 to invest, would you put it into a Bali villa or keep it liquid in stocks?"</em><br>
+      • <em>"What are the top 3 things you inspect before committing to a 6-month villa rental?"</em>
+    </div>
+  </div>
+
+  <!-- Topic 5 -->
+  <div class="topic-block">
+    <div class="stage-tag" style="margin-bottom:8px">Topic 05 · Expat Relocation</div>
+    <h4 class="topic-title">Living in Cyprus vs Living in Bali: A Comparison</h4>
+    <div class="topic-dilemma">
+      <strong>The Core Question:</strong> How does Mediterranean expat life (Cyprus) compare to Southeast Asian tropical hub life (Bali) for career growth, health, and daily well-being?
+    </div>
+
+    <div class="vocab-box" style="margin-bottom:12px">
+      <span class="vocab-label">Power Vocabulary for Denis:</span>
+      <div class="vocab-chips">
+        <span class="vocab-chip">Mediterranean safety & stability</span>
+        <span class="vocab-chip">tropical cafe culture</span>
+        <span class="vocab-chip">digital nomad density</span>
+        <span class="vocab-chip">cost of living comparison</span>
+        <span class="vocab-chip">pace of daily life</span>
+        <span class="vocab-chip">fitness and healthy food scenes</span>
+      </div>
+    </div>
+
+    <div class="topic-starters">
+      <span class="label">Sentence Starters for Denis:</span>
+      <ul>
+        <li>"Cyprus and Bali <b>are</b> both incredible islands, but their cultural atmosphere <b>is</b> totally different."</li>
+        <li>"Cyprus <b>is</b> quiet, European, and very safe, while Bali <b>is</b> buzzing with young creators and entrepreneurs."</li>
+        <li>"The food and cafe scene in Bali <b>is</b> unmatched for anyone who loves healthy nutrition and specialty coffee."</li>
+      </ul>
+    </div>
+
+    <div class="topic-followup">
+      <b>Eliza's Follow-up Questions:</b><br>
+      • <em>"What do you think will be the hardest lifestyle adjustment when you land in Bali?"</em><br>
+      • <em>"In which country do you think you will be more productive as a designer, and why?"</em>
+    </div>
+  </div>
+
 </section>
 
 <section class="soft">
