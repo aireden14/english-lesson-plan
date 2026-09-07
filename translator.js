@@ -1,28 +1,7 @@
-// translator.js — Interactive word and phrase translation for Denis
+// translator.js — Universal click-to-translate & phrase translator for Denis
 (function () {
   const DICT = {
-    // 20 Sentences
-    "two men in our team are senior product designers": "Двое мужчин в нашей команде — ведущие продуктовые дизайнеры.",
-    "three women work on the new user interface project": "Три женщины работают над новым проектом пользовательского интерфейса.",
-    "my friends have two children a boy and a girl": "У моих друзей двое детей: мальчик и девочка.",
-    "there are many creative people living and working in bali": "На Бали живет и работает много творческих людей.",
-    "i always brush my teeth in the morning and before sleep": "Я всегда чищу зубы утром и перед сном.",
-    "my feet hurt after walking ten kilometers in the city": "У меня болят ноги после десяти километров ходьбы по городу.",
-    "i dont like mice but our cat loves chasing them": "Я не люблю мышей, но наша кошка обожает за ними гоняться.",
-    "people say that cats have nine lives": "Говорят, что у кошек девять жизней.",
-    "when i traveled to the mountains i saw a lot of white sheep": "Когда я путешествовал в горы, я видел много белых овец.",
-    "there are thousands of colorful fish near the coral reef": "Возле кораллового рифа тысячи разноцветных рыб.",
-    "could you please give me two sharp knives for cooking": "Не могли бы вы дать мне два острых ножа для готовки?",
-    "i have three wooden shelves on the wall for my books and equipment": "У меня на стене три деревянные полки для книг и оборудования.",
-    "in bali you can see huge green palm leaves everywhere": "На Бали повсюду можно увидеть огромные зеленые пальмовые листья.",
-    "please cut the pizza into two equal halves": "Пожалуйста, разрежьте пиццу на две равные половинки.",
-    "the security camera recorded two thieves at night": "Камера наблюдения зафиксировала двух воров ночью.",
-    "a flock of wild geese flew across the sky": "Стая диких гусей пролетела по небу.",
-    "i watched two great detective series on netflix recently": "Недавно я посмотрел два отличных детективных сериала на Netflix.",
-    "several commercial aircraft landed at the international airport": "Несколько коммерческих самолетов приземлились в международном аэропорту.",
-    "farmers in traditional villages still work with oxen": "Фермеры в традиционных деревнях до сих пор работают с волами.",
-    "strong businesses know how to navigate global economic crises": "Сильные компании знают, как преодолевать мировые экономические кризисы.",
-    // Lesson 4 Cockpit Sentences & QA
+    // Lesson 4 Sentences & QA
     "my best friend is valery and he is in cyprus right now": "Мой лучший друг — Валерий, и он сейчас на Кипре.",
     "my laptop is fast and reliable for complex ui design": "Мой ноутбук быстрый и надежный для сложного UI-дизайна.",
     "the weather in cyprus is warm and sunny today": "Погода на Кипре сегодня теплая и солнечная.",
@@ -44,15 +23,29 @@
     "the beaches are wonderful and the mountain villages are very peaceful on weekends": "Пляжи прекрасны, а горные деревушки очень спокойны по выходным.",
     "my job is digital product design my responsibilities are creating user interfaces mobile apps and brand assets": "Моя работа — дизайн цифровых продуктов. Мои обязанности — создание интерфейсов, мобильных приложений и брендинга.",
     "bali is attractive because the ocean is close the lifestyle is calm and there are many creative people": "Бали привлекателен тем, что океан близко, ритм жизни спокойный и вокруг много творческих людей.",
-    // Extra words for Lesson 4
-    "reliable": "надежный", "complex": "сложный", "developers": "разработчики",
-    "spacious": "просторный", "bright": "светлый / яркий", "beginner": "новичок / начинающий",
-    "experienced": "опытный", "director": "директор", "comfortable": "удобный / комфортный",
-    "gym": "спортзал", "tired": "уставший", "responsibilities": "обязанности",
-    "peaceful": "мирный / спокойный", "storylines": "сюжетные линии", "exciting": "захватывающий",
-    "details": "детали", "attractive": "привлекательный", "lifestyle": "образ жизни",
-    "nomad": "кочевник (digital nomad — цифровой кочевник)", "community": "сообщество",
-    "beaches": "пляжи", "wonderful": "чудесные / прекрасные", "weekends": "выходные",
+
+    // Homework 20 Sentences
+    "two men in our team are senior product designers": "Двое мужчин в нашей команде — ведущие продуктовые дизайнеры.",
+    "three women work on the new user interface project": "Три женщины работают над новым проектом пользовательского интерфейса.",
+    "my friends have two children a boy and a girl": "У моих друзей двое детей: мальчик и девочка.",
+    "there are many creative people living and working in bali": "На Бали живет и работает много творческих людей.",
+    "i always brush my teeth in the morning and before sleep": "Я всегда чищу зубы утром и перед сном.",
+    "my feet hurt after walking ten kilometers in the city": "У меня болят ноги после десяти километров ходьбы по городу.",
+    "i dont like mice but our cat loves chasing them": "Я не люблю мышей, но наша кошка обожает за ними гоняться.",
+    "people say that cats have nine lives": "Говорят, что у кошек девять жизней.",
+    "when i traveled to the mountains i saw a lot of white sheep": "Когда я путешествовал в горы, я видел много белых овец.",
+    "there are thousands of colorful fish near the coral reef": "Возле кораллового рифа тысячи разноцветных рыб.",
+    "could you please give me two sharp knives for cooking": "Не могли бы вы дать мне два острых ножа для готовки?",
+    "i have three wooden shelves on the wall for my books and equipment": "У меня на стене три деревянные полки для книг и оборудования.",
+    "in bali you can see huge green palm leaves everywhere": "На Бали повсюду можно увидеть огромные зеленые пальмовые листья.",
+    "please cut the pizza into two equal halves": "Пожалуйста, разрежьте пиццу на две равные половинки.",
+    "the security camera recorded two thieves at night": "Камера наблюдения зафиксировала двух воров ночью.",
+    "a flock of wild geese flew across the sky": "Стая диких гусей пролетела по небу.",
+    "i watched two great detective series on netflix recently": "Недавно я посмотрел два отличных детективных сериала на Netflix.",
+    "several commercial aircraft landed at the international airport": "Несколько коммерческих самолетов приземлились в международном аэропорту.",
+    "farmers in traditional villages still work with oxen": "Фермеры в традиционных деревнях до сих пор работают с волами.",
+    "strong businesses know how to navigate global economic crises": "Сильные компании знают, как преодолевать мировые экономические кризисы.",
+
     // Core Nouns & Irregular pairs
     "man": "мужчина", "men": "мужчины (мн. ч.)",
     "woman": "женщина", "women": "женщины (мн. ч., произносится [вúмин])",
@@ -74,27 +67,48 @@
     "aircraft": "самолет / авиация (не меняется во мн. ч.)",
     "ox": "бык / вол", "oxen": "быки / волы (древнее окончание -en)",
     "crisis": "кризис", "crises": "кризисы (мн. ч., произносится [крайсиз])",
-    // Frequent words
-    "team": "команда", "product": "продукт / продуктовый", "designers": "дизайнеры",
-    "work": "работать / работа", "user": "пользователь", "interface": "интерфейс",
-    "project": "проект", "friends": "друзья", "boy": "мальчик", "girl": "девочка",
-    "creative": "творческий / креативный", "living": "живущие", "working": "работающие",
-    "bali": "Бали", "brush": "чистить", "morning": "утро", "sleep": "сон / спать",
-    "hurt": "болеть / причинять боль", "walking": "ходьба / прогулка", "kilometers": "километры",
-    "city": "город", "cat": "кошка / кот", "loves": "любит", "chasing": "гоняться / преследовать",
-    "mountains": "горы", "saw": "видел (прошедшее от see)", "white": "белый",
-    "thousands": "тысячи", "colorful": "красочные / разноцветные", "coral": "коралловый", "reef": "риф",
-    "sharp": "острый", "cooking": "готовка / приготовление пищи", "wooden": "деревянный",
-    "wall": "стена", "books": "книги", "equipment": "оборудование / техника",
-    "palm": "пальма", "everywhere": "везде / повсюду", "cut": "резать / разрезать",
-    "pizza": "пицца", "equal": "равный / одинаковый", "security": "безопасность / охрана",
-    "camera": "камера", "recorded": "записала", "night": "ночь",
-    "flock": "стая", "wild": "дикий", "flew": "летел / пролетел", "sky": "небо",
-    "watched": "смотрел", "detective": "детективный", "commercial": "коммерческий",
-    "landed": "приземлился", "airport": "аэропорт", "farmers": "фермеры",
-    "traditional": "традиционный", "villages": "деревни", "still": "всё ещё / до сих пор",
-    "businesses": "бизнесы / компании", "navigate": "ориентироваться / преодолевать",
-    "global": "мировой / глобальный", "economic": "экономический"
+
+    // Grammar & Instructions Vocabulary
+    "homework": "домашняя работа", "assignment": "задание", "instructions": "инструкции",
+    "instruction": "инструкция", "singular": "единственное число", "plural": "множественное число",
+    "irregular": "неправильный / форма-исключение", "noun": "существительное", "nouns": "существительные",
+    "verb": "глагол", "verbs": "глаголы", "pronoun": "местоимение", "pronouns": "местоимения",
+    "subject": "подлежащее / субъект", "sentence": "предложение", "sentences": "предложения",
+    "rule": "правило", "rules": "правила", "drill": "упражнение / отработка", "drills": "упражнения",
+    "accuracy": "точность речи", "fluency": "беглость речи", "correction": "исправление ошибок",
+    "mistake": "ошибка", "mistakes": "ошибки", "speaking": "говорение / устная речь",
+    "listening": "аудирование / понимание на слух", "interview": "интервью / диалог",
+    "practice": "практика", "blitz": "быстрый опрос / блиц", "block": "блок урока",
+    "stage": "этап урока", "cockpit": "пульт управления", "curriculum": "программа обучения",
+    "routine": "распорядок дня / рутина", "interrupt": "перебивать", "interruption": "перебивание",
+    "praise": "похвала", "fossilize": "закреплять ошибку", "model": "образец / пример ответа",
+    "question": "вопрос", "questions": "вопросы", "answer": "ответ", "answers": "ответы",
+    "immediately": "немедленно / сразу", "eliminated": "устранен", "eliminating": "устранение",
+    "reliable": "надежный", "complex": "сложный", "developers": "разработчики",
+    "spacious": "просторный", "bright": "светлый / яркий", "beginner": "новичок / начинающий",
+    "experienced": "опытный", "director": "директор", "comfortable": "удобный / комфортный",
+    "gym": "спортзал", "tired": "уставший", "responsibilities": "обязанности",
+    "peaceful": "мирный / спокойный", "storylines": "сюжетные линии", "exciting": "захватывающий",
+    "details": "детали", "attractive": "привлекательный", "lifestyle": "образ жизни",
+    "nomad": "кочевник", "community": "сообщество", "beaches": "пляжи",
+    "wonderful": "прекрасные / чудесные", "weekends": "выходные", "team": "команда",
+    "product": "продукт / продуктовый", "designers": "дизайнеры", "work": "работать / работа",
+    "user": "пользователь", "interface": "интерфейс", "project": "проект",
+    "friends": "друзья", "boy": "мальчик", "girl": "девочка", "creative": "творческий",
+    "living": "живущие", "working": "работающие", "bali": "Бали", "brush": "чистить",
+    "morning": "утро", "sleep": "сон / спать", "hurt": "болеть", "walking": "ходьба",
+    "kilometers": "километры", "city": "город", "cat": "кошка", "loves": "любит",
+    "chasing": "гоняться", "mountains": "горы", "saw": "видел", "white": "белый",
+    "thousands": "тысячи", "colorful": "красочные", "coral": "коралловый", "reef": "риф",
+    "sharp": "острый", "cooking": "готовка", "wooden": "деревянный", "wall": "стена",
+    "books": "книги", "equipment": "оборудование", "palm": "пальма", "everywhere": "повсюду",
+    "cut": "резать", "pizza": "пицца", "equal": "равный", "security": "безопасность",
+    "camera": "камера", "recorded": "записала", "night": "ночь", "flock": "стая",
+    "wild": "дикий", "flew": "летел", "sky": "небо", "watched": "смотрел",
+    "detective": "детективный", "commercial": "коммерческий", "landed": "приземлился",
+    "airport": "аэропорт", "farmers": "фермеры", "traditional": "традиционный",
+    "villages": "деревни", "still": "до сих пор", "businesses": "бизнесы",
+    "navigate": "преодолевать", "global": "мировой", "economic": "экономический"
   };
 
   const cache = {};
@@ -103,7 +117,7 @@
     return str.toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
   }
 
-  // Speak using native Web Speech API
+  // Native Web Speech API
   function speakText(text) {
     if ("speechSynthesis" in window) {
       window.speechSynthesis.cancel();
@@ -114,7 +128,7 @@
     }
   }
 
-  // Fetch translation: first dictionary, then online Google GTX API
+  // Translation: Dictionary first, Google GTX API second
   async function getTranslation(rawText) {
     const clean = normalize(rawText);
     if (!clean) return "";
@@ -137,7 +151,7 @@
     return DICT[clean] || "Перевод недоступен";
   }
 
-  // Create or get Floating Popup
+  // Floating Popup element
   let popup = null;
   function ensurePopup() {
     if (popup) return popup;
@@ -156,7 +170,7 @@
       </div>
       <div class="tr-p-trans" id="tr-trans-text">Перевод...</div>
       <div class="tr-p-hint">
-        <span>💡 Кликни на слово или выдели фразу мышкой/пальцем</span>
+        <span>💡 Кликни на любое слово или выдели фразу мышкой/пальцем</span>
         <span id="tr-status-tag">English → Русский</span>
       </div>
     `;
@@ -217,17 +231,31 @@
     clearActive();
   }
 
-  // Tokenize text into interactive words
-  function tokenizeElement(el) {
-    if (!el || el.dataset.trTokenized) return;
-    el.dataset.trTokenized = "true";
+  // Tokenize ALL text nodes in a given root container
+  function tokenizeAllText(root) {
+    if (!root) return;
 
-    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
     const textNodes = [];
+    const walker = document.createTreeWalker(
+      root,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode: function(node) {
+          if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+          const parent = node.parentElement;
+          if (!parent) return NodeFilter.FILTER_REJECT;
+          const tag = parent.tagName.toLowerCase();
+          if (tag === 'script' || tag === 'style' || tag === 'button') return NodeFilter.FILTER_REJECT;
+          if (parent.closest('#tr-popup') || parent.closest('.tr-controls') || parent.closest('.top-nav')) return NodeFilter.FILTER_REJECT;
+          if (parent.classList.contains('tr-w')) return NodeFilter.FILTER_REJECT;
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      },
+      false
+    );
+
     while (walker.nextNode()) {
-      if (walker.currentNode.nodeValue.trim()) {
-        textNodes.push(walker.currentNode);
-      }
+      textNodes.push(walker.currentNode);
     }
 
     textNodes.forEach(node => {
@@ -250,22 +278,19 @@
     });
   }
 
-  // Add Russian subtitle to each sentence card
+  // Add Russian subtitle to sentence elements
   function addSentenceSubtitles() {
-    const cards = document.querySelectorAll(".card, .blk");
-    cards.forEach(card => {
-      const sentEl = card.querySelector(".sent");
-      if (!sentEl) return;
-
-      const cleanText = sentEl.textContent.replace(/^Sentence:\s*/i, "").trim();
+    const items = document.querySelectorAll(".sent, .qa-a");
+    items.forEach(el => {
+      const cleanText = el.textContent.replace(/^(Sentence|Model|Eliza|Denis):?\s*/i, "").trim();
       const norm = normalize(cleanText);
       const ru = DICT[norm];
 
-      if (ru && !card.querySelector(".tr-ru-sub")) {
+      if (ru && !el.parentNode.querySelector(".tr-ru-sub")) {
         const sub = document.createElement("div");
         sub.className = "tr-ru-sub hidden";
         sub.innerHTML = `<b>Перевод:</b> ${ru}`;
-        sentEl.parentNode.insertBefore(sub, sentEl.nextSibling);
+        el.parentNode.insertBefore(sub, el.nextSibling);
       }
     });
   }
@@ -274,15 +299,15 @@
   let lastClickedSpan = null;
 
   function initInteraction() {
-    // 1. Tokenize relevant content
-    document.querySelectorAll(".sent, .pair, .hello p, .blk p, .card, .fix .line").forEach(tokenizeElement);
+    const wrap = document.querySelector(".wrap") || document.body;
+    tokenizeAllText(wrap);
     addSentenceSubtitles();
 
-    // 2. Click on a word
+    // Word Click Listener
     document.addEventListener("click", (e) => {
       const target = e.target.closest(".tr-w");
       if (!target) {
-        if (!e.target.closest("#tr-popup") && !e.target.closest(".tr-controls")) {
+        if (!e.target.closest("#tr-popup") && !e.target.closest(".tr-controls") && !e.target.closest(".tr-btn-inst")) {
           if (!window.getSelection().toString().trim()) {
             hidePopup();
           }
@@ -290,7 +315,7 @@
         return;
       }
 
-      // Handle Shift+Click for range of words
+      // Shift+Click for range of words in same block
       if (e.shiftKey && lastClickedSpan && lastClickedSpan.parentNode === target.parentNode) {
         const parent = target.parentNode;
         const words = Array.from(parent.querySelectorAll(".tr-w"));
@@ -309,7 +334,7 @@
       showTranslation(word, [target]);
     });
 
-    // 3. Selection change (user highlights multiple words with mouse or finger)
+    // Phrase / Multi-word selection listener
     let selTimer = null;
     document.addEventListener("mouseup", () => {
       clearTimeout(selTimer);
@@ -322,17 +347,17 @@
       }, 180);
     });
 
-    // 4. Add global translation controls to top of page
+    // Global Header Controls
     const header = document.querySelector("header");
-    if (header) {
+    if (header && !document.querySelector(".tr-controls")) {
       const controls = document.createElement("div");
       controls.className = "tr-controls";
       controls.innerHTML = `
         <button class="tr-btn" id="tr-toggle-all-btn">
-          <span>🇷🇺</span> <span>Показать перевод всех предложений</span>
+          <span>🇷🇺</span> <span>Показать перевод предложений</span>
         </button>
         <button class="tr-btn" id="tr-help-btn" style="color:var(--ink-faint)">
-          <span>💡</span> <span>Как переводить слова и фразы?</span>
+          <span>💡</span> <span>Как переводить любое слово и текст?</span>
         </button>
       `;
       header.parentNode.insertBefore(controls, header.nextSibling);
@@ -347,17 +372,17 @@
         toggleBtn.classList.toggle("active", allShown);
         toggleBtn.innerHTML = allShown
           ? `<span>🇷🇺</span> <span>Скрыть переводы предложений</span>`
-          : `<span>🇷🇺</span> <span>Показать перевод всех предложений</span>`;
+          : `<span>🇷🇺</span> <span>Показать перевод предложений</span>`;
       });
 
       const helpBtn = document.getElementById("tr-help-btn");
       helpBtn.addEventListener("click", () => {
         alert(
-          "Как пользоваться интерактивным переводом:\n\n" +
-          "1. Одиночный клик: нажми на любое слово, чтобы мгновенно увидеть перевод и прослушать произношение 🔊.\n" +
-          "2. Перевод фразы или группы слов: выдели мышкой или пальцем любые несколько слов подряд — внизу сразу появится перевод всей фразы!\n" +
-          "3. Shift + клик: нажми первое слово, затем зажми Shift и нажми второе слово — переведётся весь фрагмент между ними.\n" +
-          "4. Кнопка «Показать перевод всех предложений» раскроет русский перевод под каждым примером."
+          "Интерактивный переводчик на странице:\n\n" +
+          "1. ЛЮБОЕ СЛОВО КЛИКАБЕЛЬНО: нажми на любое слово (в предложениях, заголовках, описаниях заданий или правилах) — снизу сразу появится перевод и озвучка 🔊!\n\n" +
+          "2. ПЕРЕВОД ФРАЗ И ЗАДАНИЙ: просто выдели мышкой (или пальцем на телефоне) любой текст или фразу — мгновенно покажется перевод всего фрагмента.\n\n" +
+          "3. SHIFT + КЛИК: кликни на первое слово, затем зажми Shift и кликни на последнее слово — переведется весь диапазон.\n\n" +
+          "4. КНОПКА «Показать перевод предложений»: открывает русские подстрочники."
         );
       });
     }
