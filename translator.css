@@ -1,0 +1,162 @@
+/* translator.css — interactive word & phrase translation */
+.tr-w {
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.15s ease, color 0.15s ease;
+  padding: 1px 2px;
+  margin: -1px -2px;
+  display: inline;
+}
+.tr-w:hover {
+  background: var(--go-wash);
+  color: var(--go);
+}
+.tr-w.tr-active {
+  background: var(--go);
+  color: #fff !important;
+  border-radius: 3px;
+}
+.tr-w.tr-active * {
+  color: #fff !important;
+}
+
+/* Russian translation row under sentences */
+.tr-ru-sub {
+  display: block;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-top: 5px;
+  font-style: italic;
+  font-family: var(--serif);
+  line-height: 1.4;
+  border-left: 2px solid var(--go);
+  padding-left: 8px;
+  transition: all 0.2s ease;
+}
+.tr-ru-sub.hidden {
+  display: none;
+}
+
+/* Global translation toggle button */
+.tr-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0 24px;
+  flex-wrap: wrap;
+}
+.tr-btn {
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 6px 14px;
+  border: 1px solid var(--rule);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+.tr-btn:hover {
+  background: var(--sunk);
+  border-color: var(--ink-faint);
+}
+.tr-btn.active {
+  background: var(--go-wash);
+  border-color: var(--go);
+  color: var(--go);
+  font-weight: 600;
+}
+
+/* Floating translation bar at the bottom */
+#tr-popup {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  width: min(640px, calc(100% - 32px));
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--go);
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+  z-index: 10000;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+#tr-popup.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.tr-p-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--rule-soft);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.tr-p-orig {
+  font-family: var(--mono);
+  font-size: 15px;
+  color: var(--ink);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tr-p-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.tr-icon-btn {
+  background: var(--sunk);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 13px;
+  color: var(--ink);
+  line-height: 1;
+  transition: background 0.15s ease;
+}
+.tr-icon-btn:hover {
+  background: var(--go-wash);
+  color: var(--go);
+}
+.tr-p-trans {
+  font-size: 16px;
+  color: var(--go);
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 0;
+}
+.tr-p-hint {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  #tr-popup {
+    bottom: 12px;
+    width: calc(100% - 20px);
+    padding: 12px 14px;
+  }
+  .tr-p-orig { font-size: 14px; }
+  .tr-p-trans { font-size: 15px; }
+}
