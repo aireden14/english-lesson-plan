@@ -1,18 +1,17 @@
-// engine.js — Apple-grade Tinder Spaced Repetition Engine for Denis
+// engine.js — Движок карточек в стиле GamePass (Chitopus / BurpiOpus)
 (function () {
   const STORAGE_KEY = "english_tinder_trainer_v1";
 
-  // State
   let state = {
     activeTopic: "all",
     queue: [],
     currentIndex: 0,
     isRevealed: false,
     streak: 0,
-    history: [] // [{ cardId, topic, isCorrect, timestamp }]
+    history: []
   };
 
-  // --- Sound & Haptics (Chitopus-inspired Web Audio synthesis) ---
+  // --- Звуки действий (Chitopus sound engine) ---
   let audioCtx = null;
   function getAudioCtx() {
     if (!audioCtx && typeof window !== "undefined") {
@@ -50,24 +49,24 @@
         osc.stop(now + 0.03);
       } else if (type === "reveal") {
         osc.type = "sine";
-        osc.frequency.setValueAtTime(420, now);
-        osc.frequency.exponentialRampToValueAtTime(640, now + 0.08);
+        osc.frequency.setValueAtTime(440, now);
+        osc.frequency.exponentialRampToValueAtTime(660, now + 0.08);
         gain.gain.setValueAtTime(0.05, now);
         gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
         osc.start(now);
         osc.stop(now + 0.08);
       } else if (type === "success") {
         osc.type = "sine";
-        osc.frequency.setValueAtTime(587.33, now); // D5
-        osc.frequency.setValueAtTime(880, now + 0.06); // A5
-        gain.gain.setValueAtTime(0.07, now);
+        osc.frequency.setValueAtTime(587.33, now);
+        osc.frequency.setValueAtTime(880, now + 0.06);
+        gain.gain.setValueAtTime(0.06, now);
         gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
         osc.start(now);
         osc.stop(now + 0.18);
       } else if (type === "wrong") {
         osc.type = "triangle";
-        osc.frequency.setValueAtTime(240, now);
-        osc.frequency.exponentialRampToValueAtTime(160, now + 0.09);
+        osc.frequency.setValueAtTime(220, now);
+        osc.frequency.exponentialRampToValueAtTime(140, now + 0.09);
         gain.gain.setValueAtTime(0.07, now);
         gain.gain.exponentialRampToValueAtTime(0.001, now + 0.09);
         osc.start(now);
@@ -75,7 +74,7 @@
       }
     } catch (e) {}
 
-    // Haptic pulse if supported
+    // Виброотклик
     if (typeof navigator !== "undefined" && navigator.vibrate) {
       if (type === "success") navigator.vibrate(15);
       else if (type === "wrong") navigator.vibrate([25, 40, 25]);
@@ -83,7 +82,7 @@
     }
   }
 
-  // --- Persistence ---
+  // --- Хранилище ---
   function loadState() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -93,7 +92,7 @@
         if (parsed.streak) state.streak = parsed.streak;
       }
     } catch (e) {
-      console.warn("Could not load trainer state:", e);
+      console.warn("Error loading state:", e);
     }
   }
 
@@ -107,7 +106,7 @@
         })
       );
     } catch (e) {
-      console.warn("Could not save trainer state:", e);
+      console.warn("Error saving state:", e);
     }
   }
 
@@ -144,7 +143,6 @@
       filtered = allCards.filter(c => c.topic === topicFilter);
     }
 
-    // Adaptive Sort: failed cards surface first
     filtered.sort((a, b) => {
       const wa = (cardStats[a.id]?.wrong || 0) - (cardStats[a.id]?.correct || 0);
       const wb = (cardStats[b.id]?.wrong || 0) - (cardStats[b.id]?.correct || 0);
@@ -156,51 +154,40 @@
     state.isRevealed = false;
   }
 
-  // --- UI Elements & Events ---
-  let arenaEl, streakEl, progressFillEl, statsModalEl;
+  // --- UI ---
+  let arenaEl, streakNumEl, progressBarEl, statsSheetEl;
 
   function initUI() {
     arenaEl = document.getElementById("card-arena");
-    streakEl = document.getElementById("streak-counter");
-    progressFillEl = document.getElementById("progress-fill");
-    statsModalEl = document.getElementById("stats-modal");
+    streakNumEl = document.getElementById("streak-num");
+    progressBarEl = document.getElementById("progress-bar");
+    statsSheetEl = document.getElementById("stats-sheet");
 
-    // Dock Buttons
-    const btnWrong = document.getElementById("btn-wrong");
-    const btnReveal = document.getElementById("btn-reveal");
-    const btnRight = document.getElementById("btn-right");
-
-    btnWrong.addEventListener("click", () => handleAnswer(false));
-    btnRight.addEventListener("click", () => handleAnswer(true));
-    btnReveal.addEventListener("click", () => {
+    document.getElementById("btn-wrong").addEventListener("click", () => handleAnswer(false));
+    document.getElementById("btn-right").addEventListener("click", () => handleAnswer(true));
+    document.getElementById("btn-reveal").addEventListener("click", () => {
       playSound("reveal");
       toggleReveal();
     });
 
-    // Topic filter chips
-    document.querySelectorAll(".filter-chip").forEach(chip => {
+    document.querySelectorAll(".set-chip").forEach(chip => {
       chip.addEventListener("click", () => {
         playSound("tap");
-        document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
-        chip.classList.add("active");
+        document.querySelectorAll(".set-chip").forEach(c => c.classList.remove("is-current"));
+        chip.classList.add("is-current");
         buildQueue(chip.dataset.topic);
         renderCurrentCards();
       });
     });
 
-    // Stats modal
     document.getElementById("open-stats-btn").addEventListener("click", () => {
       playSound("tap");
-      openStatsModal();
+      openStatsSheet();
     });
-    document.getElementById("close-stats-btn").addEventListener("click", () => {
-      playSound("tap");
-      closeStatsModal();
-    });
-    statsModalEl.addEventListener("click", (e) => {
-      if (e.target === statsModalEl) {
+    statsSheetEl.addEventListener("click", (e) => {
+      if (e.target === statsSheetEl || e.target.classList.contains("sheet-grip")) {
         playSound("tap");
-        closeStatsModal();
+        closeStatsSheet();
       }
     });
 
@@ -213,9 +200,8 @@
       resetProgress();
     });
 
-    // Keyboard controls
     document.addEventListener("keydown", (e) => {
-      if (statsModalEl.classList.contains("open")) return;
+      if (statsSheetEl.classList.contains("open")) return;
       if (e.key === "ArrowLeft" || e.key === "1") {
         handleAnswer(false);
       } else if (e.key === "ArrowRight" || e.key === "2") {
@@ -252,17 +238,15 @@
     topCard.classList.add("card-current");
     arenaEl.appendChild(topCard);
 
-    // Tokenize text for instant tap-to-translate
     if (window.DenisTranslator && typeof window.DenisTranslator.tokenizeAllText === "function") {
       window.DenisTranslator.tokenizeAllText(topCard);
     }
 
     setupDrag(topCard);
 
-    // Update Dock Reveal Button label
-    const btnReveal = document.getElementById("btn-reveal");
-    if (btnReveal) {
-      btnReveal.querySelector(".sublabel").textContent = state.isRevealed ? "Скрыть" : "Нажми";
+    const revealLabel = document.getElementById("reveal-btn-label");
+    if (revealLabel) {
+      revealLabel.textContent = state.isRevealed ? "Скрыть" : "👁️ Ответ";
     }
   }
 
@@ -274,38 +258,39 @@
     const total = state.queue.length;
     const currentNum = index + 1;
 
+    // Слот пропуска подсвечивается акцентным цветом
+    const formattedSentence = escapeHtml(data.front).replace(/___/g, `<span class="slot">___</span>`);
+
     card.innerHTML = `
       <div class="stamp-badge stamp-right">ЗНАЮ ✓</div>
-      <div class="stamp-badge stamp-left">ОШИБКА ✕</div>
+      <div class="stamp-badge stamp-left">НЕ ЗНАЛ ✕</div>
 
-      <div class="card-header">
-        <span class="card-topic-tag">${escapeHtml(data.topicTitle)}</span>
-        <span class="card-index">${currentNum} / ${total}</span>
+      <div class="card-title-row">
+        <h3 class="card-title">${escapeHtml(data.topicTitle)}</h3>
+        <span class="card-counter">${currentNum} / ${total}</span>
       </div>
 
       <div class="card-body">
-        <div class="card-prompt">Задание</div>
-        <div class="card-sentence">${escapeHtml(data.front)}</div>
-        <div class="card-hint">💡 ${escapeHtml(data.hint)}</div>
+        <div class="card-sentence">${formattedSentence}</div>
+        <div class="hint-caption">💡 ${escapeHtml(data.hint)}</div>
 
-        <div class="card-reveal-hint" id="card-tap-hint">
-          <span>👆 Тапни по карточке, чтобы открыть ответ</span>
+        <div class="card-tap-cue" id="card-tap-cue">
+          <span>👆 Нажми карточку для ответа</span>
         </div>
 
-        <div class="answer-section ${isTop && state.isRevealed ? "revealed" : ""}">
-          <div class="correct-line">${formatCorrectAnswer(data.answer, data.keyPart)}</div>
+        <div class="answer-panel ${isTop && state.isRevealed ? "revealed" : ""}">
+          <div class="correct-phrase">${formatCorrectAnswer(data.answer, data.keyPart)}</div>
           <div class="answer-translation">🇷🇺 ${escapeHtml(data.translation)}</div>
 
-          <div class="breakdown-box">
-            ${data.breakdown.steps.map(s => `<div class="step-item"><span style="color:var(--accent-cyan)">•</span> ${escapeHtml(s)}</div>`).join("")}
-            ${data.breakdown.trap ? `<div class="trap-alert">⚠️ ${escapeHtml(data.breakdown.trap)}</div>` : ""}
-            ${data.breakdown.rule ? `<div class="rule-pill">📌 ${escapeHtml(data.breakdown.rule)}</div>` : ""}
+          <div class="breakdown-strip">
+            ${data.breakdown.steps.map(s => `<div class="breakdown-item">• ${escapeHtml(s)}</div>`).join("")}
+            ${data.breakdown.trap ? `<div class="breakdown-trap">⚠️ ${escapeHtml(data.breakdown.trap)}</div>` : ""}
+            ${data.breakdown.rule ? `<div class="breakdown-rule">📌 ${escapeHtml(data.breakdown.rule)}</div>` : ""}
           </div>
         </div>
       </div>
     `;
 
-    // Click on card body to reveal (unless clicking an interactive word)
     card.addEventListener("click", (e) => {
       if (e.target.closest(".tr-w") || e.target.closest("button") || e.target.closest("#tr-popup")) {
         return;
@@ -320,7 +305,7 @@
   function formatCorrectAnswer(fullAnswer, keyPart) {
     if (!keyPart) return escapeHtml(fullAnswer);
     const regex = new RegExp(`(${keyPart})`, "i");
-    return fullAnswer.replace(regex, `<span class="highlight">$1</span>`);
+    return fullAnswer.replace(regex, `<span class="target-highlight">$1</span>`);
   }
 
   function toggleReveal() {
@@ -328,19 +313,15 @@
     const topCard = arenaEl.querySelector(".card-current");
     if (!topCard) return;
 
-    const answerSection = topCard.querySelector(".answer-section");
-    const tapHint = topCard.querySelector("#card-tap-hint");
+    const answerPanel = topCard.querySelector(".answer-panel");
+    const tapCue = topCard.querySelector("#card-tap-cue");
 
-    if (answerSection) {
-      answerSection.classList.toggle("revealed", state.isRevealed);
-    }
-    if (tapHint) {
-      tapHint.style.display = state.isRevealed ? "none" : "flex";
-    }
+    if (answerPanel) answerPanel.classList.toggle("revealed", state.isRevealed);
+    if (tapCue) tapCue.style.display = state.isRevealed ? "none" : "flex";
 
-    const btnReveal = document.getElementById("btn-reveal");
-    if (btnReveal) {
-      btnReveal.querySelector(".sublabel").textContent = state.isRevealed ? "Скрыть" : "Нажми";
+    const revealLabel = document.getElementById("reveal-btn-label");
+    if (revealLabel) {
+      revealLabel.textContent = state.isRevealed ? "Скрыть" : "👁️ Ответ";
     }
   }
 
@@ -363,7 +344,6 @@
       state.streak++;
     } else {
       state.streak = 0;
-      // Adaptive repeat: reinsert 2-3 cards later
       const reinsertIndex = Math.min(state.queue.length, state.currentIndex + 3);
       state.queue.splice(reinsertIndex, 0, cardData);
     }
@@ -371,9 +351,9 @@
     saveState();
 
     if (topCard) {
-      topCard.style.transition = "transform 0.32s var(--ease-apple), opacity 0.28s ease";
-      const exitX = isCorrect ? window.innerWidth * 1.3 : -window.innerWidth * 1.3;
-      const rotate = isCorrect ? 24 : -24;
+      topCard.style.transition = "transform 260ms var(--ease), opacity 220ms ease";
+      const exitX = isCorrect ? window.innerWidth * 1.25 : -window.innerWidth * 1.25;
+      const rotate = isCorrect ? 20 : -20;
       topCard.style.transform = `translateX(${exitX}px) rotate(${rotate}deg)`;
       topCard.style.opacity = "0";
 
@@ -385,7 +365,7 @@
       state.currentIndex++;
       state.isRevealed = false;
       renderCurrentCards();
-    }, 220);
+    }, 200);
   }
 
   function setupDrag(card) {
@@ -416,14 +396,14 @@
       currentX = e.clientX - startX;
       currentY = e.clientY - startY;
 
-      const rotate = currentX * 0.07;
-      card.style.transform = `translateX(${currentX}px) translateY(${currentY * 0.22}px) rotate(${rotate}deg)`;
+      const rotate = currentX * 0.06;
+      card.style.transform = `translateX(${currentX}px) translateY(${currentY * 0.2}px) rotate(${rotate}deg)`;
 
       if (currentX > 20) {
-        stampRight.style.opacity = Math.min(1, (currentX - 20) / 70);
+        stampRight.style.opacity = Math.min(1, (currentX - 20) / 60);
         stampLeft.style.opacity = 0;
       } else if (currentX < -20) {
-        stampLeft.style.opacity = Math.min(1, (-currentX - 20) / 70);
+        stampLeft.style.opacity = Math.min(1, (-currentX - 20) / 60);
         stampRight.style.opacity = 0;
       } else {
         stampRight.style.opacity = 0;
@@ -436,13 +416,13 @@
       isDragging = false;
       try { card.releasePointerCapture(e.pointerId); } catch (err) {}
 
-      const threshold = window.innerWidth * 0.26;
+      const threshold = window.innerWidth * 0.25;
       if (currentX > threshold) {
         handleAnswer(true);
       } else if (currentX < -threshold) {
         handleAnswer(false);
       } else {
-        card.style.transition = "transform 0.28s var(--ease-spring)";
+        card.style.transition = "transform 260ms var(--ease)";
         card.style.transform = "translateX(0px) translateY(0px) rotate(0deg)";
         stampRight.style.opacity = 0;
         stampLeft.style.opacity = 0;
@@ -456,24 +436,24 @@
   }
 
   function updateHeaderStats() {
-    if (streakEl) streakEl.textContent = `🔥 ${state.streak}`;
-    if (progressFillEl) {
+    if (streakNumEl) streakNumEl.textContent = state.streak;
+    if (progressBarEl) {
       const total = state.queue.length || 1;
       const pct = Math.min(100, Math.round((state.currentIndex / total) * 100));
-      progressFillEl.style.width = `${pct}%`;
+      progressBarEl.style.width = `${pct}%`;
     }
   }
 
   function renderEmptyState() {
     arenaEl.innerHTML = `
-      <div class="deck-empty-state">
-        <div class="deck-empty-icon">✨</div>
-        <div class="deck-empty-title">Колода завершена!</div>
-        <div class="deck-empty-desc">
-          Отличная серия! Все запланированные карточки отработаны.
-        </div>
-        <button class="export-btn" id="restart-deck-btn" style="max-width:240px">
-          🔄 Начать заново
+      <div class="finish-wrap">
+        <div class="finish-icon">✨</div>
+        <h2 class="finish-title">Колода пройдена!</h2>
+        <p class="finish-desc">
+          Все карточки отработаны. Ошибки были повторены интервальным алгоритмом.
+        </p>
+        <button class="btn btn-primary" id="restart-deck-btn" style="min-width:200px;margin-top:8px">
+          Начать заново
         </button>
       </div>
     `;
@@ -485,13 +465,13 @@
     });
   }
 
-  function openStatsModal() {
+  function openStatsSheet() {
     renderStatsContent();
-    statsModalEl.classList.add("open");
+    statsSheetEl.classList.add("open");
   }
 
-  function closeStatsModal() {
-    statsModalEl.classList.remove("open");
+  function closeStatsSheet() {
+    statsSheetEl.classList.remove("open");
   }
 
   function renderStatsContent() {
@@ -516,14 +496,14 @@
       topicsContainer.innerHTML = Object.entries(topicStats).map(([topic, s]) => {
         const sum = s.c + s.w;
         const pct = sum > 0 ? Math.round((s.c / sum) * 100) : 0;
-        const color = pct >= 80 ? "var(--accent-emerald)" : pct >= 50 ? "var(--accent-amber)" : "var(--accent-ruby)";
+        const color = pct >= 80 ? "var(--color-success)" : pct >= 50 ? "var(--accent-1)" : "var(--color-danger)";
         return `
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--hairline-soft);font-family:var(--font-mono);font-size:12.5px">
-            <span style="color:var(--text)">${escapeHtml(topic)}</span>
-            <span style="color:${color};font-weight:700">${pct}% (${s.c}/${sum})</span>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--hairline-soft);font-size:13.5px">
+            <span style="color:var(--text);font-weight:550">${escapeHtml(topic)}</span>
+            <span style="color:${color};font-weight:700;font-variant-numeric:tabular-nums">${pct}% (${s.c}/${sum})</span>
           </div>
         `;
-      }).join("") || `<div style="color:var(--text-3);padding:12px 0;font-size:13px">Пока нет истории ответов</div>`;
+      }).join("") || `<div style="color:var(--text-3);padding:10px 0;font-size:13.5px">Пока нет истории ответов</div>`;
     }
   }
 

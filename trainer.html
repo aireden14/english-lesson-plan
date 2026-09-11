@@ -1,109 +1,111 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>English Tinder Trainer — Денис</title>
-  <meta name="description" content="Мобильный тренажер английского в формате Tinder со свайпами и разбором ошибок.">
-  <link rel="stylesheet" href="translator.css">
-  <link rel="stylesheet" href="trainer.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="Tinder-тренажёр английского языка для Дениса в дизайн-системе GamePass." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>English Cards — GamePass</title>
+  <link rel="stylesheet" href="translator.css" />
+  <link rel="stylesheet" href="trainer.css" />
 </head>
 <body>
-  <!-- Ambient Aurora Glow -->
-  <div class="aurora-bg"></div>
+  <div class="aurora" aria-hidden="true"></div>
 
-  <div class="app-container">
-    <!-- Header -->
-    <header class="app-header">
-      <div class="header-left">
-        <a href="index.html" class="back-link">
-          <span>←</span> <span>План</span>
-        </a>
-        <span class="streak-badge" id="streak-counter">🔥 0</span>
-      </div>
-      <div class="header-right">
-        <button class="icon-btn" id="open-stats-btn">📊 Аналитика</button>
+  <div id="app">
+    <!-- Шапка -->
+    <header class="head">
+      <div class="head-top">
+        <a href="index.html" class="exit-bar">‹ План</a>
+        <div class="pill-row">
+          <div class="pill is-hot" id="streak-pill" title="Серия верных ответов">
+            <span class="pill-num" id="streak-num">0</span>
+            <span>🔥</span>
+          </div>
+          <button class="pill" id="open-stats-btn">📊 Аналитика</button>
+        </div>
       </div>
     </header>
 
-    <!-- Filters / Topics -->
-    <div class="filters-bar">
-      <button class="filter-chip active" data-topic="all">Все карточки</button>
-      <button class="filter-chip chip-errors" data-topic="errors">🔥 Мои ошибки</button>
-      <button class="filter-chip" data-topic="this-that">This / That</button>
-      <button class="filter-chip" data-topic="to-be">am / is / are</button>
-      <button class="filter-chip" data-topic="do-does">do / does</button>
-      <button class="filter-chip" data-topic="verbs-s">Окончание -s</button>
-      <button class="filter-chip" data-topic="articles-plurals">Артикли / Мн. ч.</button>
-      <button class="filter-chip" data-topic="eliza-rules">Правила Элизы</button>
+    <!-- Горизонтальная лента тем (в стиле Chitopus sets-strip) -->
+    <nav class="sets-strip" id="topic-filters" aria-label="Темы">
+      <button class="set-chip is-current" data-topic="all">Все карточки</button>
+      <button class="set-chip is-danger" data-topic="errors">🔥 Ошибки</button>
+      <button class="set-chip" data-topic="this-that">This / That</button>
+      <button class="set-chip" data-topic="to-be">am / is / are</button>
+      <button class="set-chip" data-topic="do-does">do / does</button>
+      <button class="set-chip" data-topic="verbs-s">-s у глаголов</button>
+      <button class="set-chip" data-topic="articles-plurals">Артикли / Мн. ч.</button>
+      <button class="set-chip" data-topic="eliza-rules">Правила Элизы</button>
+    </nav>
+
+    <!-- Линия прогресса -->
+    <div class="progress-line">
+      <div class="progress-bar" id="progress-bar"></div>
     </div>
 
-    <!-- Progress line -->
-    <div class="progress-container">
-      <div class="progress-fill" id="progress-fill"></div>
-    </div>
-
-    <!-- Card Arena -->
+    <!-- Арена карточек -->
     <main class="card-arena" id="card-arena">
-      <!-- Injected dynamically by engine.js -->
+      <!-- Наполняется из engine.js -->
     </main>
 
-    <!-- Action Floating Dock -->
-    <footer class="action-dock">
-      <button class="btn-circle btn-wrong" id="btn-wrong" title="Свайп влево (1 / ←)">
+    <!-- Нижняя панель действий (BurpiOpus / Chitopus) -->
+    <footer class="actions-row">
+      <button class="btn btn-ghost is-danger" id="btn-wrong" title="Свайп влево (1 / ←)">
         <span>✕</span>
-        <span class="sublabel">Ошибся</span>
+        <span>Не знал</span>
       </button>
 
-      <button class="btn-reveal-pill" id="btn-reveal" title="Показать ответ (Пробел / Тап)">
-        <span style="font-size: 16px">👁️ Ответ</span>
-        <span class="sublabel">Нажми</span>
+      <button class="btn btn-ghost" id="btn-reveal" title="Показать ответ (Пробел / Тап)">
+        <span id="reveal-btn-label">👁️ Ответ</span>
       </button>
 
-      <button class="btn-circle btn-right" id="btn-right" title="Свайп вправо (2 / →)">
+      <button class="btn btn-primary" id="btn-right" title="Свайп вправо (2 / →)">
         <span>✓</span>
-        <span class="sublabel">Знаю</span>
+        <span>Знаю</span>
       </button>
     </footer>
   </div>
 
-  <!-- Stats & AI Export Modal -->
-  <div class="modal-overlay" id="stats-modal">
-    <div class="modal-sheet">
-      <div class="modal-header">
-        <h3 class="modal-title">📊 Твоя статистика</h3>
-        <button class="close-modal-btn" id="close-stats-btn">✕</button>
+  <!-- Нижний лист со статистикой (Chitopus .sheet) -->
+  <div class="sheet-backdrop" id="stats-sheet" aria-hidden="true">
+    <div class="sheet" role="dialog" aria-modal="true">
+      <div class="sheet-grip"></div>
+      <h2 class="sheet-title">Дневник тренировки</h2>
+      <p class="sheet-sub">Статистика ответов и интервального повторения</p>
+
+      <div class="stat-strip">
+        <div class="stat-card">
+          <div class="stat-label">Всего ответов</div>
+          <div class="stat-value" id="stat-total-reviews">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Точность</div>
+          <div class="stat-value" id="stat-accuracy" style="color:var(--accent-1)">0%</div>
+        </div>
       </div>
 
-      <div class="stats-grid">
-        <div class="stat-box">
-          <span class="label">Всего ответов</span>
-          <span class="value" id="stat-total-reviews">0</span>
-        </div>
-        <div class="stat-box">
-          <span class="label">Точность</span>
-          <span class="value" id="stat-accuracy" style="color:var(--accent-emerald)">0%</span>
-        </div>
-      </div>
-
-      <div style="margin-bottom: 20px">
-        <div style="font-family:var(--font-mono);font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px">Точность по темам:</div>
+      <div style="margin-bottom: 24px">
+        <div class="stat-label" style="margin-bottom: 10px">Результаты по темам:</div>
         <div id="topics-accuracy-list"></div>
       </div>
 
-      <button class="export-btn" id="export-ai-btn">
-        📋 Скопировать отчёт для Claude / Gemini
-      </button>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <button class="btn btn-primary" id="export-ai-btn">
+          📋 Скопировать отчёт для Claude / Gemini
+        </button>
 
-      <button class="reset-btn" id="reset-btn">
-        Сбросить историю ответов
-      </button>
+        <button class="btn btn-ghost is-danger" id="reset-btn">
+          Сбросить историю ответов
+        </button>
+      </div>
     </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- Скрипты -->
   <script src="translator.js"></script>
   <script src="cards-data.js"></script>
   <script src="engine.js"></script>
