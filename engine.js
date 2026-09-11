@@ -1,4 +1,4 @@
-// engine.js — Tinder Cards Spaced Repetition Engine for Denis
+// engine.js — Apple-grade Tinder Spaced Repetition Engine for Denis
 (function () {
   const STORAGE_KEY = "english_tinder_trainer_v1";
 
@@ -12,7 +12,78 @@
     history: [] // [{ cardId, topic, isCorrect, timestamp }]
   };
 
-  // Load state from localStorage
+  // --- Sound & Haptics (Chitopus-inspired Web Audio synthesis) ---
+  let audioCtx = null;
+  function getAudioCtx() {
+    if (!audioCtx && typeof window !== "undefined") {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (AudioContext) {
+        audioCtx = new AudioContext();
+        if (navigator.audioSession) {
+          try { navigator.audioSession.type = "ambient"; } catch (e) {}
+        }
+      }
+    }
+    if (audioCtx && audioCtx.state === "suspended") {
+      audioCtx.resume();
+    }
+    return audioCtx;
+  }
+
+  function playSound(type) {
+    try {
+      const ctx = getAudioCtx();
+      if (!ctx) return;
+      const now = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      if (type === "tap") {
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(800, now);
+        osc.frequency.exponentialRampToValueAtTime(400, now + 0.03);
+        gain.gain.setValueAtTime(0.04, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.03);
+        osc.start(now);
+        osc.stop(now + 0.03);
+      } else if (type === "reveal") {
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(420, now);
+        osc.frequency.exponentialRampToValueAtTime(640, now + 0.08);
+        gain.gain.setValueAtTime(0.05, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+        osc.start(now);
+        osc.stop(now + 0.08);
+      } else if (type === "success") {
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(587.33, now); // D5
+        osc.frequency.setValueAtTime(880, now + 0.06); // A5
+        gain.gain.setValueAtTime(0.07, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+        osc.start(now);
+        osc.stop(now + 0.18);
+      } else if (type === "wrong") {
+        osc.type = "triangle";
+        osc.frequency.setValueAtTime(240, now);
+        osc.frequency.exponentialRampToValueAtTime(160, now + 0.09);
+        gain.gain.setValueAtTime(0.07, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.09);
+        osc.start(now);
+        osc.stop(now + 0.09);
+      }
+    } catch (e) {}
+
+    // Haptic pulse if supported
+    if (typeof navigator !== "undefined" && navigator.vibrate) {
+      if (type === "success") navigator.vibrate(15);
+      else if (type === "wrong") navigator.vibrate([25, 40, 25]);
+      else navigator.vibrate(8);
+    }
+  }
+
+  // --- Persistence ---
   function loadState() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -40,7 +111,6 @@
     }
   }
 
-  // Calculate card error counts
   function getCardStats() {
     const stats = {};
     state.history.forEach(item => {
@@ -54,35 +124,31 @@
     return stats;
   }
 
-  // Build card queue based on filter
   function buildQueue(topicFilter = "all") {
     state.activeTopic = topicFilter;
     const allCards = window.ENGLISH_CARDS_DATA || [];
     const cardStats = getCardStats();
 
     let filtered = [];
-
     if (topicFilter === "all") {
       filtered = [...allCards];
     } else if (topicFilter === "errors") {
-      // Cards that had at least 1 mistake, or where last result was wrong
       filtered = allCards.filter(c => {
         const s = cardStats[c.id];
         return s && (s.wrong > 0 || s.lastResult === false);
       });
       if (filtered.length === 0) {
-        // Fallback if no errors yet
         filtered = [...allCards];
       }
     } else {
       filtered = allCards.filter(c => c.topic === topicFilter);
     }
 
-    // Adaptive Sort: cards with more errors appear earlier
+    // Adaptive Sort: failed cards surface first
     filtered.sort((a, b) => {
       const wa = (cardStats[a.id]?.wrong || 0) - (cardStats[a.id]?.correct || 0);
       const wb = (cardStats[b.id]?.wrong || 0) - (cardStats[b.id]?.correct || 0);
-      return wb - wa + (Math.random() * 0.4 - 0.2); // slight shuffle among equals
+      return wb - wa + (Math.random() * 0.3 - 0.15);
     });
 
     state.queue = filtered;
@@ -90,7 +156,7 @@
     state.isRevealed = false;
   }
 
-  // DOM Elements
+  // --- UI Elements & Events ---
   let arenaEl, streakEl, progressFillEl, statsModalEl;
 
   function initUI() {
@@ -99,18 +165,22 @@
     progressFillEl = document.getElementById("progress-fill");
     statsModalEl = document.getElementById("stats-modal");
 
-    // Action buttons
+    // Dock Buttons
     const btnWrong = document.getElementById("btn-wrong");
     const btnReveal = document.getElementById("btn-reveal");
     const btnRight = document.getElementById("btn-right");
 
     btnWrong.addEventListener("click", () => handleAnswer(false));
     btnRight.addEventListener("click", () => handleAnswer(true));
-    btnReveal.addEventListener("click", toggleReveal);
+    btnReveal.addEventListener("click", () => {
+      playSound("reveal");
+      toggleReveal();
+    });
 
     // Topic filter chips
     document.querySelectorAll(".filter-chip").forEach(chip => {
-      chip.addEventListener("click", (e) => {
+      chip.addEventListener("click", () => {
+        playSound("tap");
         document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
         chip.classList.add("active");
         buildQueue(chip.dataset.topic);
@@ -118,17 +188,32 @@
       });
     });
 
-    // Stats modal triggers
-    document.getElementById("open-stats-btn").addEventListener("click", openStatsModal);
-    document.getElementById("close-stats-btn").addEventListener("click", closeStatsModal);
+    // Stats modal
+    document.getElementById("open-stats-btn").addEventListener("click", () => {
+      playSound("tap");
+      openStatsModal();
+    });
+    document.getElementById("close-stats-btn").addEventListener("click", () => {
+      playSound("tap");
+      closeStatsModal();
+    });
     statsModalEl.addEventListener("click", (e) => {
-      if (e.target === statsModalEl) closeStatsModal();
+      if (e.target === statsModalEl) {
+        playSound("tap");
+        closeStatsModal();
+      }
     });
 
-    document.getElementById("export-ai-btn").addEventListener("click", copyAiReport);
-    document.getElementById("reset-btn").addEventListener("click", resetProgress);
+    document.getElementById("export-ai-btn").addEventListener("click", () => {
+      playSound("tap");
+      copyAiReport();
+    });
+    document.getElementById("reset-btn").addEventListener("click", () => {
+      playSound("wrong");
+      resetProgress();
+    });
 
-    // Keyboard support (desktop / tablet)
+    // Keyboard controls
     document.addEventListener("keydown", (e) => {
       if (statsModalEl.classList.contains("open")) return;
       if (e.key === "ArrowLeft" || e.key === "1") {
@@ -137,6 +222,7 @@
         handleAnswer(true);
       } else if (e.key === " " || e.key === "Enter" || e.key === "ArrowUp") {
         e.preventDefault();
+        playSound("reveal");
         toggleReveal();
       }
     });
@@ -144,7 +230,6 @@
     renderCurrentCards();
   }
 
-  // Render cards in arena
   function renderCurrentCards() {
     arenaEl.innerHTML = "";
     updateHeaderStats();
@@ -157,34 +242,30 @@
     const currentCardData = state.queue[state.currentIndex];
     const nextCardData = state.queue[state.currentIndex + 1];
 
-    // Next Card (background preview)
     if (nextCardData) {
       const nextCard = createCardElement(nextCardData, false, state.currentIndex + 1);
       nextCard.classList.add("card-next");
       arenaEl.appendChild(nextCard);
     }
 
-    // Top Card (active)
     const topCard = createCardElement(currentCardData, true, state.currentIndex);
     topCard.classList.add("card-current");
     arenaEl.appendChild(topCard);
 
-    // Tokenize text for instant click-to-translate & pronunciation
+    // Tokenize text for instant tap-to-translate
     if (window.DenisTranslator && typeof window.DenisTranslator.tokenizeAllText === "function") {
       window.DenisTranslator.tokenizeAllText(topCard);
     }
 
-    // Setup Tinder Swipe Drag
     setupDrag(topCard);
 
-    // Update Reveal button text
+    // Update Dock Reveal Button label
     const btnReveal = document.getElementById("btn-reveal");
     if (btnReveal) {
-      btnReveal.querySelector(".subtext").textContent = state.isRevealed ? "Скрыть" : "Нажми карточку";
+      btnReveal.querySelector(".sublabel").textContent = state.isRevealed ? "Скрыть" : "Нажми";
     }
   }
 
-  // Create card DOM
   function createCardElement(data, isTop, index) {
     const card = document.createElement("div");
     card.className = "tinder-card";
@@ -203,12 +284,12 @@
       </div>
 
       <div class="card-body">
-        <div class="card-prompt">Задание:</div>
+        <div class="card-prompt">Задание</div>
         <div class="card-sentence">${escapeHtml(data.front)}</div>
         <div class="card-hint">💡 ${escapeHtml(data.hint)}</div>
 
         <div class="card-reveal-hint" id="card-tap-hint">
-          <span>👆 Нажми на карточку, чтобы увидеть ответ</span>
+          <span>👆 Тапни по карточке, чтобы открыть ответ</span>
         </div>
 
         <div class="answer-section ${isTop && state.isRevealed ? "revealed" : ""}">
@@ -216,19 +297,20 @@
           <div class="answer-translation">🇷🇺 ${escapeHtml(data.translation)}</div>
 
           <div class="breakdown-box">
-            ${data.breakdown.steps.map(s => `<div class="step-item">• ${escapeHtml(s)}</div>`).join("")}
+            ${data.breakdown.steps.map(s => `<div class="step-item"><span style="color:var(--accent-cyan)">•</span> ${escapeHtml(s)}</div>`).join("")}
             ${data.breakdown.trap ? `<div class="trap-alert">⚠️ ${escapeHtml(data.breakdown.trap)}</div>` : ""}
-            ${data.breakdown.rule ? `<div class="rule-pill">📌 Правило: ${escapeHtml(data.breakdown.rule)}</div>` : ""}
+            ${data.breakdown.rule ? `<div class="rule-pill">📌 ${escapeHtml(data.breakdown.rule)}</div>` : ""}
           </div>
         </div>
       </div>
     `;
 
-    // Click on card body to reveal (unless clicking a clickable word or button)
+    // Click on card body to reveal (unless clicking an interactive word)
     card.addEventListener("click", (e) => {
       if (e.target.closest(".tr-w") || e.target.closest("button") || e.target.closest("#tr-popup")) {
         return;
       }
+      playSound("reveal");
       toggleReveal();
     });
 
@@ -258,18 +340,18 @@
 
     const btnReveal = document.getElementById("btn-reveal");
     if (btnReveal) {
-      btnReveal.querySelector(".subtext").textContent = state.isRevealed ? "Скрыть" : "Нажми карточку";
+      btnReveal.querySelector(".sublabel").textContent = state.isRevealed ? "Скрыть" : "Нажми";
     }
   }
 
-  // Answer handler (Correct / Wrong)
   function handleAnswer(isCorrect) {
     if (state.currentIndex >= state.queue.length) return;
+
+    playSound(isCorrect ? "success" : "wrong");
 
     const cardData = state.queue[state.currentIndex];
     const topCard = arenaEl.querySelector(".card-current");
 
-    // Record in history
     state.history.push({
       cardId: cardData.id,
       topic: cardData.topic,
@@ -281,18 +363,17 @@
       state.streak++;
     } else {
       state.streak = 0;
-      // Adaptive repeat: push card back into queue 2-3 turns later!
+      // Adaptive repeat: reinsert 2-3 cards later
       const reinsertIndex = Math.min(state.queue.length, state.currentIndex + 3);
       state.queue.splice(reinsertIndex, 0, cardData);
     }
 
     saveState();
 
-    // Trigger visual exit animation
     if (topCard) {
-      topCard.style.transition = "transform 0.35s cubic-bezier(0.18, 0.89, 0.32, 1.2), opacity 0.3s ease";
-      const exitX = isCorrect ? window.innerWidth * 1.2 : -window.innerWidth * 1.2;
-      const rotate = isCorrect ? 25 : -25;
+      topCard.style.transition = "transform 0.32s var(--ease-apple), opacity 0.28s ease";
+      const exitX = isCorrect ? window.innerWidth * 1.3 : -window.innerWidth * 1.3;
+      const rotate = isCorrect ? 24 : -24;
       topCard.style.transform = `translateX(${exitX}px) rotate(${rotate}deg)`;
       topCard.style.opacity = "0";
 
@@ -300,15 +381,13 @@
       if (stamp) stamp.style.opacity = "1";
     }
 
-    // Advance queue after animation
     setTimeout(() => {
       state.currentIndex++;
       state.isRevealed = false;
       renderCurrentCards();
-    }, 240);
+    }, 220);
   }
 
-  // Setup Tinder touch / pointer drag
   function setupDrag(card) {
     let startX = 0;
     let startY = 0;
@@ -320,7 +399,6 @@
     const stampLeft = card.querySelector(".stamp-left");
 
     function onPointerDown(e) {
-      // Don't drag if tapping interactive translation words or buttons
       if (e.target.closest(".tr-w") || e.target.closest("button") || e.target.closest("#tr-popup")) {
         return;
       }
@@ -338,10 +416,9 @@
       currentX = e.clientX - startX;
       currentY = e.clientY - startY;
 
-      const rotate = currentX * 0.08;
-      card.style.transform = `translateX(${currentX}px) translateY(${currentY * 0.25}px) rotate(${rotate}deg)`;
+      const rotate = currentX * 0.07;
+      card.style.transform = `translateX(${currentX}px) translateY(${currentY * 0.22}px) rotate(${rotate}deg)`;
 
-      // Stamp opacities
       if (currentX > 20) {
         stampRight.style.opacity = Math.min(1, (currentX - 20) / 70);
         stampLeft.style.opacity = 0;
@@ -357,19 +434,15 @@
     function onPointerUp(e) {
       if (!isDragging) return;
       isDragging = false;
-      try {
-        card.releasePointerCapture(e.pointerId);
-      } catch (err) {}
+      try { card.releasePointerCapture(e.pointerId); } catch (err) {}
 
-      // Swipe threshold
-      const threshold = window.innerWidth * 0.28;
+      const threshold = window.innerWidth * 0.26;
       if (currentX > threshold) {
         handleAnswer(true);
       } else if (currentX < -threshold) {
         handleAnswer(false);
       } else {
-        // Snap back
-        card.style.transition = "transform 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.15)";
+        card.style.transition = "transform 0.28s var(--ease-spring)";
         card.style.transform = "translateX(0px) translateY(0px) rotate(0deg)";
         stampRight.style.opacity = 0;
         stampLeft.style.opacity = 0;
@@ -382,7 +455,6 @@
     card.addEventListener("pointercancel", onPointerUp);
   }
 
-  // Update header counters
   function updateHeaderStats() {
     if (streakEl) streakEl.textContent = `🔥 ${state.streak}`;
     if (progressFillEl) {
@@ -392,36 +464,27 @@
     }
   }
 
-  // Deck finished screen
   function renderEmptyState() {
-    const cardStats = getCardStats();
-    let correctCount = 0;
-    let wrongCount = 0;
-    state.history.forEach(h => {
-      if (h.isCorrect) correctCount++;
-      else wrongCount++;
-    });
-
     arenaEl.innerHTML = `
       <div class="deck-empty-state">
-        <div class="deck-empty-icon">🎉</div>
-        <div class="deck-empty-title">Колода пройдена!</div>
+        <div class="deck-empty-icon">✨</div>
+        <div class="deck-empty-title">Колода завершена!</div>
         <div class="deck-empty-desc">
-          Отличная тренировка! Ошибки были отработаны и повторены.
+          Отличная серия! Все запланированные карточки отработаны.
         </div>
         <button class="export-btn" id="restart-deck-btn" style="max-width:240px">
-          🔄 Пройти заново
+          🔄 Начать заново
         </button>
       </div>
     `;
 
     document.getElementById("restart-deck-btn").addEventListener("click", () => {
+      playSound("tap");
       buildQueue(state.activeTopic);
       renderCurrentCards();
     });
   }
 
-  // Stats Modal
   function openStatsModal() {
     renderStatsContent();
     statsModalEl.classList.add("open");
@@ -448,24 +511,22 @@
     document.getElementById("stat-total-reviews").textContent = total;
     document.getElementById("stat-accuracy").textContent = `${acc}%`;
 
-    // Topic list
     const topicsContainer = document.getElementById("topics-accuracy-list");
     if (topicsContainer) {
       topicsContainer.innerHTML = Object.entries(topicStats).map(([topic, s]) => {
         const sum = s.c + s.w;
         const pct = sum > 0 ? Math.round((s.c / sum) * 100) : 0;
-        const color = pct >= 80 ? "var(--green)" : pct >= 50 ? "var(--yellow)" : "var(--red)";
+        const color = pct >= 80 ? "var(--accent-emerald)" : pct >= 50 ? "var(--accent-amber)" : "var(--accent-ruby)";
         return `
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-family:var(--font-mono);font-size:13px">
-            <span>${escapeHtml(topic)}</span>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--hairline-soft);font-family:var(--font-mono);font-size:12.5px">
+            <span style="color:var(--text)">${escapeHtml(topic)}</span>
             <span style="color:${color};font-weight:700">${pct}% (${s.c}/${sum})</span>
           </div>
         `;
-      }).join("") || `<div style="color:var(--text-faint);padding:10px 0">Пока нет истории ответов</div>`;
+      }).join("") || `<div style="color:var(--text-3);padding:12px 0;font-size:13px">Пока нет истории ответов</div>`;
     }
   }
 
-  // Copy AI report to clipboard
   function copyAiReport() {
     const total = state.history.length;
     let correct = 0;
@@ -544,7 +605,6 @@
       .replace(/'/g, "&#039;");
   }
 
-  // Boot
   loadState();
   buildQueue("all");
 

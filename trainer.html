@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>English Tinder Trainer — Денис</title>
   <meta name="description" content="Мобильный тренажер английского в формате Tinder со свайпами и разбором ошибок.">
   <link rel="stylesheet" href="translator.css">
   <link rel="stylesheet" href="trainer.css">
 </head>
 <body>
+  <!-- Ambient Aurora Glow -->
+  <div class="aurora-bg"></div>
+
   <div class="app-container">
     <!-- Header -->
     <header class="app-header">
       <div class="header-left">
-        <a href="index.html" class="back-link">← План</a>
+        <a href="index.html" class="back-link">
+          <span>←</span> <span>План</span>
+        </a>
         <span class="streak-badge" id="streak-counter">🔥 0</span>
       </div>
       <div class="header-right">
@@ -33,29 +40,31 @@
       <button class="filter-chip" data-topic="eliza-rules">Правила Элизы</button>
     </div>
 
-    <!-- Progress bar -->
+    <!-- Progress line -->
     <div class="progress-container">
       <div class="progress-fill" id="progress-fill"></div>
     </div>
 
     <!-- Card Arena -->
     <main class="card-arena" id="card-arena">
-      <!-- Injected by engine.js -->
+      <!-- Injected dynamically by engine.js -->
     </main>
 
-    <!-- Action Controls -->
-    <footer class="action-controls">
-      <button class="btn-action btn-wrong" id="btn-wrong" title="Свайп влево (1 / ←)">
-        <span style="font-size: 20px">✕</span>
-        <span class="subtext">Ошибся</span>
+    <!-- Action Floating Dock -->
+    <footer class="action-dock">
+      <button class="btn-circle btn-wrong" id="btn-wrong" title="Свайп влево (1 / ←)">
+        <span>✕</span>
+        <span class="sublabel">Ошибся</span>
       </button>
-      <button class="btn-action btn-reveal" id="btn-reveal" title="Показать ответ (Пробел)">
-        <span style="font-size: 18px">👁️ Ответ</span>
-        <span class="subtext">Нажми карточку</span>
+
+      <button class="btn-reveal-pill" id="btn-reveal" title="Показать ответ (Пробел / Тап)">
+        <span style="font-size: 16px">👁️ Ответ</span>
+        <span class="sublabel">Нажми</span>
       </button>
-      <button class="btn-action btn-right" id="btn-right" title="Свайп вправо (2 / →)">
-        <span style="font-size: 20px">✓</span>
-        <span class="subtext">Знаю</span>
+
+      <button class="btn-circle btn-right" id="btn-right" title="Свайп вправо (2 / →)">
+        <span>✓</span>
+        <span class="sublabel">Знаю</span>
       </button>
     </footer>
   </div>
@@ -75,12 +84,12 @@
         </div>
         <div class="stat-box">
           <span class="label">Точность</span>
-          <span class="value" id="stat-accuracy" style="color:var(--green)">0%</span>
+          <span class="value" id="stat-accuracy" style="color:var(--accent-emerald)">0%</span>
         </div>
       </div>
 
-      <div style="margin-bottom: 18px">
-        <div style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);text-transform:uppercase;margin-bottom:8px">Точность по темам:</div>
+      <div style="margin-bottom: 20px">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px">Точность по темам:</div>
         <div id="topics-accuracy-list"></div>
       </div>
 
