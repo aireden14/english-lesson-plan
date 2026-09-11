@@ -31,7 +31,11 @@ ul{margin:0 0 1em;padding-left:1.25em;max-width:64ch}
 li{margin-bottom:.45em}
 a{color:var(--go)}
 .mono{font-family:var(--mono)}
-header{padding:70px 0 0}
+.top-banner{background:var(--go);color:#fff;border-radius:10px;padding:14px 18px;margin:24px 0 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;text-decoration:none;box-shadow:0 4px 14px rgba(46,94,78,0.25);transition:transform 0.15s ease}
+.top-banner:hover{transform:translateY(-1px)}
+.top-banner-title{font-weight:700;font-size:16px;display:flex;align-items:center;gap:8px}
+.top-banner-sub{font-size:12.5px;opacity:0.9;font-family:var(--mono)}
+header{padding:40px 0 0}
 .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 22px}
 h1{font-size:clamp(32px,6vw,52px);line-height:1.04;letter-spacing:-.028em;font-weight:700;margin:0 0 20px;text-wrap:balance;max-width:17ch}
 .lede{font-size:19.5px;color:var(--ink-soft);max-width:58ch;margin:0 0 34px}
@@ -116,11 +120,22 @@ footer a{color:var(--go)}
 <body>
 <div class="wrap">
 
-<nav class="top-nav" style="padding:18px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:.06em;display:flex;gap:18px;flex-wrap:wrap">
+<nav class="top-nav" style="padding:18px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:.06em;display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+  <a href="trainer.html" style="font-weight:700;color:#fff;background:var(--go);padding:6px 12px;border-radius:6px;text-decoration:none">🔥 Tinder-тренажёр (Свайпы) →</a>
   <a href="index.html" style="font-weight:600;color:var(--go)">← Master Curriculum</a>
-  <a href="homework.html" style="color:var(--ink-faint);text-decoration:none">📝 Rule 6 Homework (20 Nouns)</a>
-  <a href="lesson-4.html" style="font-weight:700;color:var(--no);text-decoration:underline">🎯 Lesson 4 Cockpit (Next Class) →</a>
+  <a href="homework.html" style="color:var(--ink-faint);text-decoration:none">📝 Rule 6 Homework</a>
+  <a href="lesson-4.html" style="font-weight:700;color:var(--no);text-decoration:underline">🎯 Lesson 4 Cockpit →</a>
 </nav>
+
+<a href="trainer.html" class="top-banner">
+  <div class="top-banner-title">
+    <span>🔥</span>
+    <span>Интерактивный Tinder-тренажёр английского</span>
+  </div>
+  <div class="top-banner-sub">
+    Свайп-карточки · Разбор ошибок · Озвучка слов →
+  </div>
+</a>
 
 <div style="background:var(--go-wash);border:1px solid var(--go);padding:14px 18px;margin-top:16px;border-radius:6px;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:13px;flex-wrap:wrap;gap:8px">
   <span>🎯 <b>Lesson 4 Cockpit is ready:</b> The Verb TO BE, eliminating "it's" & Life Practice</span>

@@ -1193,9 +1193,18 @@ if (typeof module !== "undefined" && module.exports) {
     }
   }
 
+  window.DenisTranslator = {
+    tokenizeAllText,
+    showTranslation,
+    ensurePopup,
+    hidePopup,
+    DICT
+  };
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initInteraction);
   } else {
     initInteraction();
   }
 })();
+

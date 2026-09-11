@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>English Tinder Trainer — Денис</title>
+  <meta name="description" content="Мобильный тренажер английского в формате Tinder со свайпами и разбором ошибок.">
+  <link rel="stylesheet" href="translator.css">
+  <link rel="stylesheet" href="trainer.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <a href="index.html" class="back-link">← План</a>
+        <span class="streak-badge" id="streak-counter">🔥 0</span>
+      </div>
+      <div class="header-right">
+        <button class="icon-btn" id="open-stats-btn">📊 Аналитика</button>
+      </div>
+    </header>
+
+    <!-- Filters / Topics -->
+    <div class="filters-bar">
+      <button class="filter-chip active" data-topic="all">Все карточки</button>
+      <button class="filter-chip chip-errors" data-topic="errors">🔥 Мои ошибки</button>
+      <button class="filter-chip" data-topic="this-that">This / That</button>
+      <button class="filter-chip" data-topic="to-be">am / is / are</button>
+      <button class="filter-chip" data-topic="do-does">do / does</button>
+      <button class="filter-chip" data-topic="verbs-s">Окончание -s</button>
+      <button class="filter-chip" data-topic="articles-plurals">Артикли / Мн. ч.</button>
+      <button class="filter-chip" data-topic="eliza-rules">Правила Элизы</button>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-container">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+    <!-- Card Arena -->
+    <main class="card-arena" id="card-arena">
+      <!-- Injected by engine.js -->
+    </main>
+
+    <!-- Action Controls -->
+    <footer class="action-controls">
+      <button class="btn-action btn-wrong" id="btn-wrong" title="Свайп влево (1 / ←)">
+        <span style="font-size: 20px">✕</span>
+        <span class="subtext">Ошибся</span>
+      </button>
+      <button class="btn-action btn-reveal" id="btn-reveal" title="Показать ответ (Пробел)">
+        <span style="font-size: 18px">👁️ Ответ</span>
+        <span class="subtext">Нажми карточку</span>
+      </button>
+      <button class="btn-action btn-right" id="btn-right" title="Свайп вправо (2 / →)">
+        <span style="font-size: 20px">✓</span>
+        <span class="subtext">Знаю</span>
+      </button>
+    </footer>
+  </div>
+
+  <!-- Stats & AI Export Modal -->
+  <div class="modal-overlay" id="stats-modal">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <h3 class="modal-title">📊 Твоя статистика</h3>
+        <button class="close-modal-btn" id="close-stats-btn">✕</button>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="label">Всего ответов</span>
+          <span class="value" id="stat-total-reviews">0</span>
+        </div>
+        <div class="stat-box">
+          <span class="label">Точность</span>
+          <span class="value" id="stat-accuracy" style="color:var(--green)">0%</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 18px">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);text-transform:uppercase;margin-bottom:8px">Точность по темам:</div>
+        <div id="topics-accuracy-list"></div>
+      </div>
+
+      <button class="export-btn" id="export-ai-btn">
+        📋 Скопировать отчёт для Claude / Gemini
+      </button>
+
+      <button class="reset-btn" id="reset-btn">
+        Сбросить историю ответов
+      </button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="translator.js"></script>
+  <script src="cards-data.js"></script>
+  <script src="engine.js"></script>
+</body>
+</html>
