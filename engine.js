@@ -82,14 +82,17 @@
     }
   }
 
-  // --- Хранилище ---
+  // --- Хранилище (надежная память навсегда) ---
+  const BACKUP_KEY = "english_tinder_trainer_backup_v1";
+
   function loadState() {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY);
+      const saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(BACKUP_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (parsed.history) state.history = parsed.history;
-        if (parsed.streak) state.streak = parsed.streak;
+        if (Array.isArray(parsed.history)) state.history = parsed.history;
+        if (typeof parsed.streak === "number") state.streak = parsed.streak;
+        if (parsed.activeTopic) state.activeTopic = parsed.activeTopic;
       }
     } catch (e) {
       console.warn("Error loading state:", e);
@@ -98,13 +101,14 @@
 
   function saveState() {
     try {
-      localStorage.setItem(
-        STORAGE_KEY,
-        JSON.stringify({
-          history: state.history,
-          streak: state.streak
-        })
-      );
+      const payload = JSON.stringify({
+        history: state.history,
+        streak: state.streak,
+        activeTopic: state.activeTopic,
+        updatedAt: Date.now()
+      });
+      localStorage.setItem(STORAGE_KEY, payload);
+      localStorage.setItem(BACKUP_KEY, payload);
     } catch (e) {
       console.warn("Error saving state:", e);
     }
@@ -114,11 +118,12 @@
     const stats = {};
     state.history.forEach(item => {
       if (!stats[item.cardId]) {
-        stats[item.cardId] = { correct: 0, wrong: 0, lastResult: null };
+        stats[item.cardId] = { correct: 0, wrong: 0, lastResult: null, lastTimestamp: item.timestamp };
       }
       if (item.isCorrect) stats[item.cardId].correct++;
       else stats[item.cardId].wrong++;
       stats[item.cardId].lastResult = item.isCorrect;
+      stats[item.cardId].lastTimestamp = item.timestamp;
     });
     return stats;
   }
@@ -136,17 +141,40 @@
         const s = cardStats[c.id];
         return s && (s.wrong > 0 || s.lastResult === false);
       });
-      if (filtered.length === 0) {
-        filtered = [...allCards];
-      }
+      if (filtered.length === 0) filtered = [...allCards];
+    } else if (topicFilter === "unseen") {
+      filtered = allCards.filter(c => !cardStats[c.id]);
+      if (filtered.length === 0) filtered = [...allCards];
+    } else if (topicFilter === "mastered") {
+      filtered = allCards.filter(c => {
+        const s = cardStats[c.id];
+        return s && s.correct >= 1 && s.lastResult === true;
+      });
+      if (filtered.length === 0) filtered = [...allCards];
     } else {
       filtered = allCards.filter(c => c.topic === topicFilter);
     }
 
+    // Умная приоритизация очереди:
+    // 1. Сначала карточки с недавними ошибками (требуют повторения прямо сейчас)
+    // 2. Затем новые карточки, которые Денис еще ни разу не видел
+    // 3. Затем карточки в процессе изучения
+    // 4. В конце — уже освоенные карточки
     filtered.sort((a, b) => {
-      const wa = (cardStats[a.id]?.wrong || 0) - (cardStats[a.id]?.correct || 0);
-      const wb = (cardStats[b.id]?.wrong || 0) - (cardStats[b.id]?.correct || 0);
-      return wb - wa + (Math.random() * 0.3 - 0.15);
+      const sa = cardStats[a.id];
+      const sb = cardStats[b.id];
+
+      const errA = (sa && sa.lastResult === false) ? 3 : (sa && sa.wrong > 0) ? 2 : 0;
+      const errB = (sb && sb.lastResult === false) ? 3 : (sb && sb.wrong > 0) ? 2 : 0;
+      if (errA !== errB) return errB - errA;
+
+      const unseenA = !sa ? 1 : 0;
+      const unseenB = !sb ? 1 : 0;
+      if (unseenA !== unseenB) return unseenB - unseenA;
+
+      const wa = (sa?.wrong || 0) - (sa?.correct || 0);
+      const wb = (sb?.wrong || 0) - (sb?.correct || 0);
+      return wb - wa;
     });
 
     state.queue = filtered;
@@ -317,12 +345,31 @@
       </button>
     `).join("");
 
+    // Статус карточки в памяти
+    const cardStatsMap = getCardStats();
+    const cs = cardStatsMap[data.id];
+    let tagHtml = `<span class="memory-tag is-new">🆕 Новая</span>`;
+    if (cs) {
+      if (cs.wrong > 0 && cs.lastResult === false) {
+        tagHtml = `<span class="memory-tag is-learning">🔥 Повторить (${cs.wrong} ош.)</span>`;
+      } else if (cs.correct >= 2 && cs.wrong === 0) {
+        tagHtml = `<span class="memory-tag is-mastered">⭐ Освоено (${cs.correct}✓)</span>`;
+      } else if (cs.correct >= 1) {
+        tagHtml = `<span class="memory-tag is-practicing">✓ Изучено (${cs.correct}✓)</span>`;
+      } else {
+        tagHtml = `<span class="memory-tag is-learning">🔥 Ошибка (${cs.wrong})</span>`;
+      }
+    }
+
     card.innerHTML = `
       <div class="stamp-badge stamp-right">ВЕРНО ✓</div>
       <div class="stamp-badge stamp-left">НЕВЕРНО ✕</div>
 
       <div class="card-title-row">
-        <h3 class="card-title">${escapeHtml(data.topicTitle)}</h3>
+        <div style="display:flex;align-items:center;gap:8px;min-width:0">
+          <h3 class="card-title" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${escapeHtml(data.topicTitle)}</h3>
+          ${tagHtml}
+        </div>
         <span class="card-counter">${currentNum} / ${total}</span>
       </div>
 
@@ -663,6 +710,14 @@
     const total = state.history.length;
     let correct = 0;
     const topicStats = {};
+    const allCards = window.ENGLISH_CARDS_DATA || [];
+    const cardStats = getCardStats();
+
+    let masteredCount = 0;
+    allCards.forEach(c => {
+      const s = cardStats[c.id];
+      if (s && s.correct >= 1 && s.lastResult === true) masteredCount++;
+    });
 
     state.history.forEach(item => {
       if (item.isCorrect) correct++;
@@ -673,8 +728,12 @@
 
     const acc = total > 0 ? Math.round((correct / total) * 100) : 0;
 
-    document.getElementById("stat-total-reviews").textContent = total;
-    document.getElementById("stat-accuracy").textContent = `${acc}%`;
+    const totalEl = document.getElementById("stat-total-reviews");
+    if (totalEl) totalEl.textContent = total;
+    const accEl = document.getElementById("stat-accuracy");
+    if (accEl) accEl.textContent = `${acc}%`;
+    const mastEl = document.getElementById("stat-mastered");
+    if (mastEl) mastEl.textContent = `${masteredCount} / ${allCards.length}`;
 
     const topicsContainer = document.getElementById("topics-accuracy-list");
     if (topicsContainer) {

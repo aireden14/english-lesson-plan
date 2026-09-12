@@ -9,8 +9,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>English Cards — GamePass</title>
-  <link rel="stylesheet" href="translator.css?v=3" />
-  <link rel="stylesheet" href="trainer.css?v=3" />
+  <link rel="stylesheet" href="translator.css?v=4" />
+  <link rel="stylesheet" href="trainer.css?v=4" />
 </head>
 <body>
   <div class="aurora" aria-hidden="true"></div>
@@ -34,6 +34,8 @@
     <nav class="sets-strip" id="topic-filters" aria-label="Темы">
       <button class="set-chip is-current" data-topic="all">Все карточки</button>
       <button class="set-chip is-danger" data-topic="errors">🔥 Ошибки</button>
+      <button class="set-chip" data-topic="unseen">🆕 Не пройденные</button>
+      <button class="set-chip" data-topic="mastered">⭐ Освоенные</button>
       <button class="set-chip" data-topic="this-that">This / That</button>
       <button class="set-chip" data-topic="to-be">am / is / are</button>
       <button class="set-chip" data-topic="do-does">do / does</button>
@@ -71,6 +73,14 @@
           <div class="stat-label">Точность</div>
           <div class="stat-value" id="stat-accuracy" style="color:var(--accent-1)">0%</div>
         </div>
+        <div class="stat-card">
+          <div class="stat-label">Освоено</div>
+          <div class="stat-value" id="stat-mastered" style="color:var(--color-success)">0 / 124</div>
+        </div>
+      </div>
+
+      <div style="font-size:12px;line-height:1.4;color:var(--accent-1);background:var(--accent-soft);border:1px solid rgba(255,179,64,0.2);padding:9px 12px;border-radius:10px;margin-bottom:18px">
+        💾 Все ответы сохраняются в памяти браузера навсегда. Даже если закрыть вкладку, твой прогресс и освоенные карточки никуда не пропадут.
       </div>
 
       <div style="margin-bottom: 24px">
@@ -91,8 +101,8 @@
   </div>
 
   <!-- Скрипты -->
-  <script src="translator.js?v=3"></script>
-  <script src="cards-data.js?v=3"></script>
-  <script src="engine.js?v=3"></script>
+  <script src="translator.js?v=4"></script>
+  <script src="cards-data.js?v=4"></script>
+  <script src="engine.js?v=4"></script>
 </body>
 </html>
