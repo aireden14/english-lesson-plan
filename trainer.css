@@ -384,19 +384,157 @@ body {
   margin-top: 4px;
 }
 
+/* ---------------- Варианты ответов прямо на карточке (Chitopus Option Grid) */
+.card-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9px;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  z-index: 5;
+}
+
+.card-options.is-single-col {
+  grid-template-columns: 1fr;
+}
+
+.option-btn {
+  appearance: none;
+  border: 1px solid var(--hairline);
+  background: rgba(255, 255, 255, 0.065);
+  border-radius: var(--radius-m);
+  padding: 11px 13px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15.5px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 160ms var(--ease), background 180ms var(--ease),
+              border-color 180ms var(--ease), box-shadow 180ms var(--ease), opacity 180ms ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  min-height: 48px;
+  text-align: left;
+}
+
+.option-btn:active:not(:disabled) {
+  transform: scale(0.965);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.option-key-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--hairline-soft);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-2);
+  flex-shrink: 0;
+}
+
+.option-text {
+  flex: 1;
+  text-align: left;
+  line-height: 1.22;
+  word-break: break-word;
+}
+
+/* Состояния вариантов после выбора */
+.option-btn.is-correct {
+  background: var(--color-success-soft) !important;
+  border-color: var(--color-success) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(52, 199, 89, 0.35);
+}
+.option-btn.is-correct .option-key-badge {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: #000000;
+}
+
+.option-btn.is-wrong {
+  background: var(--color-danger-soft) !important;
+  border-color: var(--color-danger) !important;
+  color: #ffffff !important;
+  animation: optionShake 320ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.option-btn.is-wrong .option-key-badge {
+  background: var(--color-danger);
+  border-color: var(--color-danger);
+  color: #ffffff;
+}
+
+.option-btn.is-dimmed {
+  opacity: 0.35;
+  filter: grayscale(40%);
+}
+
+@keyframes optionShake {
+  10%, 90% { transform: translate3d(-2px, 0, 0); }
+  20%, 80% { transform: translate3d(3px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+/* Кнопка «Следующая карточка» после ответа */
+.btn-next-wrap {
+  display: none;
+  margin-top: 14px;
+  animation: cardFadeIn 220ms var(--ease) both;
+}
+.btn-next-wrap.show {
+  display: block;
+}
+
+.btn-next-card {
+  width: 100%;
+  padding: 13px 18px;
+  border-radius: var(--radius-m);
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  color: #000000;
+  font-family: inherit;
+  font-weight: 750;
+  font-size: 15.5px;
+  letter-spacing: -0.01em;
+  box-shadow: 0 8px 22px var(--accent-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  border: 0;
+  transition: transform 160ms var(--ease), box-shadow 160ms var(--ease);
+}
+.btn-next-card:active {
+  transform: scale(0.97);
+}
+
 /* Тапни карточку для ответа */
 .card-tap-cue {
   text-align: center;
   font-size: 12px;
   color: var(--text-3);
-  margin-top: 20px;
+  margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
 }
 .card-tap-cue span {
-  padding: 5px 12px;
+  padding: 4px 10px;
   border-radius: 999px;
   background: var(--surface);
   border: 1px solid var(--hairline-soft);
@@ -406,9 +544,9 @@ body {
 .answer-panel {
   display: none;
   animation: cardFadeIn 220ms var(--ease) both;
-  margin-top: 14px;
+  margin-top: 12px;
   border-top: 1px solid var(--hairline-soft);
-  padding-top: 16px;
+  padding-top: 14px;
 }
 .answer-panel.revealed { display: block; }
 
