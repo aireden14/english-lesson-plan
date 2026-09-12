@@ -163,12 +163,17 @@
     progressBarEl = document.getElementById("progress-bar");
     statsSheetEl = document.getElementById("stats-sheet");
 
-    document.getElementById("btn-wrong").addEventListener("click", () => handleAnswer(false));
-    document.getElementById("btn-right").addEventListener("click", () => handleAnswer(true));
-    document.getElementById("btn-reveal").addEventListener("click", () => {
-      playSound("reveal");
-      toggleReveal();
-    });
+    const btnWrong = document.getElementById("btn-wrong");
+    if (btnWrong) btnWrong.addEventListener("click", () => handleAnswer(false));
+    const btnRight = document.getElementById("btn-right");
+    if (btnRight) btnRight.addEventListener("click", () => handleAnswer(true));
+    const btnReveal = document.getElementById("btn-reveal");
+    if (btnReveal) {
+      btnReveal.addEventListener("click", () => {
+        playSound("reveal");
+        toggleReveal();
+      });
+    }
 
     document.querySelectorAll(".set-chip").forEach(chip => {
       chip.addEventListener("click", () => {
@@ -313,8 +318,8 @@
     `).join("");
 
     card.innerHTML = `
-      <div class="stamp-badge stamp-right">ЗНАЮ ✓</div>
-      <div class="stamp-badge stamp-left">НЕ ЗНАЛ ✕</div>
+      <div class="stamp-badge stamp-right">ВЕРНО ✓</div>
+      <div class="stamp-badge stamp-left">НЕВЕРНО ✕</div>
 
       <div class="card-title-row">
         <h3 class="card-title">${escapeHtml(data.topicTitle)}</h3>
@@ -327,10 +332,6 @@
 
         <div class="card-options ${isSingleCol ? "is-single-col" : ""}" id="card-options">
           ${optionsHtml}
-        </div>
-
-        <div class="card-tap-cue" id="card-tap-cue">
-          <span>👆 Выбери вариант или нажми для ответа</span>
         </div>
 
         <div class="answer-panel ${isTop && state.isRevealed ? "revealed" : ""}">
