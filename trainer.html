@@ -8,9 +8,9 @@
   <meta name="description" content="Tinder-тренажёр английского языка для Дениса в дизайн-системе GamePass." />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <title>English Cards — GamePass</title>
-  <link rel="stylesheet" href="translator.css?v=4" />
-  <link rel="stylesheet" href="trainer.css?v=4" />
+  <title>English Quiz — GamePass</title>
+  <link rel="stylesheet" href="translator.css?v=5" />
+  <link rel="stylesheet" href="trainer.css?v=5" />
 </head>
 <body>
   <div class="aurora" aria-hidden="true"></div>
@@ -25,17 +25,20 @@
             <span class="pill-num" id="streak-num">0</span>
             <span>🔥</span>
           </div>
-          <button class="pill" id="open-stats-btn">📊 Аналитика</button>
+          <div class="pill counter-pill" id="counter-pill" title="Текущая карточка">
+            <span id="counter-num">1 / 124</span>
+          </div>
+          <button class="pill icon-pill" id="open-stats-btn" title="Аналитика">📊</button>
         </div>
       </div>
     </header>
 
-    <!-- Горизонтальная лента тем (в стиле Chitopus sets-strip) -->
+    <!-- Горизонтальная лента тем (Chitopus sets-strip) -->
     <nav class="sets-strip" id="topic-filters" aria-label="Темы">
-      <button class="set-chip is-current" data-topic="all">Все карточки</button>
+      <button class="set-chip is-current" data-topic="all">Все</button>
       <button class="set-chip is-danger" data-topic="errors">🔥 Ошибки</button>
-      <button class="set-chip" data-topic="unseen">🆕 Не пройденные</button>
-      <button class="set-chip" data-topic="mastered">⭐ Освоенные</button>
+      <button class="set-chip" data-topic="unseen">🆕 Новые</button>
+      <button class="set-chip" data-topic="mastered">⭐ Освоено</button>
       <button class="set-chip" data-topic="this-that">This / That</button>
       <button class="set-chip" data-topic="to-be">am / is / are</button>
       <button class="set-chip" data-topic="do-does">do / does</button>
@@ -51,8 +54,8 @@
       <div class="progress-bar" id="progress-bar"></div>
     </div>
 
-    <!-- Арена карточек -->
-    <main class="card-arena" id="card-arena">
+    <!-- Главная рабочая сцена квиза (Zero-Scroll Stage) -->
+    <main class="quiz-stage" id="quiz-stage">
       <!-- Наполняется из engine.js -->
     </main>
   </div>
@@ -101,8 +104,8 @@
   </div>
 
   <!-- Скрипты -->
-  <script src="translator.js?v=4"></script>
-  <script src="cards-data.js?v=4"></script>
-  <script src="engine.js?v=4"></script>
+  <script src="translator.js?v=5"></script>
+  <script src="cards-data.js?v=5"></script>
+  <script src="engine.js?v=5"></script>
 </body>
 </html>

@@ -183,25 +183,14 @@
   }
 
   // --- UI ---
-  let arenaEl, streakNumEl, progressBarEl, statsSheetEl;
+  let stageEl, streakNumEl, counterNumEl, progressBarEl, statsSheetEl;
 
   function initUI() {
-    arenaEl = document.getElementById("card-arena");
+    stageEl = document.getElementById("quiz-stage");
     streakNumEl = document.getElementById("streak-num");
+    counterNumEl = document.getElementById("counter-num");
     progressBarEl = document.getElementById("progress-bar");
     statsSheetEl = document.getElementById("stats-sheet");
-
-    const btnWrong = document.getElementById("btn-wrong");
-    if (btnWrong) btnWrong.addEventListener("click", () => handleAnswer(false));
-    const btnRight = document.getElementById("btn-right");
-    if (btnRight) btnRight.addEventListener("click", () => handleAnswer(true));
-    const btnReveal = document.getElementById("btn-reveal");
-    if (btnReveal) {
-      btnReveal.addEventListener("click", () => {
-        playSound("reveal");
-        toggleReveal();
-      });
-    }
 
     document.querySelectorAll(".set-chip").forEach(chip => {
       chip.addEventListener("click", () => {
@@ -209,7 +198,7 @@
         document.querySelectorAll(".set-chip").forEach(c => c.classList.remove("is-current"));
         chip.classList.add("is-current");
         buildQueue(chip.dataset.topic);
-        renderCurrentCards();
+        renderCurrentCard();
       });
     });
 
@@ -233,64 +222,48 @@
       resetProgress();
     });
 
+    // Горячие клавиши (1, 2, 3, 4, A, B, C, D для вариантов; Space / Enter для перехода дальше)
     document.addEventListener("keydown", (e) => {
-      if (statsSheetEl.classList.contains("open")) return;
-      const topCard = arenaEl.querySelector(".card-current");
-      if (!topCard) return;
+      if (statsSheetEl && statsSheetEl.classList.contains("open")) {
+        if (e.key === "Escape") closeStatsSheet();
+        return;
+      }
+      const activeCard = stageEl ? stageEl.querySelector(".quiz-card") : null;
+      if (!activeCard) return;
 
-      const isAnswered = topCard.dataset.answered === "true";
+      const isAnswered = activeCard.dataset.answered === "true";
 
-      // Если карточка уже отвечена, пробел / Enter / стрелки переходят к следующей
       if (isAnswered) {
         if (e.key === " " || e.key === "Enter" || e.key === "ArrowRight") {
           e.preventDefault();
-          playSound("tap");
-          advanceCard(topCard.dataset.lastAnswer !== "false");
+          advanceNextCard();
           return;
         }
-      }
+      } else {
+        const optionBtns = activeCard.querySelectorAll(".option-btn");
+        if (optionBtns.length > 0) {
+          const keyLower = e.key.toLowerCase();
+          let idx = -1;
+          if (e.key === "1" || keyLower === "a") idx = 0;
+          else if (e.key === "2" || keyLower === "b") idx = 1;
+          else if (e.key === "3" || keyLower === "c") idx = 2;
+          else if (e.key === "4" || keyLower === "d") idx = 3;
 
-      // Горячие клавиши 1, 2, 3, 4 для выбора вариантов A, B, C, D
-      const optionBtns = topCard.querySelectorAll(".option-btn");
-      if (!isAnswered && optionBtns.length > 0) {
-        if (e.key === "1" || e.key.toLowerCase() === "a") {
-          e.preventDefault();
-          if (optionBtns[0]) optionBtns[0].click();
-          return;
+          if (idx >= 0 && optionBtns[idx]) {
+            e.preventDefault();
+            optionBtns[idx].click();
+            return;
+          }
         }
-        if (e.key === "2" || e.key.toLowerCase() === "b") {
-          e.preventDefault();
-          if (optionBtns[1]) optionBtns[1].click();
-          return;
-        }
-        if (e.key === "3" || e.key.toLowerCase() === "c") {
-          e.preventDefault();
-          if (optionBtns[2]) optionBtns[2].click();
-          return;
-        }
-        if (e.key === "4" || e.key.toLowerCase() === "d") {
-          e.preventDefault();
-          if (optionBtns[3]) optionBtns[3].click();
-          return;
-        }
-      }
-
-      if (e.key === "ArrowLeft") {
-        handleAnswer(false);
-      } else if (e.key === "ArrowRight") {
-        handleAnswer(true);
-      } else if (e.key === " " || e.key === "Enter" || e.key === "ArrowUp") {
-        e.preventDefault();
-        playSound("reveal");
-        toggleReveal();
       }
     });
 
-    renderCurrentCards();
+    renderCurrentCard();
   }
 
-  function renderCurrentCards() {
-    arenaEl.innerHTML = "";
+  function renderCurrentCard() {
+    if (!stageEl) return;
+    stageEl.innerHTML = "";
     updateHeaderStats();
 
     if (state.currentIndex >= state.queue.length) {
@@ -298,43 +271,31 @@
       return;
     }
 
-    const currentCardData = state.queue[state.currentIndex];
-    const nextCardData = state.queue[state.currentIndex + 1];
-
-    if (nextCardData) {
-      const nextCard = createCardElement(nextCardData, false, state.currentIndex + 1);
-      nextCard.classList.add("card-next");
-      arenaEl.appendChild(nextCard);
-    }
-
-    const topCard = createCardElement(currentCardData, true, state.currentIndex);
-    topCard.classList.add("card-current");
-    arenaEl.appendChild(topCard);
-
-    if (window.DenisTranslator && typeof window.DenisTranslator.tokenizeAllText === "function") {
-      window.DenisTranslator.tokenizeAllText(topCard);
-    }
-
-    setupDrag(topCard);
-
-    const revealLabel = document.getElementById("reveal-btn-label");
-    if (revealLabel) {
-      revealLabel.textContent = state.isRevealed ? "Скрыть" : "👁️ Ответ";
-    }
-  }
-
-  function createCardElement(data, isTop, index) {
+    const data = state.queue[state.currentIndex];
     const card = document.createElement("div");
-    card.className = "tinder-card";
+    card.className = "quiz-card";
     card.dataset.cardId = data.id;
 
-    const total = state.queue.length;
-    const currentNum = index + 1;
-
-    // Слот пропуска подсвечивается акцентным цветом
+    // Слот пропуска
     const formattedSentence = escapeHtml(data.front).replace(/___/g, `<span class="slot">___</span>`);
 
-    // Генерация кнопок вариантов ответов
+    // Статус в памяти
+    const cardStatsMap = getCardStats();
+    const cs = cardStatsMap[data.id];
+    let tagHtml = `<span class="memory-tag is-new">🆕 Новая</span>`;
+    if (cs) {
+      if (cs.wrong > 0 && cs.lastResult === false) {
+        tagHtml = `<span class="memory-tag is-learning">🔥 Повторить (${cs.wrong})</span>`;
+      } else if (cs.correct >= 2 && cs.wrong === 0) {
+        tagHtml = `<span class="memory-tag is-mastered">⭐ Освоено (${cs.correct}✓)</span>`;
+      } else if (cs.correct >= 1) {
+        tagHtml = `<span class="memory-tag is-practicing">✓ Изучено (${cs.correct}✓)</span>`;
+      } else {
+        tagHtml = `<span class="memory-tag is-learning">🔥 Ошибка (${cs.wrong})</span>`;
+      }
+    }
+
+    // Варианты ответов
     const options = data.options || [data.keyPart];
     const isSingleCol = options.some(o => o.length > 13);
     const letters = ["A", "B", "C", "D"];
@@ -345,63 +306,42 @@
       </button>
     `).join("");
 
-    // Статус карточки в памяти
-    const cardStatsMap = getCardStats();
-    const cs = cardStatsMap[data.id];
-    let tagHtml = `<span class="memory-tag is-new">🆕 Новая</span>`;
-    if (cs) {
-      if (cs.wrong > 0 && cs.lastResult === false) {
-        tagHtml = `<span class="memory-tag is-learning">🔥 Повторить (${cs.wrong} ош.)</span>`;
-      } else if (cs.correct >= 2 && cs.wrong === 0) {
-        tagHtml = `<span class="memory-tag is-mastered">⭐ Освоено (${cs.correct}✓)</span>`;
-      } else if (cs.correct >= 1) {
-        tagHtml = `<span class="memory-tag is-practicing">✓ Изучено (${cs.correct}✓)</span>`;
-      } else {
-        tagHtml = `<span class="memory-tag is-learning">🔥 Ошибка (${cs.wrong})</span>`;
-      }
-    }
-
     card.innerHTML = `
-      <div class="stamp-badge stamp-right">ВЕРНО ✓</div>
-      <div class="stamp-badge stamp-left">НЕВЕРНО ✕</div>
-
-      <div class="card-title-row">
+      <div class="quiz-card-meta">
         <div style="display:flex;align-items:center;gap:8px;min-width:0">
-          <h3 class="card-title" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${escapeHtml(data.topicTitle)}</h3>
+          <h3 class="quiz-topic-title">${escapeHtml(data.topicTitle)}</h3>
           ${tagHtml}
         </div>
-        <span class="card-counter">${currentNum} / ${total}</span>
       </div>
 
-      <div class="card-body">
-        <div class="card-sentence">${formattedSentence}</div>
-        <div class="hint-caption">💡 ${escapeHtml(data.hint)}</div>
+      <div class="quiz-card-hero">
+        <div class="quiz-sentence" id="quiz-sentence">${formattedSentence}</div>
+        <div class="quiz-hint" id="quiz-hint">💡 ${escapeHtml(data.hint)}</div>
+      </div>
 
-        <div class="card-options ${isSingleCol ? "is-single-col" : ""}" id="card-options">
-          ${optionsHtml}
+      <div class="quiz-options-grid ${isSingleCol ? "is-single-col" : ""}" id="quiz-options-grid">
+        ${optionsHtml}
+      </div>
+
+      <div class="quiz-feedback-drawer" id="quiz-feedback-drawer">
+        <div class="feedback-meta-row">
+          <div class="feedback-status-badge" id="feedback-status-badge"></div>
+          <div style="font-size:12px;font-weight:600;color:var(--text-3);font-variant-numeric:tabular-nums">${state.currentIndex + 1} / ${state.queue.length}</div>
         </div>
-
-        <div class="answer-panel ${isTop && state.isRevealed ? "revealed" : ""}">
-          <div class="correct-phrase">${formatCorrectAnswer(data.answer, data.keyPart)}</div>
-          <div class="answer-translation">🇷🇺 ${escapeHtml(data.translation)}</div>
-
-          <div class="breakdown-strip">
-            ${data.breakdown.steps.map(s => `<div class="breakdown-item">• ${escapeHtml(s)}</div>`).join("")}
-            ${data.breakdown.trap ? `<div class="breakdown-trap">⚠️ ${escapeHtml(data.breakdown.trap)}</div>` : ""}
-            ${data.breakdown.rule ? `<div class="breakdown-rule">📌 ${escapeHtml(data.breakdown.rule)}</div>` : ""}
-          </div>
-
-          <div class="btn-next-wrap ${isTop && state.isRevealed ? "show" : ""}" id="btn-next-wrap">
-            <button class="btn-next-card" id="btn-next-card" type="button">
-              <span>Следующая карточка</span>
-              <span>→</span>
-            </button>
-          </div>
+        <p class="feedback-translation" id="feedback-translation">🇷🇺 ${escapeHtml(data.translation)}</p>
+        <div class="feedback-breakdown" id="feedback-breakdown">
+          ${data.breakdown.steps.map(s => `<div class="breakdown-item" style="font-size:12px;color:var(--text);line-height:1.3">• ${escapeHtml(s)}</div>`).join("")}
+          ${data.breakdown.trap ? `<div class="feedback-rule-box is-trap">⚠️ ${escapeHtml(data.breakdown.trap)}</div>` : ""}
+          ${data.breakdown.rule ? `<div class="feedback-rule-box">📌 ${escapeHtml(data.breakdown.rule)}</div>` : ""}
         </div>
+        <button class="feedback-btn-next" id="feedback-btn-next" type="button">
+          <span>Следующий вопрос</span>
+          <span>→</span>
+        </button>
       </div>
     `;
 
-    // Обработка клика по вариантам ответов
+    // Клики по вариантам ответов
     card.querySelectorAll(".option-btn").forEach(btn => {
       btn.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -412,7 +352,7 @@
         const correctVal = (data.keyPart || "").trim();
         const isCorrect = chosenVal.toLowerCase() === correctVal.toLowerCase();
 
-        // Подсветка кнопок
+        // Подсветка вариантов
         if (isCorrect) {
           btn.classList.add("is-correct");
         } else {
@@ -440,83 +380,47 @@
           slotEl.style.borderColor = isCorrect ? "var(--color-success)" : "var(--color-danger)";
         }
 
-        // Запись в статистику и интервальное повторение
+        // Запись ответа в историю и постоянную память
         recordAnswer(isCorrect, data);
 
-        // Раскрытие разбора
-        state.isRevealed = true;
-        const answerPanel = card.querySelector(".answer-panel");
-        if (answerPanel) answerPanel.classList.add("revealed");
-
-        const tapCue = card.querySelector("#card-tap-cue");
-        if (tapCue) tapCue.style.display = "none";
-
-        const nextWrap = card.querySelector(".btn-next-wrap");
-        if (nextWrap) nextWrap.classList.add("show");
-
-        const revealLabel = document.getElementById("reveal-btn-label");
-        if (revealLabel) revealLabel.textContent = "Скрыть";
+        // Показ панели разбора
+        const drawer = card.querySelector(".quiz-feedback-drawer");
+        const statusBadge = card.querySelector("#feedback-status-badge");
+        if (statusBadge) {
+          statusBadge.textContent = isCorrect ? "✓ Верно!" : "✕ Ошибка";
+          statusBadge.className = `feedback-status-badge ${isCorrect ? "is-correct" : "is-wrong"}`;
+        }
+        if (drawer) {
+          drawer.classList.add("show");
+        }
 
         // Токенизация для переводчика
         if (window.DenisTranslator && typeof window.DenisTranslator.tokenizeAllText === "function") {
-          window.DenisTranslator.tokenizeAllText(answerPanel);
+          window.DenisTranslator.tokenizeAllText(card.querySelector(".quiz-feedback-drawer"));
         }
       });
     });
 
-    // Кнопка «Следующая карточка»
-    const nextBtn = card.querySelector(".btn-next-card");
+    // Кнопка перехода к следующему вопросу
+    const nextBtn = card.querySelector("#feedback-btn-next");
     if (nextBtn) {
       nextBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         playSound("tap");
-        advanceCard(card.dataset.lastAnswer !== "false");
+        advanceNextCard();
       });
     }
 
-    card.addEventListener("click", (e) => {
-      if (e.target.closest(".tr-w") || e.target.closest("button") || e.target.closest("#tr-popup") || e.target.closest(".option-btn")) {
-        return;
-      }
-      playSound("reveal");
-      toggleReveal();
-    });
+    stageEl.appendChild(card);
 
-    return card;
-  }
-
-  function formatCorrectAnswer(fullAnswer, keyPart) {
-    if (!keyPart) return escapeHtml(fullAnswer);
-    const regex = new RegExp(`(${keyPart})`, "i");
-    return fullAnswer.replace(regex, `<span class="target-highlight">$1</span>`);
-  }
-
-  function toggleReveal() {
-    state.isRevealed = !state.isRevealed;
-    const topCard = arenaEl.querySelector(".card-current");
-    if (!topCard) return;
-
-    const answerPanel = topCard.querySelector(".answer-panel");
-    const tapCue = topCard.querySelector("#card-tap-cue");
-    const nextWrap = topCard.querySelector(".btn-next-wrap");
-
-    if (answerPanel) answerPanel.classList.toggle("revealed", state.isRevealed);
-    if (tapCue) tapCue.style.display = state.isRevealed ? "none" : "flex";
-    if (nextWrap) nextWrap.classList.toggle("show", state.isRevealed);
-
-    const revealLabel = document.getElementById("reveal-btn-label");
-    if (revealLabel) {
-      revealLabel.textContent = state.isRevealed ? "Скрыть" : "👁️ Ответ";
+    // Токенизация слов предложения для словаря
+    if (window.DenisTranslator && typeof window.DenisTranslator.tokenizeAllText === "function") {
+      window.DenisTranslator.tokenizeAllText(card.querySelector(".quiz-card-hero"));
     }
   }
 
   function recordAnswer(isCorrect, cardData) {
     playSound(isCorrect ? "success" : "wrong");
-
-    const topCard = arenaEl.querySelector(".card-current");
-    if (topCard) {
-      topCard.dataset.lastAnswer = isCorrect ? "true" : "false";
-    }
 
     state.history.push({
       cardId: cardData.id,
@@ -529,6 +433,7 @@
       state.streak++;
     } else {
       state.streak = 0;
+      // При ошибке карточка вернётся через 3 шага для повторения
       const reinsertIndex = Math.min(state.queue.length, state.currentIndex + 3);
       state.queue.splice(reinsertIndex, 0, cardData);
     }
@@ -537,147 +442,29 @@
     updateHeaderStats();
   }
 
-  function advanceCard(isCorrect) {
+  function advanceNextCard() {
     if (state.currentIndex >= state.queue.length) return;
-
-    const topCard = arenaEl.querySelector(".card-current");
-    if (topCard) {
-      topCard.style.transition = "transform 260ms var(--ease), opacity 220ms ease";
-      const exitX = isCorrect ? window.innerWidth * 1.25 : -window.innerWidth * 1.25;
-      const rotate = isCorrect ? 20 : -20;
-      topCard.style.transform = `translateX(${exitX}px) rotate(${rotate}deg)`;
-      topCard.style.opacity = "0";
-
-      const stamp = topCard.querySelector(isCorrect ? ".stamp-right" : ".stamp-left");
-      if (stamp) stamp.style.opacity = "1";
-    }
-
-    setTimeout(() => {
-      state.currentIndex++;
-      state.isRevealed = false;
-      renderCurrentCards();
-    }, 200);
-  }
-
-  function handleAnswer(isCorrect) {
-    if (state.currentIndex >= state.queue.length) return;
-
-    const cardData = state.queue[state.currentIndex];
-    const topCard = arenaEl.querySelector(".card-current");
-    if (!topCard) return;
-
-    // Если карточка еще не отвечена, отмечаем правильный/неправильный ответ и раскрываем разбор
-    if (topCard.dataset.answered !== "true") {
-      topCard.dataset.answered = "true";
-      recordAnswer(isCorrect, cardData);
-
-      const correctVal = (cardData.keyPart || "").trim().toLowerCase();
-      topCard.querySelectorAll(".option-btn").forEach(b => {
-        if (b.dataset.val.trim().toLowerCase() === correctVal) {
-          b.classList.add("is-correct");
-        } else if (!isCorrect) {
-          b.classList.add("is-dimmed");
-        }
-      });
-
-      state.isRevealed = true;
-      const answerPanel = topCard.querySelector(".answer-panel");
-      if (answerPanel) answerPanel.classList.add("revealed");
-
-      const tapCue = topCard.querySelector("#card-tap-cue");
-      if (tapCue) tapCue.style.display = "none";
-
-      const nextWrap = topCard.querySelector(".btn-next-wrap");
-      if (nextWrap) nextWrap.classList.add("show");
-
-      const revealLabel = document.getElementById("reveal-btn-label");
-      if (revealLabel) revealLabel.textContent = "Скрыть";
-
-      return;
-    }
-
-    // Если карточка уже была отвечена — свайпаем и идем к следующей
-    advanceCard(topCard.dataset.lastAnswer !== "false");
-  }
-
-  function setupDrag(card) {
-    let startX = 0;
-    let startY = 0;
-    let currentX = 0;
-    let currentY = 0;
-    let isDragging = false;
-
-    const stampRight = card.querySelector(".stamp-right");
-    const stampLeft = card.querySelector(".stamp-left");
-
-    function onPointerDown(e) {
-      if (e.target.closest(".tr-w") || e.target.closest("button") || e.target.closest("#tr-popup")) {
-        return;
-      }
-      isDragging = true;
-      startX = e.clientX;
-      startY = e.clientY;
-      currentX = 0;
-      currentY = 0;
-      card.style.transition = "none";
-      card.setPointerCapture(e.pointerId);
-    }
-
-    function onPointerMove(e) {
-      if (!isDragging) return;
-      currentX = e.clientX - startX;
-      currentY = e.clientY - startY;
-
-      const rotate = currentX * 0.06;
-      card.style.transform = `translateX(${currentX}px) translateY(${currentY * 0.2}px) rotate(${rotate}deg)`;
-
-      if (currentX > 20) {
-        stampRight.style.opacity = Math.min(1, (currentX - 20) / 60);
-        stampLeft.style.opacity = 0;
-      } else if (currentX < -20) {
-        stampLeft.style.opacity = Math.min(1, (-currentX - 20) / 60);
-        stampRight.style.opacity = 0;
-      } else {
-        stampRight.style.opacity = 0;
-        stampLeft.style.opacity = 0;
-      }
-    }
-
-    function onPointerUp(e) {
-      if (!isDragging) return;
-      isDragging = false;
-      try { card.releasePointerCapture(e.pointerId); } catch (err) {}
-
-      const threshold = window.innerWidth * 0.25;
-      if (currentX > threshold) {
-        handleAnswer(true);
-      } else if (currentX < -threshold) {
-        handleAnswer(false);
-      } else {
-        card.style.transition = "transform 260ms var(--ease)";
-        card.style.transform = "translateX(0px) translateY(0px) rotate(0deg)";
-        stampRight.style.opacity = 0;
-        stampLeft.style.opacity = 0;
-      }
-    }
-
-    card.addEventListener("pointerdown", onPointerDown);
-    card.addEventListener("pointermove", onPointerMove);
-    card.addEventListener("pointerup", onPointerUp);
-    card.addEventListener("pointercancel", onPointerUp);
+    playSound("tap");
+    state.currentIndex++;
+    renderCurrentCard();
   }
 
   function updateHeaderStats() {
     if (streakNumEl) streakNumEl.textContent = state.streak;
+    const total = state.queue.length || 1;
+    const currentNum = Math.min(state.currentIndex + 1, total);
+    if (counterNumEl) counterNumEl.textContent = `${currentNum} / ${total}`;
     if (progressBarEl) {
-      const total = state.queue.length || 1;
       const pct = Math.min(100, Math.round((state.currentIndex / total) * 100));
       progressBarEl.style.width = `${pct}%`;
     }
   }
 
   function renderEmptyState() {
-    arenaEl.innerHTML = `
+    if (counterNumEl) counterNumEl.textContent = `${state.queue.length} / ${state.queue.length}`;
+    if (progressBarEl) progressBarEl.style.width = `100%`;
+    if (!stageEl) return;
+    stageEl.innerHTML = `
       <div class="finish-wrap">
         <div class="finish-icon">✨</div>
         <h2 class="finish-title">Колода пройдена!</h2>
@@ -693,7 +480,7 @@
     document.getElementById("restart-deck-btn").addEventListener("click", () => {
       playSound("tap");
       buildQueue(state.activeTopic);
-      renderCurrentCards();
+      renderCurrentCard();
     });
   }
 
@@ -814,7 +601,7 @@
       state.streak = 0;
       saveState();
       buildQueue(state.activeTopic);
-      renderCurrentCards();
+      renderCurrentCard();
       renderStatsContent();
     }
   }
