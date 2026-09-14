@@ -1,5 +1,245 @@
-// cards-data.js — Полная база карточек для тренажера Дениса (124 карточки с интерактивными вариантами ответов)
+// cards-data.js — Полная база карточек для тренажера Дениса (134 карточек)
 window.ENGLISH_CARDS_DATA = [
+  {
+    "id": "ex-sep14-01",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Чувства и Бали",
+    "front": "I ___ really angry because the internet connection is very slow.",
+    "hint": "Чувство/эмоция (злой) — не забудь глагол-связку to be!",
+    "answer": "I am really angry because the internet connection is very slow.",
+    "translation": "Я очень злюсь, потому что интернет очень медленный.",
+    "keyPart": "am",
+    "breakdown": {
+      "steps": [
+        "1. Angry — это прилагательное, обозначающее эмоцию (злой).",
+        "2. В английском предложении с местоимением I перед прилагательным обязательно ставится am."
+      ],
+      "trap": "Ошибка с урока: «I really angry». Без am фраза грамматически неполная!",
+      "rule": "I am + эмоция/чувство (I am angry, I am sad, I am happy)."
+    },
+    "options": [
+      "am",
+      "—",
+      "have",
+      "do"
+    ]
+  },
+  {
+    "id": "ex-sep14-02",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Чувства и Бали",
+    "front": "After riding my scooter for five hours, I ___ completely exhausted.",
+    "hint": "Состояние усталости с местоимением I",
+    "answer": "After riding my scooter for five hours, I am completely exhausted.",
+    "translation": "После пяти часов езды на скутере я совершенно без сил.",
+    "keyPart": "am",
+    "breakdown": {
+      "steps": [
+        "1. Exhausted (крайне уставший) — прилагательное состояния.",
+        "2. Связка to be обязательна: I am exhausted."
+      ],
+      "trap": "Пропуск глагола: «I exhausted».",
+      "rule": "I am tired / I am exhausted."
+    },
+    "options": [
+      "am",
+      "—",
+      "was to",
+      "feel to"
+    ]
+  },
+  {
+    "id": "ex-sep14-03",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Чувства и Бали",
+    "front": "Don't worry about the explanation, I ___ your point now.",
+    "hint": "Глагол понимать — связка am запрещена!",
+    "answer": "Don't worry about the explanation, I understand your point now.",
+    "translation": "Не переживай насчёт объяснения, я теперь понимаю твою мысль.",
+    "keyPart": "understand",
+    "breakdown": {
+      "steps": [
+        "1. Understand — глагол действия/состояния.",
+        "2. Глагол to be (am) с ним не используется."
+      ],
+      "trap": "Ошибка трёх уроков подряд: «I’m understand»! Говори только «I understand».",
+      "rule": "I understand (Я понимаю). Без am!"
+    },
+    "options": [
+      "understand",
+      "'m understand",
+      "am understanding",
+      "have understand"
+    ]
+  },
+  {
+    "id": "ex-sep14-04",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Чувства и Бали",
+    "front": "Our villa is huge, we have three ___ in different rooms.",
+    "hint": "Множественное число от исчисляемого слова TV (телевизор)",
+    "answer": "Our villa is huge, we have three TVs in different rooms.",
+    "translation": "Наша вилла огромная, у нас три телевизора в разных комнатах.",
+    "keyPart": "TVs",
+    "breakdown": {
+      "steps": [
+        "1. TV — исчисляемый предмет (один телевизор, два телевизора).",
+        "2. Во множественном числе обязательно добавляем окончание -s: TVs."
+      ],
+      "trap": "Ошибка с урока: «we have many TV» без окончания -s.",
+      "rule": "many TVs, three TVs."
+    },
+    "options": [
+      "TVs",
+      "TV",
+      "TVes",
+      "TV's"
+    ]
+  },
+  {
+    "id": "ex-sep14-05",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Чувства и Бали",
+    "front": "Could I please get two slices of ___ with butter?",
+    "hint": "Хлеб неисчисляемый, окончание -s не принимает!",
+    "answer": "Could I please get two slices of bread with butter?",
+    "translation": "Можно мне, пожалуйста, два кусочка хлеба с маслом?",
+    "keyPart": "bread",
+    "breakdown": {
+      "steps": [
+        "1. Bread — неисчисляемое вещество.",
+        "2. Считаем кусочки (slices), а само слово bread остаётся без изменений."
+      ],
+      "trap": "Сказать «two breads» или «two slices of breads».",
+      "rule": "a slice of bread, two slices of bread."
+    },
+    "options": [
+      "bread",
+      "breads",
+      "a bread",
+      "the breads"
+    ]
+  },
+  {
+    "id": "ex-sep14-06",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Чувства и Бали",
+    "front": "It's thirty degrees in Canggu today, I have ___ of cold water.",
+    "hint": "В утвердительном предложении естественнее использовать a lot of, а не much",
+    "answer": "It's thirty degrees in Canggu today, I have a lot of cold water.",
+    "translation": "В Чангу сегодня 30 градусов, у меня с собой много холодной воды.",
+    "keyPart": "a lot of",
+    "breakdown": {
+      "steps": [
+        "1. Предложение утвердительное («у меня много воды»).",
+        "2. В утверждениях разговорного английского используется a lot of."
+      ],
+      "trap": "«I have much water» — звучит сухо и неестественно.",
+      "rule": "I have a lot of water (утверждение). Do you have much water? (вопрос)."
+    },
+    "options": [
+      "a lot of",
+      "much",
+      "many",
+      "a few"
+    ]
+  },
+  {
+    "id": "ex-sep14-07",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Чувства и Бали",
+    "front": "Yesterday Denis rode his bike ___ five hours around Ubud.",
+    "hint": "Предлог длительности периода времени",
+    "answer": "Yesterday Denis rode his bike for five hours around Ubud.",
+    "translation": "Вчера Денис катался на байке пять часов по окрестностям Убуда.",
+    "keyPart": "for",
+    "breakdown": {
+      "steps": [
+        "1. Длительность периода времени в английском передаётся предлогом for.",
+        "2. Five hours — пять часов."
+      ],
+      "trap": "Сказать «rode bike five hour» без предлога for.",
+      "rule": "for 5 hours (в течение пяти часов)."
+    },
+    "options": [
+      "for",
+      "during",
+      "in",
+      "at"
+    ]
+  },
+  {
+    "id": "ex-sep14-08",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Чувства и Бали",
+    "front": "The map application was very confusing, so I was completely ___.",
+    "hint": "Чувство человека (запутался) — окончание -ed",
+    "answer": "The map application was very confusing, so I was completely confused.",
+    "translation": "Приложение с картами было очень запутанным, поэтому я совершенно запутался.",
+    "keyPart": "confused",
+    "breakdown": {
+      "steps": [
+        "1. Confusing — описывает навигатор (запутанный).",
+        "2. Человек, испытывающий замешательство — confused (-ed)."
+      ],
+      "trap": "Сказать «I was confusing» (я был запутанным для окружающих).",
+      "rule": "I am confused (я запутался)."
+    },
+    "options": [
+      "confused",
+      "confusing",
+      "confuse",
+      "confusion"
+    ]
+  },
+  {
+    "id": "ex-sep14-09",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Чувства и Бали",
+    "front": "Excuse me, how do I get to Echo Beach? — Go straight and then turn ___ at the pharmacy.",
+    "hint": "Поворот налево — без предлогов to/on",
+    "answer": "Excuse me, how do I get to Echo Beach? — Go straight and then turn left at the pharmacy.",
+    "translation": "Извините, как добраться до Эхо-Бич? — Езжайте прямо, а затем поверните налево у аптеки.",
+    "keyPart": "left",
+    "breakdown": {
+      "steps": [
+        "1. Указание направления с глаголом turn не требует предлогов.",
+        "2. Просто: turn left, turn right."
+      ],
+      "trap": "Сказать «turn to left» или «turn on left».",
+      "rule": "turn left / turn right."
+    },
+    "options": [
+      "left",
+      "to left",
+      "on left",
+      "leftly"
+    ]
+  },
+  {
+    "id": "ex-sep14-10",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Чувства и Бали",
+    "front": "You don't need to turn yet, just keep going ___ for two hundred meters.",
+    "hint": "Двигаться прямо — слово straight",
+    "answer": "You don't need to turn yet, just keep going straight for two hundred meters.",
+    "translation": "Вам пока не нужно поворачивать, просто продолжайте ехать прямо двести метров.",
+    "keyPart": "straight",
+    "breakdown": {
+      "steps": [
+        "1. «Прямо» в направлении движения — это наречие straight.",
+        "2. Слова straightly в современном английском не существует."
+      ],
+      "trap": "Выдумывать «straightly» или «to straight».",
+      "rule": "go straight / keep going straight."
+    },
+    "options": [
+      "straight",
+      "straightly",
+      "to straight",
+      "direct"
+    ]
+  },
   {
     "id": "tt-01",
     "topic": "this-that",

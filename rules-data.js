@@ -1,5 +1,305 @@
-// rules-data.js — База вопросов по логике и правилам (118 вопросов)
+// rules-data.js — База вопросов по логике и правилам (133 вопросов)
 window.ENGLISH_RULES_DATA = [
+  {
+    "id": "rule-sep14-01",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Чувства и эмоции",
+    "front": "Ты хочешь сказать на английском «Я злюсь», «Мне грустно», «Я счастлив». Как грамматически правильно построить фразу с чувствами?",
+    "hint": "Вспомни: в английском языке у чувств-прилагательных обязательно нужен глагол-связка",
+    "answer": "I am angry / I am sad / I am happy (обязательно нужен глагол to be: am)",
+    "keyPart": "I am angry / I am sad / I am happy (обязательно нужен глагол to be: am)",
+    "translation": "I am angry / I am sad / I am happy — связка am строго обязательна!",
+    "options": [
+      "I am angry / I am sad / I am happy (обязательно нужен глагол to be: am)",
+      "I angry / I sad / I happy (глагол не нужен, так как это эмоция)",
+      "I have angry / I have sad (чувство нужно иметь через have)",
+      "I do angry / I do sad"
+    ],
+    "breakdown": {
+      "rule": "В русском языке мы опускаем глагол: «Я злой», «Мне грустно». В английском angry, sad, happy, nervous, tired — это прилагательные, и без глагола-связки to be предложение грамматически мертво: «I am angry», «I am sad», «I am happy».",
+      "trap": "Сказать «I angry» или «I sad» — ошибка, повторенная около 10 раз на уроке! Элиза отвечала «Correct», но грамматически это неверно."
+    }
+  },
+  {
+    "id": "rule-sep14-02",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Чувства и эмоции",
+    "front": "Почему нельзя сказать «I nervous before the call» или «I tired after bike»?",
+    "hint": "Какая часть речи слова nervous и tired, и чего не хватает предложению?",
+    "answer": "Слова nervous и tired — это прилагательные, им обязательно требуется глагол-связка: I am nervous, I am tired",
+    "keyPart": "Слова nervous и tired — это прилагательные, им обязательно требуется глагол-связка: I am nervous, I am tired",
+    "translation": "I am nervous / I am tired — никогда не выкидывай am перед своим состоянием!",
+    "options": [
+      "Слова nervous и tired — это прилагательные, им обязательно требуется глагол-связка: I am nervous, I am tired",
+      "Слово nervous можно использовать только про погоду",
+      "Вместо местоимения I нужно всегда говорить My",
+      "После слова nervous нужно обязательно ставить предлог to"
+    ],
+    "breakdown": {
+      "rule": "Nervous (нервничающий) и tired (уставший) описывают состояние человека. Конструкция: Подлежащее + am/is/are + прилагательное состояния («I am nervous», «I am tired»).",
+      "trap": "Выбросить связку am («I nervous», «I tired») из-за привычки русской речи («Я нервный», «Я уставший»)."
+    }
+  },
+  {
+    "id": "rule-sep14-03",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Запутался vs Непонятный",
+    "front": "Как сказать «Я запутался / я в замешательстве», когда потерялся на Бали или не понял объяснение?",
+    "hint": "Отрабатывалось на уроке: окончание -ed для собственного чувства",
+    "answer": "I am confused (звучит: кэн-фьЮзд)",
+    "keyPart": "I am confused (звучит: кэн-фьЮзд)",
+    "translation": "I am confused = Я запутался. Confusing = Запутанный (объект/маршрут).",
+    "options": [
+      "I am confused (звучит: кэн-фьЮзд)",
+      "I am confusing",
+      "I confusing",
+      "I have confuse"
+    ],
+    "breakdown": {
+      "rule": "Прилагательные на -ed выражают то, что ЧУВСТВУЕТ человек: «I am confused» (я запутался). Прилагательные на -ing описывают свойство предмета: «The map is confusing» (карта запутанная).",
+      "trap": "Сказать «I am confusing» — это значит «Я сам по себе запутанный/мутный человек, который путает других»!"
+    }
+  },
+  {
+    "id": "rule-sep14-04",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Ловушка I understand",
+    "front": "Ты понял мысль собеседника и хочешь сказать «Я понимаю». Какая форма грамматически верная?",
+    "hint": "Ошибка, которую ты повторял 3 урока подряд: нужен ли глагол am перед understand?",
+    "answer": "I understand (глагол действия/состояния, связка am категорически запрещена!)",
+    "keyPart": "I understand (глагол действия/состояния, связка am категорически запрещена!)",
+    "translation": "I understand (Я понимаю). Формы «I am understand» в английском языке НЕ СУЩЕСТВУЕТ!",
+    "options": [
+      "I understand (глагол действия/состояния, связка am категорически запрещена!)",
+      "I am understand",
+      "I was understand",
+      "I have understand"
+    ],
+    "breakdown": {
+      "rule": "Understand — это самостоятельный глагол. Добавлять к нему глагол-связку am нельзя ни в коем случае: только «I understand» или «I don’t understand».",
+      "trap": "Фраза «I’m understand» — застарелая привычка Дениса. Запомни: либо I am + прилагательное (I am happy), либо сразу глагол (I understand)!"
+    }
+  },
+  {
+    "id": "rule-sep14-05",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Множественное число с many",
+    "front": "На вилле несколько телевизоров. Ты говоришь: «У меня много телевизоров». Как правильно?",
+    "hint": "Ошибка с урока («I have many TV»). Слово TV — исчисляемое!",
+    "answer": "I have many TVs (слово TV исчисляемое, во множественном числе обязательно добавляем -s)",
+    "keyPart": "I have many TVs (слово TV исчисляемое, во множественном числе обязательно добавляем -s)",
+    "translation": "После many исчисляемые существительные ВСЕГДА идут во множественном числе (-s): many TVs, many bikes.",
+    "options": [
+      "I have many TVs (слово TV исчисляемое, во множественном числе обязательно добавляем -s)",
+      "I have many TV (без окончания -s)",
+      "I have much TV",
+      "I have a TV"
+    ],
+    "breakdown": {
+      "rule": "Слово many используется только с исчисляемыми существительными во множественном числе: many TVs, many laptops, many clients.",
+      "trap": "Забыть прибавить -s («I have many TV»). Помни: many требует -s на конце исчисляемого слова!"
+    }
+  },
+  {
+    "id": "rule-sep14-06",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Миф о неисчисляемых",
+    "front": "Элиза на уроке объяснила: «Неисчисляемое — это то, что долго считать (например, рис или волосы)». Это правда?",
+    "hint": "Подумай: деньги (money) или информация (information) неисчисляемые из-за времени подсчёта?",
+    "answer": "Нет, это миф! Неисчисляемость — это категория слова, а не скорость подсчёта (деньги money тоже неисчисляемые)",
+    "keyPart": "Нет, это миф! Неисчисляемость — это категория слова, а не скорость подсчёта (деньги money тоже неисчисляемые)",
+    "translation": "Неисчисляемые слова (money, water, advice, rice, bread) неделимы грамматически, независимо от количества.",
+    "options": [
+      "Нет, это миф! Неисчисляемость — это категория слова, а не скорость подсчёта (деньги money тоже неисчисляемые)",
+      "Да, всё, что можно пересчитать за 1 минуту — всегда исчисляемое",
+      "Да, рис становится исчисляемым, если взять 5 рисинок",
+      "В английском языке вообще нет понятия неисчисляемых существительных"
+    ],
+    "breakdown": {
+      "rule": "Неисчисляемые существительные (uncountable nouns) — это концепции, массы и вещества, которые грамматика английского воспринимает как единое целое: money (деньги), bread (хлеб), water (вода), advice (советы), information (информация). Перед ними нельзя ставить a/an и нельзя добавлять -s.",
+      "trap": "Думать «раз я могу пересчитать купюры, то money исчисляемое». Купюры (bills, coins) — исчисляемые, а само слово money — строго uncountable!"
+    }
+  },
+  {
+    "id": "rule-sep14-07",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Хлеб и нарезка",
+    "front": "Элиза сказала: «Хлеб (bread) считается, если он нарезан». Как на самом деле сказать по-английски «два кусочка хлеба»?",
+    "hint": "Слово bread само по себе никогда не получает -s!",
+    "answer": "Two slices of bread (слово bread ВСЕГДА неисчисляемое, считаем кусочки — slices)",
+    "keyPart": "Two slices of bread (слово bread ВСЕГДА неисчисляемое, считаем кусочки — slices)",
+    "translation": "Хлеб никогда не бывает «two breads». Считаем куски: a slice of bread / two slices of bread.",
+    "options": [
+      "Two slices of bread (слово bread ВСЕГДА неисчисляемое, считаем кусочки — slices)",
+      "Two breads",
+      "Two bread",
+      "A two breads"
+    ],
+    "breakdown": {
+      "rule": "Слово bread в английском языке НЕИЗМЕННО неисчисляемое. Чтобы посчитать хлеб, считают единицы измерения: a slice of bread (кусочек), two slices of bread, a loaf of bread (буханка хлеба).",
+      "trap": "Сказать «two breads» или верить, что нарезка делает слово bread исчисляемым. Само слово bread окончание -s не принимает!"
+    }
+  },
+  {
+    "id": "rule-sep14-08",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Much vs A lot of",
+    "front": "Элиза приняла фразу «I have much water». Как на самом деле естественно сказать «У меня много воды» в утверждении?",
+    "hint": "В утвердительных предложениях носители вместо much используют другую популярную конструкцию",
+    "answer": "I have a lot of water (в утвердительных предложениях носители говорят a lot of, а не much)",
+    "keyPart": "I have a lot of water (в утвердительных предложениях носители говорят a lot of, а не much)",
+    "translation": "В утверждениях: I have a lot of water. Слово much используется в вопросах и отрицаниях.",
+    "options": [
+      "I have a lot of water (в утвердительных предложениях носители говорят a lot of, а не much)",
+      "I have much water (звучит неестественно и архаично для утверждения)",
+      "I have many water",
+      "I have a water"
+    ],
+    "breakdown": {
+      "rule": "В современном разговорном английском слово much в утвердительных предложениях звучит книжно и неестественно. Носители говорят «a lot of water» или «plenty of water». А вот в вопросах и отрицаниях much звучит идеально: «Do you have much water?», «I don’t have much water».",
+      "trap": "Говорить «I have much water / I have much time». В утверждениях всегда выбирай a lot of!"
+    }
+  },
+  {
+    "id": "rule-sep14-09",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Uncountable vs Uncomfortable",
+    "front": "В чём разница между словами «uncountable» и «uncomfortable»? (Ловушка с сегодняшнего урока)",
+    "hint": "Один термин из грамматики, а второй про физический комфорт или неудобство",
+    "answer": "Uncountable — неисчисляемый (грамматика); uncomfortable — неудобный / дискомфортный (одежда, стул)",
+    "keyPart": "Uncountable — неисчисляемый (грамматика); uncomfortable — неудобный / дискомфортный (одежда, стул)",
+    "translation": "Uncountable nouns = неисчисляемые существительные. Uncomfortable chair = неудобный стул.",
+    "options": [
+      "Uncountable — неисчисляемый (грамматика); uncomfortable — неудобный / дискомфортный (одежда, стул)",
+      "Это полные синонимы, оба слова означают «непонятный»",
+      "Uncomfortable используется только при заказе еды",
+      "Uncountable переводится как «очень дорогой»"
+    ],
+    "breakdown": {
+      "rule": "Uncountable происходит от count (считать) = то, что нельзя посчитать по штукам. Uncomfortable происходит от comfort = неудобный, причиняющий дискомфорт.",
+      "trap": "На уроке Денис оговорился и сказал «uncomfortable nouns» (неудобные существительные), а Элиза даже не поправила. Различай их четко!"
+    }
+  },
+  {
+    "id": "rule-sep14-10",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Длительность поездки",
+    "front": "Ты рассказываешь о поездке: «Я катался на байке около пяти часов». Как грамматически правильно оформить длительность?",
+    "hint": "На уроке прозвучало «maybe five hour». Чего не хватает?",
+    "answer": "I was riding my bike for maybe five hours (предлог for + множественное число hours)",
+    "keyPart": "I was riding my bike for maybe five hours (предлог for + множественное число hours)",
+    "translation": "Для выражения длительности нужен предлог FOR: for five hours (в течение пяти часов).",
+    "options": [
+      "I was riding my bike for maybe five hours (предлог for + множественное число hours)",
+      "I ride bike maybe five hour (нет предлога for, hour в ед. числе)",
+      "I rode bike during five hours",
+      "I was bike five hours"
+    ],
+    "breakdown": {
+      "rule": "Период времени, в течение которого длилось действие, в английском языке ВСЕГДА вводится предлогом FOR: «for 5 hours», «for 2 weeks», «for 30 minutes». При этом слово hour во множественном числе получает -s: five hours.",
+      "trap": "Опустить предлог for и забыть -s: «I ride bike five hour». Говори: «I rode for five hours»!"
+    }
+  },
+  {
+    "id": "rule-sep14-11",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Навигация на Бали",
+    "front": "Как на Бали естественно спросить у прохожего: «Как мне добраться до пляжа?»",
+    "hint": "Стандартная и самая вежливая формула вопроса о маршруте в разговорном английском",
+    "answer": "How do I get to the beach?",
+    "keyPart": "How do I get to the beach?",
+    "translation": "How do I get to...? — главный универсальный вопрос, чтобы спросить дорогу.",
+    "options": [
+      "How do I get to the beach?",
+      "How I get to beach?",
+      "Where is go to beach?",
+      "How can go beach?"
+    ],
+    "breakdown": {
+      "rule": "Формула «How do I get to + место?» — идиоматический стандарт для вопроса о маршруте. Вспомогательный глагол do обязателен!",
+      "trap": "Калька с русского «How I can go...?» или «How to go...?». Носители всегда спрашивают: «How do I get to...»."
+    }
+  },
+  {
+    "id": "rule-sep14-12",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Навигация на Бали",
+    "front": "Тебе объясняют дорогу: «Поверните налево на перекрёстке и поезжайте прямо». Как это звучит?",
+    "hint": "Запомни глаголы направления: turn и go straight",
+    "answer": "Turn left at the intersection and go straight",
+    "keyPart": "Turn left at the intersection and go straight",
+    "translation": "Turn left / Turn right — поверни налево / направо. Go straight — двигайся прямо.",
+    "options": [
+      "Turn left at the intersection and go straight",
+      "Turn to left on intersection and go straightly",
+      "Take left in intersection and go direct",
+      "Rotate left at intersection"
+    ],
+    "breakdown": {
+      "rule": "После глагола turn направление ставится БЕЗ предлога: «turn left», «turn right». Двигаться прямо — это «go straight» (слово straightly не существует в этом значении).",
+      "trap": "Ставить лишний предлог «turn to left» или выдумывать «go straightly»."
+    }
+  },
+  {
+    "id": "rule-sep14-13",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Навигация на Бали",
+    "front": "Как сказать: «Кофейня находится прямо на углу улицы, рядом с супермаркетом»?",
+    "hint": "На углу = on the corner, рядом с = next to",
+    "answer": "The cafe is right on the corner, next to the supermarket",
+    "keyPart": "The cafe is right on the corner, next to the supermarket",
+    "translation": "on the corner = на углу. next to = прямо рядом, по соседству.",
+    "options": [
+      "The cafe is right on the corner, next to the supermarket",
+      "The cafe is in the corner, near of supermarket",
+      "The cafe stays at corner, by supermarket",
+      "The cafe is on corner, beside to supermarket"
+    ],
+    "breakdown": {
+      "rule": "На углу улицы — предлог ON: «on the corner». Вплотную рядом — предлог «next to» (с частицей to).",
+      "trap": "Сказать «in the corner» (это значит внутри угла комнаты, в углу помещения) или сказать «near of» (после near предлог of не ставится)."
+    }
+  },
+  {
+    "id": "rule-sep14-14",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Произношение Refrigerator",
+    "front": "Как правильно произносится слово «refrigerator» (холодильник), которое отрабатывали по слогам на уроке?",
+    "hint": "Ударение на второй слог, а в быту носители почти всегда сокращают это слово",
+    "answer": "риф-РИДЖ-ер-эй-тер [rɪˈfrɪdʒəreɪtər], в быту говорят просто fridge [frɪdʒ]",
+    "keyPart": "риф-РИДЖ-ер-эй-тер [rɪˈfrɪdʒəreɪtər], в быту говорят просто fridge [frɪdʒ]",
+    "translation": "Refrigerator [rɪˈfrɪdʒəreɪtər]. В реальной жизни 95% носителей говорят просто fridge.",
+    "options": [
+      "риф-РИДЖ-ер-эй-тер [rɪˈfrɪdʒəreɪtər], в быту говорят просто fridge [frɪdʒ]",
+      "ре-фри-гер-атор",
+      "риф-рай-гер-эйт",
+      "рефриж-ер-атор"
+    ],
+    "breakdown": {
+      "rule": "Слово refrigerator состоит из 5 слогов с ударением на -frig- [rɪˈfrɪdʒəreɪtər]. Однако в живом разговорном английском на Бали и в быту почти всегда используют короткое слово «fridge».",
+      "trap": "Читать букву g как твёрдый русский звук [г] вместо мягкого дж [dʒ]."
+    }
+  },
+  {
+    "id": "rule-sep14-15",
+    "topic": "lesson-14sep",
+    "topicTitle": "Урок 14 сен: Обратная связь преподавателю",
+    "front": "Когда ты ошибаешься (говоришь «I angry»), а репетитор начинает с «Correct!», почему это вредит твоему прогрессу?",
+    "hint": "Мозг слышит похвалу и закрепляет ошибку как норму",
+    "answer": "Мозг слышит «Correct» и закрепляет ошибку; нужно попросить её останавливать тебя и просить повторить фразу верно",
+    "keyPart": "Мозг слышит «Correct» и закрепляет ошибку; нужно попросить её останавливать тебя и просить повторить фразу верно",
+    "translation": "Попроси Элизу: «Please stop me and make me repeat the sentence correctly, don’t say correct first».",
+    "options": [
+      "Мозг слышит «Correct» и закрепляет ошибку; нужно попросить её останавливать тебя и просить повторить фразу верно",
+      "Это никак не влияет, главное говорить без пауз",
+      "Это полезно, так как снимает языковой барьер перед грамматикой",
+      "Репетитор всегда права и ошибки исправлять на уроке не нужно"
+    ],
+    "breakdown": {
+      "rule": "Когда преподаватель из вежливости говорит «Correct» перед тем, как произнести верный вариант, ученик подсознательно уверен, что сказал всё правильно. Чтобы ошибка ушла, нужно услышать стоп-сигнал и физически повторить фразу вслух правильно: «I am angry».",
+      "trap": "Пропускать мимо ушей поправку после слова «Correct». Скажи Элизе: «When I make a mistake, please stop me and ask me to repeat it correctly!»"
+    }
+  },
   {
     "id": "rule-tt-01",
     "topic": "this-that",
