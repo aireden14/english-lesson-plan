@@ -419,17 +419,6 @@
       </div>
 
       <div class="quiz-feedback-drawer" id="quiz-feedback-drawer">
-        <div class="feedback-meta-row">
-          <div class="feedback-status-badge" id="feedback-status-badge"></div>
-          <div style="font-size:12px;font-weight:600;color:var(--text-3);font-variant-numeric:tabular-nums">${state.currentIndex + 1} / ${state.queue.length}</div>
-        </div>
-        <p class="feedback-translation" id="feedback-translation">🇷🇺 ${escapeHtml(data.translation)}</p>
-        <div class="feedback-breakdown" id="feedback-breakdown">
-          ${data.breakdown.steps.map(s => `<div class="breakdown-item" style="font-size:13px;color:var(--text);line-height:1.35">• ${escapeHtml(s)}</div>`).join("")}
-          ${data.breakdown.trap ? `<div class="feedback-rule-box is-trap">⚠️ ${escapeHtml(data.breakdown.trap)}</div>` : ""}
-          ${data.breakdown.rule ? `<div class="feedback-rule-box">📌 ${escapeHtml(data.breakdown.rule)}</div>` : ""}
-        </div>
-
         <div class="feedback-ai-actions" id="feedback-ai-actions">
           <a class="btn-chatgpt" id="chatgpt-btn" href="#" target="_blank" rel="noopener noreferrer">
             <svg class="chatgpt-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
@@ -438,9 +427,8 @@
             <span>Пояснить мне это в ChatGPT</span>
             <span class="btn-chatgpt-arrow">↗</span>
           </a>
-          <button type="button" class="btn-copy-prompt" id="copy-prompt-btn" title="Скопировать готовый промпт для вставки в Claude / DeepSeek">
+          <button type="button" class="btn-copy-prompt" id="copy-prompt-btn" title="Скопировать готовый промпт для Claude / DeepSeek">
             <span class="copy-icon">📋</span>
-            <span class="copy-label">Скопировать промпт для ИИ</span>
           </button>
         </div>
 
@@ -524,34 +512,22 @@
           copyBtn.onclick = (ev) => {
             ev.stopPropagation();
             copyToClipboard(promptText).then(() => {
-              const label = copyBtn.querySelector(".copy-label");
-              if (label) label.textContent = "✓ Промпт скопирован!";
+              copyBtn.innerHTML = `<span>✓</span>`;
               copyBtn.classList.add("is-copied");
               setTimeout(() => {
-                if (label) label.textContent = "Скопировать промпт для ИИ";
+                copyBtn.innerHTML = `<span class="copy-icon">📋</span>`;
                 copyBtn.classList.remove("is-copied");
-              }, 2500);
+              }, 2000);
             }).catch(() => {
-              const label = copyBtn.querySelector(".copy-label");
-              if (label) label.textContent = "Ошибка копирования";
+              copyBtn.innerHTML = `<span>✕</span>`;
             });
           };
         }
 
-        // Показ панели разбора
+        // Показ кнопок действий
         const drawer = card.querySelector(".quiz-feedback-drawer");
-        const statusBadge = card.querySelector("#feedback-status-badge");
-        if (statusBadge) {
-          statusBadge.textContent = isCorrect ? "✓ Верно!" : "✕ Ошибка";
-          statusBadge.className = `feedback-status-badge ${isCorrect ? "is-correct" : "is-wrong"}`;
-        }
         if (drawer) {
           drawer.classList.add("show");
-        }
-
-        // Токенизация для переводчика
-        if (window.DenisTranslator && typeof window.DenisTranslator.tokenizeAllText === "function") {
-          window.DenisTranslator.tokenizeAllText(card.querySelector(".quiz-feedback-drawer"));
         }
       });
     });
