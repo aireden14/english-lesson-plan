@@ -261,6 +261,81 @@
     renderCurrentCard();
   }
 
+  // Перемешивание массива (Fisher-Yates) для случайного порядка вариантов ответов
+  function shuffleArray(array) {
+    const arr = array.slice();
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  // Генератор детального контекстного промпта для ChatGPT / Claude / DeepSeek
+  function buildChatGptPrompt(cardData, chosenOption, isCorrect) {
+    const correctOption = (cardData.keyPart || "").trim();
+    const chosen = (chosenOption || "").trim();
+    const sentenceBlank = (cardData.front || "").replace(/___/g, "[ ___ ]");
+    const sentenceCorrect = (cardData.front || "").replace(/___/g, correctOption);
+    const sentenceChosen = (cardData.front || "").replace(/___/g, chosen);
+    const translation = cardData.translation || "";
+    const topic = cardData.topicTitle || cardData.topic || "Грамматика английского";
+    const hint = cardData.hint || "";
+
+    let prompt = `Привет! Я тренирую практический разговорный английский язык (уровень A2–B1). Разбери, пожалуйста, одно конкретное задание из моего тренажёра.\n\n`;
+    prompt += `📌 Тема: ${topic}\n`;
+    prompt += `📝 Предложение с пропуском: ${sentenceBlank}\n`;
+    if (hint) {
+      prompt += `💡 Контекст / подсказка: ${hint}\n`;
+    }
+    prompt += `🇷🇺 Перевод предложения: «${translation}»\n\n`;
+    prompt += `👉 Мой выбор: «${chosen}» (получилось: ${sentenceChosen})\n`;
+    prompt += `✅ Правильный ответ: «${correctOption}» (правильно: ${sentenceCorrect})\n\n`;
+
+    if (isCorrect) {
+      prompt += `Я ответил верно, но хочу разложить эту конструкцию по полочкам и глубже закрепить:\n`;
+      prompt += `1. Почему именно вариант «${correctOption}» здесь звучит естественно и грамматически корректно? Какое правило здесь действует?\n`;
+      prompt += `2. В каких ситуациях и почему русскоговорящие чаще всего ошибаются в этой конструкции?\n`;
+      prompt += `3. Приведи 3–4 живых примера из реального разговорного английского с этой же структурой (с переводом на русский).\n`;
+      prompt += `4. Какое простое правило или мнемонику запомнить, чтобы говорить так на автомате?`;
+    } else {
+      prompt += `Я допустил ошибку, выбрав вариант «${chosen}». Разбери, пожалуйста, подробно:\n`;
+      prompt += `1. ПОЧЕМУ вариант «${correctOption}» здесь правильный, а мой выбор «${chosen}» — ошибка? В чём грамматическая логика языка?\n`;
+      prompt += `2. КОГДА и в каких жизненных ситуациях НА САМОМ ДЕЛЕ применяется мой вариант «${chosen}»? Приведи 2–3 наглядных примера с переводом, где «${chosen}» был бы абсолютно уместен.\n`;
+      prompt += `3. Почему мозг русскоговорящего человека подталкивает сказать именно «${chosen}» (в чём заключается языковая ловушка / интерференция с русским)?\n`;
+      prompt += `4. Приведи 3–4 практических примера использования правильного варианта «${correctOption}» в реальных диалогах.\n`;
+      prompt += `5. Сформулируй одно простое правило (в 1 предложение), чтобы я больше никогда не путал «${chosen}» и «${correctOption}».`;
+    }
+
+    prompt += `\n\nОтветь простым, живым русским языком, понятно, наглядно и без занудства, как топовый личный ментор по английскому.`;
+    return prompt;
+  }
+
+  // Безопасное копирование текста в буфер обмена
+  function copyToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise((resolve, reject) => {
+      try {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.style.position = "fixed";
+        textarea.style.left = "-9999px";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        const successful = document.execCommand("copy");
+        document.body.removeChild(textarea);
+        if (successful) resolve();
+        else reject(new Error("Copy command failed"));
+      } catch (err) {
+        reject(err);
+      }
+    });
+  }
+
   function renderCurrentCard() {
     if (!stageEl) return;
     stageEl.innerHTML = "";
@@ -295,8 +370,9 @@
       }
     }
 
-    // Варианты ответов
-    const options = data.options || [data.keyPart];
+    // Варианты ответов (перемешиваем случайно, чтобы правильный ответ не был всегда первым)
+    const rawOptions = (data.options && data.options.length) ? data.options.slice() : [data.keyPart];
+    const options = shuffleArray(rawOptions);
     const isSingleCol = options.some(o => o.length > 13);
     const letters = ["A", "B", "C", "D"];
     const optionsHtml = options.map((opt, i) => `
@@ -330,10 +406,25 @@
         </div>
         <p class="feedback-translation" id="feedback-translation">🇷🇺 ${escapeHtml(data.translation)}</p>
         <div class="feedback-breakdown" id="feedback-breakdown">
-          ${data.breakdown.steps.map(s => `<div class="breakdown-item" style="font-size:12px;color:var(--text);line-height:1.3">• ${escapeHtml(s)}</div>`).join("")}
+          ${data.breakdown.steps.map(s => `<div class="breakdown-item" style="font-size:13px;color:var(--text);line-height:1.35">• ${escapeHtml(s)}</div>`).join("")}
           ${data.breakdown.trap ? `<div class="feedback-rule-box is-trap">⚠️ ${escapeHtml(data.breakdown.trap)}</div>` : ""}
           ${data.breakdown.rule ? `<div class="feedback-rule-box">📌 ${escapeHtml(data.breakdown.rule)}</div>` : ""}
         </div>
+
+        <div class="feedback-ai-actions" id="feedback-ai-actions">
+          <a class="btn-chatgpt" id="chatgpt-btn" href="#" target="_blank" rel="noopener noreferrer">
+            <svg class="chatgpt-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+            <span>Пояснить мне это в ChatGPT</span>
+            <span class="btn-chatgpt-arrow">↗</span>
+          </a>
+          <button type="button" class="btn-copy-prompt" id="copy-prompt-btn" title="Скопировать готовый промпт для вставки в Claude / DeepSeek">
+            <span class="copy-icon">📋</span>
+            <span class="copy-label">Скопировать промпт для ИИ</span>
+          </button>
+        </div>
+
         <button class="feedback-btn-next" id="feedback-btn-next" type="button">
           <span>Следующий вопрос</span>
           <span>→</span>
@@ -382,6 +473,32 @@
 
         // Запись ответа в историю и постоянную память
         recordAnswer(isCorrect, data);
+
+        // Формирование ссылки и промпта для ChatGPT
+        const promptText = buildChatGptPrompt(data, chosenVal, isCorrect);
+        const chatGptLink = card.querySelector("#chatgpt-btn");
+        if (chatGptLink) {
+          chatGptLink.href = "https://chatgpt.com/?q=" + encodeURIComponent(promptText);
+        }
+
+        const copyBtn = card.querySelector("#copy-prompt-btn");
+        if (copyBtn) {
+          copyBtn.onclick = (ev) => {
+            ev.stopPropagation();
+            copyToClipboard(promptText).then(() => {
+              const label = copyBtn.querySelector(".copy-label");
+              if (label) label.textContent = "✓ Промпт скопирован!";
+              copyBtn.classList.add("is-copied");
+              setTimeout(() => {
+                if (label) label.textContent = "Скопировать промпт для ИИ";
+                copyBtn.classList.remove("is-copied");
+              }, 2500);
+            }).catch(() => {
+              const label = copyBtn.querySelector(".copy-label");
+              if (label) label.textContent = "Ошибка копирования";
+            });
+          };
+        }
 
         // Показ панели разбора
         const drawer = card.querySelector(".quiz-feedback-drawer");

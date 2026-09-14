@@ -1468,7 +1468,7 @@ if (typeof module !== "undefined" && module.exports) {
           if (!parent) return NodeFilter.FILTER_REJECT;
           const tag = parent.tagName.toLowerCase();
           if (tag === 'script' || tag === 'style' || tag === 'button') return NodeFilter.FILTER_REJECT;
-          if (parent.closest('#tr-popup') || parent.closest('.tr-controls') || parent.closest('.top-nav') || parent.closest('.card-options') || parent.closest('.option-btn') || parent.closest('.actions-row') || parent.closest('.btn-next-wrap')) return NodeFilter.FILTER_REJECT;
+          if (parent.closest('#tr-popup') || parent.closest('.tr-controls') || parent.closest('.top-nav') || parent.closest('.card-options') || parent.closest('.option-btn') || parent.closest('.actions-row') || parent.closest('.btn-next-wrap') || parent.closest('.feedback-ai-actions') || parent.closest('.btn-chatgpt')) return NodeFilter.FILTER_REJECT;
           if (parent.classList.contains('tr-w')) return NodeFilter.FILTER_REJECT;
           return NodeFilter.FILTER_ACCEPT;
         }
