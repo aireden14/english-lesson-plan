@@ -237,6 +237,17 @@ body {
   color: #ffffff;
   border-color: var(--color-danger);
 }
+.set-chip.is-mastered-topic {
+  border-color: rgba(52, 211, 153, 0.4);
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.1);
+}
+.set-chip.is-mastered-topic.is-current {
+  background: #34d399;
+  color: #061c12;
+  border-color: #34d399;
+  font-weight: 700;
+}
 
 /* Линия прогресса */
 .progress-line {

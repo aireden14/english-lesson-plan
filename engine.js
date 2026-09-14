@@ -138,58 +138,174 @@
     return stats;
   }
 
+  const TOPIC_NAMES = {
+    "all": "Все темы",
+    "errors": "🔥 Ошибки",
+    "lesson-14sep": "🌴 Урок 14 сен (Чувства / Бали)",
+    "unseen": "🆕 Новые",
+    "mastered": "⭐ Освоено (≥90%)",
+    "this-that": "This / That",
+    "to-be": "am / is / are",
+    "do-does": "do / does",
+    "verbs-s": "-s у глаголов",
+    "articles-plurals": "Артикли / Мн. ч.",
+    "past-tense": "was / were / did",
+    "eliza-rules": "Правила Элизы",
+    "speaking": "Бытовая речь"
+  };
+
+  function shuffleArrayInPlace(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  function getTopicStatsMap() {
+    const allCards = getCurrentDataset();
+    const topicCardsCount = {};
+    allCards.forEach(c => {
+      topicCardsCount[c.topic] = (topicCardsCount[c.topic] || 0) + 1;
+    });
+
+    const topicStats = {};
+    state.history.forEach(item => {
+      if (!topicStats[item.topic]) {
+        topicStats[item.topic] = { attempts: 0, correct: 0, wrong: 0 };
+      }
+      topicStats[item.topic].attempts++;
+      if (item.isCorrect) topicStats[item.topic].correct++;
+      else topicStats[item.topic].wrong++;
+    });
+
+    const result = {};
+    const allTopics = new Set([...Object.keys(topicCardsCount), ...Object.keys(topicStats)]);
+    allTopics.forEach(topic => {
+      const count = topicCardsCount[topic] || 0;
+      const stat = topicStats[topic] || { attempts: 0, correct: 0, wrong: 0 };
+      const accuracy = stat.attempts > 0 ? Math.round((stat.correct / stat.attempts) * 100) : 0;
+      // Тема считается освоенной, если набрано >= 90% правильных ответов
+      // при минимальном пороге попыток (минимум 8 ответов или все карточки темы)
+      const minAttempts = Math.min(8, Math.max(4, count));
+      const isMastered = stat.attempts >= minAttempts && accuracy >= 90;
+
+      result[topic] = {
+        totalCards: count,
+        attempts: stat.attempts,
+        correct: stat.correct,
+        wrong: stat.wrong,
+        accuracy: accuracy,
+        isMastered: isMastered
+      };
+    });
+
+    return result;
+  }
+
+  function updateTopicChipsMastery() {
+    const topicStatsMap = getTopicStatsMap();
+    document.querySelectorAll(".set-chip[data-topic]").forEach(chip => {
+      const topic = chip.dataset.topic;
+      const baseName = TOPIC_NAMES[topic] || chip.dataset.originalText || chip.textContent.split(" •")[0];
+      if (!chip.dataset.originalText) {
+        chip.dataset.originalText = baseName;
+      }
+
+      if (topic === "all" || topic === "errors" || topic === "unseen") {
+        return;
+      }
+
+      if (topic === "mastered") {
+        let masteredCount = 0;
+        Object.values(topicStatsMap).forEach(st => {
+          if (st.isMastered) masteredCount++;
+        });
+        chip.innerHTML = `⭐ Освоено (${masteredCount})`;
+        return;
+      }
+
+      const st = topicStatsMap[topic];
+      if (!st || st.attempts === 0) {
+        chip.innerHTML = `${baseName}`;
+        chip.classList.remove("is-mastered-topic");
+      } else if (st.isMastered) {
+        chip.innerHTML = `${baseName} • ${st.accuracy}% ⭐`;
+        chip.classList.add("is-mastered-topic");
+      } else {
+        chip.innerHTML = `${baseName} • ${st.accuracy}%`;
+        chip.classList.remove("is-mastered-topic");
+      }
+    });
+  }
+
   function buildQueue(topicFilter = "all") {
     state.activeTopic = topicFilter;
     const allCards = getCurrentDataset();
     const cardStats = getCardStats();
+    const topicStatsMap = getTopicStatsMap();
 
-    let filtered = [];
+    let targetCards = [];
+
     if (topicFilter === "all") {
-      filtered = [...allCards];
+      // Ключевое правило Дениса:
+      // Тема убирается из активного общего круга только тогда, когда набрала >= 90% правильных ответов!
+      // Пока тема не набрала 90%, её карточки остаются в фокусе тренировки.
+      const unmastered = allCards.filter(c => !topicStatsMap[c.topic]?.isMastered);
+      if (unmastered.length > 0) {
+        targetCards = unmastered;
+      } else {
+        // Если все темы уже освоены на 90%+, открываем весь пул для повторения
+        targetCards = [...allCards];
+      }
     } else if (topicFilter === "errors") {
-      filtered = allCards.filter(c => {
+      targetCards = allCards.filter(c => {
         const s = cardStats[c.id];
         return s && (s.wrong > 0 || s.lastResult === false);
       });
-      if (filtered.length === 0) filtered = [...allCards];
+      if (targetCards.length === 0) targetCards = [...allCards];
     } else if (topicFilter === "unseen") {
-      filtered = allCards.filter(c => !cardStats[c.id]);
-      if (filtered.length === 0) filtered = [...allCards];
+      targetCards = allCards.filter(c => !cardStats[c.id]);
+      if (targetCards.length === 0) targetCards = [...allCards];
     } else if (topicFilter === "mastered") {
-      filtered = allCards.filter(c => {
-        const s = cardStats[c.id];
-        return s && s.correct >= 1 && s.lastResult === true;
-      });
-      if (filtered.length === 0) filtered = [...allCards];
+      targetCards = allCards.filter(c => topicStatsMap[c.topic]?.isMastered);
+      if (targetCards.length === 0) {
+        // Если целая тема еще не набрала 90%, берем отдельные уверенно отвеченные карточки
+        targetCards = allCards.filter(c => {
+          const s = cardStats[c.id];
+          return s && s.correct >= 2 && s.wrong === 0;
+        });
+      }
+      if (targetCards.length === 0) targetCards = [...allCards];
     } else {
-      filtered = allCards.filter(c => c.topic === topicFilter);
+      // Выбрана конкретная тема вручную (можно отрабатывать её отдельно до 90%)
+      targetCards = allCards.filter(c => c.topic === topicFilter);
     }
 
-    // Умная приоритизация очереди:
-    // 1. Сначала карточки с недавними ошибками (требуют повторения прямо сейчас)
-    // 2. Затем новые карточки, которые Денис еще ни разу не видел
-    // 3. Затем карточки в процессе изучения
-    // 4. В конце — уже освоенные карточки
-    filtered.sort((a, b) => {
-      const sa = cardStats[a.id];
-      const sb = cardStats[b.id];
+    // Всегда разнообразные задачи (перемешивание между темами):
+    // 1. Недавние ошибки (нужно срочно повторить) — ставим первыми, но перемешиваем между собой
+    // 2. Все остальные карточки (новые и в изучении) — полностью перемешиваем между темами,
+    //    чтобы никогда не шли подряд 10-15 однотипных вопросов из одной темы!
+    const urgentErrors = [];
+    const generalPool = [];
 
-      const errA = (sa && sa.lastResult === false) ? 3 : (sa && sa.wrong > 0) ? 2 : 0;
-      const errB = (sb && sb.lastResult === false) ? 3 : (sb && sb.wrong > 0) ? 2 : 0;
-      if (errA !== errB) return errB - errA;
-
-      const unseenA = !sa ? 1 : 0;
-      const unseenB = !sb ? 1 : 0;
-      if (unseenA !== unseenB) return unseenB - unseenA;
-
-      const wa = (sa?.wrong || 0) - (sa?.correct || 0);
-      const wb = (sb?.wrong || 0) - (sb?.correct || 0);
-      return wb - wa;
+    targetCards.forEach(c => {
+      const s = cardStats[c.id];
+      if (s && s.lastResult === false) {
+        urgentErrors.push(c);
+      } else {
+        generalPool.push(c);
+      }
     });
 
-    state.queue = filtered;
+    shuffleArrayInPlace(urgentErrors);
+    shuffleArrayInPlace(generalPool);
+
+    state.queue = [...urgentErrors, ...generalPool];
     state.currentIndex = 0;
     state.isRevealed = false;
+
+    updateTopicChipsMastery();
   }
 
   // --- UI ---
@@ -304,6 +420,7 @@
       }
     });
 
+    updateTopicChipsMastery();
     renderCurrentCard();
   }
 
@@ -618,6 +735,7 @@
 
     saveState();
     updateHeaderStats();
+    updateTopicChipsMastery();
   }
 
   function advanceNextCard() {
@@ -674,60 +792,65 @@
   function renderStatsContent() {
     const total = state.history.length;
     let correct = 0;
-    const topicStats = {};
-    const allCards = getCurrentDataset();
-    const cardStats = getCardStats();
-
-    let masteredCount = 0;
-    allCards.forEach(c => {
-      const s = cardStats[c.id];
-      if (s && s.correct >= 1 && s.lastResult === true) masteredCount++;
-    });
-
     state.history.forEach(item => {
       if (item.isCorrect) correct++;
-      if (!topicStats[item.topic]) topicStats[item.topic] = { c: 0, w: 0 };
-      if (item.isCorrect) topicStats[item.topic].c++;
-      else topicStats[item.topic].w++;
     });
 
     const acc = total > 0 ? Math.round((correct / total) * 100) : 0;
+    const topicStatsMap = getTopicStatsMap();
+
+    let masteredTopicsCount = 0;
+    let totalTopicsCount = 0;
+    Object.keys(TOPIC_NAMES).forEach(t => {
+      if (t !== "all" && t !== "errors" && t !== "unseen" && t !== "mastered") {
+        totalTopicsCount++;
+        if (topicStatsMap[t]?.isMastered) masteredTopicsCount++;
+      }
+    });
 
     const totalEl = document.getElementById("stat-total-reviews");
     if (totalEl) totalEl.textContent = total;
     const accEl = document.getElementById("stat-accuracy");
     if (accEl) accEl.textContent = `${acc}%`;
     const mastEl = document.getElementById("stat-mastered");
-    if (mastEl) mastEl.textContent = `${masteredCount} / ${allCards.length}`;
+    if (mastEl) mastEl.textContent = `${masteredTopicsCount} / ${totalTopicsCount} тем`;
 
     const topicsContainer = document.getElementById("topics-accuracy-list");
     if (topicsContainer) {
-      topicsContainer.innerHTML = Object.entries(topicStats).map(([topic, s]) => {
-        const sum = s.c + s.w;
-        const pct = sum > 0 ? Math.round((s.c / sum) * 100) : 0;
-        const color = pct >= 80 ? "var(--color-success)" : pct >= 50 ? "var(--accent-1)" : "var(--color-danger)";
+      const activeTopics = Object.keys(TOPIC_NAMES).filter(t => t !== "all" && t !== "errors" && t !== "unseen" && t !== "mastered");
+      const rows = activeTopics.map(topic => {
+        const st = topicStatsMap[topic] || { attempts: 0, correct: 0, wrong: 0, accuracy: 0, isMastered: false };
+        const title = TOPIC_NAMES[topic] || topic;
+        let badgeHtml = "";
+        if (st.isMastered) {
+          badgeHtml = `<span style="color:var(--color-success);font-weight:700">Освоено • ${st.accuracy}% ⭐</span>`;
+        } else if (st.attempts > 0) {
+          const color = st.accuracy >= 70 ? "var(--accent-1)" : "var(--color-danger)";
+          badgeHtml = `<span style="color:${color};font-weight:650">${st.accuracy}% (${st.correct}/${st.attempts})</span>`;
+        } else {
+          badgeHtml = `<span style="color:var(--text-3);font-size:12px">В очереди</span>`;
+        }
+
         return `
           <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--hairline-soft);font-size:13.5px">
-            <span style="color:var(--text);font-weight:550">${escapeHtml(topic)}</span>
-            <span style="color:${color};font-weight:700;font-variant-numeric:tabular-nums">${pct}% (${s.c}/${sum})</span>
+            <span style="color:var(--text);font-weight:550">${escapeHtml(title)}</span>
+            <span style="font-variant-numeric:tabular-nums">${badgeHtml}</span>
           </div>
         `;
-      }).join("") || `<div style="color:var(--text-3);padding:10px 0;font-size:13.5px">Пока нет истории ответов</div>`;
+      }).join("");
+      topicsContainer.innerHTML = rows;
     }
   }
 
   function copyAiReport() {
     const total = state.history.length;
     let correct = 0;
-    const topicStats = {};
+    const topicStatsMap = getTopicStatsMap();
     const cardFails = {};
 
     state.history.forEach(item => {
       if (item.isCorrect) correct++;
-      if (!topicStats[item.topic]) topicStats[item.topic] = { correct: 0, wrong: 0 };
-      if (item.isCorrect) topicStats[item.topic].correct++;
       else {
-        topicStats[item.topic].wrong++;
         cardFails[item.cardId] = (cardFails[item.cardId] || 0) + 1;
       }
     });
@@ -740,11 +863,17 @@
     text += `- Общая точность: ${acc}%\n`;
     text += `- Текущая серия: ${state.streak}\n\n`;
 
-    text += `### Точность по темам:\n`;
-    for (const [topic, s] of Object.entries(topicStats)) {
-      const sum = s.correct + s.wrong;
-      const pct = Math.round((s.correct / sum) * 100);
-      text += `- **${topic}**: ${pct}% (верно ${s.correct} из ${sum})\n`;
+    text += `### Результаты по темам (критерий освоения: ≥90%):\n`;
+    const activeTopics = Object.keys(TOPIC_NAMES).filter(t => t !== "all" && t !== "errors" && t !== "unseen" && t !== "mastered");
+    for (const topic of activeTopics) {
+      const st = topicStatsMap[topic];
+      const title = TOPIC_NAMES[topic] || topic;
+      if (st && st.attempts > 0) {
+        const star = st.isMastered ? " ⭐ (ОСВОЕНО ≥90%)" : "";
+        text += `- **${title}**: ${st.accuracy}% (верно ${st.correct} из ${st.attempts})${star}\n`;
+      } else {
+        text += `- **${title}**: ещё не пройдено\n`;
+      }
     }
 
     text += `\n### Самые частые ошибки по карточкам:\n`;
