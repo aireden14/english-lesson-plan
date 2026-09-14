@@ -9,14 +9,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>English Quiz — GamePass</title>
-  <link rel="stylesheet" href="translator.css?v=6" />
-  <link rel="stylesheet" href="trainer.css?v=6" />
+  <link rel="stylesheet" href="translator.css?v=7" />
+  <link rel="stylesheet" href="trainer.css?v=7" />
 </head>
 <body>
   <div class="aurora" aria-hidden="true"></div>
 
   <div id="app">
-    <!-- Шапка -->
+    <!-- Шапка (компактная, 1 строка, без лишнего мусора) -->
     <header class="head">
       <div class="head-top">
         <a href="index.html" class="exit-bar">‹ План</a>
@@ -28,26 +28,10 @@
           <div class="pill counter-pill" id="counter-pill" title="Текущая карточка">
             <span id="counter-num">1 / 124</span>
           </div>
-          <button class="pill icon-pill" id="open-stats-btn" title="Аналитика">📊</button>
+          <button class="pill icon-pill" id="open-stats-btn" title="Настройки и темы">⚙️</button>
         </div>
       </div>
     </header>
-
-    <!-- Горизонтальная лента тем (Chitopus sets-strip) -->
-    <nav class="sets-strip" id="topic-filters" aria-label="Темы">
-      <button class="set-chip is-current" data-topic="all">Все</button>
-      <button class="set-chip is-danger" data-topic="errors">🔥 Ошибки</button>
-      <button class="set-chip" data-topic="unseen">🆕 Новые</button>
-      <button class="set-chip" data-topic="mastered">⭐ Освоено</button>
-      <button class="set-chip" data-topic="this-that">This / That</button>
-      <button class="set-chip" data-topic="to-be">am / is / are</button>
-      <button class="set-chip" data-topic="do-does">do / does</button>
-      <button class="set-chip" data-topic="verbs-s">-s у глаголов</button>
-      <button class="set-chip" data-topic="articles-plurals">Артикли / Мн. ч.</button>
-      <button class="set-chip" data-topic="past-tense">was / were / did</button>
-      <button class="set-chip" data-topic="eliza-rules">Правила Элизы</button>
-      <button class="set-chip" data-topic="speaking">Бытовая речь</button>
-    </nav>
 
     <!-- Линия прогресса -->
     <div class="progress-line">
@@ -60,12 +44,33 @@
     </main>
   </div>
 
-  <!-- Нижний лист со статистикой (Chitopus .sheet) -->
+  <!-- Нижний лист с настройками, темами и статистикой (Chitopus .sheet) -->
   <div class="sheet-backdrop" id="stats-sheet" aria-hidden="true">
     <div class="sheet" role="dialog" aria-modal="true">
       <div class="sheet-grip"></div>
-      <h2 class="sheet-title">Дневник тренировки</h2>
-      <p class="sheet-sub">Статистика ответов и интервального повторения</p>
+      <div class="sheet-header-row">
+        <h2 class="sheet-title">Настройки и темы</h2>
+        <button class="sheet-close-btn" id="sheet-close-btn" type="button" aria-label="Закрыть">✕</button>
+      </div>
+      <p class="sheet-sub">Выбери тему тренировки, режим ошибок или посмотри статистику</p>
+
+      <div class="sheet-section" style="margin-bottom: 20px">
+        <div class="stat-label" style="margin-bottom: 8px">Выбор темы:</div>
+        <nav class="sets-strip in-sheet" id="topic-filters" aria-label="Темы">
+          <button class="set-chip is-current" data-topic="all">Все</button>
+          <button class="set-chip is-danger" data-topic="errors">🔥 Ошибки</button>
+          <button class="set-chip" data-topic="unseen">🆕 Новые</button>
+          <button class="set-chip" data-topic="mastered">⭐ Освоено</button>
+          <button class="set-chip" data-topic="this-that">This / That</button>
+          <button class="set-chip" data-topic="to-be">am / is / are</button>
+          <button class="set-chip" data-topic="do-does">do / does</button>
+          <button class="set-chip" data-topic="verbs-s">-s у глаголов</button>
+          <button class="set-chip" data-topic="articles-plurals">Артикли / Мн. ч.</button>
+          <button class="set-chip" data-topic="past-tense">was / were / did</button>
+          <button class="set-chip" data-topic="eliza-rules">Правила Элизы</button>
+          <button class="set-chip" data-topic="speaking">Бытовая речь</button>
+        </nav>
+      </div>
 
       <div class="stat-strip">
         <div class="stat-card">
@@ -104,8 +109,8 @@
   </div>
 
   <!-- Скрипты -->
-  <script src="translator.js?v=6"></script>
-  <script src="cards-data.js?v=6"></script>
-  <script src="engine.js?v=6"></script>
+  <script src="translator.js?v=7"></script>
+  <script src="cards-data.js?v=7"></script>
+  <script src="engine.js?v=7"></script>
 </body>
 </html>

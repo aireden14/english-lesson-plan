@@ -1569,9 +1569,10 @@ if (typeof module !== "undefined" && module.exports) {
       }, 180);
     });
 
-    // Global Header Controls
+    // Global Header Controls (только для страниц с конспектом/уроком, НЕ для тренажёра)
+    const isTrainer = document.getElementById("quiz-stage") || document.getElementById("app") || window.location.pathname.includes("trainer");
     const header = document.querySelector("header");
-    if (header && !document.querySelector(".tr-controls")) {
+    if (header && !isTrainer && !document.querySelector(".tr-controls")) {
       const controls = document.createElement("div");
       controls.className = "tr-controls";
       controls.innerHTML = `

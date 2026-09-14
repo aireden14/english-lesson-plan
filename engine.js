@@ -199,8 +199,17 @@
         chip.classList.add("is-current");
         buildQueue(chip.dataset.topic);
         renderCurrentCard();
+        closeStatsSheet();
       });
     });
+
+    const sheetCloseBtn = document.getElementById("sheet-close-btn");
+    if (sheetCloseBtn) {
+      sheetCloseBtn.addEventListener("click", () => {
+        playSound("tap");
+        closeStatsSheet();
+      });
+    }
 
     document.getElementById("open-stats-btn").addEventListener("click", () => {
       playSound("tap");
@@ -392,7 +401,17 @@
 
       <div class="quiz-card-hero">
         <div class="quiz-sentence" id="quiz-sentence">${formattedSentence}</div>
-        <div class="quiz-hint" id="quiz-hint">💡 ${escapeHtml(data.hint)}</div>
+        ${data.hint ? `
+          <div class="quiz-hint-wrap">
+            <button type="button" class="quiz-hint-btn" id="hint-toggle-btn" title="Показать подсказку к заданию">
+              <span class="hint-icon">💡</span>
+              <span class="hint-label">Подсказка</span>
+            </button>
+            <div class="quiz-hint-text" id="quiz-hint-text">
+              💡 ${escapeHtml(data.hint)}
+            </div>
+          </div>
+        ` : ""}
       </div>
 
       <div class="quiz-options-grid ${isSingleCol ? "is-single-col" : ""}" id="quiz-options-grid">
@@ -431,6 +450,25 @@
         </button>
       </div>
     `;
+
+    // Логика кнопки-лампочки для скрытия/раскрытия подсказки
+    const hintBtn = card.querySelector("#hint-toggle-btn");
+    const hintText = card.querySelector("#quiz-hint-text");
+    if (hintBtn && hintText) {
+      hintBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        playSound("tap");
+        const isShown = hintText.classList.toggle("is-visible");
+        hintBtn.classList.toggle("is-active", isShown);
+        const label = hintBtn.querySelector(".hint-label");
+        if (label) {
+          label.textContent = isShown ? "Скрыть подсказку" : "Подсказка";
+        }
+        if (isShown && window.DenisTranslator && typeof window.DenisTranslator.tokenizeAllText === "function") {
+          window.DenisTranslator.tokenizeAllText(hintText);
+        }
+      });
+    }
 
     // Клики по вариантам ответов
     card.querySelectorAll(".option-btn").forEach(btn => {
