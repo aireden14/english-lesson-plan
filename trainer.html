@@ -9,8 +9,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>English Quiz — GamePass</title>
-  <link rel="stylesheet" href="translator.css?v=8" />
-  <link rel="stylesheet" href="trainer.css?v=8" />
+  <link rel="stylesheet" href="translator.css?v=9" />
+  <link rel="stylesheet" href="trainer.css?v=9" />
 </head>
 <body>
   <div class="aurora" aria-hidden="true"></div>
@@ -38,6 +38,16 @@
       <div class="progress-bar" id="progress-bar"></div>
     </div>
 
+    <!-- Переключатель режимов тренажера -->
+    <div class="mode-switch-bar" id="mode-switch-bar" role="tablist" aria-label="Режим тренировки">
+      <button class="mode-chip is-active" data-mode="rules" id="mode-rules-btn" type="button" role="tab" aria-selected="true">
+        <span>⚡ Вопросы по правилам</span>
+      </button>
+      <button class="mode-chip" data-mode="examples" id="mode-examples-btn" type="button" role="tab" aria-selected="false">
+        <span>🎯 Примеры в речи</span>
+      </button>
+    </div>
+
     <!-- Главная рабочая сцена квиза (Zero-Scroll Stage) -->
     <main class="quiz-stage" id="quiz-stage">
       <!-- Наполняется из engine.js -->
@@ -53,6 +63,14 @@
         <button class="sheet-close-btn" id="sheet-close-btn" type="button" aria-label="Закрыть">✕</button>
       </div>
       <p class="sheet-sub">Выбери тему тренировки, режим ошибок или посмотри статистику</p>
+
+      <div class="sheet-section" style="margin-bottom: 18px">
+        <div class="stat-label" style="margin-bottom: 8px">Режим тренировки:</div>
+        <div class="mode-switch-bar in-sheet">
+          <button class="mode-chip is-active" data-mode="rules" type="button">⚡ Вопросы по правилам (118)</button>
+          <button class="mode-chip" data-mode="examples" type="button">🎯 Примеры в речи (124)</button>
+        </div>
+      </div>
 
       <div class="sheet-section" style="margin-bottom: 20px">
         <div class="stat-label" style="margin-bottom: 8px">Выбор темы:</div>
@@ -109,8 +127,9 @@
   </div>
 
   <!-- Скрипты -->
-  <script src="translator.js?v=8"></script>
-  <script src="cards-data.js?v=8"></script>
-  <script src="engine.js?v=8"></script>
+  <script src="translator.js?v=9"></script>
+  <script src="cards-data.js?v=9"></script>
+  <script src="rules-data.js?v=9"></script>
+  <script src="engine.js?v=9"></script>
 </body>
 </html>

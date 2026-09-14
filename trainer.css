@@ -255,6 +255,53 @@ body {
   transition: width 300ms var(--ease);
 }
 
+/* ------------------------------------------------------------- Переключатель режимов */
+.mode-switch-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--hairline-soft);
+  border-radius: 12px;
+  padding: 2px;
+  gap: 3px;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.mode-switch-bar.in-sheet {
+  margin-bottom: 0;
+}
+
+.mode-chip {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--text-2);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 650;
+  padding: 6px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 150ms var(--ease), color 150ms var(--ease), transform 150ms var(--ease);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+.mode-chip:active {
+  transform: scale(0.97);
+}
+.mode-chip.is-active {
+  background: var(--surface-strong);
+  color: var(--accent-1);
+  border: 1px solid color-mix(in srgb, var(--accent-1) 35%, transparent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
 /* ------------------------------------------------------------- Главная рабочая сцена (Zero-Scroll Quiz Stage) */
 
 .quiz-stage {
@@ -322,6 +369,15 @@ body {
   color: #ffffff;
   margin: 2px 0 8px;
   word-wrap: break-word;
+}
+
+.quiz-sentence.is-rule-question {
+  font-size: clamp(17px, 4.4vw, 24px);
+  font-weight: 750;
+  letter-spacing: -0.015em;
+  line-height: 1.32;
+  color: #ffffff;
+  margin: 2px 0 8px;
 }
 
 .quiz-sentence .slot {

@@ -3,6 +3,7 @@
   const STORAGE_KEY = "english_tinder_trainer_v1";
 
   let state = {
+    mode: "rules", // "rules" (Вопросы по правилам) | "examples" (Примеры в речи)
     activeTopic: "all",
     queue: [],
     currentIndex: 0,
@@ -10,6 +11,13 @@
     streak: 0,
     history: []
   };
+
+  function getCurrentDataset() {
+    if (state.mode === "examples") {
+      return window.ENGLISH_CARDS_DATA || [];
+    }
+    return window.ENGLISH_RULES_DATA || [];
+  }
 
   // --- Звуки действий (Chitopus sound engine) ---
   let audioCtx = null;
@@ -93,6 +101,7 @@
         if (Array.isArray(parsed.history)) state.history = parsed.history;
         if (typeof parsed.streak === "number") state.streak = parsed.streak;
         if (parsed.activeTopic) state.activeTopic = parsed.activeTopic;
+        if (parsed.mode === "rules" || parsed.mode === "examples") state.mode = parsed.mode;
       }
     } catch (e) {
       console.warn("Error loading state:", e);
@@ -102,6 +111,7 @@
   function saveState() {
     try {
       const payload = JSON.stringify({
+        mode: state.mode,
         history: state.history,
         streak: state.streak,
         activeTopic: state.activeTopic,
@@ -130,7 +140,7 @@
 
   function buildQueue(topicFilter = "all") {
     state.activeTopic = topicFilter;
-    const allCards = window.ENGLISH_CARDS_DATA || [];
+    const allCards = getCurrentDataset();
     const cardStats = getCardStats();
 
     let filtered = [];
@@ -185,12 +195,39 @@
   // --- UI ---
   let stageEl, streakNumEl, counterNumEl, progressBarEl, statsSheetEl;
 
+  function updateModeUI() {
+    document.querySelectorAll("[data-mode]").forEach(btn => {
+      const isActive = btn.dataset.mode === state.mode;
+      btn.classList.toggle("is-active", isActive);
+      if (btn.hasAttribute("aria-selected")) {
+        btn.setAttribute("aria-selected", isActive ? "true" : "false");
+      }
+    });
+  }
+
+  function setTrainerMode(newMode) {
+    if (state.mode === newMode) return;
+    state.mode = newMode;
+    saveState();
+    updateModeUI();
+    buildQueue(state.activeTopic);
+    renderCurrentCard();
+  }
+
   function initUI() {
     stageEl = document.getElementById("quiz-stage");
     streakNumEl = document.getElementById("streak-num");
     counterNumEl = document.getElementById("counter-num");
     progressBarEl = document.getElementById("progress-bar");
     statsSheetEl = document.getElementById("stats-sheet");
+
+    document.querySelectorAll("[data-mode]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        playSound("tap");
+        setTrainerMode(btn.dataset.mode);
+      });
+    });
+    updateModeUI();
 
     document.querySelectorAll(".set-chip").forEach(chip => {
       chip.addEventListener("click", () => {
@@ -284,29 +321,36 @@
   function buildChatGptPrompt(cardData, chosenOption, isCorrect) {
     const correctOption = (cardData.keyPart || "").trim();
     const chosen = (chosenOption || "").trim();
-    const sentenceBlank = (cardData.front || "").replace(/___/g, "[ ___ ]");
-    const sentenceCorrect = (cardData.front || "").replace(/___/g, correctOption);
-    const sentenceChosen = (cardData.front || "").replace(/___/g, chosen);
-    const translation = cardData.translation || "";
     const topic = cardData.topicTitle || cardData.topic || "Грамматика английского";
     const hint = cardData.hint || "";
+    const isSentence = cardData.front && cardData.front.includes("___");
 
-    let prompt = `Привет! Я тренирую практический разговорный английский язык (уровень A2–B1). Разбери, пожалуйста, одно конкретное задание из моего тренажёра.\n\n`;
+    let prompt = `Привет! Я изучаю практический разговорный английский язык (уровень A2–B1). Разбери, пожалуйста, вопрос из моего тренажёра по грамматике и логике языка.\n\n`;
     prompt += `📌 Тема: ${topic}\n`;
-    prompt += `📝 Предложение с пропуском: ${sentenceBlank}\n`;
-    if (hint) {
-      prompt += `💡 Контекст / подсказка: ${hint}\n`;
+
+    if (isSentence) {
+      const sentenceBlank = (cardData.front || "").replace(/___/g, "[ ___ ]");
+      const sentenceCorrect = (cardData.front || "").replace(/___/g, correctOption);
+      const sentenceChosen = (cardData.front || "").replace(/___/g, chosen);
+      prompt += `📝 Предложение с пропуском: ${sentenceBlank}\n`;
+      if (hint) prompt += `💡 Контекст / подсказка: ${hint}\n`;
+      if (cardData.translation) prompt += `🇷🇺 Перевод предложения: «${cardData.translation}»\n\n`;
+      prompt += `👉 Мой выбор: «${chosen}» (получилось: ${sentenceChosen})\n`;
+      prompt += `✅ Правильный ответ: «${correctOption}» (правильно: ${sentenceCorrect})\n\n`;
+    } else {
+      prompt += `❓ Вопрос по правилу / ситуации: «${cardData.front}»\n`;
+      if (hint) prompt += `💡 Подсказка: ${hint}\n`;
+      if (cardData.translation) prompt += `📖 Суть правила: ${cardData.translation}\n\n`;
+      prompt += `👉 Мой выбор: «${chosen}»\n`;
+      prompt += `✅ Правильный ответ: «${correctOption}»\n\n`;
     }
-    prompt += `🇷🇺 Перевод предложения: «${translation}»\n\n`;
-    prompt += `👉 Мой выбор: «${chosen}» (получилось: ${sentenceChosen})\n`;
-    prompt += `✅ Правильный ответ: «${correctOption}» (правильно: ${sentenceCorrect})\n\n`;
 
     if (isCorrect) {
       prompt += `Я ответил верно, но хочу разложить эту конструкцию по полочкам и глубже закрепить:\n`;
-      prompt += `1. Почему именно вариант «${correctOption}» здесь звучит естественно и грамматически корректно? Какое правило здесь действует?\n`;
-      prompt += `2. В каких ситуациях и почему русскоговорящие чаще всего ошибаются в этой конструкции?\n`;
-      prompt += `3. Приведи 3–4 живых примера из реального разговорного английского с этой же структурой (с переводом на русский).\n`;
-      prompt += `4. Какое простое правило или мнемонику запомнить, чтобы говорить так на автомате?`;
+      prompt += `1. Почему именно вариант «${correctOption}» здесь правильный? Какая глубинная логика у носителей языка?\n`;
+      prompt += `2. В каких похожих жизненных ситуациях русскоговорящие чаще всего путаются и ошибаются?\n`;
+      prompt += `3. Приведи 3–4 живых примера из реального разговорного английского (с переводом на русский).\n`;
+      prompt += `4. Дай одну простую мнемонику или ориентир, чтобы мгновенно выбирать правильный вариант без раздумий.`;
     } else {
       prompt += `Я допустил ошибку, выбрав вариант «${chosen}». Разбери, пожалуйста, подробно:\n`;
       prompt += `1. ПОЧЕМУ вариант «${correctOption}» здесь правильный, а мой выбор «${chosen}» — ошибка? В чём грамматическая логика языка?\n`;
@@ -360,8 +404,11 @@
     card.className = "quiz-card";
     card.dataset.cardId = data.id;
 
-    // Слот пропуска
-    const formattedSentence = escapeHtml(data.front).replace(/___/g, `<span class="slot">___</span>`);
+    // Вопрос или предложение со слотом пропуска
+    const isSentenceWithBlank = data.front && data.front.includes("___");
+    const formattedSentence = isSentenceWithBlank
+      ? escapeHtml(data.front).replace(/___/g, `<span class="slot">___</span>`)
+      : escapeHtml(data.front);
 
     // Статус в памяти
     const cardStatsMap = getCardStats();
@@ -382,7 +429,7 @@
     // Варианты ответов (перемешиваем случайно, чтобы правильный ответ не был всегда первым)
     const rawOptions = (data.options && data.options.length) ? data.options.slice() : [data.keyPart];
     const options = shuffleArray(rawOptions);
-    const isSingleCol = options.some(o => o.length > 13);
+    const isSingleCol = options.some(o => o.length > 14);
     const letters = ["A", "B", "C", "D"];
     const optionsHtml = options.map((opt, i) => `
       <button class="option-btn" type="button" data-val="${escapeHtml(opt)}" data-index="${i}">
@@ -400,7 +447,7 @@
       </div>
 
       <div class="quiz-card-hero">
-        <div class="quiz-sentence" id="quiz-sentence">${formattedSentence}</div>
+        <div class="quiz-sentence ${isSentenceWithBlank ? "" : "is-rule-question"}" id="quiz-sentence">${formattedSentence}</div>
         ${data.hint ? `
           <div class="quiz-hint-wrap">
             <button type="button" class="quiz-hint-btn" id="hint-toggle-btn" title="Показать подсказку к заданию">
@@ -628,7 +675,7 @@
     const total = state.history.length;
     let correct = 0;
     const topicStats = {};
-    const allCards = window.ENGLISH_CARDS_DATA || [];
+    const allCards = getCurrentDataset();
     const cardStats = getCardStats();
 
     let masteredCount = 0;
@@ -705,7 +752,7 @@
     if (sortedFails.length === 0) {
       text += `Ошибок не зафиксировано!\n`;
     } else {
-      const allCards = window.ENGLISH_CARDS_DATA || [];
+      const allCards = [...(window.ENGLISH_RULES_DATA || []), ...(window.ENGLISH_CARDS_DATA || [])];
       sortedFails.forEach(([id, fails]) => {
         const card = allCards.find(c => c.id === id);
         if (card) {
