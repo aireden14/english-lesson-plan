@@ -1,32 +1,32 @@
 {
   "topics": {
+    "there-that": {
+      "title": "There / That / This",
+      "emoji": "👉"
+    },
+    "articles": {
+      "title": "a / an / the",
+      "emoji": "🔤"
+    },
     "to-be": {
       "title": "am / is / are",
       "emoji": "🧩"
     },
-    "articles-plurals": {
-      "title": "Артикли",
-      "emoji": "🔤"
-    },
     "do-does": {
-      "title": "do / does",
+      "title": "do / does / don't",
       "emoji": "❓"
     },
-    "verbs-s": {
-      "title": "-s у глаголов",
-      "emoji": "🔁"
-    },
-    "past-tense": {
-      "title": "Прошедшее",
+    "past": {
+      "title": "was / were / did",
       "emoji": "⏮"
     },
-    "future-will": {
-      "title": "Будущее will",
+    "will": {
+      "title": "will / won't",
       "emoji": "⏭"
     },
-    "this-that": {
-      "title": "This / That",
-      "emoji": "👉"
+    "prepositions": {
+      "title": "in / on / at / for",
+      "emoji": "📍"
     },
     "restaurant": {
       "title": "Ресторан",
@@ -36,2624 +36,1890 @@
       "title": "Профессии",
       "emoji": "💼"
     },
-    "tongue-twisters": {
+    "tongue": {
       "title": "Скороговорки",
       "emoji": "👅"
-    },
-    "speaking": {
-      "title": "Живая речь",
-      "emoji": "💬"
-    },
-    "lesson-14sep": {
-      "title": "Чувства",
-      "emoji": "🌴"
-    },
-    "eliza-rules": {
-      "title": "Ловушки",
-      "emoji": "⚠️"
     }
   },
   "sentences": [
     {
-      "id": "s-sep14-01",
-      "en": "I am really angry because the internet connection is very slow.",
-      "ru": "Я очень злюсь, потому что интернет очень медленный.",
-      "topic": "lesson-14sep",
-      "focus": "am",
-      "distractors": [
-        "—",
-        "have",
-        "do"
-      ],
-      "slip": "I really angry because the internet connection is very slow.",
-      "note": "I am + эмоция/чувство (I am angry, I am sad, I am happy).",
-      "words": 11
-    },
-    {
-      "id": "s-sep14-02",
-      "en": "After riding my scooter for five hours, I am completely exhausted.",
-      "ru": "После пяти часов езды на скутере я совершенно без сил.",
-      "topic": "lesson-14sep",
-      "focus": "am",
-      "distractors": [
-        "—",
-        "was to",
-        "feel to"
-      ],
-      "slip": "After riding my scooter for five hours, I completely exhausted.",
-      "note": "I am tired / I am exhausted.",
-      "words": 11
-    },
-    {
-      "id": "s-sep14-03",
-      "en": "Don't worry about the explanation, I understand your point now.",
-      "ru": "Не переживай насчёт объяснения, я теперь понимаю твою мысль.",
-      "topic": "lesson-14sep",
-      "focus": "understand",
-      "distractors": [
-        "'m understand",
-        "am understanding",
-        "have understand"
-      ],
-      "slip": null,
-      "note": "I understand (Я понимаю).",
-      "words": 10
-    },
-    {
-      "id": "s-sep14-04",
-      "en": "Our villa is huge, we have three TVs in different rooms.",
-      "ru": "Наша вилла огромная, у нас три телевизора в разных комнатах.",
-      "topic": "lesson-14sep",
-      "focus": "TVs",
-      "distractors": [
-        "TV",
-        "TVes",
-        "TV's"
-      ],
-      "slip": "Our villa is huge, we have three TV in different rooms.",
-      "note": "many TVs, three TVs.",
-      "words": 11
-    },
-    {
-      "id": "s-sep14-05",
-      "en": "Could I please get two slices of bread with butter?",
-      "ru": "Можно мне, пожалуйста, два кусочка хлеба с маслом?",
-      "topic": "lesson-14sep",
-      "focus": "bread",
-      "distractors": [
-        "breads",
-        "a bread",
-        "the breads"
-      ],
-      "slip": "Could I please get two slices of breads with butter?",
-      "note": "a slice of bread, two slices of bread.",
-      "words": 10
-    },
-    {
-      "id": "s-sep14-06",
-      "en": "It's thirty degrees in Canggu today, I have a lot of cold water.",
-      "ru": "В Чангу сегодня 30 градусов, у меня с собой много холодной воды.",
-      "topic": "lesson-14sep",
-      "focus": "a lot of",
-      "distractors": [
-        "much",
-        "many",
-        "a few"
-      ],
-      "slip": "It's thirty degrees in Canggu today, I have much cold water.",
-      "note": "I have a lot of water (утверждение).",
-      "words": 13
-    },
-    {
-      "id": "s-sep14-07",
-      "en": "Yesterday Denis rode his bike for five hours around Ubud.",
-      "ru": "Вчера Денис катался на байке пять часов по окрестностям Убуда.",
-      "topic": "lesson-14sep",
-      "focus": "for",
-      "distractors": [
-        "during",
-        "in",
-        "at"
-      ],
-      "slip": "Yesterday Denis rode his bike during five hours around Ubud.",
-      "note": "for 5 hours (в течение пяти часов).",
-      "words": 10
-    },
-    {
-      "id": "s-sep14-08",
-      "en": "The map application was very confusing, so I was completely confused.",
-      "ru": "Приложение с картами было очень запутанным, поэтому я совершенно запутался.",
-      "topic": "lesson-14sep",
-      "focus": "confused",
-      "distractors": [
-        "confusing",
-        "confuse",
-        "confusion"
-      ],
-      "slip": "The map application was very confusing, so I was completely confuse.",
-      "note": "I am confused (я запутался).",
-      "words": 11
-    },
-    {
-      "id": "s-sep14-09",
-      "en": "Excuse me, how do I get to Echo Beach? — Go straight and then turn left at the pharmacy.",
-      "ru": "Извините, как добраться до Эхо-Бич? — Езжайте прямо, а затем поверните налево у аптеки.",
-      "topic": "lesson-14sep",
-      "focus": "left",
-      "distractors": [
-        "to left",
-        "on left",
-        "leftly"
-      ],
-      "slip": "Excuse me, how do I get to Echo Beach? — Go straight and then turn leftly at the pharmacy.",
-      "note": "turn left / turn right.",
-      "words": 18
-    },
-    {
-      "id": "s-sep14-10",
-      "en": "You don't need to turn yet, just keep going straight for two hundred meters.",
-      "ru": "Вам пока не нужно поворачивать, просто продолжайте ехать прямо двести метров.",
-      "topic": "lesson-14sep",
-      "focus": "straight",
-      "distractors": [
-        "straightly",
-        "to straight",
-        "direct"
-      ],
-      "slip": "You don't need to turn yet, just keep going straightly for two hundred meters.",
-      "note": "go straight / keep going straight.",
-      "words": 14
-    },
-    {
-      "id": "tt-01",
-      "en": "These shoes are very comfortable.",
-      "ru": "Эти туфли очень удобные.",
-      "topic": "this-that",
-      "focus": "These",
-      "distractors": [
-        "This",
-        "Those",
-        "That"
-      ],
-      "slip": "This shoes are very comfortable.",
-      "note": "This (этот, 1) | That (тот, 1) | These (эти, много) | Those (те, много)",
-      "words": 5
-    },
-    {
-      "id": "tt-02",
-      "en": "That is my car across the street.",
-      "ru": "Вон то моя машина через дорогу.",
-      "topic": "this-that",
-      "focus": "That",
-      "distractors": [
-        "This",
-        "Those",
-        "These"
-      ],
-      "slip": "This is my car across the street.",
-      "note": "That is = вон то (указание пальцем).",
-      "words": 7
-    },
-    {
-      "id": "tt-03",
-      "en": "Look at those boxes over there by the door.",
-      "ru": "Посмотри на те коробки вон там у двери.",
-      "topic": "this-that",
-      "focus": "those",
-      "distractors": [
-        "these",
-        "that",
-        "this"
-      ],
-      "slip": "Look at these boxes over there by the door.",
-      "note": "Those boxes = те коробки (далеко, много).",
-      "words": 9
-    },
-    {
-      "id": "tt-04",
-      "en": "These cookies are delicious! Try one.",
-      "ru": "Эти печенья очень вкусные! Попробуй одно.",
-      "topic": "this-that",
-      "focus": "These",
-      "distractors": [
-        "This",
-        "Those",
-        "That"
-      ],
-      "slip": "This cookies are delicious! Try one.",
-      "note": "This [ðɪs] = 1 близко | These [ðiːz] = много близко.",
-      "words": 6
-    },
-    {
-      "id": "tt-05",
-      "en": "What are these in your hand?",
-      "ru": "Что это у тебя в руке?",
-      "topic": "this-that",
-      "focus": "these",
-      "distractors": [
-        "this",
-        "those",
-        "that"
-      ],
-      "slip": "What are this in your hand?",
-      "note": "What is this?",
-      "words": 6
-    },
-    {
-      "id": "tt-06",
-      "en": "Who is that guy talking to Valery?",
-      "ru": "Кто вон тот парень, который говорит с Валерием?",
-      "topic": "this-that",
-      "focus": "that",
-      "distractors": [
-        "this",
-        "those",
-        "these"
-      ],
-      "slip": "Who is this guy talking to Valery?",
-      "note": "That guy = вон тот парень.",
-      "words": 7
-    },
-    {
-      "id": "tt-07",
-      "en": "This is my new 4K monitor on the desk.",
-      "ru": "Это мой новый 4K-монитор на столе.",
-      "topic": "this-that",
-      "focus": "This",
-      "distractors": [
-        "These",
-        "That",
-        "Those"
-      ],
-      "slip": "These is my new 4K monitor on the desk.",
-      "note": "This is = «Это (мой монитор / мой ноутбук)».",
-      "words": 9
-    },
-    {
-      "id": "tt-08",
-      "en": "Do you remember those days we spent in Bali?",
-      "ru": "Ты помнишь те дни, что мы провели на Бали?",
-      "topic": "this-that",
-      "focus": "those",
-      "distractors": [
-        "these",
-        "that",
-        "this"
-      ],
-      "slip": "Do you remember these days we spent in Bali?",
-      "note": "Those days = те давние дни.",
-      "words": 9
-    },
-    {
-      "id": "tt-09",
-      "en": "This is Alina's laptop on the coffee table.",
-      "ru": "Это ноутбук Алины на столике.",
-      "topic": "this-that",
-      "focus": "This",
-      "distractors": [
-        "These",
-        "That",
-        "Those"
-      ],
-      "slip": "These is Alina's laptop on the coffee table.",
-      "note": "This is + существительное в единственном числе.",
-      "words": 8
-    },
-    {
-      "id": "tt-10",
-      "en": "Can you pass me those keys over there on the counter?",
-      "ru": "Можешь передать мне вон те ключи на стойке?",
-      "topic": "this-that",
-      "focus": "those",
-      "distractors": [
-        "these",
-        "that",
-        "this"
-      ],
-      "slip": "Can you pass me these keys over there on the counter?",
-      "note": "Those keys = вон те ключи.",
-      "words": 11
-    },
-    {
-      "id": "tt-11",
-      "en": "This coffee here is much better than the one in the hotel.",
-      "ru": "Этот кофе здесь намного лучше, чем в отеле.",
-      "topic": "this-that",
-      "focus": "This",
-      "distractors": [
-        "These",
-        "That",
-        "Those"
-      ],
-      "slip": "These coffee here is much better than the one in the hotel.",
-      "note": "This (тут, рядом) vs That (там, далеко).",
-      "words": 12
-    },
-    {
-      "id": "tt-12",
-      "en": "These headphones are noise-cancelling. Put them on.",
-      "ru": "Эти наушники с шумоподавлением. Надень их.",
-      "topic": "this-that",
-      "focus": "These",
-      "distractors": [
-        "This",
-        "Those",
-        "That"
-      ],
-      "slip": "This headphones are noise-cancelling. Put them on.",
-      "note": "These headphones / These glasses / These scissors (всегда во мн.",
-      "words": 8
-    },
-    {
-      "id": "tt-13",
-      "en": "Who are those people standing near the pool?",
-      "ru": "Кто вон те люди, стоящие возле бассейна?",
-      "topic": "this-that",
-      "focus": "those",
-      "distractors": [
-        "these",
-        "that",
-        "this"
-      ],
-      "slip": "Who are these people standing near the pool?",
-      "note": "Those people = вон те люди.",
-      "words": 8
-    },
-    {
-      "id": "tt-14",
-      "en": "How much is that white T-shirt in the window?",
-      "ru": "Сколько стоит вон та белая футболка в витрине?",
-      "topic": "this-that",
-      "focus": "that",
-      "distractors": [
-        "this",
-        "those",
-        "these"
-      ],
-      "slip": "How much is this white T-shirt in the window?",
-      "note": "That T-shirt = вон та футболка.",
-      "words": 10
-    },
-    {
-      "id": "tt-15",
-      "en": "These are the best sneakers I have ever owned.",
-      "ru": "Это лучшие кроссовки, которые у меня когда-либо были.",
-      "topic": "this-that",
-      "focus": "These",
-      "distractors": [
-        "This",
-        "Those",
-        "That"
-      ],
-      "slip": "This are the best sneakers I have ever owned.",
-      "note": "These are + множественное число.",
-      "words": 9
-    },
-    {
-      "id": "tobe-01",
-      "en": "I am thirsty after the gym.",
-      "ru": "Я хочу пить после тренировки.",
-      "topic": "to-be",
-      "focus": "am",
-      "distractors": [
-        "is",
-        "are",
-        "be"
-      ],
-      "slip": "I is thirsty after the gym.",
-      "note": "I AM | He / She / It IS | We / You / They ARE",
-      "words": 6
-    },
-    {
-      "id": "tobe-02",
-      "en": "Alina and I are in Limassol today.",
-      "ru": "Мы с Алиной сегодня в Лимасоле.",
-      "topic": "to-be",
-      "focus": "are",
-      "distractors": [
-        "is",
-        "am",
-        "be"
-      ],
-      "slip": "Alina and I is in Limassol today.",
-      "note": "X and I = WE → всегда требует ARE.",
-      "words": 7
-    },
-    {
-      "id": "tobe-03",
-      "en": "My friends are in Kazakhstan right now.",
-      "ru": "Мои друзья сейчас в Казахстане.",
-      "topic": "to-be",
-      "focus": "are",
-      "distractors": [
-        "is",
-        "am",
-        "be"
-      ],
-      "slip": "My friends is in Kazakhstan right now.",
-      "note": "Множественное число существительного → ARE.",
-      "words": 7
-    },
-    {
-      "id": "tobe-04",
-      "en": "I understand what you mean.",
-      "ru": "Я понимаю, что ты имеешь в виду.",
-      "topic": "to-be",
-      "focus": "understand",
-      "distractors": [
-        "am understand",
-        "am understanding",
-        "understands"
-      ],
-      "slip": "I understands what you mean.",
-      "note": "Никакого AM перед глаголом действия: «I understand», «I live», «I design».",
-      "words": 5
-    },
-    {
-      "id": "tobe-05",
-      "en": "She isn't ready for the client call yet.",
-      "ru": "Она еще не готова к звонку с клиентом.",
-      "topic": "to-be",
-      "focus": "isn't",
-      "distractors": [
-        "aren't",
-        "doesn't",
-        "not"
-      ],
-      "slip": "She aren't ready for the client call yet.",
-      "note": "He / She / It + IS / ISN'T",
-      "words": 8
-    },
-    {
-      "id": "tobe-06",
-      "en": "Are you tired after playing story games?",
-      "ru": "Ты устал после игры?",
-      "topic": "to-be",
-      "focus": "Are",
-      "distractors": [
-        "Is",
-        "Am",
-        "Do"
-      ],
-      "slip": "Is you tired after playing story games?",
-      "note": "Are you + [прилагательное]?",
-      "words": 7
-    },
-    {
-      "id": "tobe-07",
-      "en": "The weather in Cyprus is sunny today.",
-      "ru": "Погода на Кипре сегодня солнечная.",
-      "topic": "to-be",
-      "focus": "is",
-      "distractors": [
-        "are",
-        "am",
-        "be"
-      ],
-      "slip": "The weather in Cyprus are sunny today.",
-      "note": "Неисчисляемые существительные (weather, water, coffee) → IS.",
-      "words": 7
-    },
-    {
-      "id": "tobe-08",
-      "en": "We are not tired, we are ready to practice.",
-      "ru": "Мы не устали, мы готовы тренироваться.",
-      "topic": "to-be",
-      "focus": "are",
-      "distractors": [
-        "is",
-        "am",
-        "be"
-      ],
-      "slip": "We is not tired, we are ready to practice.",
-      "note": "We / You / They + ARE (aren't).",
-      "words": 9
-    },
-    {
-      "id": "tobe-09",
-      "en": "I am not a beginner in UI design, I have 8 years of experience.",
-      "ru": "Я не новичок в UI-дизайне, у меня 8 лет опыта.",
-      "topic": "to-be",
-      "focus": "am",
-      "distractors": [
-        "is",
-        "are",
-        "be"
-      ],
-      "slip": "I is not a beginner in UI design, I have 8 years of experience.",
-      "note": "I am not + существительное/прилагательное.",
-      "words": 13
-    },
-    {
-      "id": "tobe-10",
-      "en": "Where are you from?",
-      "ru": "Откуда ты?",
-      "topic": "to-be",
-      "focus": "are",
-      "distractors": [
-        "is",
-        "am",
-        "be"
-      ],
-      "slip": "Where is you from?",
-      "note": "Where ARE you from?",
-      "words": 4
-    },
-    {
-      "id": "tobe-11",
-      "en": "Is she at home right now?",
-      "ru": "Она сейчас дома?",
-      "topic": "to-be",
-      "focus": "Is",
-      "distractors": [
-        "Are",
-        "Does",
-        "Am"
-      ],
-      "slip": "Are she at home right now?",
-      "note": "Is he / Is she + [где]?",
-      "words": 6
-    },
-    {
-      "id": "tobe-12",
-      "en": "Our clients are from Europe and the United States.",
-      "ru": "Наши клиенты из Европы и США.",
-      "topic": "to-be",
-      "focus": "are",
-      "distractors": [
-        "is",
-        "am",
-        "be"
-      ],
-      "slip": "Our clients is from Europe and the United States.",
-      "note": "Plural subject + ARE.",
-      "words": 9
-    },
-    {
-      "id": "tobe-13",
-      "en": "My MacBook is very fast and quiet.",
-      "ru": "Мой MacBook очень быстрый и тихий.",
-      "topic": "to-be",
-      "focus": "is",
-      "distractors": [
-        "are",
-        "am",
-        "be"
-      ],
-      "slip": "My MacBook are very fast and quiet.",
-      "note": "Subject + IS + adjective.",
-      "words": 7
-    },
-    {
-      "id": "tobe-14",
-      "en": "Cyprus isn't cheap, but it is safe and comfortable.",
-      "ru": "Кипр не дешёвый, но он безопасный и комфортный.",
-      "topic": "to-be",
-      "focus": "isn't",
-      "distractors": [
-        "aren't",
-        "doesn't",
-        "not"
-      ],
-      "slip": "Cyprus aren't cheap, but it is safe and comfortable.",
-      "note": "Country/Place + IS / ISN'T.",
-      "words": 9
-    },
-    {
-      "id": "tobe-15",
-      "en": "The beaches in Limassol are crowded on Sunday.",
-      "ru": "Пляжи в Лимасоле переполнены в воскресенье.",
-      "topic": "to-be",
-      "focus": "are",
-      "distractors": [
-        "is",
-        "am",
-        "be"
-      ],
-      "slip": "The beaches in Limassol is crowded on Sunday.",
-      "note": "Согласуй глагол с главным словом: The beaches ARE.",
-      "words": 8
-    },
-    {
-      "id": "do-01",
-      "en": "I don't see any apples on the table.",
-      "ru": "Я не вижу яблок на столе.",
-      "topic": "do-does",
-      "focus": "don't",
-      "distractors": [
-        "doesn't",
-        "not",
-        "isn't"
-      ],
-      "slip": "I doesn't see any apples on the table.",
-      "note": "I / You / We / They + DON'T + глагол (I don't see, I don't know).",
-      "words": 8
-    },
-    {
-      "id": "do-02",
-      "en": "Alina doesn't like cold winter weather.",
-      "ru": "Алина не любит холодную зимнюю погоду.",
-      "topic": "do-does",
-      "focus": "doesn't",
-      "distractors": [
-        "don't",
-        "isn't",
-        "not"
-      ],
-      "slip": "Alina don't like cold winter weather.",
-      "note": "He / She / It + DOESN'T + начальная форма глагола.",
-      "words": 6
-    },
-    {
-      "id": "do-03",
-      "en": "Do you like playing story games on PS5?",
-      "ru": "Тебе нравится играть в сюжетные игры на PS5?",
-      "topic": "do-does",
-      "focus": "Do",
-      "distractors": [
-        "Does",
-        "Are",
-        "Did"
-      ],
-      "slip": "Does you like playing story games on PS5?",
-      "note": "DO + you + глагол?",
-      "words": 8
-    },
-    {
-      "id": "do-04",
-      "en": "Where does Valery work in Cyprus?",
-      "ru": "Где на Кипре работает Валерий?",
-      "topic": "do-does",
-      "focus": "does",
-      "distractors": [
-        "do",
-        "is",
-        "has"
-      ],
-      "slip": "Where do Valery work in Cyprus?",
-      "note": "Where / What / When + DOES + he/she + начальный глагол?",
-      "words": 6
-    },
-    {
-      "id": "do-05",
-      "en": "She doesn't drink filter coffee in the evening.",
-      "ru": "Она не пьет фильтр-кофе вечером.",
-      "topic": "do-does",
-      "focus": "doesn't",
-      "distractors": [
-        "don't",
-        "isn't",
-        "not"
-      ],
-      "slip": "She don't drink filter coffee in the evening.",
-      "note": "Doesn't + чистый глагол без окончаний.",
-      "words": 8
-    },
-    {
-      "id": "do-06",
-      "en": "I don't drink black tea, I prefer espresso.",
-      "ru": "Я не пью черный чай, я предпочитаю эспрессо.",
-      "topic": "do-does",
-      "focus": "don't",
-      "distractors": [
-        "doesn't",
-        "not",
-        "isn't"
-      ],
-      "slip": "I doesn't drink black tea, I prefer espresso.",
-      "note": "I don't + verb.",
-      "words": 8
-    },
-    {
-      "id": "do-07",
-      "en": "Do you have two monitors for complex UI work?",
-      "ru": "У тебя есть два монитора для работы над UI?",
-      "topic": "do-does",
-      "focus": "Do",
-      "distractors": [
-        "Does",
-        "Are",
-        "Did"
-      ],
-      "slip": "Does you have two monitors for complex UI work?",
-      "note": "DO you have...?",
-      "words": 9
-    },
-    {
-      "id": "do-08",
-      "en": "Does he speak Greek?",
-      "ru": "Он говорит по-гречески?",
-      "topic": "do-does",
-      "focus": "speak",
-      "distractors": [
-        "speaks",
-        "speaking",
-        "is speak"
-      ],
-      "slip": "Does he speaks Greek?",
-      "note": "Does he speak Greek?",
-      "words": 4
-    },
-    {
-      "id": "do-09",
-      "en": "Why do you want to learn English?",
-      "ru": "Почему ты хочешь учить английский?",
-      "topic": "do-does",
-      "focus": "do",
-      "distractors": [
-        "does",
-        "are",
-        "have"
-      ],
-      "slip": "Why does you want to learn English?",
-      "note": "Why DO you want...?",
-      "words": 7
-    },
-    {
-      "id": "do-10",
-      "en": "They don't live in Limassol, they live in Paphos.",
-      "ru": "Они не живут в Лимасоле, они живут в Пафосе.",
-      "topic": "do-does",
-      "focus": "don't",
-      "distractors": [
-        "doesn't",
-        "not",
-        "isn't"
-      ],
-      "slip": "They doesn't live in Limassol, they live in Paphos.",
-      "note": "They don't + verb.",
-      "words": 9
-    },
-    {
-      "id": "do-11",
-      "en": "What does Alina do for work?",
-      "ru": "Кем работает Алина?",
-      "topic": "do-does",
-      "focus": "does",
-      "distractors": [
-        "do",
-        "is",
-        "has"
-      ],
-      "slip": "What is Alina do for work?",
-      "note": "What does [he/she] do?",
-      "words": 6
-    },
-    {
-      "id": "do-12",
-      "en": "We don't need a car in the city center.",
-      "ru": "Нам не нужна машина в центре города.",
-      "topic": "do-does",
-      "focus": "don't",
-      "distractors": [
-        "doesn't",
-        "not",
-        "isn't"
-      ],
-      "slip": "We doesn't need a car in the city center.",
-      "note": "We don't need...",
-      "words": 9
-    },
-    {
-      "id": "verbs-01",
-      "en": "Alina lives in Limassol with me.",
-      "ru": "Алина живет в Лимасоле со мной.",
-      "topic": "verbs-s",
-      "focus": "lives",
-      "distractors": [
-        "live",
-        "living",
-        "is live"
-      ],
-      "slip": "Alina live in Limassol with me.",
-      "note": "He / She / It + VERB-S (lives, works, plays, drinks, wants).",
-      "words": 6
-    },
-    {
-      "id": "verbs-02",
-      "en": "I work as a product designer from home.",
-      "ru": "Я работаю продуктовым дизайнером из дома.",
-      "topic": "verbs-s",
-      "focus": "work",
-      "distractors": [
-        "works",
-        "working",
-        "am work"
-      ],
-      "slip": "I works as a product designer from home.",
-      "note": "I work | You work | We work | They work | He/She WORKS",
-      "words": 8
-    },
-    {
-      "id": "verbs-03",
-      "en": "My friends like playing board games on weekends.",
-      "ru": "Мои друзья любят играть в настольные игры по выходным.",
-      "topic": "verbs-s",
-      "focus": "like",
-      "distractors": [
-        "likes",
-        "liking",
-        "are like"
-      ],
-      "slip": "My friends likes playing board games on weekends.",
-      "note": "My friend likes (один) vs My friends like (много друзей).",
-      "words": 8
-    },
-    {
-      "id": "verbs-04",
-      "en": "Does he speak English fluently?",
-      "ru": "Он бегло говорит по-английски?",
-      "topic": "verbs-s",
-      "focus": "speak",
-      "distractors": [
-        "speaks",
-        "speaking",
-        "is speak"
-      ],
-      "slip": "Does he speaks English fluently?",
-      "note": "Does he SPEAK?",
-      "words": 5
-    },
-    {
-      "id": "verbs-05",
-      "en": "Valery lives in Limassol too.",
-      "ru": "Валерий тоже живет в Лимасоле.",
-      "topic": "verbs-s",
-      "focus": "lives",
-      "distractors": [
-        "live",
-        "living",
-        "is live"
-      ],
-      "slip": "Valery live in Limassol too.",
-      "note": "[Имя одного человека] + verb-S.",
-      "words": 5
-    },
-    {
-      "id": "verbs-06",
-      "en": "Our cat loves chasing mice at night.",
-      "ru": "Наша кошка обожает гоняться за мышами по ночам.",
-      "topic": "verbs-s",
-      "focus": "loves",
-      "distractors": [
-        "love",
-        "loving",
-        "is love"
-      ],
-      "slip": "Our cat love chasing mice at night.",
-      "note": "Cat loves / Dog barks / Bird sings.",
-      "words": 7
-    },
-    {
-      "id": "verbs-07",
-      "en": "You type very fast on this keyboard.",
-      "ru": "Ты очень быстро печатаешь на этой клавиатуре.",
-      "topic": "verbs-s",
-      "focus": "type",
-      "distractors": [
-        "types",
-        "typing",
-        "are type"
-      ],
-      "slip": "You types very fast on this keyboard.",
-      "note": "You + глагол БЕЗ -s (You work, you speak, you type).",
-      "words": 7
-    },
-    {
-      "id": "verbs-08",
-      "en": "He drinks coffee every morning before work.",
-      "ru": "Он пьет кофе каждое утро перед работой.",
-      "topic": "verbs-s",
-      "focus": "drinks",
-      "distractors": [
-        "drink",
-        "drinking",
-        "is drink"
-      ],
-      "slip": "He drink coffee every morning before work.",
-      "note": "He drinks / He eats / He sleeps.",
-      "words": 7
-    },
-    {
-      "id": "art-01",
-      "en": "You are a great teacher.",
-      "ru": "Ты отличный преподаватель.",
-      "topic": "articles-plurals",
-      "focus": "a",
-      "distractors": [
-        "an",
-        "the",
-        "—"
-      ],
-      "slip": "You are great teacher.",
-      "note": "to be + A / AN + профессия/роль (I am a designer.",
-      "words": 5
-    },
-    {
-      "id": "art-02",
-      "en": "I bought two new phones for work.",
-      "ru": "Я купил два новых телефона для работы.",
-      "topic": "articles-plurals",
-      "focus": "phones",
-      "distractors": [
-        "phone",
-        "phones'",
-        "a phone"
-      ],
-      "slip": "I bought two new phone for work.",
-      "note": "Two / three / many + существительное с окончанием -S.",
-      "words": 7
-    },
-    {
-      "id": "art-03",
-      "en": "I brush my teeth every morning and evening.",
-      "ru": "Я чищу зубы каждое утро и вечер.",
-      "topic": "articles-plurals",
-      "focus": "teeth",
-      "distractors": [
-        "tooths",
-        "tooth",
-        "teeths"
-      ],
-      "slip": "I brush my teeths every morning and evening.",
-      "note": "Tooth [tuːθ] → Teeth [tiːθ] (зубы).",
-      "words": 8
-    },
-    {
-      "id": "art-04",
-      "en": "Many creative people live in Bali.",
-      "ru": "Многие творческие люди живут на Бали.",
-      "topic": "articles-plurals",
-      "focus": "people",
-      "distractors": [
-        "persons",
-        "peoples",
-        "person"
-      ],
-      "slip": "Many creative peoples live in Bali.",
-      "note": "Person (человек) → People (люди, народ).",
-      "words": 6
-    },
-    {
-      "id": "art-05",
-      "en": "Could you pass me two sharp knives for cooking?",
-      "ru": "Не мог бы ты передать мне два острых ножа для готовки?",
-      "topic": "articles-plurals",
-      "focus": "knives",
-      "distractors": [
-        "knifes",
-        "knife",
-        "knifefs"
-      ],
-      "slip": "Could you pass me two sharp knife for cooking?",
-      "note": "Knife → Knives [naɪvz].",
-      "words": 9
-    },
-    {
-      "id": "art-06",
-      "en": "People say that cats have nine lives.",
-      "ru": "Говорят, что у кошек девять жизней.",
-      "topic": "articles-plurals",
-      "focus": "lives",
-      "distractors": [
-        "lifes",
-        "life",
-        "live"
-      ],
-      "slip": "People say that cats have nine live.",
-      "note": "Life → Lives.",
-      "words": 7
-    },
-    {
-      "id": "art-07",
-      "en": "There are thousands of colorful fish near the reef.",
-      "ru": "Возле рифа тысячи разноцветных рыб.",
-      "topic": "articles-plurals",
-      "focus": "fish",
-      "distractors": [
-        "fishes",
-        "fishs",
-        "a fish"
-      ],
-      "slip": "There are thousands of colorful fishes near the reef.",
-      "note": "Fish → Fish (не меняется!).",
-      "words": 9
-    },
-    {
-      "id": "art-08",
-      "en": "My friends have two children: a boy and a girl.",
-      "ru": "У моих друзей двое детей: мальчик и девочка.",
-      "topic": "articles-plurals",
-      "focus": "children",
-      "distractors": [
-        "childs",
-        "child",
-        "childrens"
-      ],
-      "slip": "My friends have two childs: a boy and a girl.",
-      "note": "Child → Children.",
-      "words": 10
-    },
-    {
-      "id": "art-09",
-      "en": "My feet hurt after walking ten kilometers in Limassol.",
-      "ru": "У меня болят ступни после десяти километров пешком.",
-      "topic": "articles-plurals",
-      "focus": "feet",
-      "distractors": [
-        "foots",
-        "foot",
-        "feets"
-      ],
-      "slip": "My feets hurt after walking ten kilometers in Limassol.",
-      "note": "Foot → Feet.",
-      "words": 9
-    },
-    {
-      "id": "art-10",
-      "en": "Three women work on the new product design team.",
-      "ru": "Три женщины работают в команде продуктового дизайна.",
-      "topic": "articles-plurals",
-      "focus": "women",
-      "distractors": [
-        "womans",
-        "woman",
-        "womens"
-      ],
-      "slip": "Three womans work on the new product design team.",
-      "note": "Woman → Women [ˈwɪmɪn].",
-      "words": 9
-    },
-    {
-      "id": "past-01",
-      "en": "Yesterday I was very tired after the meeting.",
-      "ru": "Вчера я очень устал после встречи.",
-      "topic": "past-tense",
-      "focus": "was",
-      "distractors": [
-        "were",
-        "did",
-        "is"
-      ],
-      "slip": "Yesterday I were very tired after the meeting.",
-      "note": "I / He / She / It WAS | We / You / They WERE",
-      "words": 8
-    },
-    {
-      "id": "past-02",
-      "en": "Where were you yesterday evening?",
-      "ru": "Где ты был вчера вечером?",
-      "topic": "past-tense",
-      "focus": "were",
-      "distractors": [
-        "was",
-        "did",
-        "are"
-      ],
-      "slip": "Where was you yesterday evening?",
-      "note": "Where were you yesterday?",
-      "words": 5
-    },
-    {
-      "id": "past-03",
-      "en": "Did you play video games yesterday?",
-      "ru": "Ты играл в видеоигры вчера?",
-      "topic": "past-tense",
-      "focus": "Did",
-      "distractors": [
-        "Were",
-        "Do",
-        "Have"
-      ],
-      "slip": "Were you play video games yesterday?",
-      "note": "Did you play...?",
-      "words": 6
-    },
-    {
-      "id": "past-04",
-      "en": "I didn't see Valery yesterday.",
-      "ru": "Я не видел Валерия вчера.",
-      "topic": "past-tense",
-      "focus": "didn't",
-      "distractors": [
-        "wasn't",
-        "don't",
-        "haven't"
-      ],
-      "slip": "I wasn't see Valery yesterday.",
-      "note": "Didn't + начальная форма глагола (didn't see, didn't go, didn't know).",
-      "words": 5
-    },
-    {
-      "id": "past-05",
-      "en": "We were at the beach last weekend.",
-      "ru": "Мы были на пляже в прошлые выходные.",
-      "topic": "past-tense",
-      "focus": "were",
-      "distractors": [
-        "was",
-        "did",
-        "are"
-      ],
-      "slip": "We was at the beach last weekend.",
-      "note": "We were / They were / You were.",
-      "words": 7
-    },
-    {
-      "id": "past-06",
-      "en": "I went to Bali last winter.",
-      "ru": "Я ездил на Бали прошлой зимой.",
-      "topic": "past-tense",
-      "focus": "went",
-      "distractors": [
-        "goed",
-        "go",
-        "gone"
-      ],
-      "slip": null,
-      "note": "Go → Went → Gone.",
-      "words": 6
-    },
-    {
-      "id": "past-07",
-      "en": "What did you do last night?",
-      "ru": "Чем ты занимался вчера вечером?",
-      "topic": "past-tense",
-      "focus": "did",
-      "distractors": [
-        "was",
-        "do",
-        "were"
-      ],
-      "slip": "What was you do last night?",
-      "note": "What did you do?",
-      "words": 6
-    },
-    {
-      "id": "past-08",
-      "en": "Alina was at home all day yesterday.",
-      "ru": "Алина вчера весь день была дома.",
-      "topic": "past-tense",
-      "focus": "was",
-      "distractors": [
-        "were",
-        "did",
-        "is"
-      ],
-      "slip": "Alina were at home all day yesterday.",
-      "note": "He was / She was / It was.",
-      "words": 7
-    },
-    {
-      "id": "eliza-01",
-      "en": "I like reading books in the evening.",
-      "ru": "Я люблю читать книги по вечерам.",
-      "topic": "eliza-rules",
-      "focus": "reading",
-      "distractors": [
-        "read",
-        "to reading",
-        "reads"
-      ],
-      "slip": "I like read books in the evening.",
-      "note": "Like doing something = постоянное хобби / привычка (а не процесс в эту секунду!).",
-      "words": 7
-    },
-    {
-      "id": "eliza-02",
-      "en": "There is a great coffee shop near my apartment.",
-      "ru": "Рядом с моей квартирой есть отличная кофейня.",
-      "topic": "eliza-rules",
+      "id": "s-there-that-01",
+      "en": "There is a cat on my balcony.",
+      "ru": "На моём балконе кот.",
+      "topic": "there-that",
+      "prompt": "____ a cat on my balcony.",
       "focus": "There is",
       "distractors": [
-        "It is",
         "There are",
-        "That is"
+        "That is",
+        "This is"
       ],
-      "slip": "There are a great coffee shop near my apartment.",
-      "note": "There is/are = «имеется / существует».",
-      "words": 9
-    },
-    {
-      "id": "eliza-03",
-      "en": "There are two laptops on my desk.",
-      "ru": "На моем столе есть два ноутбука.",
-      "topic": "eliza-rules",
-      "focus": "are",
-      "distractors": [
-        "is",
-        "am",
-        "be"
-      ],
-      "slip": "There is two laptops on my desk.",
-      "note": "There is (1 шт) vs There are (много).",
+      "slip": "That is a cat on my balcony.",
+      "note": "There is = «есть, находится». That is = «вон то — это…».",
       "words": 7
     },
     {
-      "id": "eliza-04",
-      "en": "My best friend is Valery.",
-      "ru": "Мой лучший друг — Валерий.",
-      "topic": "eliza-rules",
-      "focus": "is",
+      "id": "s-there-that-02",
+      "en": "That is my neighbour's cat.",
+      "ru": "Это кот моего соседа.",
+      "topic": "there-that",
+      "prompt": "____ my neighbour's cat.",
+      "focus": "That is",
       "distractors": [
-        "it's",
-        "are",
-        "it is"
+        "There is",
+        "There are",
+        "Those are"
       ],
-      "slip": "My best friend it's Valery.",
-      "note": "[Подлежащее] + IS + [Имя]: «My friend is Valery», «Cyprus is warm».",
+      "slip": "There is my neighbour's cat.",
+      "note": "Показываешь на конкретного кота — That is. Сообщаешь о наличии — There is.",
       "words": 5
     },
     {
-      "id": "eliza-05",
-      "en": "This UI design is very modern and clean.",
-      "ru": "Этот UI-дизайн очень современный и аккуратный.",
-      "topic": "eliza-rules",
-      "focus": "is",
+      "id": "s-there-that-03",
+      "en": "There are four coffee shops near my house.",
+      "ru": "Рядом с домом четыре кофейни.",
+      "topic": "there-that",
+      "prompt": "____ four coffee shops near my house.",
+      "focus": "There are",
       "distractors": [
-        "it's",
-        "are",
-        "it is"
+        "There is",
+        "These are",
+        "That are"
       ],
-      "slip": "This UI design it's very modern and clean.",
-      "note": "Design IS clean (без it's).",
+      "slip": "There is four coffee shops near my house.",
+      "note": "Дальше идёт множественное число — There ARE.",
       "words": 8
     },
     {
-      "id": "tt-16",
-      "en": "Look at those yachts over there in Limassol Marina.",
-      "ru": "Посмотри на вон те яхты в марине Лимасола.",
-      "topic": "this-that",
-      "focus": "those",
+      "id": "s-there-that-04",
+      "en": "This is my new microphone.",
+      "ru": "Это мой новый микрофон.",
+      "topic": "there-that",
+      "prompt": "____ my new microphone.",
+      "focus": "This is",
       "distractors": [
-        "these",
+        "That is",
+        "There is",
+        "These are"
+      ],
+      "slip": "There is my new microphone.",
+      "note": "This is — про то, что у тебя в руках. That is — про то, что вон там.",
+      "words": 5
+    },
+    {
+      "id": "s-there-that-05",
+      "en": "Put the coffee over there, please.",
+      "ru": "Поставь кофе вон туда, пожалуйста.",
+      "topic": "there-that",
+      "prompt": "Put the coffee over ____, please.",
+      "focus": "there",
+      "distractors": [
         "that",
-        "this"
-      ],
-      "slip": "Look at these yachts over there in Limassol Marina.",
-      "note": "Those yachts = вон те яхты.",
-      "words": 9
-    },
-    {
-      "id": "tt-17",
-      "en": "This is the best espresso in this neighborhood.",
-      "ru": "Это лучший эспрессо в этом районе.",
-      "topic": "this-that",
-      "focus": "This",
-      "distractors": [
-        "These",
-        "That",
-        "Those"
-      ],
-      "slip": "These is the best espresso in this neighborhood.",
-      "note": "This is = «Это (лучший эспрессо)».",
-      "words": 8
-    },
-    {
-      "id": "tt-18",
-      "en": "Are these your sunglasses on the passenger seat?",
-      "ru": "Это твои солнцезащитные очки на сиденье?",
-      "topic": "this-that",
-      "focus": "these",
-      "distractors": [
         "this",
-        "those",
-        "that"
-      ],
-      "slip": "Are this your sunglasses on the passenger seat?",
-      "note": "Are these your sunglasses?",
-      "words": 8
-    },
-    {
-      "id": "tobe-16",
-      "en": "The sea in Limassol is very calm this morning.",
-      "ru": "Море в Лимасоле сегодня утром очень спокойное.",
-      "topic": "to-be",
-      "focus": "is",
-      "distractors": [
-        "are",
-        "am",
-        "be"
-      ],
-      "slip": "The sea in Limassol are very calm this morning.",
-      "note": "Subject + IS + adjective.",
-      "words": 9
-    },
-    {
-      "id": "tobe-17",
-      "en": "We are ready to order dinner.",
-      "ru": "Мы готовы заказать ужин.",
-      "topic": "to-be",
-      "focus": "are",
-      "distractors": [
-        "is",
-        "am",
-        "be"
-      ],
-      "slip": "We is ready to order dinner.",
-      "note": "We are ready.",
-      "words": 6
-    },
-    {
-      "id": "tobe-18",
-      "en": "Are they developers or product managers?",
-      "ru": "Они разработчики или продакт-менеджеры?",
-      "topic": "to-be",
-      "focus": "Are",
-      "distractors": [
-        "Is",
-        "Am",
-        "Do"
-      ],
-      "slip": "Is they developers or product managers?",
-      "note": "Are they + [профессии во мн.",
-      "words": 6
-    },
-    {
-      "id": "tobe-19",
-      "en": "English grammar is not as hard as it seems.",
-      "ru": "Английская грамматика не так сложна, как кажется.",
-      "topic": "to-be",
-      "focus": "is not",
-      "distractors": [
-        "are not",
-        "does not",
-        "not"
+        "here"
       ],
       "slip": null,
-      "note": "Grammar is not hard.",
-      "words": 9
-    },
-    {
-      "id": "do-13",
-      "en": "Do you drink coffee with milk or without sugar?",
-      "ru": "Ты пьёшь кофе с молоком или без сахара?",
-      "topic": "do-does",
-      "focus": "drink",
-      "distractors": [
-        "drinks",
-        "drinking",
-        "drank"
-      ],
-      "slip": "Do you drinks coffee with milk or without sugar?",
-      "note": "Do you drink...?",
-      "words": 9
-    },
-    {
-      "id": "do-14",
-      "en": "Alina doesn't eat spicy Asian food.",
-      "ru": "Алина не ест острую азиатскую еду.",
-      "topic": "do-does",
-      "focus": "eat",
-      "distractors": [
-        "eats",
-        "eating",
-        "ate"
-      ],
-      "slip": "Alina doesn't eats spicy Asian food.",
-      "note": "Doesn't + EAT.",
+      "note": "there = «там, туда» (место). that = «то, тот» (предмет).",
       "words": 6
     },
     {
-      "id": "do-15",
-      "en": "Where do you live in Limassol?",
-      "ru": "Где ты живёшь в Лимасоле?",
-      "topic": "do-does",
-      "focus": "live",
-      "distractors": [
-        "lives",
-        "living",
-        "lived"
-      ],
-      "slip": "Where do you lives in Limassol?",
-      "note": "Where do you live?",
-      "words": 6
-    },
-    {
-      "id": "do-16",
-      "en": "Does this gym have a swimming pool?",
-      "ru": "В этом спортзале есть бассейн?",
-      "topic": "do-does",
-      "focus": "have",
-      "distractors": [
-        "has",
-        "having",
-        "had"
-      ],
-      "slip": "Does this gym has a swimming pool?",
-      "note": "Does it have...?",
-      "words": 7
-    },
-    {
-      "id": "do-17",
-      "en": "We don't have meetings on Friday afternoons.",
-      "ru": "У нас нет созвонов по пятницам после обеда.",
-      "topic": "do-does",
-      "focus": "have",
-      "distractors": [
-        "has",
-        "having",
-        "had"
-      ],
-      "slip": "We don't has meetings on Friday afternoons.",
-      "note": "We don't have...",
-      "words": 7
-    },
-    {
-      "id": "verbs-09",
-      "en": "Denis creates digital user interfaces for mobile apps.",
-      "ru": "Денис создаёт интерфейсы для мобильных приложений.",
-      "topic": "verbs-s",
-      "focus": "creates",
-      "distractors": [
-        "create",
-        "creating",
-        "is create"
-      ],
-      "slip": "Denis create digital user interfaces for mobile apps.",
-      "note": "Denis creates / Denis designs.",
-      "words": 8
-    },
-    {
-      "id": "verbs-10",
-      "en": "The sun shines so brightly in Cyprus during summer.",
-      "ru": "Солнце на Кипре светит очень ярко летом.",
-      "topic": "verbs-s",
-      "focus": "shines",
-      "distractors": [
-        "shine",
-        "shining",
-        "is shine"
-      ],
-      "slip": "The sun shine so brightly in Cyprus during summer.",
-      "note": "The sun shines / The wind blows.",
-      "words": 9
-    },
-    {
-      "id": "verbs-11",
-      "en": "They travel around Cyprus by car on weekends.",
-      "ru": "Они путешествуют по Кипру на машине по выходным.",
-      "topic": "verbs-s",
-      "focus": "travel",
-      "distractors": [
-        "travels",
-        "traveling",
-        "are travel"
-      ],
-      "slip": "They travels around Cyprus by car on weekends.",
-      "note": "They travel / They drive / They visit.",
-      "words": 8
-    },
-    {
-      "id": "art-11",
-      "en": "I have two wooden shelves on the wall for my books.",
-      "ru": "У меня на стене две деревянные полки для книг.",
-      "topic": "articles-plurals",
-      "focus": "shelves",
-      "distractors": [
-        "shelfs",
-        "shelf",
-        "shelve"
-      ],
-      "slip": "I have two wooden shelfs on the wall for my books.",
-      "note": "Shelf → Shelves [ʃelvz].",
-      "words": 11
-    },
-    {
-      "id": "art-12",
-      "en": "Huge green palm leaves are everywhere in Bali.",
-      "ru": "Огромные зеленые пальмовые листья повсюду на Бали.",
-      "topic": "articles-plurals",
-      "focus": "leaves",
-      "distractors": [
-        "leafs",
-        "leaf",
-        "leave"
-      ],
-      "slip": "Huge green palm leafs are everywhere in Bali.",
-      "note": "Leaf → Leaves.",
-      "words": 8
-    },
-    {
-      "id": "art-13",
-      "en": "Please cut the pizza into two equal halves.",
-      "ru": "Пожалуйста, разрежь пиццу на две равные половины.",
-      "topic": "articles-plurals",
-      "focus": "halves",
-      "distractors": [
-        "halfs",
-        "half",
-        "halve"
-      ],
-      "slip": "Please cut the pizza into two equal halfs.",
-      "note": "Half → Halves.",
-      "words": 8
-    },
-    {
-      "id": "art-14",
-      "en": "The security camera recorded two thieves at night.",
-      "ru": "Камера зафиксировала двух воров ночью.",
-      "topic": "articles-plurals",
-      "focus": "thieves",
-      "distractors": [
-        "thiefs",
-        "thief",
-        "thieve"
-      ],
-      "slip": "The security camera recorded two thiefs at night.",
-      "note": "Thief → Thieves.",
-      "words": 8
-    },
-    {
-      "id": "art-15",
-      "en": "I watched two great detective series on Netflix recently.",
-      "ru": "Я недавно посмотрел два отличных детективных сериала на Netflix.",
-      "topic": "articles-plurals",
-      "focus": "series",
-      "distractors": [
-        "serie",
-        "serieses",
-        "a serie"
-      ],
-      "slip": "I watched two great detective serie on Netflix recently.",
-      "note": "One series → Two series (всегда с буквой s).",
-      "words": 9
-    },
-    {
-      "id": "art-16",
-      "en": "Several commercial aircraft landed at Larnaca airport today.",
-      "ru": "Несколько коммерческих самолетов приземлились в Ларнаке.",
-      "topic": "articles-plurals",
-      "focus": "aircraft",
-      "distractors": [
-        "aircrafts",
-        "aircraftes",
-        "an aircrafts"
-      ],
-      "slip": "Several commercial aircrafts landed at Larnaca airport today.",
-      "note": "Aircraft → Aircraft (без -s во мн.",
-      "words": 8
-    },
-    {
-      "id": "past-09",
-      "en": "Yesterday I spent five hours designing the new mobile screen.",
-      "ru": "Вчера я провел пять часов, проектируя новый мобильный экран.",
-      "topic": "past-tense",
-      "focus": "spent",
-      "distractors": [
-        "spended",
-        "spend",
-        "was spend"
-      ],
-      "slip": "Yesterday I spended five hours designing the new mobile screen.",
-      "note": "Spend → Spent → Spent.",
-      "words": 10
-    },
-    {
-      "id": "past-10",
-      "en": "Did you see Alina at the office yesterday?",
-      "ru": "Ты видел Алину вчера в офисе?",
-      "topic": "past-tense",
-      "focus": "see",
-      "distractors": [
-        "saw",
-        "seen",
-        "seeing"
-      ],
-      "slip": "Did you seen Alina at the office yesterday?",
-      "note": "DID you see...?",
-      "words": 8
-    },
-    {
-      "id": "past-11",
-      "en": "We had dinner at a Greek tavern by the sea last night.",
-      "ru": "Мы поужинали в греческой таверне у моря вчера вечером.",
-      "topic": "past-tense",
-      "focus": "had",
-      "distractors": [
-        "haved",
-        "have",
-        "was have"
-      ],
-      "slip": "We haved dinner at a Greek tavern by the sea last night.",
-      "note": "Have → Had.",
-      "words": 12
-    },
-    {
-      "id": "past-12",
-      "en": "I didn't play any video games yesterday.",
-      "ru": "Я не играл вчера ни в какие видеоигры.",
-      "topic": "past-tense",
-      "focus": "didn't",
-      "distractors": [
-        "wasn't",
-        "don't",
-        "haven't"
-      ],
-      "slip": "I wasn't play any video games yesterday.",
-      "note": "Не говори «I not played».",
-      "words": 7
-    },
-    {
-      "id": "tt-19",
-      "en": "Is that your backpack on the chair across the room?",
-      "ru": "Вон то твой рюкзак на стуле?",
-      "topic": "this-that",
+      "id": "s-there-that-06",
+      "en": "I know that you edit videos at night.",
+      "ru": "Я знаю, что ты монтируешь ночью.",
+      "topic": "there-that",
+      "prompt": "I know ____ you edit videos at night.",
       "focus": "that",
       "distractors": [
+        "there",
         "this",
-        "those",
-        "these"
+        "what"
       ],
-      "slip": "Is this your backpack on the chair across the room?",
-      "note": "Is that your [предмет]?",
-      "words": 10
+      "slip": "I know there you edit videos at night.",
+      "note": "that = «что» — союз, соединяет две части предложения.",
+      "words": 8
     },
     {
-      "id": "tt-20",
-      "en": "That was the best vacation of my life.",
-      "ru": "То был лучший отпуск в моей жизни.",
-      "topic": "this-that",
-      "focus": "That",
+      "id": "s-there-that-07",
+      "en": "There isn't any milk in the fridge.",
+      "ru": "В холодильнике нет молока.",
+      "topic": "there-that",
+      "prompt": "____ any milk in the fridge.",
+      "focus": "There isn't",
+      "distractors": [
+        "There aren't",
+        "That isn't",
+        "This isn't"
+      ],
+      "slip": "There no milk in the fridge.",
+      "note": "Нет чего-то → There isn't. Milk неисчисляемое, поэтому isn't.",
+      "words": 7
+    },
+    {
+      "id": "s-there-that-08",
+      "en": "These headphones are too loud.",
+      "ru": "Эти наушники слишком громкие.",
+      "topic": "there-that",
+      "prompt": "____ headphones are too loud.",
+      "focus": "These",
       "distractors": [
         "This",
         "Those",
-        "These"
+        "That"
       ],
-      "slip": "This was the best vacation of my life.",
-      "note": "That was = «То было...»",
+      "slip": "This headphones are too loud.",
+      "note": "headphones всегда множественное — These/Those, не This/That.",
+      "words": 5
+    },
+    {
+      "id": "s-there-that-09",
+      "en": "Those clouds over the sea look heavy.",
+      "ru": "Вон те облака над морем тяжёлые.",
+      "topic": "there-that",
+      "prompt": "____ clouds over the sea look heavy.",
+      "focus": "Those",
+      "distractors": [
+        "These",
+        "That",
+        "There"
+      ],
+      "slip": null,
+      "note": "Далеко и много → Those. Близко и много → These.",
+      "words": 7
+    },
+    {
+      "id": "s-there-that-10",
+      "en": "Is there a pharmacy near the beach?",
+      "ru": "Рядом с пляжем есть аптека?",
+      "topic": "there-that",
+      "prompt": "____ a pharmacy near the beach?",
+      "focus": "Is there",
+      "distractors": [
+        "Are there",
+        "Is that",
+        "There is"
+      ],
+      "slip": "There is a pharmacy near the beach?",
+      "note": "Вопрос: is меняется местами с there — «Is there…?»",
+      "words": 7
+    },
+    {
+      "id": "s-there-that-11",
+      "en": "There was a big storm in Limassol last night.",
+      "ru": "Ночью в Лимасоле был сильный шторм.",
+      "topic": "there-that",
+      "prompt": "____ a big storm in Limassol last night.",
+      "focus": "There was",
+      "distractors": [
+        "There were",
+        "That was",
+        "There is"
+      ],
+      "slip": null,
+      "note": "Прошедшее время от There is — There was.",
+      "words": 9
+    },
+    {
+      "id": "s-there-that-12",
+      "en": "There were too many people at the beach.",
+      "ru": "На пляже было слишком много людей.",
+      "topic": "there-that",
+      "prompt": "____ too many people at the beach.",
+      "focus": "There were",
+      "distractors": [
+        "There was",
+        "Those were",
+        "There are"
+      ],
+      "slip": "There was too many people at the beach.",
+      "note": "People — множественное, значит There WERE.",
       "words": 8
     },
     {
-      "id": "tt-21",
-      "en": "Do you see that modern building across the bay?",
-      "ru": "Ты видишь вон то современное здание через залив?",
-      "topic": "this-that",
-      "focus": "that",
+      "id": "s-there-that-13",
+      "en": "That's why I don't drink coffee after six.",
+      "ru": "Вот почему я не пью кофе после шести.",
+      "topic": "there-that",
+      "prompt": "____ why I don't drink coffee after six.",
+      "focus": "That's",
       "distractors": [
-        "this",
-        "those",
+        "There's",
+        "This's",
+        "Those"
+      ],
+      "slip": null,
+      "note": "«That's why» — устойчивое «вот почему». There's why не говорят.",
+      "words": 8
+    },
+    {
+      "id": "s-there-that-14",
+      "en": "Look at this — my video got 200 000 views.",
+      "ru": "Смотри — мой ролик набрал 200 000 просмотров.",
+      "topic": "there-that",
+      "prompt": "Look at ____ — my video got 200 000 views.",
+      "focus": "this",
+      "distractors": [
+        "that",
+        "there",
         "these"
       ],
-      "slip": "Do you see this modern building across the bay?",
-      "note": "That building = вон то здание.",
-      "words": 9
-    },
-    {
-      "id": "tobe-20",
-      "en": "I am so glad we moved to Cyprus.",
-      "ru": "Я так рад, что мы переехали на Кипр.",
-      "topic": "to-be",
-      "focus": "am",
-      "distractors": [
-        "is",
-        "are",
-        "be"
-      ],
-      "slip": "I is so glad we moved to Cyprus.",
-      "note": "I am + [прилагательное].",
-      "words": 8
-    },
-    {
-      "id": "tobe-21",
-      "en": "The coffee shop down the street is open until 10 PM.",
-      "ru": "Кофейня на этой улице открыта до 10 вечера.",
-      "topic": "to-be",
-      "focus": "is",
-      "distractors": [
-        "are",
-        "am",
-        "be"
-      ],
-      "slip": "The coffee shop down the street are open until 10 PM.",
-      "note": "Subject + IS + open/closed.",
-      "words": 10
-    },
-    {
-      "id": "tobe-22",
-      "en": "My parents are very proud of my achievements in design.",
-      "ru": "Мои родители очень гордятся моими успехами в дизайне.",
-      "topic": "to-be",
-      "focus": "are",
-      "distractors": [
-        "is",
-        "am",
-        "be"
-      ],
-      "slip": "My parents is very proud of my achievements in design.",
-      "note": "My parents ARE.",
-      "words": 10
-    },
-    {
-      "id": "do-18",
-      "en": "How often do you go to the gym in Limassol?",
-      "ru": "Как часто ты ходишь в спортзал в Лимасоле?",
-      "topic": "do-does",
-      "focus": "go",
-      "distractors": [
-        "goes",
-        "going",
-        "went"
-      ],
-      "slip": "How often do you goes to the gym in Limassol?",
-      "note": "How often DO you go...?",
-      "words": 10
-    },
-    {
-      "id": "do-19",
-      "en": "Alina doesn't drink cow milk, she drinks oat milk.",
-      "ru": "Алина не пьет коровье молоко, она пьет овсяное.",
-      "topic": "do-does",
-      "focus": "drink",
-      "distractors": [
-        "drinks",
-        "drinking",
-        "drank"
-      ],
-      "slip": "Alina doesn't drinking cow milk, she drinks oat milk.",
-      "note": "Doesn't + drink.",
-      "words": 9
-    },
-    {
-      "id": "do-20",
-      "en": "I don't see any issues with this typography scale.",
-      "ru": "Я не вижу никаких проблем с этим размером шрифтов.",
-      "topic": "do-does",
-      "focus": "see",
-      "distractors": [
-        "sees",
-        "seeing",
-        "saw"
-      ],
-      "slip": "I don't sees any issues with this typography scale.",
-      "note": "I don't see.",
-      "words": 9
-    },
-    {
-      "id": "do-21",
-      "en": "Does your MacBook get hot during long Figma sessions?",
-      "ru": "Твой MacBook греется при долгой работе в Figma?",
-      "topic": "do-does",
-      "focus": "get",
-      "distractors": [
-        "gets",
-        "getting",
-        "got"
-      ],
-      "slip": "Does your MacBook gets hot during long Figma sessions?",
-      "note": "Does it get...?",
-      "words": 9
-    },
-    {
-      "id": "verbs-12",
-      "en": "He needs a reliable cloud backup for all design assets.",
-      "ru": "Ему нужен надежный бэкап для всех дизайн-файлов.",
-      "topic": "verbs-s",
-      "focus": "needs",
-      "distractors": [
-        "need",
-        "needing",
-        "is need"
-      ],
-      "slip": "He need a reliable cloud backup for all design assets.",
-      "note": "He needs / She needs.",
-      "words": 10
-    },
-    {
-      "id": "verbs-13",
-      "en": "Alina does yoga every Tuesday and Thursday.",
-      "ru": "Алина занимается йогой каждый вторник и четверг.",
-      "topic": "verbs-s",
-      "focus": "does",
-      "distractors": [
-        "do",
-        "doing",
-        "is do"
-      ],
-      "slip": "Alina do yoga every Tuesday and Thursday.",
-      "note": "He / She DOES.",
+      "slip": null,
+      "note": "Показываешь на свой экран, это рядом — this.",
       "words": 7
     },
     {
-      "id": "past-13",
-      "en": "Yesterday we walked five kilometers along the Limassol promenade.",
-      "ru": "Вчера мы прошли пять километров по набережной Лимасола.",
-      "topic": "past-tense",
-      "focus": "walked",
+      "id": "s-there-that-15",
+      "en": "Is that your car in front of the gate?",
+      "ru": "Это твоя машина перед воротами?",
+      "topic": "there-that",
+      "prompt": "____ your car in front of the gate?",
+      "focus": "Is that",
       "distractors": [
-        "walk",
-        "walking",
-        "was walk"
+        "Is there",
+        "Is this",
+        "Are those"
       ],
-      "slip": "Yesterday we walk five kilometers along the Limassol promenade.",
-      "note": "Regular verb + -ed.",
+      "slip": null,
+      "note": "Машина не у тебя в руках, она вон там — that.",
       "words": 9
     },
     {
-      "id": "past-14",
-      "en": "The sunset in Cyprus yesterday was absolutely incredible.",
-      "ru": "Закат на Кипре вчера был потрясающим.",
-      "topic": "past-tense",
-      "focus": "was",
+      "id": "s-there-that-16",
+      "en": "There's no signal in the mountains.",
+      "ru": "В горах нет связи.",
+      "topic": "there-that",
+      "prompt": "____ no signal in the mountains.",
+      "focus": "There's",
       "distractors": [
-        "were",
-        "did",
-        "is"
-      ],
-      "slip": "The sunset in Cyprus yesterday were absolutely incredible.",
-      "note": "It was.",
-      "words": 8
-    },
-    {
-      "id": "past-15",
-      "en": "Where did you find that vintage poster on your wall?",
-      "ru": "Где ты нашел тот плакат на стене?",
-      "topic": "past-tense",
-      "focus": "find",
-      "distractors": [
-        "found",
-        "finding",
-        "was find"
-      ],
-      "slip": "Where did you finding that vintage poster on your wall?",
-      "note": "Where did you find...?",
-      "words": 10
-    },
-    {
-      "id": "past-16",
-      "en": "I ate a delicious seafood salad for lunch yesterday.",
-      "ru": "Я вчера съел вкусный салат с морепродуктами на обед.",
-      "topic": "past-tense",
-      "focus": "ate",
-      "distractors": [
-        "eated",
-        "eat",
-        "eaten"
+        "That's",
+        "This's",
+        "There're"
       ],
       "slip": null,
-      "note": null,
-      "words": 9
-    },
-    {
-      "id": "life-01",
-      "en": "Could you please say that again more slowly?",
-      "ru": "Не могли бы вы сказать это еще раз помедленнее?",
-      "topic": "speaking",
-      "focus": "say",
-      "distractors": [
-        "tell",
-        "speak",
-        "talk"
-      ],
-      "slip": null,
-      "note": "Could you please say that again?",
-      "words": 8
-    },
-    {
-      "id": "life-02",
-      "en": "I would like to order a flat white with oat milk, please.",
-      "ru": "Я бы хотел заказать флэт уайт на овсяном молоке, пожалуйста.",
-      "topic": "speaking",
-      "focus": "order",
-      "distractors": [
-        "ordered",
-        "ordering",
-        "ask"
-      ],
-      "slip": "I would like to ordered a flat white with oat milk, please.",
-      "note": "I would like to order...",
-      "words": 12
-    },
-    {
-      "id": "life-03",
-      "en": "How much does this cost in euros?",
-      "ru": "Сколько это стоит в евро?",
-      "topic": "speaking",
-      "focus": "does",
-      "distractors": [
-        "is",
-        "do",
-        "are"
-      ],
-      "slip": "How much is this cost in euros?",
-      "note": "How much does it cost?",
-      "words": 7
-    },
-    {
-      "id": "life-04",
-      "en": "Can I pay by card or is it cash only?",
-      "ru": "Могу я оплатить картой или только наличные?",
-      "topic": "speaking",
-      "focus": "pay",
-      "distractors": [
-        "paid",
-        "paying",
-        "payment"
-      ],
-      "slip": "Can I paying by card or is it cash only?",
-      "note": "Can I pay by card?",
-      "words": 10
-    },
-    {
-      "id": "life-05",
-      "en": "How long does it take to get to Larnaca airport by taxi?",
-      "ru": "Сколько времени занимает доехать на такси до аэропорта Ларнаки?",
-      "topic": "speaking",
-      "focus": "take",
-      "distractors": [
-        "takes",
-        "taking",
-        "cost"
-      ],
-      "slip": "How long does it takes to get to Larnaca airport by taxi?",
-      "note": "How long does it take to [глагол]?",
-      "words": 12
-    },
-    {
-      "id": "life-06",
-      "en": "What do you recommend for this button design?",
-      "ru": "Что ты рекомендуешь для дизайна этой кнопки?",
-      "topic": "speaking",
-      "focus": "recommend",
-      "distractors": [
-        "recommends",
-        "recommending",
-        "suggest"
-      ],
-      "slip": "What do you recommends for this button design?",
-      "note": "What do you recommend?",
-      "words": 8
-    },
-    {
-      "id": "life-07",
-      "en": "I usually start working around 10 AM.",
-      "ru": "Я обычно начинаю работать около 10 утра.",
-      "topic": "speaking",
-      "focus": "start",
-      "distractors": [
-        "starts",
-        "starting",
-        "started"
-      ],
-      "slip": "I usually starts working around 10 AM.",
-      "note": "I usually start...",
+      "note": "There's = there is. Формы «this's» в английском не существует.",
       "words": 6
     },
     {
-      "id": "life-08",
-      "en": "Do you mind if I open the window?",
-      "ru": "Ты не против, если я открою окно?",
-      "topic": "speaking",
-      "focus": "open",
+      "id": "s-there-that-17",
+      "en": "I want that one, not this one.",
+      "ru": "Я хочу вон тот, а не этот.",
+      "topic": "there-that",
+      "prompt": "I want ____ one, not this one.",
+      "focus": "that",
       "distractors": [
-        "opened",
-        "opening",
-        "opens"
+        "there",
+        "these",
+        "this"
       ],
-      "slip": "Do you mind if I opened the window?",
-      "note": "Do you mind if I...?",
+      "slip": null,
+      "note": "That one — вон тот. This one — этот.",
+      "words": 7
+    },
+    {
+      "id": "s-there-that-18",
+      "en": "Are there any good sushi places in Paphos?",
+      "ru": "В Пафосе есть хорошие суши?",
+      "topic": "there-that",
+      "prompt": "____ any good sushi places in Paphos?",
+      "focus": "Are there",
+      "distractors": [
+        "Is there",
+        "Are these",
+        "There are"
+      ],
+      "slip": "There are any good sushi places in Paphos?",
+      "note": "Вопрос во множественном числе — Are there…?",
       "words": 8
     },
     {
-      "id": "life-09",
-      "en": "Have a great weekend!",
-      "ru": "Отличных выходных!",
-      "topic": "speaking",
-      "focus": "weekend",
+      "id": "s-there-that-19",
+      "en": "This is the best espresso in the neighbourhood.",
+      "ru": "Это лучший эспрессо в районе.",
+      "topic": "there-that",
+      "prompt": "____ is the best espresso in the neighbourhood.",
+      "focus": "This",
       "distractors": [
-        "week",
-        "vacation",
-        "day"
+        "These",
+        "There",
+        "Those"
       ],
-      "slip": "Have a great week!",
-      "note": "Have a great weekend / Have a nice day.",
-      "words": 4
+      "slip": null,
+      "note": "Один эспрессо, он перед тобой — This is.",
+      "words": 8
     },
     {
-      "id": "life-10",
-      "en": "Nice to see you, Eliza! Thank you for the lesson.",
-      "ru": "Рад был увидеться, Элиза! Спасибо за урок.",
-      "topic": "speaking",
-      "focus": "see",
+      "id": "s-there-that-20",
+      "en": "Alina left her keys over there, on the table.",
+      "ru": "Алина оставила ключи вон там, на столе.",
+      "topic": "there-that",
+      "prompt": "Alina left her keys over ____, on the table.",
+      "focus": "there",
       "distractors": [
-        "meet",
-        "saw",
-        "seen"
+        "that",
+        "this",
+        "these"
       ],
-      "slip": "Nice to seen you, Eliza! Thank you for the lesson.",
-      "note": "Nice to meet you (1-й раз) vs Nice to see you (снова).",
-      "words": 10
+      "slip": "Alina left her keys over that, on the table.",
+      "note": "over there = «вон там». Это место, а не предмет.",
+      "words": 9
     },
     {
-      "id": "s-sep21-r01",
-      "en": "I would like a salad, please.",
-      "ru": "Я бы хотел салат, пожалуйста.",
-      "topic": "restaurant",
+      "id": "s-articles-01",
+      "en": "I go to a restaurant every Friday.",
+      "ru": "Я хожу в ресторан каждую пятницу.",
+      "topic": "articles",
+      "prompt": "I go to ____ restaurant every Friday.",
+      "focus": "a",
+      "distractors": [
+        "—",
+        "the",
+        "an"
+      ],
+      "slip": "I go to restaurant every Friday.",
+      "note": "Любой ресторан, не конкретный → a. Без артикля нельзя.",
+      "words": 7
+    },
+    {
+      "id": "s-articles-02",
+      "en": "I work in a small studio at home.",
+      "ru": "Я работаю в маленькой студии дома.",
+      "topic": "articles",
+      "prompt": "I work in ____ small studio at home.",
+      "focus": "a",
+      "distractors": [
+        "—",
+        "the",
+        "an"
+      ],
+      "slip": "I work in small studio at home.",
+      "note": "in a studio, in a school, in a hospital — везде артикль.",
+      "words": 8
+    },
+    {
+      "id": "s-articles-03",
+      "en": "I am a video editor.",
+      "ru": "Я видеомонтажёр.",
+      "topic": "articles",
+      "prompt": "I am ____ video editor.",
+      "focus": "a",
+      "distractors": [
+        "—",
+        "the",
+        "an"
+      ],
+      "slip": "I am video editor.",
+      "note": "Профессия всегда с артиклем: I am a doctor, a teacher, an editor.",
+      "words": 5
+    },
+    {
+      "id": "s-articles-04",
+      "en": "She is an English teacher.",
+      "ru": "Она преподаёт английский.",
+      "topic": "articles",
+      "prompt": "She is ____ English teacher.",
+      "focus": "an",
+      "distractors": [
+        "a",
+        "—",
+        "the"
+      ],
+      "slip": "She is a English teacher.",
+      "note": "Следующее слово English начинается с гласного звука → an.",
+      "words": 5
+    },
+    {
+      "id": "s-articles-05",
+      "en": "Can you pass me the salt?",
+      "ru": "Передашь соль?",
+      "topic": "articles",
+      "prompt": "Can you pass me ____ salt?",
+      "focus": "the",
+      "distractors": [
+        "a",
+        "—",
+        "an"
+      ],
+      "slip": null,
+      "note": "Соль на столе одна, обоим понятно какая → the.",
+      "words": 6
+    },
+    {
+      "id": "s-articles-06",
+      "en": "I bought a new camera yesterday.",
+      "ru": "Вчера я купил новую камеру.",
+      "topic": "articles",
+      "prompt": "I bought ____ new camera yesterday.",
       "focus": "a",
       "distractors": [
         "the",
         "—",
         "an"
       ],
-      "slip": "I would like salad, please.",
-      "note": "Заказываешь один любой салат — артикль a.",
+      "slip": null,
+      "note": "Первое упоминание — a. Дальше про неё же будет the.",
       "words": 6
     },
     {
-      "id": "s-sep21-r02",
-      "en": "Can we have the bill, please?",
-      "ru": "Можно нам счёт, пожалуйста?",
-      "topic": "restaurant",
-      "focus": "bill",
+      "id": "s-articles-07",
+      "en": "The camera I bought yesterday is broken.",
+      "ru": "Камера, которую я вчера купил, сломалась.",
+      "topic": "articles",
+      "prompt": "____ camera I bought yesterday is broken.",
+      "focus": "The",
       "distractors": [
-        "menu",
-        "chef",
-        "waiter"
+        "A",
+        "—",
+        "An"
       ],
       "slip": null,
-      "note": "the bill — счёт.",
-      "words": 6
+      "note": "Уже понятно, о какой камере речь → the.",
+      "words": 7
     },
     {
-      "id": "s-sep21-r03",
-      "en": "The menu shows all the food that the restaurant sells.",
-      "ru": "В меню перечислена вся еда, которую продаёт ресторан.",
-      "topic": "restaurant",
-      "focus": "menu",
+      "id": "s-articles-08",
+      "en": "I drink coffee every morning.",
+      "ru": "Я пью кофе каждое утро.",
+      "topic": "articles",
+      "prompt": "I drink ____ coffee every morning.",
+      "focus": "—",
       "distractors": [
-        "bill",
-        "order",
-        "receipt"
+        "a",
+        "the",
+        "an"
       ],
-      "slip": null,
-      "note": "menu — список блюд.",
-      "words": 10
+      "slip": "I drink a coffee every morning.",
+      "note": "Кофе вообще, как вещество — без артикля. «A coffee» = одна чашка.",
+      "words": 5
     },
     {
-      "id": "s-sep21-r04",
-      "en": "I go to a restaurant every Friday with my friends.",
-      "ru": "Я хожу в ресторан каждую пятницу с друзьями.",
-      "topic": "restaurant",
+      "id": "s-articles-09",
+      "en": "I need an hour to finish the edit.",
+      "ru": "Мне нужен час, чтобы доделать монтаж.",
+      "topic": "articles",
+      "prompt": "I need ____ hour to finish the edit.",
+      "focus": "an",
+      "distractors": [
+        "a",
+        "the",
+        "—"
+      ],
+      "slip": "I need a hour to finish the edit.",
+      "note": "В hour буква h не читается, слышно «ауэр» → an.",
+      "words": 8
+    },
+    {
+      "id": "s-articles-10",
+      "en": "We live in Cyprus.",
+      "ru": "Мы живём на Кипре.",
+      "topic": "articles",
+      "prompt": "We live in ____ Cyprus.",
+      "focus": "—",
+      "distractors": [
+        "the",
+        "a",
+        "an"
+      ],
+      "slip": "We live in the Cyprus.",
+      "note": "Перед названиями стран артикль не ставят: in Cyprus, in Russia.",
+      "words": 4
+    },
+    {
+      "id": "s-articles-11",
+      "en": "This is the best coffee in town.",
+      "ru": "Это лучший кофе в городе.",
+      "topic": "articles",
+      "prompt": "This is ____ best coffee in town.",
+      "focus": "the",
+      "distractors": [
+        "a",
+        "—",
+        "an"
+      ],
+      "slip": "This is best coffee in town.",
+      "note": "Превосходная степень (best, biggest) всегда с the.",
+      "words": 7
+    },
+    {
+      "id": "s-articles-12",
+      "en": "He is a police officer.",
+      "ru": "Он полицейский.",
+      "topic": "articles",
+      "prompt": "He is ____ police officer.",
       "focus": "a",
       "distractors": [
         "—",
         "the",
-        "in"
+        "an"
       ],
-      "slip": "I go to restaurant every Friday with my friends.",
-      "note": "Перед исчисляемым существительным в единственном числе артикль обязателен.",
-      "words": 10
-    },
-    {
-      "id": "s-sep21-r05",
-      "en": "The chef cooks all the food in the kitchen.",
-      "ru": "Шеф-повар готовит всю еду на кухне.",
-      "topic": "restaurant",
-      "focus": "chef",
-      "distractors": [
-        "waiter",
-        "customer",
-        "waitress"
-      ],
-      "slip": null,
-      "note": "chef читается «шеф», через ш.",
-      "words": 9
-    },
-    {
-      "id": "s-sep21-r06",
-      "en": "It was delicious, thank you.",
-      "ru": "Было очень вкусно, спасибо.",
-      "topic": "restaurant",
-      "focus": "was",
-      "distractors": [
-        "is",
-        "were",
-        "am"
-      ],
-      "slip": "It is delicious, thank you.",
-      "note": "Вопрос в прошедшем времени (was) — и ответ в прошедшем.",
+      "slip": "He is police officer.",
+      "note": "Ровно та ошибка с урока 21 сентября: артикль обязателен.",
       "words": 5
     },
     {
-      "id": "s-sep21-r07",
-      "en": "An orange juice, please.",
-      "ru": "Апельсиновый сок, пожалуйста.",
-      "topic": "restaurant",
-      "focus": "An",
+      "id": "s-articles-13",
+      "en": "I watch YouTube in the evening.",
+      "ru": "Вечером я смотрю ютуб.",
+      "topic": "articles",
+      "prompt": "I watch ____ YouTube in the evening.",
+      "focus": "—",
       "distractors": [
-        "A",
-        "The",
-        "Some of"
+        "the",
+        "a",
+        "an"
       ],
-      "slip": "A orange juice, please.",
-      "note": "Перед гласным звуком — an: an orange juice, an apple, an egg.",
-      "words": 4
+      "slip": "I watch the YouTube in the evening.",
+      "note": "Названия сервисов идут без артикля: YouTube, Instagram, Telegram.",
+      "words": 6
     },
     {
-      "id": "s-sep21-r08",
-      "en": "I would like scrambled eggs, please.",
-      "ru": "Я бы хотел яичницу-болтунью, пожалуйста.",
-      "topic": "restaurant",
-      "focus": "eggs",
+      "id": "s-articles-14",
+      "en": "There is a problem with my microphone.",
+      "ru": "С микрофоном проблема.",
+      "topic": "articles",
+      "prompt": "There is ____ problem with my microphone.",
+      "focus": "a",
       "distractors": [
         "—",
-        "food",
-        "cook"
+        "the",
+        "an"
       ],
-      "slip": "I would like scrambled , please.",
-      "note": "scrambled — прилагательное, нужно существительное: scrambled eggs.",
-      "words": 6
+      "slip": "There is problem with my microphone.",
+      "note": "Одна проблема, впервые упоминается → a problem.",
+      "words": 7
     },
     {
-      "id": "s-sep21-r09",
-      "en": "What would you like?",
-      "ru": "Что бы вы хотели?",
-      "topic": "restaurant",
-      "focus": "would",
+      "id": "s-articles-15",
+      "en": "Alina is an artist.",
+      "ru": "Алина художница.",
+      "topic": "articles",
+      "prompt": "Alina is ____ artist.",
+      "focus": "an",
       "distractors": [
-        "will",
-        "do",
-        "are"
+        "a",
+        "—",
+        "the"
       ],
-      "slip": "What will you like?",
-      "note": "«What would you like?» — вежливый вопрос официанта.",
+      "slip": "Alina is a artist.",
+      "note": "artist начинается с гласного звука → an.",
       "words": 4
     },
     {
-      "id": "s-sep21-r10",
-      "en": "Today the chef's special is pizza.",
-      "ru": "Сегодняшнее фирменное блюдо — пицца.",
-      "topic": "restaurant",
-      "focus": "special",
+      "id": "s-articles-16",
+      "en": "I usually go to the gym after work.",
+      "ru": "Обычно я хожу в зал после работы.",
+      "topic": "articles",
+      "prompt": "I usually go to ____ gym after work.",
+      "focus": "the",
       "distractors": [
-        "menu",
-        "order",
-        "receipt"
+        "a",
+        "—",
+        "an"
       ],
       "slip": null,
-      "note": "the chef's special / today's special — блюдо дня.",
+      "note": "Тот самый зал, куда ходишь всегда → the gym.",
+      "words": 8
+    },
+    {
+      "id": "s-to-be-01",
+      "en": "I am tired after the long edit.",
+      "ru": "Я устал после долгого монтажа.",
+      "topic": "to-be",
+      "prompt": "I ____ tired after the long edit.",
+      "focus": "am",
+      "distractors": [
+        "is",
+        "are",
+        "—"
+      ],
+      "slip": "I tired after the long edit.",
+      "note": "Перед состоянием нужен глагол: I am tired, не «I tired».",
+      "words": 7
+    },
+    {
+      "id": "s-to-be-02",
+      "en": "It will be sunny tomorrow.",
+      "ru": "Завтра будет солнечно.",
+      "topic": "to-be",
+      "prompt": "It ____ sunny tomorrow.",
+      "focus": "will be",
+      "distractors": [
+        "will",
+        "is",
+        "will is"
+      ],
+      "slip": "It will sunny tomorrow.",
+      "note": "Твоя ошибка с урока: перед прилагательным нужен be — will BE sunny.",
+      "words": 5
+    },
+    {
+      "id": "s-to-be-03",
+      "en": "Alina and I are in Limassol today.",
+      "ru": "Мы с Алиной сегодня в Лимасоле.",
+      "topic": "to-be",
+      "prompt": "Alina and I ____ in Limassol today.",
+      "focus": "are",
+      "distractors": [
+        "am",
+        "is",
+        "—"
+      ],
+      "slip": "Alina and I is in Limassol today.",
+      "note": "X and I = we, а we всегда с are.",
+      "words": 7
+    },
+    {
+      "id": "s-to-be-04",
+      "en": "My laptop is very slow today.",
+      "ru": "Мой ноутбук сегодня очень тормозит.",
+      "topic": "to-be",
+      "prompt": "My laptop ____ very slow today.",
+      "focus": "is",
+      "distractors": [
+        "are",
+        "am",
+        "—"
+      ],
+      "slip": "My laptop very slow today.",
+      "note": "Одна вещь → is. И выбрасывать его нельзя.",
       "words": 6
     },
     {
-      "id": "s-sep21-r11",
-      "en": "A man who brings your food to the table is a waiter.",
-      "ru": "Мужчина, который приносит еду к столу, — официант.",
-      "topic": "restaurant",
-      "focus": "waiter",
-      "distractors": [
-        "waitress",
-        "chef",
-        "customer"
-      ],
-      "slip": "A man who brings your food to the table is a waitress.",
-      "note": "waiter — мужчина, waitress — женщина.",
-      "words": 12
-    },
-    {
-      "id": "s-sep21-r12",
-      "en": "Here you are.",
-      "ru": "Вот, пожалуйста.",
-      "topic": "restaurant",
+      "id": "s-to-be-05",
+      "en": "The videos are ready for upload.",
+      "ru": "Ролики готовы к загрузке.",
+      "topic": "to-be",
+      "prompt": "The videos ____ ready for upload.",
       "focus": "are",
       "distractors": [
         "is",
-        "have",
-        "take"
+        "am",
+        "was"
       ],
-      "slip": "Here you is.",
-      "note": "«Here you are» = «Here you go» — вот, держите.",
-      "words": 3
-    },
-    {
-      "id": "s-sep21-w01",
-      "en": "I think it will rain tomorrow.",
-      "ru": "Думаю, завтра будет дождь.",
-      "topic": "future-will",
-      "focus": "will",
-      "distractors": [
-        "is",
-        "was",
-        "does"
-      ],
-      "slip": "I think it is rain tomorrow.",
-      "note": "Предсказание — will + базовый глагол.",
+      "slip": "The videos is ready for upload.",
+      "note": "Videos — множественное число → are.",
       "words": 6
     },
     {
-      "id": "s-sep21-w02",
-      "en": "I think it will be sunny tomorrow.",
-      "ru": "Думаю, завтра будет солнечно.",
-      "topic": "future-will",
-      "focus": "be",
+      "id": "s-to-be-06",
+      "en": "I am not a beginner, I have eight years of experience.",
+      "ru": "Я не новичок, у меня восемь лет опыта.",
+      "topic": "to-be",
+      "prompt": "I ____ a beginner, I have eight years of experience.",
+      "focus": "am not",
       "distractors": [
-        "—",
-        "is",
-        "being"
+        "not am",
+        "don't",
+        "am no"
       ],
-      "slip": "I think it will sunny tomorrow.",
-      "note": "will + be + прилагательное.",
+      "slip": "I not a beginner, I have eight years of experience.",
+      "note": "Отрицание с to be: am + not. Do здесь не нужен.",
+      "words": 11
+    },
+    {
+      "id": "s-to-be-07",
+      "en": "This coffee is too hot to drink.",
+      "ru": "Этот кофе слишком горячий.",
+      "topic": "to-be",
+      "prompt": "This coffee ____ too hot to drink.",
+      "focus": "is",
+      "distractors": [
+        "are",
+        "am",
+        "—"
+      ],
+      "slip": null,
+      "note": "Coffee — одна порция → is.",
       "words": 7
     },
     {
-      "id": "s-sep21-w03",
-      "en": "Tomorrow he will run fast too.",
-      "ru": "Завтра он тоже побежит быстро.",
-      "topic": "future-will",
-      "focus": "run",
+      "id": "s-to-be-08",
+      "en": "You are right about the sound.",
+      "ru": "Ты прав насчёт звука.",
+      "topic": "to-be",
+      "prompt": "You ____ right about the sound.",
+      "focus": "are",
       "distractors": [
-        "runs",
-        "running",
-        "ran"
+        "is",
+        "am",
+        "—"
       ],
-      "slip": "Tomorrow he will runs fast too.",
-      "note": "После will — только базовая форма, без -s.",
+      "slip": "You right about the sound.",
+      "note": "You всегда с are, даже если это один человек.",
       "words": 6
     },
     {
-      "id": "s-sep21-w04",
-      "en": "We won't play football today.",
-      "ru": "Мы не будем сегодня играть в футбол.",
-      "topic": "future-will",
-      "focus": "won't",
+      "id": "s-to-be-09",
+      "en": "The weather in Cyprus is hot in September.",
+      "ru": "На Кипре в сентябре жарко.",
+      "topic": "to-be",
+      "prompt": "The weather in Cyprus ____ hot in September.",
+      "focus": "is",
       "distractors": [
-        "willn't",
-        "don't will",
-        "not will"
+        "are",
+        "am",
+        "be"
       ],
-      "slip": "We willn't play football today.",
-      "note": "will not → won't.",
+      "slip": null,
+      "note": "Weather — единственное число, всегда is.",
+      "words": 8
+    },
+    {
+      "id": "s-to-be-10",
+      "en": "We are happy with the new apartment.",
+      "ru": "Мы довольны новой квартирой.",
+      "topic": "to-be",
+      "prompt": "We ____ happy with the new apartment.",
+      "focus": "are",
+      "distractors": [
+        "is",
+        "am",
+        "—"
+      ],
+      "slip": "We happy with the new apartment.",
+      "note": "We + are. Без связки фраза разваливается.",
+      "words": 7
+    },
+    {
+      "id": "s-to-be-11",
+      "en": "My headphones are broken again.",
+      "ru": "Мои наушники опять сломались.",
+      "topic": "to-be",
+      "prompt": "My headphones ____ broken again.",
+      "focus": "are",
+      "distractors": [
+        "is",
+        "am",
+        "was"
+      ],
+      "slip": "My headphones is broken again.",
+      "note": "Headphones — всегда множественное число.",
       "words": 5
     },
     {
-      "id": "s-sep21-w05",
-      "en": "What will you do after work today?",
-      "ru": "Что ты будешь делать сегодня после работы?",
-      "topic": "future-will",
-      "focus": "What",
+      "id": "s-to-be-12",
+      "en": "He is not at home right now.",
+      "ru": "Его сейчас нет дома.",
+      "topic": "to-be",
+      "prompt": "He ____ not at home right now.",
+      "focus": "is",
       "distractors": [
-        "How",
-        "Who",
-        "Where"
+        "are",
+        "am",
+        "don't"
       ],
-      "slip": null,
-      "note": "Вопросительное слово + will + подлежащее + глагол.",
+      "slip": "He don't at home right now.",
+      "note": "С to be отрицание делается через not, а не через don't.",
       "words": 7
     },
     {
-      "id": "s-sep21-w06",
+      "id": "s-do-does-01",
+      "en": "I don't understand this word.",
+      "ru": "Я не понимаю это слово.",
+      "topic": "do-does",
+      "prompt": "I ____ understand this word.",
+      "focus": "don't",
+      "distractors": [
+        "am not",
+        "doesn't",
+        "not"
+      ],
+      "slip": "I'm not understand this word.",
+      "note": "Твоя ошибка с урока: «I'm not understand» — нельзя. Нужно I don't understand.",
+      "words": 5
+    },
+    {
+      "id": "s-do-does-02",
+      "en": "My translator doesn't know this word.",
+      "ru": "Мой переводчик не знает это слово.",
+      "topic": "do-does",
+      "prompt": "My translator ____ know this word.",
+      "focus": "doesn't",
+      "distractors": [
+        "don't",
+        "isn't",
+        "not"
+      ],
+      "slip": "My translator not know this word.",
+      "note": "Ещё одна ошибка урока: он/она/оно → doesn't.",
+      "words": 6
+    },
+    {
+      "id": "s-do-does-03",
+      "en": "Do you want coffee or tea?",
+      "ru": "Ты будешь кофе или чай?",
+      "topic": "do-does",
+      "prompt": "____ you want coffee or tea?",
+      "focus": "Do",
+      "distractors": [
+        "Does",
+        "Are",
+        "Is"
+      ],
+      "slip": null,
+      "note": "Вопрос про you → Do you…?",
+      "words": 6
+    },
+    {
+      "id": "s-do-does-04",
+      "en": "Does Alina work on Saturdays?",
+      "ru": "Алина работает по субботам?",
+      "topic": "do-does",
+      "prompt": "____ Alina work on Saturdays?",
+      "focus": "Does",
+      "distractors": [
+        "Do",
+        "Is",
+        "Are"
+      ],
+      "slip": "Do Alina work on Saturdays?",
+      "note": "Alina = she → Does. И глагол после does без -s.",
+      "words": 5
+    },
+    {
+      "id": "s-do-does-05",
+      "en": "We don't have meetings on Friday.",
+      "ru": "У нас нет созвонов по пятницам.",
+      "topic": "do-does",
+      "prompt": "We ____ have meetings on Friday.",
+      "focus": "don't",
+      "distractors": [
+        "doesn't",
+        "aren't",
+        "not"
+      ],
+      "slip": null,
+      "note": "We → don't.",
+      "words": 6
+    },
+    {
+      "id": "s-do-does-06",
+      "en": "He doesn't like horror movies.",
+      "ru": "Он не любит ужастики.",
+      "topic": "do-does",
+      "prompt": "He ____ like horror movies.",
+      "focus": "doesn't",
+      "distractors": [
+        "don't",
+        "isn't",
+        "not like"
+      ],
+      "slip": "He don't like horror movies.",
+      "note": "He/she/it → doesn't, и глагол остаётся без -s: doesn't like.",
+      "words": 5
+    },
+    {
+      "id": "s-do-does-07",
+      "en": "What time do you usually wake up?",
+      "ru": "Во сколько ты обычно встаёшь?",
+      "topic": "do-does",
+      "prompt": "What time ____ you usually wake up?",
+      "focus": "do",
+      "distractors": [
+        "does",
+        "are",
+        "is"
+      ],
+      "slip": null,
+      "note": "Вопросительное слово + do + you + глагол.",
+      "words": 7
+    },
+    {
+      "id": "s-do-does-08",
+      "en": "Do they speak English at home?",
+      "ru": "Они говорят дома по-английски?",
+      "topic": "do-does",
+      "prompt": "____ they speak English at home?",
+      "focus": "Do",
+      "distractors": [
+        "Does",
+        "Are",
+        "Is"
+      ],
+      "slip": null,
+      "note": "They → Do.",
+      "words": 6
+    },
+    {
+      "id": "s-do-does-09",
+      "en": "She doesn't eat meat.",
+      "ru": "Она не ест мясо.",
+      "topic": "do-does",
+      "prompt": "She ____ eat meat.",
+      "focus": "doesn't",
+      "distractors": [
+        "don't",
+        "isn't",
+        "not eat"
+      ],
+      "slip": "She not eat meat.",
+      "note": "Отрицание в настоящем времени всегда через don't/doesn't.",
+      "words": 4
+    },
+    {
+      "id": "s-do-does-10",
+      "en": "I do my best every time.",
+      "ru": "Я каждый раз выкладываюсь.",
+      "topic": "do-does",
+      "prompt": "I ____ my best every time.",
+      "focus": "do",
+      "distractors": [
+        "does",
+        "am",
+        "make"
+      ],
+      "slip": null,
+      "note": "do my best — устойчивое «стараться изо всех сил».",
+      "words": 6
+    },
+    {
+      "id": "s-do-does-11",
+      "en": "Why don't you take a break?",
+      "ru": "Почему бы тебе не отдохнуть?",
+      "topic": "do-does",
+      "prompt": "Why ____ you take a break?",
+      "focus": "don't",
+      "distractors": [
+        "doesn't",
+        "aren't",
+        "not"
+      ],
+      "slip": null,
+      "note": "«Why don't you…?» — вежливое предложение, а не упрёк.",
+      "words": 6
+    },
+    {
+      "id": "s-do-does-12",
+      "en": "Does this bus go to the old town?",
+      "ru": "Этот автобус идёт в старый город?",
+      "topic": "do-does",
+      "prompt": "____ this bus go to the old town?",
+      "focus": "Does",
+      "distractors": [
+        "Do",
+        "Is",
+        "Are"
+      ],
+      "slip": "Do this bus go to the old town?",
+      "note": "Bus = it → Does.",
+      "words": 8
+    },
+    {
+      "id": "s-past-01",
+      "en": "The sunset yesterday was incredible.",
+      "ru": "Закат вчера был потрясающий.",
+      "topic": "past",
+      "prompt": "The sunset yesterday ____ incredible.",
+      "focus": "was",
+      "distractors": [
+        "were",
+        "is",
+        "did"
+      ],
+      "slip": null,
+      "note": "Один закат → was.",
+      "words": 5
+    },
+    {
+      "id": "s-past-02",
+      "en": "We were at the beach all morning.",
+      "ru": "Мы всё утро были на пляже.",
+      "topic": "past",
+      "prompt": "We ____ at the beach all morning.",
+      "focus": "were",
+      "distractors": [
+        "was",
+        "are",
+        "did"
+      ],
+      "slip": "We was at the beach all morning.",
+      "note": "We/you/they → were. I/he/she/it → was.",
+      "words": 7
+    },
+    {
+      "id": "s-past-03",
+      "en": "I worked on the video until 3 a.m.",
+      "ru": "Я монтировал до трёх ночи.",
+      "topic": "past",
+      "prompt": "I ____ on the video until 3 a.m.",
+      "focus": "worked",
+      "distractors": [
+        "work",
+        "was work",
+        "did work"
+      ],
+      "slip": "I was work on the video until 3 a.m.",
+      "note": "Правильный глагол в прошедшем: work + ed. Никакого was рядом.",
+      "words": 8
+    },
+    {
+      "id": "s-past-04",
+      "en": "Did you sleep well last night?",
+      "ru": "Ты выспался?",
+      "topic": "past",
+      "prompt": "____ you sleep well last night?",
+      "focus": "Did",
+      "distractors": [
+        "Do",
+        "Was",
+        "Were"
+      ],
+      "slip": "Do you sleep well last night?",
+      "note": "Вопрос о прошлом → Did + глагол в начальной форме.",
+      "words": 6
+    },
+    {
+      "id": "s-past-05",
+      "en": "I didn't finish the edit yesterday.",
+      "ru": "Вчера я не доделал монтаж.",
+      "topic": "past",
+      "prompt": "I ____ finish the edit yesterday.",
+      "focus": "didn't",
+      "distractors": [
+        "don't",
+        "wasn't",
+        "not"
+      ],
+      "slip": "I don't finish the edit yesterday.",
+      "note": "Отрицание в прошедшем → didn't + начальная форма глагола.",
+      "words": 6
+    },
+    {
+      "id": "s-past-06",
+      "en": "She went to Bali in March.",
+      "ru": "В марте она улетела на Бали.",
+      "topic": "past",
+      "prompt": "She ____ to Bali in March.",
+      "focus": "went",
+      "distractors": [
+        "goed",
+        "did go",
+        "was go"
+      ],
+      "slip": null,
+      "note": "go — неправильный глагол: go → went.",
+      "words": 6
+    },
+    {
+      "id": "s-past-07",
+      "en": "The coffee was cold when I came back.",
+      "ru": "Кофе остыл, пока я ходил.",
+      "topic": "past",
+      "prompt": "The coffee ____ cold when I came back.",
+      "focus": "was",
+      "distractors": [
+        "were",
+        "is",
+        "did"
+      ],
+      "slip": null,
+      "note": "Coffee — единственное число → was.",
+      "words": 8
+    },
+    {
+      "id": "s-past-08",
+      "en": "Were you at the gym this morning?",
+      "ru": "Ты был утром в зале?",
+      "topic": "past",
+      "prompt": "____ you at the gym this morning?",
+      "focus": "Were",
+      "distractors": [
+        "Was",
+        "Did",
+        "Do"
+      ],
+      "slip": null,
+      "note": "You всегда с were, даже про одного человека.",
+      "words": 7
+    },
+    {
+      "id": "s-past-09",
+      "en": "I ate scrambled eggs for breakfast.",
+      "ru": "На завтрак я съел яичницу.",
+      "topic": "past",
+      "prompt": "I ____ scrambled eggs for breakfast.",
+      "focus": "ate",
+      "distractors": [
+        "eated",
+        "did eat",
+        "was eat"
+      ],
+      "slip": null,
+      "note": "eat → ate. Неправильный глагол, форму надо помнить.",
+      "words": 6
+    },
+    {
+      "id": "s-past-10",
+      "en": "They didn't come to the party.",
+      "ru": "Они не пришли на вечеринку.",
+      "topic": "past",
+      "prompt": "They ____ come to the party.",
+      "focus": "didn't",
+      "distractors": [
+        "don't",
+        "weren't",
+        "not came"
+      ],
+      "slip": "They not came to the party.",
+      "note": "didn't + come, а не didn't + came.",
+      "words": 6
+    },
+    {
+      "id": "s-past-11",
+      "en": "My phone died during the call.",
+      "ru": "Телефон сел прямо во время звонка.",
+      "topic": "past",
+      "prompt": "My phone ____ during the call.",
+      "focus": "died",
+      "distractors": [
+        "die",
+        "was die",
+        "did die"
+      ],
+      "slip": null,
+      "note": "die → died. Обычное правильное окончание -ed.",
+      "words": 6
+    },
+    {
+      "id": "s-past-12",
+      "en": "What did you cook this morning?",
+      "ru": "Что ты готовил утром?",
+      "topic": "past",
+      "prompt": "What ____ you cook this morning?",
+      "focus": "did",
+      "distractors": [
+        "do",
+        "was",
+        "were"
+      ],
+      "slip": null,
+      "note": "Вопрос о прошлом → did, и cook остаётся без окончания.",
+      "words": 6
+    },
+    {
+      "id": "s-will-01",
+      "en": "I think it will rain tomorrow.",
+      "ru": "Думаю, завтра будет дождь.",
+      "topic": "will",
+      "prompt": "I think it ____ tomorrow.",
+      "focus": "will rain",
+      "distractors": [
+        "will rains",
+        "rains",
+        "will raining"
+      ],
+      "slip": null,
+      "note": "После will глагол в начальной форме, без -s и без -ing.",
+      "words": 6
+    },
+    {
+      "id": "s-will-02",
+      "en": "He will run five kilometres tomorrow.",
+      "ru": "Завтра он пробежит пять километров.",
+      "topic": "will",
+      "prompt": "He ____ five kilometres tomorrow.",
+      "focus": "will run",
+      "distractors": [
+        "will runs",
+        "runs",
+        "will running"
+      ],
+      "slip": "He will runs five kilometres tomorrow.",
+      "note": "Элиза спрашивала прямо: после will букву -s убираем.",
+      "words": 6
+    },
+    {
+      "id": "s-will-03",
+      "en": "I won't do anything this weekend.",
+      "ru": "В эти выходные я ничего не буду делать.",
+      "topic": "will",
+      "prompt": "I ____ do anything this weekend.",
+      "focus": "won't",
+      "distractors": [
+        "will not do not",
+        "don't will",
+        "willn't"
+      ],
+      "slip": null,
+      "note": "will not → won't. Формы willn't не существует.",
+      "words": 6
+    },
+    {
+      "id": "s-will-04",
       "en": "The phone is ringing. I will get it!",
       "ru": "Телефон звонит. Я возьму!",
-      "topic": "future-will",
+      "topic": "will",
+      "prompt": "The phone is ringing. I ____ get it!",
       "focus": "will",
       "distractors": [
         "am",
         "do",
         "would"
       ],
-      "slip": "The phone is ringing. I am get it!",
-      "note": "Решение в момент речи — всегда will.",
+      "slip": null,
+      "note": "Решение прямо сейчас — всегда will.",
       "words": 8
     },
     {
-      "id": "s-sep21-w07",
-      "en": "Don't stay up too late or you will regret it tomorrow.",
-      "ru": "Не ложись слишком поздно, иначе завтра пожалеешь.",
-      "topic": "future-will",
-      "focus": "will",
-      "distractors": [
-        "would",
-        "are",
-        "do"
-      ],
-      "slip": "Don't stay up too late or you would regret it tomorrow.",
-      "note": "Последствие в будущем — will.",
-      "words": 11
-    },
-    {
-      "id": "s-sep21-w08",
-      "en": "She'll go to a concert.",
-      "ru": "Она пойдёт на концерт.",
-      "topic": "future-will",
-      "focus": "She'll",
-      "distractors": [
-        "Shell",
-        "She'will",
-        "She's"
-      ],
-      "slip": "Shell go to a concert.",
-      "note": "she will → she'll.",
-      "words": 5
-    },
-    {
-      "id": "s-sep21-w09",
-      "en": "If you eat too much candy, you will feel sick.",
-      "ru": "Если съешь слишком много конфет, тебе станет плохо.",
-      "topic": "future-will",
-      "focus": "will",
-      "distractors": [
-        "would",
-        "are",
-        "—"
-      ],
-      "slip": "If you eat too much candy, you feel sick.",
-      "note": "First Conditional: If + настоящее, ...",
-      "words": 10
-    },
-    {
-      "id": "s-sep21-w10",
-      "en": "I promise I will help you with your homework.",
-      "ru": "Обещаю, я помогу тебе с домашним заданием.",
-      "topic": "future-will",
-      "focus": "will",
-      "distractors": [
-        "am",
-        "would",
-        "do"
-      ],
-      "slip": "I promise I am help you with your homework.",
-      "note": "Обещание — всегда will.",
-      "words": 9
-    },
-    {
-      "id": "s-sep21-w11",
-      "en": "The meeting will take place at 2 p.m. tomorrow.",
-      "ru": "Встреча состоится завтра в два часа дня.",
-      "topic": "future-will",
-      "focus": "will",
-      "distractors": [
-        "is",
-        "was",
-        "does"
-      ],
-      "slip": "The meeting is take place at 2 p.m. tomorrow.",
-      "note": "will + take place — состоится.",
-      "words": 9
-    },
-    {
-      "id": "s-sep21-w12",
-      "en": "My family will not do anything this weekend.",
-      "ru": "Моя семья ничего не будет делать в эти выходные.",
-      "topic": "future-will",
-      "focus": "will not",
-      "distractors": [
-        "not will",
-        "don't will",
-        "will don't"
-      ],
-      "slip": "My family not will do anything this weekend.",
-      "note": "Подлежащее + will + not + глагол.",
-      "words": 8
-    },
-    {
-      "id": "s-sep21-w13",
-      "en": "It's so cold in here. I will turn on the heating.",
-      "ru": "Здесь так холодно. Я включу отопление.",
-      "topic": "future-will",
-      "focus": "will",
-      "distractors": [
-        "am",
-        "would",
-        "was"
-      ],
-      "slip": "It's so cold in here. I am turn on the heating.",
-      "note": "Спонтанное решение — will.",
-      "words": 11
-    },
-    {
-      "id": "s-sep21-w14",
-      "en": "I'll eat pizza.",
-      "ru": "Я поем пиццу.",
-      "topic": "future-will",
+      "id": "s-will-05",
+      "en": "I'll send you the file tonight.",
+      "ru": "Скину тебе файл вечером.",
+      "topic": "will",
+      "prompt": "____ send you the file tonight.",
       "focus": "I'll",
       "distractors": [
         "Ill",
-        "I'will",
-        "I'am"
-      ],
-      "slip": "Ill eat pizza.",
-      "note": "I will → I'll в разговорной речи.",
-      "words": 3
-    },
-    {
-      "id": "s-sep21-j01",
-      "en": "I am a doctor.",
-      "ru": "Я работаю в больнице. Я лечу больных. Я врач.",
-      "topic": "jobs",
-      "focus": "a",
-      "distractors": [
-        "—",
-        "the",
-        "an"
-      ],
-      "slip": "I am doctor.",
-      "note": "Профессия в английском требует артикль: I am a doctor.",
-      "words": 4
-    },
-    {
-      "id": "s-sep21-j02",
-      "en": "I am a police officer.",
-      "ru": "Я ношу форму. Я ловлю преступников. Я полицейский.",
-      "topic": "jobs",
-      "focus": "a",
-      "distractors": [
-        "—",
-        "an",
-        "the"
-      ],
-      "slip": "I am police officer.",
-      "note": "I am a police officer — артикль обязателен.",
-      "words": 5
-    },
-    {
-      "id": "s-sep21-j03",
-      "en": "I am a pilot.",
-      "ru": "Я летаю во многие страны. Я работаю в кабине. Я пилот.",
-      "topic": "jobs",
-      "focus": "pilot",
-      "distractors": [
-        "flight attendant",
-        "astronaut",
-        "driver"
+        "I will be",
+        "I am"
       ],
       "slip": null,
-      "note": "cockpit — кабина пилотов, значит это pilot.",
-      "words": 4
+      "note": "I will → I'll в разговоре. Апостроф обязателен.",
+      "words": 6
     },
     {
-      "id": "s-sep21-j04",
-      "en": "I work in a restaurant.",
-      "ru": "Я работаю в ресторане. Я готовлю еду. Я шеф-повар.",
-      "topic": "jobs",
-      "focus": "a",
+      "id": "s-will-06",
+      "en": "We won't play football in this rain.",
+      "ru": "В такой дождь мы играть не будем.",
+      "topic": "will",
+      "prompt": "We ____ play football in this rain.",
+      "focus": "won't",
       "distractors": [
-        "—",
-        "the",
-        "an"
-      ],
-      "slip": "I work in restaurant.",
-      "note": "in a restaurant, in a school, in a hospital — везде артикль.",
-      "words": 5
-    },
-    {
-      "id": "s-sep21-j05",
-      "en": "I am a farmer.",
-      "ru": "Я выращиваю урожай и держу животных. Я фермер.",
-      "topic": "jobs",
-      "focus": "farmer",
-      "distractors": [
-        "baker",
-        "chef",
-        "barber"
+        "will not play not",
+        "don't play",
+        "aren't play"
       ],
       "slip": null,
-      "note": "crops — урожай, посевы.",
-      "words": 4
+      "note": "won't + начальная форма глагола.",
+      "words": 7
     },
     {
-      "id": "s-sep21-j06",
-      "en": "I am a postman.",
-      "ru": "Я разношу письма и посылки по домам. Я почтальон.",
-      "topic": "jobs",
-      "focus": "postman",
+      "id": "s-will-07",
+      "en": "It will be cold in the mountains.",
+      "ru": "В горах будет холодно.",
+      "topic": "will",
+      "prompt": "It ____ cold in the mountains.",
+      "focus": "will be",
       "distractors": [
-        "delivery man",
-        "waiter",
-        "driver"
+        "will",
+        "will is",
+        "is"
+      ],
+      "slip": "It will cold in the mountains.",
+      "note": "Перед прилагательным нужен be: will BE cold.",
+      "words": 7
+    },
+    {
+      "id": "s-will-08",
+      "en": "What will you do after work?",
+      "ru": "Что будешь делать после работы?",
+      "topic": "will",
+      "prompt": "____ you do after work?",
+      "focus": "What will",
+      "distractors": [
+        "What you will",
+        "What do",
+        "What will be"
       ],
       "slip": null,
-      "note": "postman (UK) / mailman (US) — почтальон.",
-      "words": 4
+      "note": "Порядок жёсткий: вопросительное слово + will + подлежащее.",
+      "words": 6
     },
     {
-      "id": "s-sep21-j07",
-      "en": "I am a flight attendant.",
-      "ru": "Я работаю в самолёте, но я не пилот. Я бортпроводник.",
-      "topic": "jobs",
-      "focus": "flight attendant",
+      "id": "s-will-09",
+      "en": "I promise I will help you tomorrow.",
+      "ru": "Обещаю, завтра помогу.",
+      "topic": "will",
+      "prompt": "I promise I ____ you tomorrow.",
+      "focus": "will help",
       "distractors": [
-        "pilot",
-        "astronaut",
-        "waiter"
+        "help",
+        "will helps",
+        "am help"
       ],
       "slip": null,
-      "note": "flight attendant — современное нейтральное слово (раньше говорили stewardess).",
-      "words": 5
+      "note": "Обещание — один из четырёх случаев will.",
+      "words": 7
     },
     {
-      "id": "s-sep21-j08",
-      "en": "I am a baker.",
-      "ru": "Я пеку хлеб и торты. Я пекарь.",
-      "topic": "jobs",
-      "focus": "baker",
+      "id": "s-will-10",
+      "en": "She will go to the concert on Friday.",
+      "ru": "В пятницу она пойдёт на концерт.",
+      "topic": "will",
+      "prompt": "She ____ to the concert on Friday.",
+      "focus": "will go",
       "distractors": [
-        "chef",
-        "farmer",
-        "barber"
+        "will goes",
+        "goes",
+        "will going"
       ],
       "slip": null,
-      "note": "bake — печь, baker — пекарь, bakery — пекарня.",
-      "words": 4
-    },
-    {
-      "id": "s-sep21-j09",
-      "en": "I cut men's hair. I am a barber.",
-      "ru": "Я стригу мужчин. Я парикмахер.",
-      "topic": "jobs",
-      "focus": "cut",
-      "distractors": [
-        "can",
-        "make",
-        "do"
-      ],
-      "slip": "I can men's hair. I am a barber.",
-      "note": "cut hair — стричь волосы.",
+      "note": "will go — без -s, без -ing.",
       "words": 8
     },
     {
-      "id": "s-sep21-j10",
-      "en": "I am a firefighter.",
-      "ru": "Я тушу пожары и спасаю людей. Я пожарный.",
-      "topic": "jobs",
-      "focus": "firefighter",
+      "id": "s-prepositions-01",
+      "en": "I wait for Alina every evening.",
+      "ru": "Я жду Алину каждый вечер.",
+      "topic": "prepositions",
+      "prompt": "I wait ____ Alina every evening.",
+      "focus": "for",
       "distractors": [
-        "police officer",
-        "doctor",
-        "farmer"
+        "—",
+        "to",
+        "of"
+      ],
+      "slip": "I wait Alina every evening.",
+      "note": "wait FOR somebody — предлог обязателен.",
+      "words": 6
+    },
+    {
+      "id": "s-prepositions-02",
+      "en": "He attacked my opponent.",
+      "ru": "Он атаковал моего противника.",
+      "topic": "prepositions",
+      "prompt": "He attacked ____ my opponent.",
+      "focus": "—",
+      "distractors": [
+        "for",
+        "to",
+        "on"
+      ],
+      "slip": "He attacked for my opponent.",
+      "note": "attack somebody — БЕЗ предлога. Твоя ошибка «attack for».",
+      "words": 4
+    },
+    {
+      "id": "s-prepositions-03",
+      "en": "He told me about the new patch.",
+      "ru": "Он рассказал мне про новый патч.",
+      "topic": "prepositions",
+      "prompt": "He told ____ me about the new patch.",
+      "focus": "—",
+      "distractors": [
+        "for",
+        "to",
+        "at"
+      ],
+      "slip": "He told for me about the new patch.",
+      "note": "tell somebody — без предлога. А вот say TO somebody — с предлогом.",
+      "words": 7
+    },
+    {
+      "id": "s-prepositions-04",
+      "en": "I live in Cyprus.",
+      "ru": "Я живу на Кипре.",
+      "topic": "prepositions",
+      "prompt": "I live ____ Cyprus.",
+      "focus": "in",
+      "distractors": [
+        "on",
+        "at",
+        "to"
+      ],
+      "slip": "I live on Cyprus.",
+      "note": "Страны и города — всегда in: in Cyprus, in Limassol.",
+      "words": 4
+    },
+    {
+      "id": "s-prepositions-05",
+      "en": "The keys are on the table.",
+      "ru": "Ключи на столе.",
+      "topic": "prepositions",
+      "prompt": "The keys are ____ the table.",
+      "focus": "on",
+      "distractors": [
+        "in",
+        "at",
+        "over"
       ],
       "slip": null,
-      "note": "put out a fire — тушить пожар.",
-      "words": 4
+      "note": "Поверхность → on. Внутри → in.",
+      "words": 6
     },
     {
-      "id": "s-sep21-j11",
-      "en": "I am an astronaut.",
-      "ru": "Я летаю в космос. Я космонавт.",
-      "topic": "jobs",
-      "focus": "an",
+      "id": "s-prepositions-06",
+      "en": "We met at the coffee shop.",
+      "ru": "Мы встретились в кофейне.",
+      "topic": "prepositions",
+      "prompt": "We met ____ the coffee shop.",
+      "focus": "at",
       "distractors": [
-        "a",
-        "—",
-        "the"
+        "in",
+        "on",
+        "to"
       ],
-      "slip": "I am astronaut.",
-      "note": "Перед гласным звуком — an: an astronaut, an engineer, an actor.",
-      "words": 4
+      "slip": null,
+      "note": "Точка встречи → at. at the shop, at the airport, at home.",
+      "words": 6
     },
     {
-      "id": "s-sep21-j12",
-      "en": "I am an English teacher.",
-      "ru": "Я работаю в школе и преподаю английский. Я учитель английского.",
-      "topic": "jobs",
-      "focus": "an",
+      "id": "s-prepositions-07",
+      "en": "I go to the gym on Mondays.",
+      "ru": "По понедельникам я хожу в зал.",
+      "topic": "prepositions",
+      "prompt": "I go ____ the gym on Mondays.",
+      "focus": "to",
       "distractors": [
-        "a",
-        "—",
-        "the"
+        "in",
+        "at",
+        "for"
       ],
-      "slip": "I am English teacher.",
-      "note": "Артикль смотрит на следующее слово: an English teacher (гласный звук «э»).",
+      "slip": "I go in the gym on Mondays.",
+      "note": "Движение куда-то → to.",
+      "words": 7
+    },
+    {
+      "id": "s-prepositions-08",
+      "en": "This video is for my channel.",
+      "ru": "Это видео для моего канала.",
+      "topic": "prepositions",
+      "prompt": "This video is ____ my channel.",
+      "focus": "for",
+      "distractors": [
+        "to",
+        "at",
+        "on"
+      ],
+      "slip": null,
+      "note": "Здесь for на месте: «для кого-то, для чего-то».",
+      "words": 6
+    },
+    {
+      "id": "s-prepositions-09",
+      "en": "The meeting starts at two o'clock.",
+      "ru": "Встреча начинается в два.",
+      "topic": "prepositions",
+      "prompt": "The meeting starts ____ two o'clock.",
+      "focus": "at",
+      "distractors": [
+        "in",
+        "on",
+        "to"
+      ],
+      "slip": null,
+      "note": "Точное время → at. Дни → on. Месяцы → in.",
+      "words": 6
+    },
+    {
+      "id": "s-prepositions-10",
+      "en": "I was born in September.",
+      "ru": "Я родился в сентябре.",
+      "topic": "prepositions",
+      "prompt": "I was born ____ September.",
+      "focus": "in",
+      "distractors": [
+        "on",
+        "at",
+        "to"
+      ],
+      "slip": null,
+      "note": "Месяцы и годы → in September, in 2026.",
       "words": 5
     },
     {
-      "id": "s-sep21-t01",
+      "id": "s-prepositions-11",
+      "en": "See you on Friday.",
+      "ru": "Увидимся в пятницу.",
+      "topic": "prepositions",
+      "prompt": "See you ____ Friday.",
+      "focus": "on",
+      "distractors": [
+        "in",
+        "at",
+        "to"
+      ],
+      "slip": "See you in Friday.",
+      "note": "Дни недели → on Monday, on Friday.",
+      "words": 4
+    },
+    {
+      "id": "s-prepositions-12",
+      "en": "Thank you for your help.",
+      "ru": "Спасибо за помощь.",
+      "topic": "prepositions",
+      "prompt": "Thank you ____ your help.",
+      "focus": "for",
+      "distractors": [
+        "to",
+        "of",
+        "—"
+      ],
+      "slip": null,
+      "note": "thank somebody FOR something.",
+      "words": 5
+    },
+    {
+      "id": "s-prepositions-13",
+      "en": "I listen to music while I edit.",
+      "ru": "Я слушаю музыку во время монтажа.",
+      "topic": "prepositions",
+      "prompt": "I listen ____ music while I edit.",
+      "focus": "to",
+      "distractors": [
+        "—",
+        "for",
+        "at"
+      ],
+      "slip": "I listen music while I edit.",
+      "note": "listen TO music — предлог обязателен, в отличие от русского.",
+      "words": 7
+    },
+    {
+      "id": "s-prepositions-14",
+      "en": "I'm looking for my charger.",
+      "ru": "Я ищу зарядку.",
+      "topic": "prepositions",
+      "prompt": "I'm looking ____ my charger.",
+      "focus": "for",
+      "distractors": [
+        "at",
+        "to",
+        "—"
+      ],
+      "slip": null,
+      "note": "look for = искать. look at = смотреть на.",
+      "words": 5
+    },
+    {
+      "id": "s-restaurant-01",
+      "en": "I would like a salad, please.",
+      "ru": "Я бы хотел салат, пожалуйста.",
+      "topic": "restaurant",
+      "prompt": "____ a salad, please.",
+      "focus": "I would like",
+      "distractors": [
+        "I want",
+        "I like",
+        "I will like"
+      ],
+      "slip": null,
+      "note": "Вежливая формула заказа. «I want» звучит как приказ.",
+      "words": 6
+    },
+    {
+      "id": "s-restaurant-02",
+      "en": "Can we have the bill, please?",
+      "ru": "Можно счёт, пожалуйста?",
+      "topic": "restaurant",
+      "prompt": "Can we have the ____, please?",
+      "focus": "bill",
+      "distractors": [
+        "menu",
+        "receipt",
+        "order"
+      ],
+      "slip": null,
+      "note": "bill — счёт до оплаты. receipt — чек после.",
+      "words": 6
+    },
+    {
+      "id": "s-restaurant-03",
+      "en": "I would like scrambled eggs, please.",
+      "ru": "Мне яичницу-болтунью, пожалуйста.",
+      "topic": "restaurant",
+      "prompt": "I would like scrambled ____, please.",
+      "focus": "eggs",
+      "distractors": [
+        "egg",
+        "—",
+        "food"
+      ],
+      "slip": "I would like scrambled, please.",
+      "note": "scrambled — прилагательное, ему нужно существительное.",
+      "words": 6
+    },
+    {
+      "id": "s-restaurant-04",
+      "en": "The waiter brought our food quickly.",
+      "ru": "Официант быстро принёс еду.",
+      "topic": "restaurant",
+      "prompt": "The ____ brought our food quickly.",
+      "focus": "waiter",
+      "distractors": [
+        "waitress",
+        "chef",
+        "customer"
+      ],
+      "slip": null,
+      "note": "waiter — мужчина, waitress — женщина.",
+      "words": 6
+    },
+    {
+      "id": "s-restaurant-05",
+      "en": "What would you like to drink?",
+      "ru": "Что будете пить?",
+      "topic": "restaurant",
+      "prompt": "What ____ you like to drink?",
+      "focus": "would",
+      "distractors": [
+        "will",
+        "do",
+        "are"
+      ],
+      "slip": null,
+      "note": "Вежливый вопрос официанта — would.",
+      "words": 6
+    },
+    {
+      "id": "s-restaurant-06",
+      "en": "It was delicious, thank you.",
+      "ru": "Было очень вкусно, спасибо.",
+      "topic": "restaurant",
+      "prompt": "It ____ delicious, thank you.",
+      "focus": "was",
+      "distractors": [
+        "is",
+        "were",
+        "am"
+      ],
+      "slip": null,
+      "note": "Еда уже съедена, и она одна → was.",
+      "words": 5
+    },
+    {
+      "id": "s-restaurant-07",
+      "en": "Today the chef's special is pizza.",
+      "ru": "Сегодняшнее фирменное блюдо — пицца.",
+      "topic": "restaurant",
+      "prompt": "Today the chef's ____ is pizza.",
+      "focus": "special",
+      "distractors": [
+        "menu",
+        "bill",
+        "order"
+      ],
+      "slip": null,
+      "note": "chef's special — блюдо дня.",
+      "words": 6
+    },
+    {
+      "id": "s-restaurant-08",
+      "en": "Could I have the menu, please?",
+      "ru": "Можно меню, пожалуйста?",
+      "topic": "restaurant",
+      "prompt": "Could I ____ the menu, please?",
+      "focus": "have",
+      "distractors": [
+        "to have",
+        "having",
+        "has"
+      ],
+      "slip": null,
+      "note": "После could идёт начальная форма глагола.",
+      "words": 6
+    },
+    {
+      "id": "s-restaurant-09",
+      "en": "I'm allergic to nuts.",
+      "ru": "У меня аллергия на орехи.",
+      "topic": "restaurant",
+      "prompt": "I'm allergic ____ nuts.",
+      "focus": "to",
+      "distractors": [
+        "for",
+        "on",
+        "with"
+      ],
+      "slip": "I'm allergic for nuts.",
+      "note": "allergic TO something — предлог именно to.",
+      "words": 4
+    },
+    {
+      "id": "s-restaurant-10",
+      "en": "We booked a table for four people.",
+      "ru": "Мы забронировали стол на четверых.",
+      "topic": "restaurant",
+      "prompt": "We booked a table ____ four people.",
+      "focus": "for",
+      "distractors": [
+        "to",
+        "on",
+        "at"
+      ],
+      "slip": null,
+      "note": "Здесь for правильный: «на четверых».",
+      "words": 7
+    },
+    {
+      "id": "s-jobs-01",
+      "en": "I treat sick people. I am a doctor.",
+      "ru": "Я лечу больных. Я врач.",
+      "topic": "jobs",
+      "prompt": "I treat sick people. I am ____.",
+      "focus": "a doctor",
+      "distractors": [
+        "doctor",
+        "the doctor",
+        "an doctor"
+      ],
+      "slip": "I treat sick people. I am doctor.",
+      "note": "Профессия всегда с артиклем: a doctor.",
+      "words": 8
+    },
+    {
+      "id": "s-jobs-02",
+      "en": "I catch criminals. I am a police officer.",
+      "ru": "Я ловлю преступников. Я полицейский.",
+      "topic": "jobs",
+      "prompt": "I catch criminals. I am ____.",
+      "focus": "a police officer",
+      "distractors": [
+        "police officer",
+        "the police officer",
+        "an police officer"
+      ],
+      "slip": "I catch criminals. I am police officer.",
+      "note": "Ровно та фраза с урока, где Элиза пропустила ошибку.",
+      "words": 8
+    },
+    {
+      "id": "s-jobs-03",
+      "en": "I fly planes. I am a pilot.",
+      "ru": "Я вожу самолёты. Я пилот.",
+      "topic": "jobs",
+      "prompt": "I fly planes. I am ____.",
+      "focus": "a pilot",
+      "distractors": [
+        "pilot",
+        "an pilot",
+        "the pilot"
+      ],
+      "slip": null,
+      "note": "a pilot — согласный звук, поэтому a.",
+      "words": 7
+    },
+    {
+      "id": "s-jobs-04",
+      "en": "I deliver letters. I am a postman.",
+      "ru": "Я разношу письма. Я почтальон.",
+      "topic": "jobs",
+      "prompt": "I deliver letters. I am ____.",
+      "focus": "a postman",
+      "distractors": [
+        "a delivery man",
+        "postman",
+        "the postman"
+      ],
+      "slip": null,
+      "note": "postman разносит почту, delivery man возит заказы.",
+      "words": 7
+    },
+    {
+      "id": "s-jobs-05",
+      "en": "I cut men's hair. I am a barber.",
+      "ru": "Я стригу мужчин. Я барбер.",
+      "topic": "jobs",
+      "prompt": "I cut men's hair. I am ____.",
+      "focus": "a barber",
+      "distractors": [
+        "barber",
+        "an barber",
+        "a hairdresser"
+      ],
+      "slip": "I can men's hair. I am barber.",
+      "note": "cut hair — стричь. На уроке у тебя выпал глагол.",
+      "words": 8
+    },
+    {
+      "id": "s-jobs-06",
+      "en": "I work on a plane but I'm not a pilot.",
+      "ru": "Я работаю в самолёте, но я не пилот.",
+      "topic": "jobs",
+      "prompt": "I work on a plane but I'm ____.",
+      "focus": "not a pilot",
+      "distractors": [
+        "a not pilot",
+        "not pilot",
+        "no a pilot"
+      ],
+      "slip": "I work on a plane but I'm a not pilot.",
+      "note": "Порядок жёсткий: I'm + not + a + профессия.",
+      "words": 10
+    },
+    {
+      "id": "s-jobs-07",
+      "en": "I travel to space. I am an astronaut.",
+      "ru": "Я летаю в космос. Я космонавт.",
+      "topic": "jobs",
+      "prompt": "I travel to space. I am ____.",
+      "focus": "an astronaut",
+      "distractors": [
+        "a astronaut",
+        "astronaut",
+        "the astronaut"
+      ],
+      "slip": null,
+      "note": "Гласный звук в начале → an.",
+      "words": 8
+    },
+    {
+      "id": "s-jobs-08",
+      "en": "I bake bread. I am a baker.",
+      "ru": "Я пеку хлеб. Я пекарь.",
+      "topic": "jobs",
+      "prompt": "I bake bread. I am ____.",
+      "focus": "a baker",
+      "distractors": [
+        "baker",
+        "an baker",
+        "a chef"
+      ],
+      "slip": null,
+      "note": "baker печёт, chef готовит блюда.",
+      "words": 7
+    },
+    {
+      "id": "s-jobs-09",
+      "en": "What do you do for a living?",
+      "ru": "Кем ты работаешь?",
+      "topic": "jobs",
+      "prompt": "What ____ you do for a living?",
+      "focus": "do",
+      "distractors": [
+        "are",
+        "does",
+        "will"
+      ],
+      "slip": null,
+      "note": "«What do you do?» — самый частый вопрос о профессии.",
+      "words": 7
+    },
+    {
+      "id": "s-jobs-10",
+      "en": "I edit videos. I am a video editor.",
+      "ru": "Я монтирую видео. Я видеомонтажёр.",
+      "topic": "jobs",
+      "prompt": "I edit videos. I am ____.",
+      "focus": "a video editor",
+      "distractors": [
+        "video editor",
+        "an video editor",
+        "the video editor"
+      ],
+      "slip": "I edit videos. I am video editor.",
+      "note": "Твоя собственная профессия — тем более с артиклем.",
+      "words": 8
+    },
+    {
+      "id": "s-tongue-01",
       "en": "I saw Susie sitting in a shoe shine shop.",
-      "ru": "Я видел Сюзи в мастерской по чистке обуви.",
-      "topic": "tongue-twisters",
+      "ru": "Я видел Сюзи в мастерской чистки обуви.",
+      "topic": "tongue",
+      "prompt": "I saw Susie sitting in a shoe shine ____.",
       "focus": "shop",
       "distractors": [
-        "stop",
         "ship",
+        "stop",
         "sheep"
       ],
       "slip": null,
-      "note": "Тренирует переключение между [s] и [ʃ].",
+      "note": "Тренирует переключение между [s] и [ш].",
       "words": 9
     },
     {
-      "id": "s-sep21-t02",
+      "id": "s-tongue-02",
       "en": "Kitty caught the kitten in the kitchen.",
       "ru": "Китти поймала котёнка на кухне.",
-      "topic": "tongue-twisters",
+      "topic": "tongue",
+      "prompt": "Kitty caught the kitten in the ____.",
       "focus": "kitchen",
       "distractors": [
         "chicken",
@@ -2661,104 +1927,95 @@
         "cabin"
       ],
       "slip": null,
-      "note": "Тренирует звук [k] и короткое [ɪ].",
+      "note": "kitchen — кухня, chicken — курица. Не путай.",
       "words": 7
     },
     {
-      "id": "s-sep21-t03",
+      "id": "s-tongue-03",
       "en": "A big black bear bit a big black bug.",
-      "ru": "Большой чёрный медведь укусил большого чёрного жука.",
-      "topic": "tongue-twisters",
+      "ru": "Большой чёрный медведь укусил жука.",
+      "topic": "tongue",
+      "prompt": "A big black bear bit a big black ____.",
       "focus": "bug",
       "distractors": [
-        "bag",
         "beer",
+        "bag",
         "book"
       ],
       "slip": null,
-      "note": "Тренирует звук [b] и разные гласные: big, black, bear, bit, bug.",
+      "note": "bear — медведь [бэа], beer — пиво [биа].",
       "words": 9
     },
     {
-      "id": "s-sep21-t04",
-      "en": "I scream, you scream, we all scream for ice cream.",
-      "ru": "Я кричу, ты кричишь, мы все кричим — мороженого!",
-      "topic": "tongue-twisters",
+      "id": "s-tongue-04",
+      "en": "We all scream for ice cream.",
+      "ru": "Мы все кричим: мороженого!",
+      "topic": "tongue",
+      "prompt": "We all scream for ____.",
       "focus": "ice cream",
       "distractors": [
         "I scream",
-        "ice crime",
-        "eye cream"
+        "eye cream",
+        "ice crime"
       ],
       "slip": null,
-      "note": "Шутка в том, что «I scream» и «ice cream» звучат почти одинаково.",
-      "words": 10
+      "note": "«I scream» и «ice cream» звучат почти одинаково.",
+      "words": 6
     },
     {
-      "id": "s-sep21-t05",
-      "en": "Green glass globes glow greenly.",
-      "ru": "Зелёные стеклянные шары светятся зелёным.",
-      "topic": "tongue-twisters",
-      "focus": "greenly",
-      "distractors": [
-        "green",
-        "greeny",
-        "greening"
-      ],
-      "slip": "Green glass globes glow greeny.",
-      "note": "Тренирует сочетание [gl] и [gr] подряд.",
-      "words": 5
-    },
-    {
-      "id": "s-sep21-t06",
-      "en": "How much wood would a woodchuck chuck if a woodchuck could chuck wood?",
-      "ru": "Сколько дерева перекидал бы сурок, если бы сурок мог кидать дерево?",
-      "topic": "tongue-twisters",
+      "id": "s-tongue-05",
+      "en": "How much wood would a woodchuck chuck?",
+      "ru": "Сколько дерева перекидал бы сурок?",
+      "topic": "tongue",
+      "prompt": "How much wood would a ____ chuck?",
       "focus": "woodchuck",
       "distractors": [
         "woodcheck",
         "woodchick",
-        "woodchuk"
+        "woodshock"
       ],
-      "slip": "How much wood would a woodchuk chuck if a woodchuck could chuck wood?",
-      "note": "Тренирует [w] и [ʊ]: wood, would, woodchuck, could.",
-      "words": 13
+      "slip": null,
+      "note": "Тренирует [w] и [у]: wood, would, could.",
+      "words": 7
     },
     {
-      "id": "s-sep21-t07",
+      "id": "s-tongue-06",
       "en": "If a dog chews shoes, whose shoes does he choose?",
-      "ru": "Если пёс жуёт ботинки, чьи ботинки он выберет?",
-      "topic": "tongue-twisters",
+      "ru": "Если пёс жуёт ботинки, чьи он выберет?",
+      "topic": "tongue",
+      "prompt": "If a dog chews shoes, ____ shoes does he choose?",
       "focus": "whose",
       "distractors": [
         "who's",
         "which",
         "what"
       ],
-      "slip": "If a dog chews shoes, who's shoes does he choose?",
-      "note": "whose — чей.",
+      "slip": null,
+      "note": "whose — чей. who's — это who is.",
       "words": 10
     },
     {
-      "id": "s-sep21-t08",
-      "en": "Whether the weather is warm, whether the weather is hot...",
-      "ru": "Тёплая ли погода, жаркая ли погода — придётся её терпеть.",
-      "topic": "tongue-twisters",
-      "focus": "Whether",
+      "id": "s-tongue-07",
+      "en": "Whether the weather is warm or cold, we go out.",
+      "ru": "Тёплая погода или холодная — мы всё равно выходим.",
+      "topic": "tongue",
+      "prompt": "Whether the ____ is warm or cold, we go out.",
+      "focus": "weather",
       "distractors": [
-        "Weather",
-        "Wether",
-        "Whither"
+        "whether",
+        "wether",
+        "wheather"
       ],
       "slip": null,
-      "note": "whether — союз «ли», weather — погода.",
+      "note": "weather — погода, whether — «ли». Звучат одинаково.",
       "words": 10
     },
     {
-      "id": "s-sep21-t09",
-      "en": "Fuzzy Wuzzy was a bear. Fuzzy Wuzzy had no hair.",
-      "ru": "Пушистик был медведем. У Пушистика не было шерсти.",
-      "topic": "tongue-twisters",
+      "id": "s-tongue-08",
+      "en": "Fuzzy Wuzzy was a bear.",
+      "ru": "Пушистик был медведем.",
+      "topic": "tongue",
+      "prompt": "Fuzzy Wuzzy was a ____.",
       "focus": "bear",
       "distractors": [
         "beer",
@@ -2766,14 +2023,31 @@
         "bird"
       ],
       "slip": null,
-      "note": "bear рифмуется с hair — в этом вся соль скороговорки.",
-      "words": 10
+      "note": "bear рифмуется с hair, в этом вся соль.",
+      "words": 5
     },
     {
-      "id": "s-sep21-t10",
+      "id": "s-tongue-09",
+      "en": "I think of six thin things.",
+      "ru": "Я думаю о шести тонких вещах.",
+      "topic": "tongue",
+      "prompt": "I think of six ____ things.",
+      "focus": "thin",
+      "distractors": [
+        "sin",
+        "fin",
+        "tin"
+      ],
+      "slip": null,
+      "note": "Межзубный [θ]: кончик языка между зубами.",
+      "words": 6
+    },
+    {
+      "id": "s-tongue-10",
       "en": "We surely shall see the sun shine soon.",
       "ru": "Мы наверняка скоро увидим солнце.",
-      "topic": "tongue-twisters",
+      "topic": "tongue",
+      "prompt": "We surely shall see the sun shine ____.",
       "focus": "soon",
       "distractors": [
         "sun",
@@ -2781,38 +2055,341 @@
         "seen"
       ],
       "slip": null,
-      "note": "Тренирует [s] и [ʃ] вперемешку: surely, shall, see, sun, shine, soon.",
+      "note": "Тренирует [s] и [ш] вперемешку.",
       "words": 8
-    },
-    {
-      "id": "s-sep21-t11",
-      "en": "I think of six thin things, but I can think of six thick things too.",
-      "ru": "Я думаю о шести тонких вещах, но могу подумать и о шести толстых.",
-      "topic": "tongue-twisters",
-      "focus": "thin",
-      "distractors": [
-        "thick",
-        "think",
-        "thing"
-      ],
-      "slip": "I think of six thing things, but I can think of six thick things too.",
-      "note": "Тренирует межзубный [θ]: think, thin, thick, thing.",
-      "words": 15
-    },
-    {
-      "id": "s-sep21-t12",
-      "en": "How can a clam cram in a clean cream can?",
-      "ru": "Как моллюску втиснуться в чистую банку из-под крема?",
-      "topic": "tongue-twisters",
-      "focus": "can",
-      "distractors": [
-        "cane",
-        "corn",
-        "come"
-      ],
-      "slip": "How cane a clam cram in a clean cream can?",
-      "note": "Тренирует сочетания [kl] и [kr]: clam, cram, clean, cream, can.",
-      "words": 10
     }
-  ]
+  ],
+  "vocab": {
+    "a": "неопределённый артикль: один из многих",
+    "about": "о, про",
+    "after": "после",
+    "again": "снова, опять",
+    "alina": "Алина",
+    "all": "весь, всё",
+    "allergic": "аллергический",
+    "am": "форма глагола «быть» для I",
+    "an": "артикль перед гласным звуком",
+    "and": "и",
+    "any": "какой-нибудь, сколько-нибудь",
+    "anything": "что-нибудь, ничего",
+    "apartment": "квартира",
+    "are": "форма «быть» для we / you / they",
+    "artist": "художник, художница",
+    "astronaut": "космонавт",
+    "at": "в, на (точка)",
+    "ate": "съел (прош. от eat)",
+    "attacked": "атаковал",
+    "back": "назад, обратно",
+    "bake": "печь",
+    "baker": "пекарь",
+    "balcony": "балкон",
+    "bali": "Бали",
+    "barber": "мужской парикмахер",
+    "be": "быть",
+    "beach": "пляж",
+    "bear": "медведь",
+    "beginner": "новичок",
+    "best": "лучший",
+    "big": "большой",
+    "bill": "счёт",
+    "bit": "укусил (прош. от bite)",
+    "black": "чёрный",
+    "booked": "забронировал",
+    "born": "рождённый",
+    "bought": "купил (прош. от buy)",
+    "bread": "хлеб",
+    "break": "перерыв",
+    "breakfast": "завтрак",
+    "broken": "сломанный",
+    "brought": "принёс (прош. от bring)",
+    "bug": "жук",
+    "bus": "автобус",
+    "but": "но",
+    "call": "звонок, звонить",
+    "came": "пришёл (прош. от come)",
+    "camera": "камера",
+    "can": "мочь, можно",
+    "car": "машина",
+    "cat": "кот, кошка",
+    "catch": "ловить",
+    "caught": "поймал (прош. от catch)",
+    "channel": "канал",
+    "charger": "зарядка",
+    "chef's": "шеф-повара (принадлежность)",
+    "chews": "жуёт",
+    "choose": "выбирать",
+    "chuck": "швырять, кидать",
+    "clouds": "облака",
+    "coffee": "кофе",
+    "cold": "холодный",
+    "come": "приходить",
+    "concert": "концерт",
+    "cook": "готовить",
+    "could": "мог бы, можно ли",
+    "cream": "крем, сливки",
+    "criminals": "преступники",
+    "cut": "резать, стричь",
+    "cyprus": "Кипр",
+    "delicious": "очень вкусный",
+    "deliver": "доставлять",
+    "did": "вспомогательный для прошедшего",
+    "didn't": "did not — не (в прошедшем)",
+    "died": "умер; сел (о батарее)",
+    "do": "делать; вспомогательный для вопроса",
+    "doctor": "врач",
+    "does": "форма do для he / she / it",
+    "doesn't": "does not — не (он/она/оно)",
+    "dog": "собака",
+    "don't": "do not — не",
+    "drink": "пить",
+    "during": "во время",
+    "eat": "есть, кушать",
+    "edit": "монтировать, редактировать",
+    "editor": "монтажёр, редактор",
+    "eggs": "яйца",
+    "eight": "восемь",
+    "english": "английский",
+    "espresso": "эспрессо",
+    "evening": "вечер",
+    "every": "каждый",
+    "experience": "опыт",
+    "file": "файл",
+    "finish": "заканчивать",
+    "five": "пять",
+    "fly": "летать",
+    "food": "еда",
+    "football": "футбол",
+    "for": "для, за; в течение",
+    "four": "четыре",
+    "friday": "пятница",
+    "fridge": "холодильник",
+    "front": "перёд; in front of — перед",
+    "fuzzy": "пушистый",
+    "gate": "ворота",
+    "get": "получить; взять",
+    "go": "идти, ехать",
+    "good": "хороший",
+    "got": "получил (прош. от get)",
+    "gym": "спортзал",
+    "hair": "волосы",
+    "happy": "счастливый, довольный",
+    "have": "иметь; have a look — взглянуть",
+    "he": "он",
+    "headphones": "наушники",
+    "heavy": "тяжёлый",
+    "help": "помощь, помогать",
+    "her": "её",
+    "home": "дом, домой",
+    "horror": "ужасы (жанр)",
+    "hot": "горячий, жаркий",
+    "hour": "час",
+    "house": "дом (здание)",
+    "how": "как",
+    "i": "я",
+    "i'll": "I will — я буду",
+    "i'm": "I am — я есть",
+    "ice": "лёд",
+    "if": "если",
+    "in": "в (внутри); в (месяц, год)",
+    "incredible": "потрясающий",
+    "is": "форма «быть» для he / she / it",
+    "isn't": "is not — не является",
+    "it": "он/она/оно (о предмете)",
+    "keys": "ключи",
+    "kilometres": "километры",
+    "kitchen": "кухня",
+    "kitten": "котёнок",
+    "kitty": "киска, кошечка",
+    "know": "знать",
+    "laptop": "ноутбук",
+    "last": "прошлый, последний",
+    "left": "оставил (прош. от leave); левый",
+    "letters": "письма",
+    "like": "нравиться; как",
+    "limassol": "Лимасол",
+    "listen": "слушать",
+    "live": "жить",
+    "living": "for a living — на жизнь",
+    "long": "длинный, долгий",
+    "look": "смотреть; look for — искать",
+    "looking": "look for — искать",
+    "loud": "громкий",
+    "m": "сокращение от am",
+    "many": "много (исчисляемое)",
+    "march": "март",
+    "me": "мне, меня",
+    "meat": "мясо",
+    "meeting": "встреча, созвон",
+    "meetings": "встречи, созвоны",
+    "men's": "мужские",
+    "menu": "меню",
+    "met": "встретил (прош. от meet)",
+    "microphone": "микрофон",
+    "milk": "молоко",
+    "mondays": "по понедельникам",
+    "morning": "утро",
+    "mountains": "горы",
+    "movies": "фильмы",
+    "much": "много (неисчисляемое)",
+    "music": "музыка",
+    "my": "мой",
+    "near": "рядом с",
+    "need": "нуждаться, нужно",
+    "neighbour's": "соседа",
+    "neighbourhood": "район",
+    "new": "новый",
+    "night": "ночь",
+    "no": "нет, никакой",
+    "not": "не",
+    "now": "сейчас",
+    "nuts": "орехи",
+    "o'clock": "часов (о времени)",
+    "of": "родительный падеж: кого, чего",
+    "officer": "офицер, сотрудник",
+    "old": "старый",
+    "on": "на (поверхности); в (день недели)",
+    "one": "один; тот самый",
+    "opponent": "противник",
+    "or": "или",
+    "our": "наш",
+    "out": "наружу; go out — выходить",
+    "over": "над; over there — вон там",
+    "paphos": "Пафос",
+    "party": "вечеринка",
+    "pass": "передать",
+    "patch": "патч, обновление игры",
+    "people": "люди",
+    "pharmacy": "аптека",
+    "phone": "телефон",
+    "pilot": "пилот",
+    "pizza": "пицца",
+    "places": "места, заведения",
+    "plane": "самолёт",
+    "planes": "самолёты",
+    "play": "играть",
+    "please": "пожалуйста",
+    "police": "полиция",
+    "postman": "почтальон",
+    "problem": "проблема",
+    "promise": "обещать",
+    "put": "класть, ставить",
+    "quickly": "быстро",
+    "rain": "дождь; идти (о дожде)",
+    "ready": "готовый",
+    "restaurant": "ресторан",
+    "right": "правый; прав; правильно",
+    "ringing": "звонит",
+    "run": "бежать",
+    "salad": "салат",
+    "salt": "соль",
+    "saturdays": "по субботам",
+    "saw": "видел (прош. от see)",
+    "scrambled": "взболтанный (о яйцах)",
+    "scream": "кричать",
+    "sea": "море",
+    "see": "видеть",
+    "send": "отправить",
+    "september": "сентябрь",
+    "shall": "устар. форма будущего",
+    "she": "она",
+    "shine": "светить, блестеть",
+    "shoe": "ботинок",
+    "shoes": "обувь, ботинки",
+    "shop": "магазин, мастерская",
+    "shops": "магазины",
+    "sick": "больной",
+    "signal": "связь, сигнал",
+    "sitting": "сидящий",
+    "six": "шесть",
+    "sleep": "спать",
+    "slow": "медленный",
+    "small": "маленький",
+    "soon": "скоро",
+    "sound": "звук",
+    "space": "космос",
+    "speak": "говорить",
+    "special": "фирменное блюдо; особый",
+    "starts": "начинается",
+    "storm": "шторм, буря",
+    "studio": "студия",
+    "sun": "солнце",
+    "sunny": "солнечный",
+    "sunset": "закат",
+    "surely": "наверняка",
+    "sushi": "суши",
+    "susie": "Сюзи (имя)",
+    "table": "стол",
+    "take": "брать; take a break — отдохнуть",
+    "tea": "чай",
+    "teacher": "преподаватель",
+    "thank": "благодарить",
+    "that": "тот, вон тот; что (союз)",
+    "that's": "that is — это",
+    "the": "определённый артикль: тот самый",
+    "there": "там, туда; there is — есть",
+    "there's": "there is — есть, имеется",
+    "these": "эти (рядом)",
+    "they": "они",
+    "thin": "тонкий",
+    "things": "вещи",
+    "think": "думать",
+    "this": "этот (рядом)",
+    "those": "те (далеко)",
+    "time": "время",
+    "tired": "уставший",
+    "to": "к, в (направление)",
+    "today": "сегодня",
+    "told": "сказал (прош. от tell)",
+    "tomorrow": "завтра",
+    "tonight": "сегодня вечером",
+    "too": "слишком; тоже",
+    "town": "город",
+    "translator": "переводчик",
+    "travel": "путешествовать",
+    "treat": "лечить",
+    "two": "два",
+    "understand": "понимать",
+    "until": "до (какого-то момента)",
+    "up": "вверх; wake up — просыпаться",
+    "upload": "загрузка на сервер",
+    "usually": "обычно",
+    "very": "очень",
+    "video": "видео",
+    "videos": "видео (мн.)",
+    "views": "просмотры",
+    "wait": "ждать",
+    "waiter": "официант",
+    "wake": "wake up — просыпаться",
+    "want": "хотеть",
+    "warm": "тёплый",
+    "was": "был (для I / he / she / it)",
+    "watch": "смотреть",
+    "we": "мы",
+    "weather": "погода",
+    "weekend": "выходные",
+    "well": "хорошо",
+    "went": "пошёл (прош. от go)",
+    "were": "были (для we / you / they)",
+    "what": "что, какой",
+    "when": "когда",
+    "whether": "ли (союз)",
+    "while": "пока, в то время как",
+    "whose": "чей",
+    "why": "почему",
+    "will": "буду, будет (будущее время)",
+    "with": "с (вместе)",
+    "won't": "will not — не буду, не будет",
+    "wood": "дерево (материал)",
+    "woodchuck": "сурок лесной",
+    "word": "слово",
+    "work": "работа, работать",
+    "worked": "работал",
+    "would": "бы; would like — хотел бы",
+    "wuzzy": "Пушистик (имя)",
+    "years": "годы",
+    "yesterday": "вчера",
+    "you": "ты, вы",
+    "your": "твой, ваш",
+    "youtube": "Ютуб"
+  }
 }
