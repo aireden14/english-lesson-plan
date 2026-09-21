@@ -1,4 +1,4 @@
-// cards-data.js — база тренажёра Дениса (184 карточек)
+// cards-data.js — база веб-тренажёра (184 карточек)
 window.ENGLISH_CARDS_DATA = [
   {
     "id": "ex-sep14-01",

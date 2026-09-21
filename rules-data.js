@@ -1,4 +1,4 @@
-// rules-data.js — база тренажёра Дениса (159 вопросов)
+// rules-data.js — база веб-тренажёра (159 вопросов)
 window.ENGLISH_RULES_DATA = [
   {
     "id": "rule-sep14-01",
