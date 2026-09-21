@@ -1,4 +1,4 @@
-// rules-data.js — База вопросов по логике и правилам (133 вопросов)
+// rules-data.js — база тренажёра Дениса (159 вопросов)
 window.ENGLISH_RULES_DATA = [
   {
     "id": "rule-sep14-01",
@@ -2659,5 +2659,525 @@ window.ENGLISH_RULES_DATA = [
       "rule": "Классическая концовка любого успешного созвона: благодарность за время («Thanks for your time» / «Thank you for your time») + пожелание («Have a great day / great weekend!»).",
       "trap": "Резкое отключение со словом «Bye» без финальной вежливой формулы, либо кальки «Thank you from your time» (вместо 'for your time')."
     }
+  },
+  {
+    "id": "rule-sep21-r01",
+    "topic": "restaurant",
+    "front": "Элиза сегодня показала вежливую формулу заказа в ресторане. Как правильно попросить салат?",
+    "hint": "Формула из урока начинается с would",
+    "answer": "I would like a salad, please.",
+    "translation": "Я бы хотел салат, пожалуйста.",
+    "options": [
+      "I would like a salad, please.",
+      "I want salad now.",
+      "Give me one salad.",
+      "I am like a salad, please."
+    ],
+    "breakdown": {
+      "rule": "«I would like ___, please» — стандартная вежливая формула заказа. В разговоре её сокращают до «I'd like…».",
+      "trap": "«I want» звучит для официанта как приказ. На уроке ты уже сказал правильно — закрепляй."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды",
+    "keyPart": "I would like a salad, please."
+  },
+  {
+    "id": "rule-sep21-r02",
+    "topic": "restaurant",
+    "front": "Сегодня ты сказал «I go to restaurant», и Элиза ответила «Yes, that is correct». Она ошиблась. Что не так?",
+    "hint": "Перед исчисляемым словом в единственном числе в английском почти всегда что-то стоит",
+    "answer": "Нужен артикль: I go to a restaurant",
+    "translation": "Я хожу в ресторан.",
+    "options": [
+      "Нужен артикль: I go to a restaurant",
+      "Всё верно, артикль не нужен",
+      "Нужно сказать I go in restaurant",
+      "Нужно сказать I going to restaurant"
+    ],
+    "breakdown": {
+      "rule": "restaurant — исчисляемое существительное в единственном числе. Перед ним обязателен артикль: a restaurant (какой-то) или the restaurant (тот самый).",
+      "trap": "Это твоя главная ошибка урока: «I go to restaurant», «I work in restaurant», «I am police officer». Элиза её не поймала ни разу."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды",
+    "keyPart": "Нужен артикль: I go to a restaurant"
+  },
+  {
+    "id": "rule-sep21-r03",
+    "topic": "restaurant",
+    "front": "Чем waiter отличается от waitress?",
+    "hint": "Элиза сказала: «waiter boy, waitress is a girl»",
+    "answer": "waiter — официант-мужчина, waitress — официантка-женщина",
+    "translation": "официант / официантка",
+    "options": [
+      "waiter — официант-мужчина, waitress — официантка-женщина",
+      "waiter — тот, кто ждёт в очереди, waitress — та, кто подаёт",
+      "waiter — старший официант, waitress — младшая помощница",
+      "Это одно и то же слово в разных диалектах"
+    ],
+    "breakdown": {
+      "rule": "waiter (м.) / waitress (ж.). Нейтральный вариант, который сейчас используют чаще всего — server.",
+      "trap": "Слово waitress не значит «ждать» — это от waiter, «тот, кто прислуживает за столом»."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды",
+    "keyPart": "waiter — официант-мужчина, waitress — официантка-женщина"
+  },
+  {
+    "id": "rule-sep21-r04",
+    "topic": "restaurant",
+    "front": "Поел и хочешь расплатиться. Как попросить счёт?",
+    "hint": "Фраза из ролевой игры на уроке",
+    "answer": "Can we have the bill, please?",
+    "translation": "Можно нам счёт, пожалуйста?",
+    "options": [
+      "Can we have the bill, please?",
+      "Give me the money paper.",
+      "I want to pay you now.",
+      "Where is my receipt money?"
+    ],
+    "breakdown": {
+      "rule": "the bill — счёт (в Британии и на Кипре), the check — то же самое в США. Артикль the, потому что счёт конкретно твой.",
+      "trap": "receipt (чек) — это уже бумажка после оплаты, её просить бессмысленно, пока не заплатил."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды",
+    "keyPart": "Can we have the bill, please?"
+  },
+  {
+    "id": "rule-sep21-r05",
+    "topic": "restaurant",
+    "front": "Официант спрашивает: «How was your food?» Какой ответ из урока звучит естественно?",
+    "hint": "Еда уже съедена — какое время нужно?",
+    "answer": "It was delicious, thank you.",
+    "translation": "Было очень вкусно, спасибо.",
+    "options": [
+      "It was delicious, thank you.",
+      "It is delicious yesterday.",
+      "My food good.",
+      "I am delicious, thank you."
+    ],
+    "breakdown": {
+      "rule": "Вопрос в прошедшем (was) — и ответ в прошедшем: «It was good / great / delicious».",
+      "trap": "«I am delicious» значит «я вкусный». Подлежащее — еда (it), а не ты."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды",
+    "keyPart": "It was delicious, thank you."
+  },
+  {
+    "id": "rule-sep21-r06",
+    "topic": "restaurant",
+    "front": "Сегодня ты заказал «I would like scrambled, please». Как надо?",
+    "hint": "scrambled — это прилагательное «взболтанный». А что именно взболтали?",
+    "answer": "I would like scrambled eggs, please.",
+    "translation": "Я бы хотел яичницу-болтунью, пожалуйста.",
+    "options": [
+      "I would like scrambled eggs, please.",
+      "I would like a scrambled, please.",
+      "I would like scrambles, please.",
+      "I would like the scrambled, please."
+    ],
+    "breakdown": {
+      "rule": "scrambled — прилагательное, ему нужно существительное: scrambled eggs. Элиза сама подсказала: «You would like a scrambled egg, please?»",
+      "trap": "По-русски «болтунья» — самостоятельное слово, в английском — нет."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды",
+    "keyPart": "I would like scrambled eggs, please."
+  },
+  {
+    "id": "rule-sep21-r07",
+    "topic": "restaurant",
+    "front": "Что такое the chef's special, о котором ты читал в ролевой игре?",
+    "hint": "Ты произнёс это в роли официанта: «Today the chef's special is the pizza»",
+    "answer": "Фирменное блюдо дня, которое шеф-повар рекомендует сегодня",
+    "translation": "Сегодняшнее фирменное блюдо — пицца.",
+    "options": [
+      "Фирменное блюдо дня, которое шеф-повар рекомендует сегодня",
+      "Скидка для постоянных клиентов",
+      "Специальный стол для шеф-повара",
+      "Блюдо, которое готовят только на заказ заранее"
+    ],
+    "breakdown": {
+      "rule": "the chef's special / today's special — то, что кухня предлагает именно сегодня. Частая фраза в меню и от официанта.",
+      "trap": "Не путай со special offer — это про скидку, а не про блюдо."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды",
+    "keyPart": "Фирменное блюдо дня, которое шеф-повар рекомендует сегодня"
+  },
+  {
+    "id": "rule-sep21-r08",
+    "topic": "restaurant",
+    "front": "Официант приносит счёт и говорит: «Sure, here you are». Что это значит?",
+    "hint": "Стандартная фраза при передаче чего-то из рук в руки",
+    "answer": "«Конечно, вот, пожалуйста» — так говорят, когда что-то подают",
+    "translation": "Конечно, вот, пожалуйста.",
+    "options": [
+      "«Конечно, вот, пожалуйста» — так говорят, когда что-то подают",
+      "«Разумеется, вы здесь» — приветствие гостя",
+      "«Точно, вы правы» — согласие с клиентом",
+      "«Конечно, вы первый» — про очередь"
+    ],
+    "breakdown": {
+      "rule": "«Here you are» и «Here you go» — то, что говорят, передавая предмет. Ответ на них — «Thank you».",
+      "trap": "Дословный перевод «вот вы есть» сбивает с толку — это устойчивая фраза, её не разбирают по словам."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды",
+    "keyPart": "«Конечно, вот, пожалуйста» — так говорят, когда что-то подают"
+  },
+  {
+    "id": "rule-sep21-w01",
+    "topic": "future-will",
+    "front": "Элиза назвала четыре случая, когда нужен will. Какие?",
+    "hint": "Она перечисляла: погода, помощь с домашкой, «возьму воды», «понесу твою сумку»",
+    "answer": "Предсказание, обещание, решение на месте и предложение помощи",
+    "translation": "prediction, promise, decision, offer",
+    "options": [
+      "Предсказание, обещание, решение на месте и предложение помощи",
+      "Только расписание и планы на завтра",
+      "Только то, что случится после 2050 года",
+      "Только вопросы о будущем"
+    ],
+    "breakdown": {
+      "rule": "will: prediction («I think it will rain»), promise («I will help you»), decision прямо сейчас («I will get some water»), offer («I will carry your bag»).",
+      "trap": "Заранее запланированное обычно говорят через going to, а will — про то, что решил в момент речи."
+    },
+    "topicTitle": "⏭ Future: will / won't",
+    "keyPart": "Предсказание, обещание, решение на месте и предложение помощи"
+  },
+  {
+    "id": "rule-sep21-w02",
+    "topic": "future-will",
+    "front": "«He runs» в будущем времени. Элиза спросила: оставишь -s или уберёшь?",
+    "hint": "После will всегда идёт голая форма глагола",
+    "answer": "He will run — окончание -s убирается",
+    "translation": "Он побежит.",
+    "options": [
+      "He will run — окончание -s убирается",
+      "He will runs — -s остаётся, потому что he",
+      "He wills run — -s переезжает на will",
+      "He will running — нужна форма с -ing"
+    ],
+    "breakdown": {
+      "rule": "После will всегда базовая форма глагола, без -s, без -ed, без -ing. Он бежит — he runs, он побежит — he will run.",
+      "trap": "Привычка из Present Simple («he runs», «she plays») тянет -s в будущее. Сегодня ты справился — держи это."
+    },
+    "topicTitle": "⏭ Future: will / won't",
+    "keyPart": "He will run — окончание -s убирается"
+  },
+  {
+    "id": "rule-sep21-w03",
+    "topic": "future-will",
+    "front": "Сегодня ты сказал «I think it will sun tomorrow». Элиза поправила. Как правильно?",
+    "hint": "sunny — прилагательное. Чего не хватает перед прилагательным?",
+    "answer": "I think it will be sunny tomorrow",
+    "translation": "Думаю, завтра будет солнечно.",
+    "options": [
+      "I think it will be sunny tomorrow",
+      "I think it will sunny tomorrow",
+      "I think it will sun tomorrow",
+      "I think it will is sunny tomorrow"
+    ],
+    "breakdown": {
+      "rule": "Перед прилагательным нужен глагол to be. В будущем: will + be + прилагательное. It will be sunny / cold / hot / busy.",
+      "trap": "Это та же самая твоя сквозная ошибка, что и «I angry» вместо «I am angry». Только в будущем времени: нужен be."
+    },
+    "topicTitle": "⏭ Future: will / won't",
+    "keyPart": "I think it will be sunny tomorrow"
+  },
+  {
+    "id": "rule-sep21-w04",
+    "topic": "future-will",
+    "front": "Как сократить will not в разговоре?",
+    "hint": "Элиза отдельно проговорила это слово",
+    "answer": "won't",
+    "translation": "не буду / не будет",
+    "options": [
+      "won't",
+      "willn't",
+      "wont't",
+      "will'nt"
+    ],
+    "breakdown": {
+      "rule": "will not → won't (произносится «уоунт», с долгим «оу»). I won't go. She won't play.",
+      "trap": "Не путай с want («хотеть»): won't — [woʊnt], want — [wɒnt]. На уроке ты произнёс «want» вместо «won't»."
+    },
+    "topicTitle": "⏭ Future: will / won't",
+    "keyPart": "won't"
+  },
+  {
+    "id": "rule-sep21-w05",
+    "topic": "future-will",
+    "front": "Какие сокращения от will ты сегодня читал вслух?",
+    "hint": "Их шесть, все через апостроф",
+    "answer": "I'll, you'll, he'll, she'll, we'll, they'll",
+    "translation": "я буду, ты будешь, он будет, она будет, мы будем, они будут",
+    "options": [
+      "I'll, you'll, he'll, she'll, we'll, they'll",
+      "I'w, you'w, he'w, she'w, we'w, they'w",
+      "Ill, youll, hell, shell, well, theyll",
+      "I've, you've, he've, she've, we've, they've"
+    ],
+    "breakdown": {
+      "rule": "Сокращение съедает wi-: I will → I'll. В живой речи почти всегда говорят так.",
+      "trap": "Элиза сказала: полную форму will оставляют для письменной и официальной речи (учёба, работа, документы)."
+    },
+    "topicTitle": "⏭ Future: will / won't",
+    "keyPart": "I'll, you'll, he'll, she'll, we'll, they'll"
+  },
+  {
+    "id": "rule-sep21-w06",
+    "topic": "future-will",
+    "front": "Где стоит not в отрицательном предложении с will?",
+    "hint": "Вспомни пример: «They will not sing»",
+    "answer": "Сразу после will: will not + глагол",
+    "translation": "Они не будут петь.",
+    "options": [
+      "Сразу после will: will not + глагол",
+      "В самом начале предложения: Not they will sing",
+      "После глагола: They will sing not",
+      "Перед подлежащим: They not will sing"
+    ],
+    "breakdown": {
+      "rule": "Подлежащее + will + not + базовый глагол. They will not sing = They won't sing.",
+      "trap": "Русское «не» цепляется к глаголу, английское not — к will."
+    },
+    "topicTitle": "⏭ Future: will / won't",
+    "keyPart": "Сразу после will: will not + глагол"
+  },
+  {
+    "id": "rule-sep21-j01",
+    "topic": "jobs",
+    "front": "Сегодня ты сказал «I am police officer». Элиза ответила «Correct», но это не так. Чего не хватает?",
+    "hint": "Та же ошибка, что и с рестораном",
+    "answer": "Артикля: I am a police officer",
+    "translation": "Я полицейский.",
+    "options": [
+      "Артикля: I am a police officer",
+      "Ничего, фраза правильная",
+      "Нужно сказать I am the police officer",
+      "Нужно сказать I am police officers"
+    ],
+    "breakdown": {
+      "rule": "Профессия в английском всегда с артиклем: I am a doctor / a teacher / a police officer. Без артикля — грубая ошибка уровня «я врач» → «я врачи».",
+      "trap": "По-русски артикля нет вообще, поэтому мозг его не вставляет. Проверяй себя: назвал профессию — поставил a/an."
+    },
+    "topicTitle": "💼 Профессии",
+    "keyPart": "Артикля: I am a police officer"
+  },
+  {
+    "id": "rule-sep21-j02",
+    "topic": "jobs",
+    "front": "Перед какой профессией нужен an, а не a?",
+    "hint": "Смотри на первый ЗВУК слова",
+    "answer": "an astronaut, an engineer, an actor — перед гласным звуком",
+    "translation": "космонавт, инженер, актёр",
+    "options": [
+      "an astronaut, an engineer, an actor — перед гласным звуком",
+      "an doctor, an teacher — перед длинными словами",
+      "an pilot, an baker — перед редкими профессиями",
+      "an нужен только во множественном числе"
+    ],
+    "breakdown": {
+      "rule": "a перед согласным звуком, an перед гласным: a pilot, a baker, но an astronaut, an engineer, an English teacher.",
+      "trap": "Важен звук, а не буква: a university (звучит «ю»), an hour (h не читается)."
+    },
+    "topicTitle": "💼 Профессии",
+    "keyPart": "an astronaut, an engineer, an actor — перед гласным звуком"
+  },
+  {
+    "id": "rule-sep21-j03",
+    "topic": "jobs",
+    "front": "Ты сегодня сказал «It's delivery man». Как по-английски тот, кто разносит письма и посылки?",
+    "hint": "Элиза подсказала это слово",
+    "answer": "postman (в США — mailman)",
+    "translation": "почтальон",
+    "options": [
+      "postman (в США — mailman)",
+      "delivery man",
+      "letter driver",
+      "parcel officer"
+    ],
+    "breakdown": {
+      "rule": "postman / mailman — почтальон, разносит letters and parcels. delivery man — курьер, который везёт заказы из магазина или еду.",
+      "trap": "Курьер и почтальон — разные работы, и слова разные."
+    },
+    "topicTitle": "💼 Профессии",
+    "keyPart": "postman (в США — mailman)"
+  },
+  {
+    "id": "rule-sep21-j04",
+    "topic": "jobs",
+    "front": "Кто такой barber — последняя профессия сегодняшнего списка?",
+    "hint": "Ты сказал «I can man's hair» — а надо было про стрижку",
+    "answer": "Мужской парикмахер: I cut men's hair",
+    "translation": "Я стригу мужчин.",
+    "options": [
+      "Мужской парикмахер: I cut men's hair",
+      "Бармен в баре",
+      "Продавец мужской одежды",
+      "Массажист"
+    ],
+    "breakdown": {
+      "rule": "barber — мужской мастер (стрижка, борода). hairdresser — парикмахер вообще, чаще женский.",
+      "trap": "У тебя выпал глагол: «I can man's hair» вместо «I cut men's hair». cut — стричь."
+    },
+    "topicTitle": "💼 Профессии",
+    "keyPart": "Мужской парикмахер: I cut men's hair"
+  },
+  {
+    "id": "rule-sep21-j05",
+    "topic": "jobs",
+    "front": "Как спросить у человека, кем он работает?",
+    "hint": "Самый частый способ в живой речи — вопрос в Present Simple",
+    "answer": "What do you do?",
+    "translation": "Чем ты занимаешься? (Кем работаешь?)",
+    "options": [
+      "What do you do?",
+      "What is your work?",
+      "Who are you working?",
+      "What you do job?"
+    ],
+    "breakdown": {
+      "rule": "«What do you do?» — стандартный вопрос о профессии. Полностью: «What do you do for a living?»",
+      "trap": "«What is your job?» понятно, но звучит как анкета. Носители спрашивают «What do you do?»"
+    },
+    "topicTitle": "💼 Профессии",
+    "keyPart": "What do you do?"
+  },
+  {
+    "id": "rule-sep21-j06",
+    "topic": "jobs",
+    "front": "Ты сегодня сказал «I work in airplane but I'm a not pilot». Как правильно построить эту фразу?",
+    "hint": "Два исправления: артикль и отрицание с to be",
+    "answer": "I work on a plane, but I'm not a pilot",
+    "translation": "Я работаю в самолёте, но я не пилот.",
+    "options": [
+      "I work on a plane, but I'm not a pilot",
+      "I work in airplane but I'm a not pilot",
+      "I working on plane but I not pilot",
+      "I work on plane but I don't pilot"
+    ],
+    "breakdown": {
+      "rule": "not ставится сразу после am/is/are: I'm not a pilot. Артикль a — перед профессией. И в самолёте — on a plane, а не in.",
+      "trap": "Ты поставил «a» не туда: «I'm a not pilot». Порядок жёсткий: I'm + not + a + профессия."
+    },
+    "topicTitle": "💼 Профессии",
+    "keyPart": "I work on a plane, but I'm not a pilot"
+  },
+  {
+    "id": "rule-sep21-t01",
+    "topic": "tongue-twisters",
+    "front": "Сегодня ты честно сказал, что не понял слово twister. Что такое tongue twister?",
+    "hint": "Tongue — язык во рту, а фраза специально трудная для произношения",
+    "answer": "Скороговорка — фраза с повторяющимися звуками, которую трудно выговорить",
+    "translation": "скороговорка",
+    "options": [
+      "Скороговорка — фраза с повторяющимися звуками, которую трудно выговорить",
+      "Поговорка со скрытым смыслом",
+      "Песня для разучивания слов",
+      "Игра в слова на время"
+    ],
+    "breakdown": {
+      "rule": "twist — крутить, скручивать. tongue twister — «то, что скручивает язык». Тренирует чёткость речи.",
+      "trap": "Элиза сказала, что теперь скороговорки будут на КАЖДОМ уроке. Эти карточки — твоя подготовка."
+    },
+    "topicTitle": "👅 Скороговорки",
+    "keyPart": "Скороговорка — фраза с повторяющимися звуками, которую трудно выговорить"
+  },
+  {
+    "id": "rule-sep21-t02",
+    "topic": "tongue-twisters",
+    "front": "Сегодня ты дважды сказал «big black beer» вместо нужного слова. В чём разница bear и beer?",
+    "hint": "Элиза отдельно остановилась и повторила: «This is pronounced as bear»",
+    "answer": "bear [beə] — медведь, beer [bɪə] — пиво",
+    "translation": "медведь / пиво",
+    "options": [
+      "bear [beə] — медведь, beer [bɪə] — пиво",
+      "bear — пиво, beer — медведь",
+      "Это одно слово с двумя написаниями",
+      "bear — медведица, beer — медведь"
+    ],
+    "breakdown": {
+      "rule": "bear рифмуется с air и hair. beer рифмуется с here и near. «A big black bear bit a big black bug» — про медведя.",
+      "trap": "Скажешь «Fuzzy Wuzzy was a beer» — получится «Пушистик был пивом»."
+    },
+    "topicTitle": "👅 Скороговорки",
+    "keyPart": "bear [beə] — медведь, beer [bɪə] — пиво"
+  },
+  {
+    "id": "rule-sep21-t03",
+    "topic": "tongue-twisters",
+    "front": "Скороговорка «I saw Susie sitting in a shoe shine shop» тренирует контраст двух звуков. Каких?",
+    "hint": "Susie против shoe shine shop",
+    "answer": "[s] как в Susie и [ʃ] как в shoe (русское «ш»)",
+    "translation": "Я видел Сюзи в мастерской по чистке обуви.",
+    "options": [
+      "[s] как в Susie и [ʃ] как в shoe (русское «ш»)",
+      "[t] и [d]",
+      "[b] и [p]",
+      "[r] и [l]"
+    ],
+    "breakdown": {
+      "rule": "s — язык у альвеол, воздух узкой струёй. sh — язык отодвинут назад, губы чуть вперёд. Скороговорка заставляет переключаться между ними.",
+      "trap": "У русскоговорящих оба звука сливаются в среднее «сь/шь». Медленно и чётко — важнее, чем быстро."
+    },
+    "topicTitle": "👅 Скороговорки",
+    "keyPart": "[s] как в Susie и [ʃ] как в shoe (русское «ш»)"
+  },
+  {
+    "id": "rule-sep21-t04",
+    "topic": "tongue-twisters",
+    "front": "«I think of six thin things, but I can think of six thick things too» — какой звук тут главный?",
+    "hint": "Он есть в think, thin, thick — и его нет в русском языке",
+    "answer": "Межзубный [θ] — кончик языка между зубами",
+    "translation": "Я думаю о шести тонких вещах, но могу подумать и о шести толстых.",
+    "options": [
+      "Межзубный [θ] — кончик языка между зубами",
+      "Обычный русский [с]",
+      "Обычный русский [ф]",
+      "Звук [т] с придыханием"
+    ],
+    "breakdown": {
+      "rule": "th в think, thin, thick, thing — глухой [θ]: кончик языка между зубами, выдох. В this, that, they — звонкий [ð].",
+      "trap": "Замена на «с» или «ф» («sink» вместо «think», «free» вместо «three») — самый узнаваемый русский акцент."
+    },
+    "topicTitle": "👅 Скороговорки",
+    "keyPart": "Межзубный [θ] — кончик языка между зубами"
+  },
+  {
+    "id": "rule-sep21-t05",
+    "topic": "tongue-twisters",
+    "front": "«Whether the weather is warm…» — два слова звучат одинаково. Что они значат?",
+    "hint": "Одно про погоду, другое — союз",
+    "answer": "weather — погода, whether — «ли / независимо от того»",
+    "translation": "Какой бы ни была погода, придётся её терпеть, нравится нам или нет.",
+    "options": [
+      "weather — погода, whether — «ли / независимо от того»",
+      "weather — ветер, whether — дождь",
+      "Оба слова значат «погода»",
+      "weather — глагол, whether — существительное"
+    ],
+    "breakdown": {
+      "rule": "Омофоны: звучат одинаково [ˈweðə], пишутся по-разному. «I don't know whether he will come» — не знаю, придёт ли он.",
+      "trap": "На слух различить нельзя — только по смыслу предложения."
+    },
+    "topicTitle": "👅 Скороговорки",
+    "keyPart": "weather — погода, whether — «ли / независимо от того»"
+  },
+  {
+    "id": "rule-sep21-t06",
+    "topic": "tongue-twisters",
+    "front": "Зачем Элиза вообще дала тебе скороговорки?",
+    "hint": "Она объяснила это двумя причинами",
+    "answer": "Тренировать чёткое произношение, чтобы тебя понимали люди",
+    "translation": "practice your pronunciation and speak more clearly",
+    "options": [
+      "Тренировать чёткое произношение, чтобы тебя понимали люди",
+      "Выучить новые редкие слова для экзамена",
+      "Научиться говорить быстрее всех",
+      "Запомнить правила грамматики через ритм"
+    ],
+    "breakdown": {
+      "rule": "Её слова: «to practice your pronunciation and to train your tongue and mouth to speak more clearly so that more people can understand you».",
+      "trap": "Смысл не в скорости. Сначала медленно и чётко, скорость — потом."
+    },
+    "topicTitle": "👅 Скороговорки",
+    "keyPart": "Тренировать чёткое произношение, чтобы тебя понимали люди"
   }
 ];

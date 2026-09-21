@@ -3187,5 +3187,1005 @@
       "saw",
       "seen"
     ]
+  },
+  {
+    "id": "ex-sep21-r01",
+    "topic": "restaurant",
+    "front": "I would like ___ salad, please.",
+    "hint": "Один салат из многих — какой артикль?",
+    "answer": "I would like a salad, please.",
+    "translation": "Я бы хотел салат, пожалуйста.",
+    "keyPart": "a",
+    "options": [
+      "a",
+      "the",
+      "—",
+      "an"
+    ],
+    "breakdown": {
+      "rule": "Заказываешь один любой салат — артикль a.",
+      "trap": "the salad означало бы «тот самый салат», о котором уже говорили."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды"
+  },
+  {
+    "id": "ex-sep21-r02",
+    "topic": "restaurant",
+    "front": "Can we have the ___, please? We want to pay.",
+    "hint": "То, что приносят в конце ужина",
+    "answer": "Can we have the bill, please?",
+    "translation": "Можно нам счёт, пожалуйста?",
+    "keyPart": "bill",
+    "options": [
+      "bill",
+      "menu",
+      "chef",
+      "waiter"
+    ],
+    "breakdown": {
+      "rule": "the bill — счёт. В США чаще говорят the check.",
+      "trap": "receipt — это чек уже после оплаты."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды"
+  },
+  {
+    "id": "ex-sep21-r03",
+    "topic": "restaurant",
+    "front": "The ___ shows all the food that the restaurant sells.",
+    "hint": "Ты читал это слово вслух на уроке",
+    "answer": "The menu shows all the food that the restaurant sells.",
+    "translation": "В меню перечислена вся еда, которую продаёт ресторан.",
+    "keyPart": "menu",
+    "options": [
+      "menu",
+      "bill",
+      "order",
+      "receipt"
+    ],
+    "breakdown": {
+      "rule": "menu — список блюд. Элиза так и объяснила: «it contains the list of food».",
+      "trap": "Ударение в английском menu на первый слог: MEN-you."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды"
+  },
+  {
+    "id": "ex-sep21-r04",
+    "topic": "restaurant",
+    "front": "I go to ___ restaurant every Friday with my friends.",
+    "hint": "Твоя ошибка сегодняшнего урока",
+    "answer": "I go to a restaurant every Friday with my friends.",
+    "translation": "Я хожу в ресторан каждую пятницу с друзьями.",
+    "keyPart": "a",
+    "options": [
+      "a",
+      "—",
+      "the",
+      "in"
+    ],
+    "breakdown": {
+      "rule": "Перед исчисляемым существительным в единственном числе артикль обязателен.",
+      "trap": "Сегодня ты сказал «I go to restaurant», и Элиза это пропустила."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды"
+  },
+  {
+    "id": "ex-sep21-r05",
+    "topic": "restaurant",
+    "front": "The ___ cooks all the food in the kitchen.",
+    "hint": "Главный человек на кухне",
+    "answer": "The chef cooks all the food in the kitchen.",
+    "translation": "Шеф-повар готовит всю еду на кухне.",
+    "keyPart": "chef",
+    "options": [
+      "chef",
+      "waiter",
+      "customer",
+      "waitress"
+    ],
+    "breakdown": {
+      "rule": "chef читается «шеф», через ш. Это повар, а не «шеф-начальник».",
+      "trap": "boss — начальник. chef — только про кухню."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды"
+  },
+  {
+    "id": "ex-sep21-r06",
+    "topic": "restaurant",
+    "front": "\"How was your food?\" — \"It ___ delicious, thank you.\"",
+    "hint": "Еду ты уже съел",
+    "answer": "It was delicious, thank you.",
+    "translation": "Было очень вкусно, спасибо.",
+    "keyPart": "was",
+    "options": [
+      "was",
+      "is",
+      "were",
+      "am"
+    ],
+    "breakdown": {
+      "rule": "Вопрос в прошедшем времени (was) — и ответ в прошедшем.",
+      "trap": "food — единственное число, поэтому was, а не were."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды"
+  },
+  {
+    "id": "ex-sep21-r07",
+    "topic": "restaurant",
+    "front": "\"Anything to drink?\" — \"___ orange juice, please.\"",
+    "hint": "Первый звук слова orange — гласный",
+    "answer": "An orange juice, please.",
+    "translation": "Апельсиновый сок, пожалуйста.",
+    "keyPart": "An",
+    "options": [
+      "An",
+      "A",
+      "The",
+      "Some of"
+    ],
+    "breakdown": {
+      "rule": "Перед гласным звуком — an: an orange juice, an apple, an egg.",
+      "trap": "Артикль зависит от звука, а не от буквы."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды"
+  },
+  {
+    "id": "ex-sep21-r08",
+    "topic": "restaurant",
+    "front": "I would like scrambled ___, please.",
+    "hint": "Твоя сегодняшняя фраза, которую Элиза достроила",
+    "answer": "I would like scrambled eggs, please.",
+    "translation": "Я бы хотел яичницу-болтунью, пожалуйста.",
+    "keyPart": "eggs",
+    "options": [
+      "eggs",
+      "—",
+      "food",
+      "cook"
+    ],
+    "breakdown": {
+      "rule": "scrambled — прилагательное, нужно существительное: scrambled eggs.",
+      "trap": "Сегодня ты сказал просто «scrambled» — этого мало."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды"
+  },
+  {
+    "id": "ex-sep21-r09",
+    "topic": "restaurant",
+    "front": "Waiter: \"What ___ you like?\" Customer: \"I would like a burger, please.\"",
+    "hint": "Вежливая форма вопроса из ролевой игры",
+    "answer": "What would you like?",
+    "translation": "Что бы вы хотели?",
+    "keyPart": "would",
+    "options": [
+      "would",
+      "will",
+      "do",
+      "are"
+    ],
+    "breakdown": {
+      "rule": "«What would you like?» — вежливый вопрос официанта. Ответ тем же would.",
+      "trap": "«What do you want?» звучит резко."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды"
+  },
+  {
+    "id": "ex-sep21-r10",
+    "topic": "restaurant",
+    "front": "Today the chef's ___ is pizza.",
+    "hint": "Ты читал эту строчку в роли официанта",
+    "answer": "Today the chef's special is pizza.",
+    "translation": "Сегодняшнее фирменное блюдо — пицца.",
+    "keyPart": "special",
+    "options": [
+      "special",
+      "menu",
+      "order",
+      "receipt"
+    ],
+    "breakdown": {
+      "rule": "the chef's special / today's special — блюдо дня.",
+      "trap": "Апостроф + s значит «принадлежащий шефу»."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды"
+  },
+  {
+    "id": "ex-sep21-r11",
+    "topic": "restaurant",
+    "front": "A man who brings your food to the table is a ___.",
+    "hint": "Мужской вариант",
+    "answer": "A man who brings your food to the table is a waiter.",
+    "translation": "Мужчина, который приносит еду к столу, — официант.",
+    "keyPart": "waiter",
+    "options": [
+      "waiter",
+      "waitress",
+      "chef",
+      "customer"
+    ],
+    "breakdown": {
+      "rule": "waiter — мужчина, waitress — женщина.",
+      "trap": "Нейтральное современное слово — server."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды"
+  },
+  {
+    "id": "ex-sep21-r12",
+    "topic": "restaurant",
+    "front": "\"Here you ___.\" — the waiter gives you the bill.",
+    "hint": "Устойчивая фраза при передаче предмета",
+    "answer": "Here you are.",
+    "translation": "Вот, пожалуйста.",
+    "keyPart": "are",
+    "options": [
+      "are",
+      "is",
+      "have",
+      "take"
+    ],
+    "breakdown": {
+      "rule": "«Here you are» = «Here you go» — вот, держите.",
+      "trap": "Разбирать по словам бесполезно, это застывшая фраза."
+    },
+    "topicTitle": "🍽 Ресторан и заказ еды"
+  },
+  {
+    "id": "ex-sep21-w01",
+    "topic": "future-will",
+    "front": "I think it ___ rain tomorrow.",
+    "hint": "Предсказание про завтра",
+    "answer": "I think it will rain tomorrow.",
+    "translation": "Думаю, завтра будет дождь.",
+    "keyPart": "will",
+    "options": [
+      "will",
+      "is",
+      "was",
+      "does"
+    ],
+    "breakdown": {
+      "rule": "Предсказание — will + базовый глагол.",
+      "trap": "rain здесь глагол «идти (о дожде)», поэтому be не нужен."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-w02",
+    "topic": "future-will",
+    "front": "I think it will ___ sunny tomorrow.",
+    "hint": "Твоя ошибка сегодня: sunny — прилагательное",
+    "answer": "I think it will be sunny tomorrow.",
+    "translation": "Думаю, завтра будет солнечно.",
+    "keyPart": "be",
+    "options": [
+      "be",
+      "—",
+      "is",
+      "being"
+    ],
+    "breakdown": {
+      "rule": "will + be + прилагательное. It will be sunny / cold / busy.",
+      "trap": "Сегодня ты сказал «it will sun tomorrow». Перед прилагательным нужен be — это твоя сквозная ошибка."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-w03",
+    "topic": "future-will",
+    "front": "He runs fast. Tomorrow he will ___ fast too.",
+    "hint": "Элиза специально спросила: оставишь -s или уберёшь?",
+    "answer": "Tomorrow he will run fast too.",
+    "translation": "Завтра он тоже побежит быстро.",
+    "keyPart": "run",
+    "options": [
+      "run",
+      "runs",
+      "running",
+      "ran"
+    ],
+    "breakdown": {
+      "rule": "После will — только базовая форма, без -s.",
+      "trap": "Present Simple тянет -s за собой: he runs. В будущем его нет."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-w04",
+    "topic": "future-will",
+    "front": "We ___ play football today. It's raining.",
+    "hint": "Отрицание в короткой форме",
+    "answer": "We won't play football today.",
+    "translation": "Мы не будем сегодня играть в футбол.",
+    "keyPart": "won't",
+    "options": [
+      "won't",
+      "willn't",
+      "don't will",
+      "not will"
+    ],
+    "breakdown": {
+      "rule": "will not → won't.",
+      "trap": "Формы willn't не существует."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-w05",
+    "topic": "future-will",
+    "front": "___ will you do after work today?",
+    "hint": "Элиза задавала тебе именно этот вопрос",
+    "answer": "What will you do after work today?",
+    "translation": "Что ты будешь делать сегодня после работы?",
+    "keyPart": "What",
+    "options": [
+      "What",
+      "How",
+      "Who",
+      "Where"
+    ],
+    "breakdown": {
+      "rule": "Вопросительное слово + will + подлежащее + глагол.",
+      "trap": "Порядок жёсткий: What will YOU do, а не «What you will do»."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-w06",
+    "topic": "future-will",
+    "front": "The phone is ringing. I ___ get it!",
+    "hint": "Решение принято прямо сейчас",
+    "answer": "The phone is ringing. I will get it!",
+    "translation": "Телефон звонит. Я возьму!",
+    "keyPart": "will",
+    "options": [
+      "will",
+      "am",
+      "do",
+      "would"
+    ],
+    "breakdown": {
+      "rule": "Решение в момент речи — всегда will.",
+      "trap": "going to здесь не подходит: ты не планировал это заранее."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-w07",
+    "topic": "future-will",
+    "front": "Don't stay up too late or you ___ regret it tomorrow.",
+    "hint": "Предупреждение о последствии",
+    "answer": "Don't stay up too late or you will regret it tomorrow.",
+    "translation": "Не ложись слишком поздно, иначе завтра пожалеешь.",
+    "keyPart": "will",
+    "options": [
+      "will",
+      "would",
+      "are",
+      "do"
+    ],
+    "breakdown": {
+      "rule": "Последствие в будущем — will.",
+      "trap": "Сегодня ты потерял it: «you will regret tomorrow». Нужно «regret it»."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-w08",
+    "topic": "future-will",
+    "front": "Where will Kelly go? She ___ go to a concert.",
+    "hint": "Короткая форма she will",
+    "answer": "She'll go to a concert.",
+    "translation": "Она пойдёт на концерт.",
+    "keyPart": "She'll",
+    "options": [
+      "She'll",
+      "Shell",
+      "She'will",
+      "She's"
+    ],
+    "breakdown": {
+      "rule": "she will → she'll. Апостроф на месте wi-.",
+      "trap": "Shell без апострофа — это «ракушка»."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-w09",
+    "topic": "future-will",
+    "front": "If you eat too much candy, you ___ feel sick.",
+    "hint": "После if будущее не ставят, а во второй части — ставят",
+    "answer": "If you eat too much candy, you will feel sick.",
+    "translation": "Если съешь слишком много конфет, тебе станет плохо.",
+    "keyPart": "will",
+    "options": [
+      "will",
+      "would",
+      "are",
+      "—"
+    ],
+    "breakdown": {
+      "rule": "First Conditional: If + настоящее, ... will + глагол.",
+      "trap": "После if будущее время не ставится: не «If you will eat»."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-w10",
+    "topic": "future-will",
+    "front": "I promise I ___ help you with your homework.",
+    "hint": "Обещание — один из четырёх случаев will",
+    "answer": "I promise I will help you with your homework.",
+    "translation": "Обещаю, я помогу тебе с домашним заданием.",
+    "keyPart": "will",
+    "options": [
+      "will",
+      "am",
+      "would",
+      "do"
+    ],
+    "breakdown": {
+      "rule": "Обещание — всегда will.",
+      "trap": "«I help you» звучит как привычное действие, а не обещание."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-w11",
+    "topic": "future-will",
+    "front": "The meeting ___ take place at 2 p.m. tomorrow.",
+    "hint": "Ты сам правильно ответил на это на уроке",
+    "answer": "The meeting will take place at 2 p.m. tomorrow.",
+    "translation": "Встреча состоится завтра в два часа дня.",
+    "keyPart": "will",
+    "options": [
+      "will",
+      "is",
+      "was",
+      "does"
+    ],
+    "breakdown": {
+      "rule": "will + take place — состоится.",
+      "trap": "take place — устойчивое выражение, не «take a place»."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-w12",
+    "topic": "future-will",
+    "front": "My family ___ do anything this weekend. We will stay home.",
+    "hint": "Отрицание, полная форма",
+    "answer": "My family will not do anything this weekend.",
+    "translation": "Моя семья ничего не будет делать в эти выходные.",
+    "keyPart": "will not",
+    "options": [
+      "will not",
+      "not will",
+      "don't will",
+      "will don't"
+    ],
+    "breakdown": {
+      "rule": "Подлежащее + will + not + глагол.",
+      "trap": "Сокращённо: My family won't do anything."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-w13",
+    "topic": "future-will",
+    "front": "It's so cold in here. I ___ turn on the heating.",
+    "hint": "Решил прямо сейчас",
+    "answer": "It's so cold in here. I will turn on the heating.",
+    "translation": "Здесь так холодно. Я включу отопление.",
+    "keyPart": "will",
+    "options": [
+      "will",
+      "am",
+      "would",
+      "was"
+    ],
+    "breakdown": {
+      "rule": "Спонтанное решение — will.",
+      "trap": "turn on — включить. turn off — выключить."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-w14",
+    "topic": "future-will",
+    "front": "In everyday talk with friends, \"I will eat pizza\" becomes \"___ eat pizza\".",
+    "hint": "Разговорное сокращение",
+    "answer": "I'll eat pizza.",
+    "translation": "Я поем пиццу.",
+    "keyPart": "I'll",
+    "options": [
+      "I'll",
+      "Ill",
+      "I'will",
+      "I'am"
+    ],
+    "breakdown": {
+      "rule": "I will → I'll в разговорной речи.",
+      "trap": "Элиза сказала: полное will оставляют для письменной и официальной речи."
+    },
+    "topicTitle": "⏭ Future: will / won't"
+  },
+  {
+    "id": "ex-sep21-j01",
+    "topic": "jobs",
+    "front": "I work in a hospital. I treat sick people. I am ___ doctor.",
+    "hint": "Профессия всегда с артиклем",
+    "answer": "I am a doctor.",
+    "translation": "Я работаю в больнице. Я лечу больных. Я врач.",
+    "keyPart": "a",
+    "options": [
+      "a",
+      "—",
+      "the",
+      "an"
+    ],
+    "breakdown": {
+      "rule": "Профессия в английском требует артикль: I am a doctor.",
+      "trap": "По-русски артикля нет, поэтому мозг его теряет."
+    },
+    "topicTitle": "💼 Профессии"
+  },
+  {
+    "id": "ex-sep21-j02",
+    "topic": "jobs",
+    "front": "I wear a uniform. I catch criminals. I am ___ police officer.",
+    "hint": "Сегодня ты сказал это без артикля",
+    "answer": "I am a police officer.",
+    "translation": "Я ношу форму. Я ловлю преступников. Я полицейский.",
+    "keyPart": "a",
+    "options": [
+      "a",
+      "—",
+      "an",
+      "the"
+    ],
+    "breakdown": {
+      "rule": "I am a police officer — артикль обязателен.",
+      "trap": "Элиза сегодня ответила «Correct» на фразу без артикля. Она ошиблась."
+    },
+    "topicTitle": "💼 Профессии"
+  },
+  {
+    "id": "ex-sep21-j03",
+    "topic": "jobs",
+    "front": "I fly to many countries. I work in a cockpit. I am a ___.",
+    "hint": "Ты ответил это правильно",
+    "answer": "I am a pilot.",
+    "translation": "Я летаю во многие страны. Я работаю в кабине. Я пилот.",
+    "keyPart": "pilot",
+    "options": [
+      "pilot",
+      "flight attendant",
+      "astronaut",
+      "driver"
+    ],
+    "breakdown": {
+      "rule": "cockpit — кабина пилотов, значит это pilot.",
+      "trap": "flight attendant тоже работает в самолёте, но не в кабине."
+    },
+    "topicTitle": "💼 Профессии"
+  },
+  {
+    "id": "ex-sep21-j04",
+    "topic": "jobs",
+    "front": "I work in ___ restaurant. I cook food. I am a chef.",
+    "hint": "Твоя сквозная ошибка урока",
+    "answer": "I work in a restaurant.",
+    "translation": "Я работаю в ресторане. Я готовлю еду. Я шеф-повар.",
+    "keyPart": "a",
+    "options": [
+      "a",
+      "—",
+      "the",
+      "an"
+    ],
+    "breakdown": {
+      "rule": "in a restaurant, in a school, in a hospital — везде артикль.",
+      "trap": "Сегодня ты сказал «I work in restaurant». Пропущен артикль."
+    },
+    "topicTitle": "💼 Профессии"
+  },
+  {
+    "id": "ex-sep21-j05",
+    "topic": "jobs",
+    "front": "I grow crops and keep animals. I am a ___.",
+    "hint": "Работает на земле",
+    "answer": "I am a farmer.",
+    "translation": "Я выращиваю урожай и держу животных. Я фермер.",
+    "keyPart": "farmer",
+    "options": [
+      "farmer",
+      "baker",
+      "chef",
+      "barber"
+    ],
+    "breakdown": {
+      "rule": "crops — урожай, посевы. farmer — фермер.",
+      "trap": "Не путай farmer (фермер) и former (бывший)."
+    },
+    "topicTitle": "💼 Профессии"
+  },
+  {
+    "id": "ex-sep21-j06",
+    "topic": "jobs",
+    "front": "I deliver letters and parcels to people's houses. I am a ___.",
+    "hint": "Сегодня ты сказал «delivery man», а Элиза поправила",
+    "answer": "I am a postman.",
+    "translation": "Я разношу письма и посылки по домам. Я почтальон.",
+    "keyPart": "postman",
+    "options": [
+      "postman",
+      "delivery man",
+      "waiter",
+      "driver"
+    ],
+    "breakdown": {
+      "rule": "postman (UK) / mailman (US) — почтальон.",
+      "trap": "delivery man — курьер, привозит заказы из магазина."
+    },
+    "topicTitle": "💼 Профессии"
+  },
+  {
+    "id": "ex-sep21-j07",
+    "topic": "jobs",
+    "front": "I work on a plane, but I'm not a pilot. I am a ___.",
+    "hint": "Обслуживает пассажиров в салоне",
+    "answer": "I am a flight attendant.",
+    "translation": "Я работаю в самолёте, но я не пилот. Я бортпроводник.",
+    "keyPart": "flight attendant",
+    "options": [
+      "flight attendant",
+      "pilot",
+      "astronaut",
+      "waiter"
+    ],
+    "breakdown": {
+      "rule": "flight attendant — современное нейтральное слово (раньше говорили stewardess).",
+      "trap": "Сегодня ты сказал «I'm a not pilot». Порядок: I'm + not + a + профессия."
+    },
+    "topicTitle": "💼 Профессии"
+  },
+  {
+    "id": "ex-sep21-j08",
+    "topic": "jobs",
+    "front": "I bake bread and cakes. I am a ___.",
+    "hint": "Работает в пекарне",
+    "answer": "I am a baker.",
+    "translation": "Я пеку хлеб и торты. Я пекарь.",
+    "keyPart": "baker",
+    "options": [
+      "baker",
+      "chef",
+      "farmer",
+      "barber"
+    ],
+    "breakdown": {
+      "rule": "bake — печь, baker — пекарь, bakery — пекарня.",
+      "trap": "chef готовит блюда, baker печёт выпечку."
+    },
+    "topicTitle": "💼 Профессии"
+  },
+  {
+    "id": "ex-sep21-j09",
+    "topic": "jobs",
+    "front": "I ___ men's hair. I am a barber.",
+    "hint": "Сегодня у тебя выпал глагол",
+    "answer": "I cut men's hair. I am a barber.",
+    "translation": "Я стригу мужчин. Я парикмахер.",
+    "keyPart": "cut",
+    "options": [
+      "cut",
+      "can",
+      "make",
+      "do"
+    ],
+    "breakdown": {
+      "rule": "cut hair — стричь волосы.",
+      "trap": "Сегодня ты сказал «I can man's hair» — без глагола фраза бессмысленна."
+    },
+    "topicTitle": "💼 Профессии"
+  },
+  {
+    "id": "ex-sep21-j10",
+    "topic": "jobs",
+    "front": "I put out fires and save people. I am a ___.",
+    "hint": "Красная машина и сирена",
+    "answer": "I am a firefighter.",
+    "translation": "Я тушу пожары и спасаю людей. Я пожарный.",
+    "keyPart": "firefighter",
+    "options": [
+      "firefighter",
+      "police officer",
+      "doctor",
+      "farmer"
+    ],
+    "breakdown": {
+      "rule": "put out a fire — тушить пожар. firefighter — пожарный.",
+      "trap": "fireman тоже говорят, но firefighter нейтральнее."
+    },
+    "topicTitle": "💼 Профессии"
+  },
+  {
+    "id": "ex-sep21-j11",
+    "topic": "jobs",
+    "front": "I travel to space. I am ___ astronaut.",
+    "hint": "Первый звук слова astronaut — гласный",
+    "answer": "I am an astronaut.",
+    "translation": "Я летаю в космос. Я космонавт.",
+    "keyPart": "an",
+    "options": [
+      "an",
+      "a",
+      "—",
+      "the"
+    ],
+    "breakdown": {
+      "rule": "Перед гласным звуком — an: an astronaut, an engineer, an actor.",
+      "trap": "a astronaut — ошибка, два гласных подряд не произносятся."
+    },
+    "topicTitle": "💼 Профессии"
+  },
+  {
+    "id": "ex-sep21-j12",
+    "topic": "jobs",
+    "front": "I work in a school and I teach English. I am ___ English teacher.",
+    "hint": "Смотри на первый звук слова English",
+    "answer": "I am an English teacher.",
+    "translation": "Я работаю в школе и преподаю английский. Я учитель английского.",
+    "keyPart": "an",
+    "options": [
+      "an",
+      "a",
+      "—",
+      "the"
+    ],
+    "breakdown": {
+      "rule": "Артикль смотрит на следующее слово: an English teacher (гласный звук «э»).",
+      "trap": "Если бы было просто teacher — было бы a teacher."
+    },
+    "topicTitle": "💼 Профессии"
+  },
+  {
+    "id": "ex-sep21-t01",
+    "topic": "tongue-twisters",
+    "front": "I saw Susie sitting in a shoe shine ___.",
+    "hint": "Место, где чистят обувь",
+    "answer": "I saw Susie sitting in a shoe shine shop.",
+    "translation": "Я видел Сюзи в мастерской по чистке обуви.",
+    "keyPart": "shop",
+    "options": [
+      "shop",
+      "stop",
+      "ship",
+      "sheep"
+    ],
+    "breakdown": {
+      "rule": "Тренирует переключение между [s] и [ʃ].",
+      "trap": "Не превращай shop в «щоп» — губы вперёд, язык назад."
+    },
+    "topicTitle": "👅 Скороговорки"
+  },
+  {
+    "id": "ex-sep21-t02",
+    "topic": "tongue-twisters",
+    "front": "Kitty caught the kitten in the ___.",
+    "hint": "Комната, где готовят",
+    "answer": "Kitty caught the kitten in the kitchen.",
+    "translation": "Китти поймала котёнка на кухне.",
+    "keyPart": "kitchen",
+    "options": [
+      "kitchen",
+      "chicken",
+      "kitten",
+      "cabin"
+    ],
+    "breakdown": {
+      "rule": "Тренирует звук [k] и короткое [ɪ].",
+      "trap": "kitchen (кухня) и chicken (курица) — разные слова, не путай."
+    },
+    "topicTitle": "👅 Скороговорки"
+  },
+  {
+    "id": "ex-sep21-t03",
+    "topic": "tongue-twisters",
+    "front": "A big black bear bit a big black ___.",
+    "hint": "Насекомое",
+    "answer": "A big black bear bit a big black bug.",
+    "translation": "Большой чёрный медведь укусил большого чёрного жука.",
+    "keyPart": "bug",
+    "options": [
+      "bug",
+      "bag",
+      "beer",
+      "book"
+    ],
+    "breakdown": {
+      "rule": "Тренирует звук [b] и разные гласные: big, black, bear, bit, bug.",
+      "trap": "Сегодня ты сказал «big black beer with a big black bag» — вышло про пиво и сумку."
+    },
+    "topicTitle": "👅 Скороговорки"
+  },
+  {
+    "id": "ex-sep21-t04",
+    "topic": "tongue-twisters",
+    "front": "I scream, you scream, we all scream for ___ ___.",
+    "hint": "Холодное и сладкое",
+    "answer": "I scream, you scream, we all scream for ice cream.",
+    "translation": "Я кричу, ты кричишь, мы все кричим — мороженого!",
+    "keyPart": "ice cream",
+    "options": [
+      "ice cream",
+      "I scream",
+      "ice crime",
+      "eye cream"
+    ],
+    "breakdown": {
+      "rule": "Шутка в том, что «I scream» и «ice cream» звучат почти одинаково.",
+      "trap": "Разница только в паузе: I | scream против ice | cream."
+    },
+    "topicTitle": "👅 Скороговорки"
+  },
+  {
+    "id": "ex-sep21-t05",
+    "topic": "tongue-twisters",
+    "front": "Green glass globes glow ___.",
+    "hint": "Наречие от green",
+    "answer": "Green glass globes glow greenly.",
+    "translation": "Зелёные стеклянные шары светятся зелёным.",
+    "keyPart": "greenly",
+    "options": [
+      "greenly",
+      "green",
+      "greeny",
+      "greening"
+    ],
+    "breakdown": {
+      "rule": "Тренирует сочетание [gl] и [gr] подряд.",
+      "trap": "Русский язык вставляет гласную между g и l — этого делать нельзя."
+    },
+    "topicTitle": "👅 Скороговорки"
+  },
+  {
+    "id": "ex-sep21-t06",
+    "topic": "tongue-twisters",
+    "front": "How much wood would a ___ chuck if a woodchuck could chuck wood?",
+    "hint": "Лесной зверёк, сурок",
+    "answer": "How much wood would a woodchuck chuck if a woodchuck could chuck wood?",
+    "translation": "Сколько дерева перекидал бы сурок, если бы сурок мог кидать дерево?",
+    "keyPart": "woodchuck",
+    "options": [
+      "woodchuck",
+      "woodcheck",
+      "woodchick",
+      "woodchuk"
+    ],
+    "breakdown": {
+      "rule": "Тренирует [w] и [ʊ]: wood, would, woodchuck, could.",
+      "trap": "wood и would звучат одинаково — [wʊd]."
+    },
+    "topicTitle": "👅 Скороговорки"
+  },
+  {
+    "id": "ex-sep21-t07",
+    "topic": "tongue-twisters",
+    "front": "If a dog chews shoes, ___ shoes does he choose?",
+    "hint": "Вопрос о принадлежности",
+    "answer": "If a dog chews shoes, whose shoes does he choose?",
+    "translation": "Если пёс жуёт ботинки, чьи ботинки он выберет?",
+    "keyPart": "whose",
+    "options": [
+      "whose",
+      "who's",
+      "which",
+      "what"
+    ],
+    "breakdown": {
+      "rule": "whose — чей. who's — сокращение от who is.",
+      "trap": "Сегодня ты говорил «chief» вместо chews [tʃuːz] — жевать."
+    },
+    "topicTitle": "👅 Скороговорки"
+  },
+  {
+    "id": "ex-sep21-t08",
+    "topic": "tongue-twisters",
+    "front": "___ the weather is warm, whether the weather is hot, we have to put up with the weather.",
+    "hint": "Начало — это союз «ли», а не погода",
+    "answer": "Whether the weather is warm, whether the weather is hot...",
+    "translation": "Тёплая ли погода, жаркая ли погода — придётся её терпеть.",
+    "keyPart": "Whether",
+    "options": [
+      "Whether",
+      "Weather",
+      "Wether",
+      "Whither"
+    ],
+    "breakdown": {
+      "rule": "whether — союз «ли», weather — погода. Звучат одинаково.",
+      "trap": "put up with — мириться, терпеть. Устойчивое выражение."
+    },
+    "topicTitle": "👅 Скороговорки"
+  },
+  {
+    "id": "ex-sep21-t09",
+    "topic": "tongue-twisters",
+    "front": "Fuzzy Wuzzy was a ___. Fuzzy Wuzzy had no hair.",
+    "hint": "Не пиво",
+    "answer": "Fuzzy Wuzzy was a bear. Fuzzy Wuzzy had no hair.",
+    "translation": "Пушистик был медведем. У Пушистика не было шерсти.",
+    "keyPart": "bear",
+    "options": [
+      "bear",
+      "beer",
+      "bar",
+      "bird"
+    ],
+    "breakdown": {
+      "rule": "bear рифмуется с hair — в этом вся соль скороговорки.",
+      "trap": "Сегодня ты сказал «was a beer». Медведь — bear [beə]."
+    },
+    "topicTitle": "👅 Скороговорки"
+  },
+  {
+    "id": "ex-sep21-t10",
+    "topic": "tongue-twisters",
+    "front": "We surely shall see the sun shine ___.",
+    "hint": "Скоро",
+    "answer": "We surely shall see the sun shine soon.",
+    "translation": "Мы наверняка скоро увидим солнце.",
+    "keyPart": "soon",
+    "options": [
+      "soon",
+      "sun",
+      "son",
+      "seen"
+    ],
+    "breakdown": {
+      "rule": "Тренирует [s] и [ʃ] вперемешку: surely, shall, see, sun, shine, soon.",
+      "trap": "sun (солнце) и son (сын) звучат одинаково — [sʌn]."
+    },
+    "topicTitle": "👅 Скороговорки"
+  },
+  {
+    "id": "ex-sep21-t11",
+    "topic": "tongue-twisters",
+    "front": "I think of six ___ things, but I can think of six thick things too.",
+    "hint": "Противоположность thick",
+    "answer": "I think of six thin things, but I can think of six thick things too.",
+    "translation": "Я думаю о шести тонких вещах, но могу подумать и о шести толстых.",
+    "keyPart": "thin",
+    "options": [
+      "thin",
+      "thick",
+      "think",
+      "thing"
+    ],
+    "breakdown": {
+      "rule": "Тренирует межзубный [θ]: think, thin, thick, thing.",
+      "trap": "Замена th на «с» или «ф» — самый заметный русский акцент."
+    },
+    "topicTitle": "👅 Скороговорки"
+  },
+  {
+    "id": "ex-sep21-t12",
+    "topic": "tongue-twisters",
+    "front": "How can a clam cram in a clean cream ___?",
+    "hint": "Жестяная банка",
+    "answer": "How can a clam cram in a clean cream can?",
+    "translation": "Как моллюску втиснуться в чистую банку из-под крема?",
+    "keyPart": "can",
+    "options": [
+      "can",
+      "cane",
+      "corn",
+      "come"
+    ],
+    "breakdown": {
+      "rule": "Тренирует сочетания [kl] и [kr]: clam, cram, clean, cream, can.",
+      "trap": "can здесь существительное «жестянка», а не модальный глагол."
+    },
+    "topicTitle": "👅 Скороговорки"
   }
 ]
