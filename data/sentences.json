@@ -39,6 +39,18 @@
     "tongue": {
       "title": "Скороговорки",
       "emoji": "👅"
+    },
+    "health": {
+      "title": "У врача",
+      "emoji": "🤒"
+    },
+    "appearance": {
+      "title": "Внешность",
+      "emoji": "🧑"
+    },
+    "he-she-s": {
+      "title": "Он / она + -s",
+      "emoji": "🧍"
     }
   },
   "sentences": [
@@ -363,6 +375,70 @@
       "words": 9
     },
     {
+      "id": "s-there-that-21",
+      "en": "There is a security guard in the supermarket.",
+      "ru": "В супермаркете есть охранник.",
+      "topic": "there-that",
+      "prompt": "____ a security guard in the supermarket.",
+      "focus": "There is",
+      "distractors": [
+        "There are",
+        "There has",
+        "It is"
+      ],
+      "slip": "In supermarket have security.",
+      "note": "«Где-то есть что-то» — There is/are. Have так не работает.",
+      "words": 8
+    },
+    {
+      "id": "s-there-that-22",
+      "en": "There are a lot of tall people in Russia.",
+      "ru": "В России много высоких людей.",
+      "topic": "there-that",
+      "prompt": "____ a lot of tall people in Russia.",
+      "focus": "There are",
+      "distractors": [
+        "There is",
+        "There has",
+        "It are"
+      ],
+      "slip": "In Russia have a lot of tall people.",
+      "note": "Людей много → There ARE.",
+      "words": 9
+    },
+    {
+      "id": "s-there-that-23",
+      "en": "There is a popular rock singer in Russia.",
+      "ru": "В России есть популярный рок-музыкант.",
+      "topic": "there-that",
+      "prompt": "____ a popular rock singer in Russia.",
+      "focus": "There is",
+      "distractors": [
+        "There are",
+        "There has",
+        "That is"
+      ],
+      "slip": "In Russia have popular rock man.",
+      "note": "Один певец → There is.",
+      "words": 8
+    },
+    {
+      "id": "s-there-that-24",
+      "en": "There was a long queue at the doctor's.",
+      "ru": "У врача была большая очередь.",
+      "topic": "there-that",
+      "prompt": "____ a long queue at the doctor's.",
+      "focus": "There was",
+      "distractors": [
+        "There is",
+        "There were",
+        "There have"
+      ],
+      "slip": null,
+      "note": "Вчера и одна очередь → There was.",
+      "words": 8
+    },
+    {
       "id": "s-articles-01",
       "en": "I go to a restaurant every Friday.",
       "ru": "Я хожу в ресторан каждую пятницу.",
@@ -617,6 +693,102 @@
       "slip": null,
       "note": "Тот самый зал, куда ходишь всегда → the gym.",
       "words": 8
+    },
+    {
+      "id": "s-articles-17",
+      "en": "I bought a Big Mac at McDonald's.",
+      "ru": "Я купил биг-мак в Макдональдсе.",
+      "topic": "articles",
+      "prompt": "I bought ____ Big Mac at McDonald's.",
+      "focus": "a",
+      "distractors": [
+        "—",
+        "the",
+        "an"
+      ],
+      "slip": "I buy Big Mac.",
+      "note": "Один бургер, впервые в разговоре → a.",
+      "words": 7
+    },
+    {
+      "id": "s-articles-18",
+      "en": "I work as a video editor.",
+      "ru": "Я работаю видеомонтажёром.",
+      "topic": "articles",
+      "prompt": "I work as ____ video editor.",
+      "focus": "a",
+      "distractors": [
+        "—",
+        "the",
+        "an"
+      ],
+      "slip": "I work as video editor.",
+      "note": "Профессия всегда с артиклем.",
+      "words": 6
+    },
+    {
+      "id": "s-articles-19",
+      "en": "An hour later my head still hurt.",
+      "ru": "Через час голова всё ещё болела.",
+      "topic": "articles",
+      "prompt": "____ hour later my head still hurt.",
+      "focus": "An",
+      "distractors": [
+        "A",
+        "The",
+        "—"
+      ],
+      "slip": null,
+      "note": "В hour первая буква не читается, слышится гласный → an.",
+      "words": 7
+    },
+    {
+      "id": "s-articles-20",
+      "en": "I like coffee in the morning.",
+      "ru": "По утрам я люблю кофе.",
+      "topic": "articles",
+      "prompt": "I like ____ coffee in the morning.",
+      "focus": "—",
+      "distractors": [
+        "a",
+        "the",
+        "an"
+      ],
+      "slip": "I like a coffee in the morning.",
+      "note": "Кофе вообще — без артикля. A coffee это «одна чашка».",
+      "words": 6
+    },
+    {
+      "id": "s-articles-21",
+      "en": "The coffee you made is cold.",
+      "ru": "Кофе, который ты сделал, остыл.",
+      "topic": "articles",
+      "prompt": "____ coffee you made is cold.",
+      "focus": "The",
+      "distractors": [
+        "A",
+        "An",
+        "—"
+      ],
+      "slip": null,
+      "note": "Конкретный, тот самый кофе → the.",
+      "words": 6
+    },
+    {
+      "id": "s-articles-22",
+      "en": "She has beautiful hair.",
+      "ru": "У неё красивые волосы.",
+      "topic": "articles",
+      "prompt": "She has ____ beautiful hair.",
+      "focus": "—",
+      "distractors": [
+        "a",
+        "the",
+        "an"
+      ],
+      "slip": "She has a beautiful hair.",
+      "note": "hair неисчисляемое, артикль не ставим.",
+      "words": 4
     },
     {
       "id": "s-to-be-01",
@@ -1195,6 +1367,134 @@
       "words": 6
     },
     {
+      "id": "s-past-13",
+      "en": "I woke up at one o'clock yesterday.",
+      "ru": "Вчера я проснулся в час дня.",
+      "topic": "past",
+      "prompt": "I ____ at one o'clock yesterday.",
+      "focus": "woke up",
+      "distractors": [
+        "wake up",
+        "waked up",
+        "was wake up"
+      ],
+      "slip": "I wake up at 1 o'clock.",
+      "note": "wake → woke. Про вчера только прошедшее время.",
+      "words": 7
+    },
+    {
+      "id": "s-past-14",
+      "en": "I cooked scrambled eggs with tomato and garlic.",
+      "ru": "Я пожарил яичницу с помидором и чесноком.",
+      "topic": "past",
+      "prompt": "I ____ scrambled eggs with tomato and garlic.",
+      "focus": "cooked",
+      "distractors": [
+        "cook",
+        "was cook",
+        "cooking"
+      ],
+      "slip": "I cook it scramble and tomato.",
+      "note": "cook → cooked. И «яичница-болтунья» это scrambled eggs.",
+      "words": 8
+    },
+    {
+      "id": "s-past-15",
+      "en": "I watched a series about space.",
+      "ru": "Я смотрел сериал про космос.",
+      "topic": "past",
+      "prompt": "I ____ a series about space.",
+      "focus": "watched",
+      "distractors": [
+        "watch",
+        "was watch",
+        "watching"
+      ],
+      "slip": "I watch series about space.",
+      "note": "watch → watched. Плюс артикль: a series.",
+      "words": 6
+    },
+    {
+      "id": "s-past-16",
+      "en": "Today I only called one client.",
+      "ru": "Сегодня я только позвонил одному клиенту.",
+      "topic": "past",
+      "prompt": "Today I only ____ one client.",
+      "focus": "called",
+      "distractors": [
+        "call",
+        "was call",
+        "calling"
+      ],
+      "slip": "Today I only call my client.",
+      "note": "call → called. День уже прошёл.",
+      "words": 6
+    },
+    {
+      "id": "s-past-17",
+      "en": "I went to the beach and got a cold.",
+      "ru": "Я сходил на пляж и простыл.",
+      "topic": "past",
+      "prompt": "I ____ to the beach and got a cold.",
+      "focus": "went",
+      "distractors": [
+        "go",
+        "goed",
+        "was go"
+      ],
+      "slip": "I go to the beach and I have cold.",
+      "note": "go → went, get → got. Оба неправильные.",
+      "words": 9
+    },
+    {
+      "id": "s-past-18",
+      "en": "I screamed too much at the concert.",
+      "ru": "Я слишком много кричал на концерте.",
+      "topic": "past",
+      "prompt": "I ____ too much at the concert.",
+      "focus": "screamed",
+      "distractors": [
+        "scream",
+        "was scream",
+        "screaming"
+      ],
+      "slip": "I very scream.",
+      "note": "scream → screamed. И «слишком много» это too much, а не very.",
+      "words": 7
+    },
+    {
+      "id": "s-past-19",
+      "en": "I didn't sleep last night.",
+      "ru": "Этой ночью я не спал.",
+      "topic": "past",
+      "prompt": "I ____ sleep last night.",
+      "focus": "didn't",
+      "distractors": [
+        "don't",
+        "wasn't",
+        "not"
+      ],
+      "slip": null,
+      "note": "didn't + начальная форма глагола.",
+      "words": 5
+    },
+    {
+      "id": "s-past-20",
+      "en": "Last year I had covid and a high fever.",
+      "ru": "В прошлом году я болел ковидом с высокой температурой.",
+      "topic": "past",
+      "prompt": "Last year I ____ covid and a high fever.",
+      "focus": "had",
+      "distractors": [
+        "have",
+        "has",
+        "was have"
+      ],
+      "slip": "Last year I have coronavirus.",
+      "note": "have → had. Прошлый год закончился.",
+      "words": 9
+    },
+    {
       "id": "s-will-01",
       "en": "I think it will rain tomorrow.",
       "ru": "Думаю, завтра будет дождь.",
@@ -1577,6 +1877,70 @@
       "slip": null,
       "note": "look for = искать. look at = смотреть на.",
       "words": 5
+    },
+    {
+      "id": "s-prepositions-15",
+      "en": "I arrived in Cyprus in August.",
+      "ru": "Я приехал на Кипр в августе.",
+      "topic": "prepositions",
+      "prompt": "I arrived ____ Cyprus in August.",
+      "focus": "in",
+      "distractors": [
+        "to",
+        "at",
+        "on"
+      ],
+      "slip": "I arrived to Cyprus in August.",
+      "note": "arrive IN страна или город. arrive AT — здание или аэропорт.",
+      "words": 6
+    },
+    {
+      "id": "s-prepositions-16",
+      "en": "There is a rash on my arm.",
+      "ru": "У меня сыпь на руке.",
+      "topic": "prepositions",
+      "prompt": "There is a rash ____ my arm.",
+      "focus": "on",
+      "distractors": [
+        "in",
+        "at",
+        "to"
+      ],
+      "slip": null,
+      "note": "На поверхности тела → on.",
+      "words": 7
+    },
+    {
+      "id": "s-prepositions-17",
+      "en": "I take medicine for a headache.",
+      "ru": "Я пью лекарство от головы.",
+      "topic": "prepositions",
+      "prompt": "I take medicine ____ a headache.",
+      "focus": "for",
+      "distractors": [
+        "from",
+        "to",
+        "of"
+      ],
+      "slip": "I take medicine from headache.",
+      "note": "Лекарство ОТ чего-то — это medicine FOR.",
+      "words": 6
+    },
+    {
+      "id": "s-prepositions-18",
+      "en": "She was in bed all day with a fever.",
+      "ru": "Она весь день лежала с температурой.",
+      "topic": "prepositions",
+      "prompt": "She was ____ bed all day with a fever.",
+      "focus": "in",
+      "distractors": [
+        "on",
+        "at",
+        "to"
+      ],
+      "slip": "She was on bed all day with a fever.",
+      "note": "in bed — лежать в постели. on the bed — сидеть на кровати сверху.",
+      "words": 9
     },
     {
       "id": "s-restaurant-01",
@@ -2057,6 +2421,742 @@
       "slip": null,
       "note": "Тренирует [s] и [ш] вперемешку.",
       "words": 8
+    },
+    {
+      "id": "s-health-01",
+      "en": "I have a headache today.",
+      "ru": "Сегодня у меня болит голова.",
+      "topic": "health",
+      "prompt": "I have ____ today.",
+      "focus": "a headache",
+      "distractors": [
+        "headache",
+        "the headache",
+        "an headache"
+      ],
+      "slip": "I have headache today.",
+      "note": "С болезнями всегда артикль: I have A headache.",
+      "words": 5
+    },
+    {
+      "id": "s-health-02",
+      "en": "I had a headache every day in August.",
+      "ru": "Весь август у меня каждый день болела голова.",
+      "topic": "health",
+      "prompt": "I ____ a headache every day in August.",
+      "focus": "had",
+      "distractors": [
+        "have",
+        "has",
+        "was have"
+      ],
+      "slip": "All August I have a headache.",
+      "note": "Август прошёл, значит had. На уроке ты сказал это в настоящем.",
+      "words": 8
+    },
+    {
+      "id": "s-health-03",
+      "en": "I have a very bad toothache.",
+      "ru": "У меня очень сильно болит зуб.",
+      "topic": "health",
+      "prompt": "I have ____ toothache.",
+      "focus": "a very bad",
+      "distractors": [
+        "a very",
+        "very bad",
+        "the very bad"
+      ],
+      "slip": "I have a very toothache.",
+      "note": "Very само не работает: нужно very + bad. Элиза поймала это на уроке.",
+      "words": 6
+    },
+    {
+      "id": "s-health-04",
+      "en": "I went to the dentist yesterday.",
+      "ru": "Вчера я ходил к стоматологу.",
+      "topic": "health",
+      "prompt": "I went to ____ yesterday.",
+      "focus": "the dentist",
+      "distractors": [
+        "dentist",
+        "dentists",
+        "a dentists"
+      ],
+      "slip": "I go to dentist.",
+      "note": "Без артикля нельзя: the dentist или a dentist.",
+      "words": 6
+    },
+    {
+      "id": "s-health-05",
+      "en": "I have a cold and I cannot stop coughing.",
+      "ru": "Я простыл и не могу перестать кашлять.",
+      "topic": "health",
+      "prompt": "I have ____ and I cannot stop coughing.",
+      "focus": "a cold",
+      "distractors": [
+        "cold",
+        "the cold",
+        "a cough"
+      ],
+      "slip": "I'm have very cold and I coughing.",
+      "note": "Простуда — a cold. «I am cold» значит «мне холодно», это другое.",
+      "words": 9
+    },
+    {
+      "id": "s-health-06",
+      "en": "I am coughing a lot today.",
+      "ru": "Сегодня я много кашляю.",
+      "topic": "health",
+      "prompt": "I ____ a lot today.",
+      "focus": "am coughing",
+      "distractors": [
+        "coughing",
+        "am cough",
+        "is coughing"
+      ],
+      "slip": "I coughing a lot today.",
+      "note": "Окончание -ing никогда не живёт без am/is/are.",
+      "words": 6
+    },
+    {
+      "id": "s-health-07",
+      "en": "I had a high fever for three days.",
+      "ru": "Три дня у меня была высокая температура.",
+      "topic": "health",
+      "prompt": "I had ____ fever for three days.",
+      "focus": "a high",
+      "distractors": [
+        "a bad",
+        "high",
+        "the high"
+      ],
+      "slip": "I have very bad fever.",
+      "note": "Температура бывает high, а не bad. И с артиклем: a high fever.",
+      "words": 8
+    },
+    {
+      "id": "s-health-08",
+      "en": "My brother has a rash on his arm.",
+      "ru": "У брата сыпь на руке.",
+      "topic": "health",
+      "prompt": "My brother has a ____ on his arm.",
+      "focus": "rash",
+      "distractors": [
+        "rush",
+        "rushes",
+        "brush"
+      ],
+      "slip": "My brother have rush.",
+      "note": "rash [рэш] — сыпь. rush [раш] — спешка. Разные слова.",
+      "words": 8
+    },
+    {
+      "id": "s-health-09",
+      "en": "I screamed and now I have a sore throat.",
+      "ru": "Я накричался, и теперь болит горло.",
+      "topic": "health",
+      "prompt": "I screamed and now I have ____.",
+      "focus": "a sore throat",
+      "distractors": [
+        "sore throat",
+        "the sore throat",
+        "a sore throught"
+      ],
+      "slip": "Next day I will sore throat.",
+      "note": "«Болит горло» — I have a sore throat. Не will, а have.",
+      "words": 9
+    },
+    {
+      "id": "s-health-10",
+      "en": "What's the matter with you?",
+      "ru": "Что с тобой?",
+      "topic": "health",
+      "prompt": "____ the matter with you?",
+      "focus": "What's",
+      "distractors": [
+        "What",
+        "How's",
+        "Which"
+      ],
+      "slip": null,
+      "note": "What's the matter? — так спросят в аптеке, у врача и просто на улице.",
+      "words": 5
+    },
+    {
+      "id": "s-health-11",
+      "en": "I have a stomach ache after every coffee.",
+      "ru": "После каждого кофе болит живот.",
+      "topic": "health",
+      "prompt": "I have ____ after every coffee.",
+      "focus": "a stomach ache",
+      "distractors": [
+        "stomach ache",
+        "a stomach",
+        "an stomach ache"
+      ],
+      "slip": "I have stomach ache after every coffee.",
+      "note": "stomach ache — «болит живот», и опять с артиклем a.",
+      "words": 8
+    },
+    {
+      "id": "s-health-12",
+      "en": "Can I get some medicine for a headache?",
+      "ru": "Можно какое-нибудь лекарство от головы?",
+      "topic": "health",
+      "prompt": "Can I get ____ for a headache?",
+      "focus": "some medicine",
+      "distractors": [
+        "a medicine",
+        "medicines",
+        "the medicines"
+      ],
+      "slip": null,
+      "note": "medicine неисчисляемое: some medicine, а не «a medicine».",
+      "words": 8
+    },
+    {
+      "id": "s-health-13",
+      "en": "I don't feel well today.",
+      "ru": "Мне сегодня нехорошо.",
+      "topic": "health",
+      "prompt": "I ____ well today.",
+      "focus": "don't feel",
+      "distractors": [
+        "not feel",
+        "am not feel",
+        "doesn't feel"
+      ],
+      "slip": "I not feel well today.",
+      "note": "Отрицание в настоящем: don't + глагол.",
+      "words": 5
+    },
+    {
+      "id": "s-health-14",
+      "en": "She has a fever, so she stayed at home.",
+      "ru": "У неё температура, поэтому она осталась дома.",
+      "topic": "health",
+      "prompt": "She ____ a fever, so she stayed at home.",
+      "focus": "has",
+      "distractors": [
+        "have",
+        "is have",
+        "has got the"
+      ],
+      "slip": null,
+      "note": "She — третье лицо, значит has.",
+      "words": 9
+    },
+    {
+      "id": "s-health-15",
+      "en": "My throat hurts when I swallow.",
+      "ru": "Горло болит, когда я глотаю.",
+      "topic": "health",
+      "prompt": "My throat hurts when I ____.",
+      "focus": "swallow",
+      "distractors": [
+        "eat",
+        "speak",
+        "cough"
+      ],
+      "slip": null,
+      "note": "swallow — глотать. Самое нужное слово, чтобы объяснить врачу.",
+      "words": 6
+    },
+    {
+      "id": "s-health-16",
+      "en": "Yesterday I was sick, but today I feel better.",
+      "ru": "Вчера я болел, а сегодня мне лучше.",
+      "topic": "health",
+      "prompt": "Yesterday I was sick, but today I feel ____.",
+      "focus": "better",
+      "distractors": [
+        "good",
+        "more good",
+        "best"
+      ],
+      "slip": null,
+      "note": "«Лучше» — better. «More good» не бывает.",
+      "words": 9
+    },
+    {
+      "id": "s-appearance-01",
+      "en": "Alina has long hair.",
+      "ru": "У Алины длинные волосы.",
+      "topic": "appearance",
+      "prompt": "Alina has ____.",
+      "focus": "long hair",
+      "distractors": [
+        "a long hair",
+        "long hairs",
+        "a long hairs"
+      ],
+      "slip": "Alina has a long hair.",
+      "note": "hair неисчисляемое: без артикля и без -s. На уроке это прозвучало неверно.",
+      "words": 4
+    },
+    {
+      "id": "s-appearance-02",
+      "en": "I have short hair.",
+      "ru": "У меня короткие волосы.",
+      "topic": "appearance",
+      "prompt": "I have ____.",
+      "focus": "short hair",
+      "distractors": [
+        "a short hair",
+        "short hairs",
+        "the short hairs"
+      ],
+      "slip": "I have a short hair.",
+      "note": "Та же ловушка: short hair, без a.",
+      "words": 4
+    },
+    {
+      "id": "s-appearance-03",
+      "en": "My friends have curly hair.",
+      "ru": "У моих друзей кудрявые волосы.",
+      "topic": "appearance",
+      "prompt": "My friends have ____.",
+      "focus": "curly hair",
+      "distractors": [
+        "curly hairs",
+        "a curly hair",
+        "curl hair"
+      ],
+      "slip": "They have curly hairs.",
+      "note": "Даже про нескольких человек hair остаётся без -s.",
+      "words": 5
+    },
+    {
+      "id": "s-appearance-04",
+      "en": "After a shower Alina has wavy hair.",
+      "ru": "После душа у Алины волнистые волосы.",
+      "topic": "appearance",
+      "prompt": "After a shower Alina has ____.",
+      "focus": "wavy hair",
+      "distractors": [
+        "a wavy hair",
+        "wavy hairs",
+        "wave hair"
+      ],
+      "slip": null,
+      "note": "Твоя фраза с урока, только без лишнего артикля.",
+      "words": 7
+    },
+    {
+      "id": "s-appearance-05",
+      "en": "The cashier had blonde hair.",
+      "ru": "У кассирши были светлые волосы.",
+      "topic": "appearance",
+      "prompt": "The cashier had ____.",
+      "focus": "blonde hair",
+      "distractors": [
+        "a blonde hair",
+        "blonde hairs",
+        "the blonde hair"
+      ],
+      "slip": null,
+      "note": "blonde hair — светлые волосы. Артикль не нужен.",
+      "words": 5
+    },
+    {
+      "id": "s-appearance-06",
+      "en": "My grandfather is bald.",
+      "ru": "Мой дед лысый.",
+      "topic": "appearance",
+      "prompt": "My grandfather is ____.",
+      "focus": "bald",
+      "distractors": [
+        "a bald",
+        "bald hair",
+        "balded"
+      ],
+      "slip": "He has a bald hair.",
+      "note": "bald — прилагательное «лысый». «Bald hair» не бывает.",
+      "words": 4
+    },
+    {
+      "id": "s-appearance-07",
+      "en": "Alina has blue eyes.",
+      "ru": "У Алины голубые глаза.",
+      "topic": "appearance",
+      "prompt": "Alina has ____.",
+      "focus": "blue eyes",
+      "distractors": [
+        "a blue eyes",
+        "blue eye",
+        "blue ice"
+      ],
+      "slip": "Alina has a blue ice.",
+      "note": "eyes [айз] — глаза, ice [айс] — лёд. Два глаза, поэтому без артикля.",
+      "words": 4
+    },
+    {
+      "id": "s-appearance-08",
+      "en": "My grandmother has grey eyes.",
+      "ru": "У бабушки серые глаза.",
+      "topic": "appearance",
+      "prompt": "My grandmother ____ grey eyes.",
+      "focus": "has",
+      "distractors": [
+        "have",
+        "is have",
+        "has got a"
+      ],
+      "slip": "My grandmother have grey eyes.",
+      "note": "grandmother — она, значит has.",
+      "words": 5
+    },
+    {
+      "id": "s-appearance-09",
+      "en": "My father has a round face.",
+      "ru": "У отца круглое лицо.",
+      "topic": "appearance",
+      "prompt": "My father has ____.",
+      "focus": "a round face",
+      "distractors": [
+        "round face",
+        "a round faces",
+        "an round face"
+      ],
+      "slip": null,
+      "note": "Лицо одно и оно исчисляемое, поэтому a round face.",
+      "words": 6
+    },
+    {
+      "id": "s-appearance-10",
+      "en": "In Bali many people have oval faces.",
+      "ru": "На Бали у многих овальное лицо.",
+      "topic": "appearance",
+      "prompt": "In Bali ____ have oval faces.",
+      "focus": "many people",
+      "distractors": [
+        "much people",
+        "many peoples",
+        "much peoples"
+      ],
+      "slip": "In Bali too much people have an oval face.",
+      "note": "people исчисляемое: many people. Much только с неисчисляемым.",
+      "words": 7
+    },
+    {
+      "id": "s-appearance-11",
+      "en": "My friend's name is Valery.",
+      "ru": "Моего друга зовут Валерий.",
+      "topic": "appearance",
+      "prompt": "My friend's name ____ Valery.",
+      "focus": "is",
+      "distractors": [
+        "—",
+        "are",
+        "has"
+      ],
+      "slip": "My friend his name Valery.",
+      "note": "Между «имя друга» и самим именем нужен is.",
+      "words": 5
+    },
+    {
+      "id": "s-appearance-12",
+      "en": "He is average height, not tall and not short.",
+      "ru": "Он среднего роста.",
+      "topic": "appearance",
+      "prompt": "He ____ average height, not tall and not short.",
+      "focus": "is",
+      "distractors": [
+        "has",
+        "have",
+        "his is"
+      ],
+      "slip": "His has average height.",
+      "note": "Рост описываем через is: He is average height.",
+      "words": 9
+    },
+    {
+      "id": "s-appearance-13",
+      "en": "I am 193 centimetres tall.",
+      "ru": "Мой рост 193 сантиметра.",
+      "topic": "appearance",
+      "prompt": "I ____ 193 centimetres tall.",
+      "focus": "am",
+      "distractors": [
+        "have",
+        "is",
+        "am have"
+      ],
+      "slip": "I have 193 centimetres.",
+      "note": "Рост по-английски через am, а не have.",
+      "words": 4
+    },
+    {
+      "id": "s-appearance-14",
+      "en": "In England they measure height in feet, not centimetres.",
+      "ru": "В Англии рост меряют в футах.",
+      "topic": "appearance",
+      "prompt": "In England they measure height in ____, not centimetres.",
+      "focus": "feet",
+      "distractors": [
+        "foots",
+        "feets",
+        "foot"
+      ],
+      "slip": null,
+      "note": "foot → feet. Твои 193 см это шесть футов четыре дюйма.",
+      "words": 9
+    },
+    {
+      "id": "s-appearance-15",
+      "en": "She is very slim and she goes to the gym.",
+      "ru": "Она очень стройная и ходит в зал.",
+      "topic": "appearance",
+      "prompt": "She is very ____ and she goes to the gym.",
+      "focus": "slim",
+      "distractors": [
+        "skinny",
+        "thin",
+        "fat"
+      ],
+      "slip": null,
+      "note": "slim — стройная, это комплимент. skinny — тощая, это уже не комплимент.",
+      "words": 10
+    },
+    {
+      "id": "s-appearance-16",
+      "en": "That rock singer is really skinny.",
+      "ru": "Тот рок-музыкант совсем тощий.",
+      "topic": "appearance",
+      "prompt": "That rock singer is really ____.",
+      "focus": "skinny",
+      "distractors": [
+        "slim",
+        "thin",
+        "small"
+      ],
+      "slip": null,
+      "note": "skinny — кожа да кости. Ровно твой пример с урока.",
+      "words": 6
+    },
+    {
+      "id": "s-appearance-17",
+      "en": "Alina has a pretty face.",
+      "ru": "У Алины красивое лицо.",
+      "topic": "appearance",
+      "prompt": "Alina ____ a pretty face.",
+      "focus": "has",
+      "distractors": [
+        "have",
+        "is",
+        "has got the"
+      ],
+      "slip": null,
+      "note": "Alina одна, значит has. А лицо одно, значит a pretty face.",
+      "words": 5
+    },
+    {
+      "id": "s-appearance-18",
+      "en": "He is handsome and she is pretty.",
+      "ru": "Он красивый, и она красивая.",
+      "topic": "appearance",
+      "prompt": "He is ____ and she is pretty.",
+      "focus": "handsome",
+      "distractors": [
+        "beautiful",
+        "cute",
+        "funny"
+      ],
+      "slip": null,
+      "note": "handsome — про мужчин, pretty — про женщин, cute — про детей.",
+      "words": 7
+    },
+    {
+      "id": "s-he-she-s-01",
+      "en": "My brother has a rash on his arm.",
+      "ru": "У брата сыпь на руке.",
+      "topic": "he-she-s",
+      "prompt": "My brother ____ a rash on his arm.",
+      "focus": "has",
+      "distractors": [
+        "have",
+        "is have",
+        "haves"
+      ],
+      "slip": "My brother have rash.",
+      "note": "he/she/it → has. Have здесь не бывает никогда.",
+      "words": 8
+    },
+    {
+      "id": "s-he-she-s-02",
+      "en": "Alina has a MacBook and a bike.",
+      "ru": "У Алины макбук и велосипед.",
+      "topic": "he-she-s",
+      "prompt": "Alina ____ a MacBook and a bike.",
+      "focus": "has",
+      "distractors": [
+        "have",
+        "is have",
+        "has got a"
+      ],
+      "slip": "Alina have MacBook.",
+      "note": "Одна Алина → has.",
+      "words": 7
+    },
+    {
+      "id": "s-he-she-s-03",
+      "en": "My grandmother goes to the beach every morning.",
+      "ru": "Бабушка каждое утро ходит на пляж.",
+      "topic": "he-she-s",
+      "prompt": "My grandmother ____ to the beach every morning.",
+      "focus": "goes",
+      "distractors": [
+        "go",
+        "gos",
+        "is go"
+      ],
+      "slip": "My grandmother go to the beach.",
+      "note": "он/она/оно → глагол с окончанием: go становится goes.",
+      "words": 8
+    },
+    {
+      "id": "s-he-she-s-04",
+      "en": "He likes coconut water.",
+      "ru": "Он любит кокосовую воду.",
+      "topic": "he-she-s",
+      "prompt": "He ____ coconut water.",
+      "focus": "likes",
+      "distractors": [
+        "like",
+        "is like",
+        "likes to"
+      ],
+      "slip": "He like coconut.",
+      "note": "-s ставим только после he, she, it.",
+      "words": 4
+    },
+    {
+      "id": "s-he-she-s-05",
+      "en": "Danny lives in Bali now.",
+      "ru": "Дэнни сейчас живёт на Бали.",
+      "topic": "he-she-s",
+      "prompt": "Danny ____ in Bali now.",
+      "focus": "lives",
+      "distractors": [
+        "live",
+        "living",
+        "is live"
+      ],
+      "slip": "Danny live in Bali.",
+      "note": "live → lives. Одна буква, но без неё фраза звучит неграмотно.",
+      "words": 5
+    },
+    {
+      "id": "s-he-she-s-06",
+      "en": "I work at home every day.",
+      "ru": "Я каждый день работаю дома.",
+      "topic": "he-she-s",
+      "prompt": "I ____ at home every day.",
+      "focus": "work",
+      "distractors": [
+        "works",
+        "am work",
+        "working"
+      ],
+      "slip": "I works at home every day.",
+      "note": "После I и you -s НЕ ставится. Перегиб в другую сторону тоже ошибка.",
+      "words": 6
+    },
+    {
+      "id": "s-he-she-s-07",
+      "en": "My friends watch football on Sunday.",
+      "ru": "Друзья смотрят футбол по воскресеньям.",
+      "topic": "he-she-s",
+      "prompt": "My friends ____ football on Sunday.",
+      "focus": "watch",
+      "distractors": [
+        "watches",
+        "is watch",
+        "watchs"
+      ],
+      "slip": "My friends watches football.",
+      "note": "friends — «они», значит без -s.",
+      "words": 6
+    },
+    {
+      "id": "s-he-she-s-08",
+      "en": "She doesn't eat meat.",
+      "ru": "Она не ест мясо.",
+      "topic": "he-she-s",
+      "prompt": "She ____ eat meat.",
+      "focus": "doesn't",
+      "distractors": [
+        "don't",
+        "doesn't eats",
+        "not"
+      ],
+      "slip": "She don't eat meat.",
+      "note": "he/she/it → doesn't, и глагол после него уже БЕЗ -s.",
+      "words": 4
+    },
+    {
+      "id": "s-he-she-s-09",
+      "en": "Does your brother speak English?",
+      "ru": "Твой брат говорит по-английски?",
+      "topic": "he-she-s",
+      "prompt": "____ your brother speak English?",
+      "focus": "Does",
+      "distractors": [
+        "Do",
+        "Is",
+        "Does he"
+      ],
+      "slip": "Do your brother speak English?",
+      "note": "Вопрос про he/she/it → Does.",
+      "words": 5
+    },
+    {
+      "id": "s-he-she-s-10",
+      "en": "Alina watches series in the evening.",
+      "ru": "Алина смотрит сериалы по вечерам.",
+      "topic": "he-she-s",
+      "prompt": "Alina ____ series in the evening.",
+      "focus": "watches",
+      "distractors": [
+        "watchs",
+        "watch",
+        "watching"
+      ],
+      "slip": null,
+      "note": "После -ch добавляем -es: watches.",
+      "words": 6
+    },
+    {
+      "id": "s-he-she-s-11",
+      "en": "The cashier has blonde hair.",
+      "ru": "У кассирши светлые волосы.",
+      "topic": "he-she-s",
+      "prompt": "The cashier ____ blonde hair.",
+      "focus": "has",
+      "distractors": [
+        "have",
+        "haves",
+        "is have"
+      ],
+      "slip": null,
+      "note": "cashier — один человек, значит has.",
+      "words": 5
+    },
+    {
+      "id": "s-he-she-s-12",
+      "en": "It takes me two hours to edit a video.",
+      "ru": "На монтаж у меня уходит два часа.",
+      "topic": "he-she-s",
+      "prompt": "It ____ me two hours to edit a video.",
+      "focus": "takes",
+      "distractors": [
+        "take",
+        "is take",
+        "takes to"
+      ],
+      "slip": null,
+      "note": "it → takes. То же самое -s.",
+      "words": 9
     }
   ],
   "vocab": {
@@ -2121,7 +3221,7 @@
     "chuck": "швырять, кидать",
     "clouds": "облака",
     "coffee": "кофе",
-    "cold": "холодный",
+    "cold": "холодный; простуда (a cold)",
     "come": "приходить",
     "concert": "концерт",
     "cook": "готовить",
@@ -2297,7 +3397,7 @@
     "shoes": "обувь, ботинки",
     "shop": "магазин, мастерская",
     "shops": "магазины",
-    "sick": "больной",
+    "sick": "больной, заболевший",
     "signal": "связь, сигнал",
     "sitting": "сидящий",
     "six": "шесть",
@@ -2390,6 +3490,117 @@
     "yesterday": "вчера",
     "you": "ты, вы",
     "your": "твой, ваш",
-    "youtube": "Ютуб"
+    "youtube": "Ютуб",
+    "ache": "боль (ноющая)",
+    "arm": "рука (от плеча до кисти)",
+    "arrived": "приехал, прибыл",
+    "as": "как, в качестве",
+    "august": "август",
+    "average": "средний",
+    "bad": "плохой, сильный (о боли)",
+    "bald": "лысый",
+    "beautiful": "красивая, прекрасная",
+    "bed": "кровать, постель",
+    "better": "лучше",
+    "bike": "велосипед",
+    "blonde": "светлые (о волосах)",
+    "blue": "голубой, синий",
+    "brother": "брат",
+    "called": "позвонил, назвал",
+    "cannot": "не могу",
+    "cashier": "кассир, кассирша",
+    "centimetres": "сантиметры",
+    "client": "клиент",
+    "coconut": "кокос, кокосовый",
+    "cooked": "приготовил",
+    "coughing": "кашляющий, кашляю",
+    "covid": "ковид",
+    "curly": "кудрявые",
+    "danny": "Дэнни",
+    "day": "день",
+    "days": "дни",
+    "dentist": "стоматолог",
+    "doctor's": "у врача, врачебный кабинет",
+    "england": "Англия",
+    "eyes": "глаза",
+    "face": "лицо",
+    "faces": "лица",
+    "father": "отец",
+    "feel": "чувствовать себя",
+    "feet": "футы; ступни (мн. от foot)",
+    "fever": "жар, высокая температура",
+    "friend's": "друга (принадлежность)",
+    "friends": "друзья",
+    "garlic": "чеснок",
+    "goes": "идёт, ходит (he/she/it)",
+    "grandfather": "дедушка",
+    "grandmother": "бабушка",
+    "grey": "серый",
+    "guard": "охранник",
+    "had": "имел, было (прош. от have)",
+    "handsome": "красивый (о мужчине)",
+    "has": "имеет, есть у (he/she/it)",
+    "head": "голова",
+    "headache": "головная боль",
+    "height": "рост, высота",
+    "high": "высокий",
+    "his": "его",
+    "hours": "часы (о времени)",
+    "hurt": "болел, повредил",
+    "hurts": "болит",
+    "later": "позже, спустя",
+    "likes": "любит, нравится (he/she/it)",
+    "lives": "живёт",
+    "lot": "много (в a lot of)",
+    "mac": "мак (в Big Mac)",
+    "macbook": "макбук",
+    "made": "сделал, приготовил",
+    "matter": "дело, проблема",
+    "mcdonald's": "Макдональдс",
+    "measure": "измерять",
+    "medicine": "лекарство",
+    "name": "имя, название",
+    "only": "только",
+    "oval": "овальный",
+    "popular": "популярный",
+    "pretty": "хорошенькая, симпатичная",
+    "queue": "очередь",
+    "rash": "сыпь",
+    "really": "правда, очень",
+    "rock": "рок (музыка)",
+    "round": "круглый",
+    "russia": "Россия",
+    "screamed": "кричал, орал",
+    "security": "охрана",
+    "series": "сериал",
+    "short": "короткий, невысокий",
+    "shower": "душ",
+    "singer": "певец, музыкант",
+    "skinny": "тощий, кожа да кости",
+    "slim": "стройный",
+    "so": "поэтому, так",
+    "some": "немного, какой-нибудь",
+    "sore": "воспалённый, больной",
+    "stayed": "остался",
+    "still": "всё ещё",
+    "stomach": "живот, желудок",
+    "stop": "прекращать, останавливаться",
+    "sunday": "воскресенье",
+    "supermarket": "супермаркет",
+    "swallow": "глотать",
+    "takes": "занимает, берёт",
+    "tall": "высокий (о человеке)",
+    "three": "три",
+    "throat": "горло",
+    "tomato": "помидор",
+    "toothache": "зубная боль",
+    "valery": "Валерий",
+    "watched": "смотрел",
+    "watches": "смотрит",
+    "water": "вода",
+    "wavy": "волнистые",
+    "what's": "what is — что есть",
+    "woke": "проснулся",
+    "year": "год"
   }
 }
