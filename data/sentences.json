@@ -1,4 +1,5 @@
 {
+  "built": "2026-09-23T14:39:44+00:00",
   "topics": {
     "there-that": {
       "title": "There / That / This",
@@ -17,16 +18,16 @@
       "emoji": "❓"
     },
     "past": {
-      "title": "was / were / did",
+      "title": "Прошлое: вчера",
       "emoji": "⏮"
     },
     "will": {
-      "title": "will / won't",
+      "title": "Будущее: will",
       "emoji": "⏭"
     },
     "prepositions": {
-      "title": "in / on / at / for",
-      "emoji": "📍"
+      "title": "in / on / at / to",
+      "emoji": "🧭"
     },
     "restaurant": {
       "title": "Ресторан",
@@ -49,8 +50,56 @@
       "emoji": "🧑"
     },
     "he-she-s": {
-      "title": "Он / она + -s",
-      "emoji": "🧍"
+      "title": "-s: he likes",
+      "emoji": "👤"
+    },
+    "have-has": {
+      "title": "have / has",
+      "emoji": "🎒"
+    },
+    "there-is": {
+      "title": "There is — «где-то есть»",
+      "emoji": "📍"
+    },
+    "negation": {
+      "title": "Как сказать «не»",
+      "emoji": "🚫"
+    },
+    "questions": {
+      "title": "Как задать вопрос",
+      "emoji": "❓"
+    },
+    "polite": {
+      "title": "Позвать и попросить",
+      "emoji": "🤝"
+    },
+    "much-many": {
+      "title": "Много и очень",
+      "emoji": "📦"
+    },
+    "see-watch": {
+      "title": "see / watch / show",
+      "emoji": "👀"
+    },
+    "feelings": {
+      "title": "scared или scary",
+      "emoji": "😱"
+    },
+    "weather": {
+      "title": "Погода: It's…",
+      "emoji": "🌦"
+    },
+    "this-that": {
+      "title": "this / that / these",
+      "emoji": "👉"
+    },
+    "can-need": {
+      "title": "can / need to / want to",
+      "emoji": "💪"
+    },
+    "pronouns": {
+      "title": "my / her / me / him",
+      "emoji": "🙋"
     }
   },
   "sentences": [
@@ -4765,7 +4814,107 @@
     "wavy": "волнистые",
     "what's": "what is — что есть",
     "woke": "проснулся",
-    "year": "год"
+    "year": "год",
+    "accent": "акцент",
+    "almaty": "Алматы",
+    "astana": "Астана",
+    "batman": "Бэтмен",
+    "bats": "летучие мыши",
+    "birthday": "день рождения",
+    "boat": "лодка",
+    "bones": "кости",
+    "bored": "мне скучно (про того, кому скучно)",
+    "boring": "скучный (про то, что вызывает скуку)",
+    "broomstick": "метла (у ведьмы)",
+    "buy": "покупать",
+    "cafes": "кафе (много)",
+    "can't": "не могу, нельзя (can not)",
+    "candy": "конфета, сладости",
+    "ceiling": "потолок",
+    "city": "город",
+    "close": "закрывать; близко",
+    "cloudy": "облачно",
+    "dark": "тёмный",
+    "door": "дверь",
+    "dota": "Дота (игра)",
+    "event": "событие, ивент",
+    "fear": "страх",
+    "few": "мало (a few — несколько)",
+    "film": "фильм",
+    "flat": "квартира",
+    "forgot": "забыл (прош. от forget)",
+    "game": "игра",
+    "ghost": "призрак, привидение",
+    "ghosts": "призраки",
+    "give": "давать",
+    "going": "собираюсь (going to); идущий",
+    "halloween": "Хэллоуин",
+    "haunted": "с привидениями (haunted house — дом с привидениями)",
+    "heights": "высота (fear of heights — боязнь высоты)",
+    "here": "здесь, сюда",
+    "him": "его, ему (после действия)",
+    "history": "история (наука)",
+    "houses": "дома",
+    "how's": "how is — как (там)",
+    "hungry": "голодный",
+    "interested": "заинтересованный (мне интересно)",
+    "into": "в, внутрь",
+    "it's": "it is — это; (про погоду) сейчас",
+    "its": "его, её (про вещь)",
+    "jacket": "куртка",
+    "kite": "воздушный змей",
+    "lego": "Лего",
+    "lesson": "урок",
+    "let's": "давай(те) — позвать вместе",
+    "little": "маленький; мало (a little — немного)",
+    "lost": "потерял (прош. от lose)",
+    "love": "любить",
+    "luck": "удача (bad luck — к несчастью)",
+    "may": "май; может быть",
+    "message": "сообщение",
+    "midnight": "полночь",
+    "mine": "мой, моя (без предмета после)",
+    "miss": "скучать по; пропустить",
+    "monday": "понедельник",
+    "money": "деньги",
+    "museum": "музей",
+    "neighbours": "соседи",
+    "netflix": "Нетфликс",
+    "nice": "приятный, хороший",
+    "october": "октябрь",
+    "petersburg": "Петербург",
+    "photo": "фото",
+    "pumpkin": "тыква",
+    "raining": "идёт дождь",
+    "room": "комната",
+    "said": "сказал (прош. от say)",
+    "scared": "напуганный (мне страшно)",
+    "scary": "страшный (про то, что пугает)",
+    "scooter": "скутер",
+    "show": "показывать",
+    "showed": "показал",
+    "shining": "светит, сияет",
+    "skeleton": "скелет",
+    "snow": "снег",
+    "spider": "паук",
+    "spiders": "пауки",
+    "st": "Санкт- (St.)",
+    "stormy": "штормовой, бурный (it was stormy — был шторм)",
+    "strong": "сильный",
+    "surfing": "сёрфинг",
+    "taxi": "такси",
+    "their": "их (чей)",
+    "tv": "телевизор",
+    "umbrella": "зонт",
+    "waited": "ждал",
+    "wasn't": "was not — не был, было не",
+    "web": "паутина (spider web)",
+    "week": "неделя",
+    "weekends": "выходные",
+    "where": "где, куда",
+    "windy": "ветрено",
+    "works": "работает (he/she/it)",
+    "yogurt": "йогурт"
   },
   "rules": {
     "there-is-are": {
@@ -6313,6 +6462,3496 @@
           "ru": "Можно счёт, пожалуйста?"
         }
       ]
+    },
+    "have-has": {
+      "id": "have-has",
+      "title": "have и has",
+      "subtitle": "Один человек или одна вещь — has. Все остальные — have.",
+      "body": [
+        "«У меня есть», «у неё есть» по-английски говорят через глагол have — «иметь». У него два вида: have и has.",
+        "Has — только когда речь про ОДНОГО другого человека или одну вещь: he, she, it, Алина, брат, телефон. Alina has a cat. My phone has a good camera.",
+        "Have — со всеми остальными: I, you, we, they и когда их несколько. I have a scooter. You have a nice accent. My friends have a boat. Про себя — всегда have, хотя ты один.",
+        "Как только рядом появляется помощник — does, doesn't, can, can't, will, — has снова становится have: Alina doesn't have a car. Does she have a car? She can have a dog. Именно поэтому на уроке 23 сентября «про Алину — have» и «про Алину — has» прозвучало оба раза: во фразе с can't стоит have.",
+        "«Нет» с have делают через помощника: I don't have, she doesn't have. Не «I'm not have» и не «I no have». А «где-то есть» — вообще не have: There is a ghost in my house."
+      ],
+      "forms": [
+        {
+          "left": "I / you / we / they",
+          "right": "have"
+        },
+        {
+          "left": "he / she / it / Алина",
+          "right": "has"
+        },
+        {
+          "left": "не",
+          "right": "I don't have · she doesn't have"
+        },
+        {
+          "left": "вопрос",
+          "right": "Do you have…? · Does she have…?"
+        },
+        {
+          "left": "после can / will / doesn't",
+          "right": "have"
+        },
+        {
+          "left": "прошлое, для всех",
+          "right": "had"
+        }
+      ],
+      "examples": [
+        {
+          "good": "Alina has a new MacBook.",
+          "bad": "Alina have MacBook.",
+          "ru": "У Алины новый макбук."
+        },
+        {
+          "good": "I don't have a taxi.",
+          "bad": "I'm not have taxi.",
+          "ru": "У меня нет такси."
+        },
+        {
+          "good": "Alina doesn't have a broomstick.",
+          "bad": "My girlfriend no have this.",
+          "ru": "У Алины нет метлы."
+        }
+      ]
+    },
+    "lets-would": {
+      "id": "lets-would",
+      "title": "Let's и Would you like to",
+      "subtitle": "Позвать с собой — let's. Спросить, хочет ли человек, — would you like to.",
+      "body": [
+        "Let's = «давай(те) мы». Так зовут пойти или сделать что-то ВМЕСТЕ: Let's go to the beach. После let's сразу действие, без to: Let's go, let's eat.",
+        "Если сказать просто Go to the beach, это «иди на пляж» — друг пойдёт один, без тебя. Это Элиза хорошо объяснила на уроке 23 сентября.",
+        "Would you like to…? — вежливо спросить, хочет ли человек: Would you like to go to the museum? Would встаёт в начало, после like — to и действие.",
+        "Твоя смесь с урока — «Maybe you would like let's go» — склеивает оба способа сразу. Выбери один: Let's go to the beach! или Would you like to go to the beach?"
+      ],
+      "forms": [
+        {
+          "left": "Let's + действие",
+          "right": "Let's go surfing!"
+        },
+        {
+          "left": "Would you like to + действие?",
+          "right": "Would you like to go?"
+        },
+        {
+          "left": "Would you like + вещь?",
+          "right": "Would you like a coffee?"
+        },
+        {
+          "left": "Can you please…?",
+          "right": "вежливая просьба"
+        }
+      ],
+      "examples": [
+        {
+          "good": "Let's go to the beach!",
+          "bad": "Go to the beach.",
+          "ru": "Пошли на пляж!"
+        },
+        {
+          "good": "Would you like to go to the museum?",
+          "bad": "Maybe you would like go to the museum.",
+          "ru": "Хочешь пойти в музей?"
+        },
+        {
+          "good": "Would you like to fly a kite?",
+          "bad": "Maybe you would like let's go and we use kite.",
+          "ru": "Хочешь запустить змея?"
+        }
+      ]
+    },
+    "see-watch-show": {
+      "id": "see-watch-show",
+      "title": "see, watch, look, show",
+      "subtitle": "Видеть, смотреть, посмотреть и показать — четыре разных слова.",
+      "body": [
+        "see — видеть глазами, замечать, даже не специально: I saw a black cat. I can't see you. Прошлое — saw.",
+        "watch — смотреть долго и специально: фильм, сериал, матч, видео. I watch Netflix every evening. Прошлое — watched.",
+        "look — направить взгляд, «посмотри»: Look at this spider! После look почти всегда at.",
+        "show — показывать кому-то: Can you show me your video? Прошлое — showed. Твоя частая ошибка — «I show a movie» вместо I watched a movie и «I show bats» вместо I saw bats."
+      ],
+      "forms": [
+        {
+          "left": "see → saw",
+          "right": "увидел, заметил"
+        },
+        {
+          "left": "watch → watched",
+          "right": "смотрел фильм"
+        },
+        {
+          "left": "look at",
+          "right": "посмотри на"
+        },
+        {
+          "left": "show → showed",
+          "right": "показал"
+        }
+      ],
+      "examples": [
+        {
+          "good": "I saw bats in the game.",
+          "bad": "In game, I show it bats.",
+          "ru": "Я видел в игре летучих мышей."
+        },
+        {
+          "good": "I watched a movie on Netflix.",
+          "bad": "I show a movie on Netflix.",
+          "ru": "Я смотрел фильм на Netflix."
+        },
+        {
+          "good": "Can you show me your new video?",
+          "bad": null,
+          "ru": "Покажешь мне своё новое видео?"
+        }
+      ]
+    },
+    "feelings-ed": {
+      "id": "feelings-ed",
+      "title": "scared или scary",
+      "subtitle": "Кто боится — scared. Что пугает — scary. Сам страх — fear.",
+      "body": [
+        "scared — про того, КТО боится: I'm scared of spiders. «Мне страшно», «я боюсь».",
+        "scary — про то, ЧТО пугает: a scary film, spiders are scary. «Страшный».",
+        "fear — сам страх, предмет: I have a fear of heights. Сказать «I'm fear» или «it's very fear» нельзя.",
+        "Такая же пара у многих чувств: bored (мне скучно) и boring (скучный фильм), interested (мне интересно) и interesting (интересная книга). -ed — что чувствуешь ты, -ing — что это вызывает. I'm boring — это «я зануда».",
+        "На уроке 23 сентября прозвучало «fear — для всего, scary — для монстров». Это не так: разница не в монстрах, а в том, кто боится и что пугает."
+      ],
+      "forms": [
+        {
+          "left": "I'm scared",
+          "right": "мне страшно"
+        },
+        {
+          "left": "it's scary",
+          "right": "это страшно"
+        },
+        {
+          "left": "a fear of…",
+          "right": "страх чего-то"
+        },
+        {
+          "left": "I'm bored · it's boring",
+          "right": "мне скучно · это скучно"
+        },
+        {
+          "left": "I'm interested · it's interesting",
+          "right": "мне интересно · это интересно"
+        }
+      ],
+      "examples": [
+        {
+          "good": "I'm very scared of haunted houses.",
+          "bad": "Haunted house, it's very fear.",
+          "ru": "Я очень боюсь домов с привидениями."
+        },
+        {
+          "good": "This film is very scary.",
+          "bad": null,
+          "ru": "Этот фильм очень страшный."
+        },
+        {
+          "good": "I'm bored — let's go to the beach.",
+          "bad": "I'm boring.",
+          "ru": "Мне скучно — пошли на пляж."
+        }
+      ]
+    },
+    "weather-it": {
+      "id": "weather-it",
+      "title": "Погода: It's…",
+      "subtitle": "У английской фразы всегда есть «кто». Для погоды это it.",
+      "body": [
+        "По-русски говорят просто «жарко», «идёт дождь». В английском у фразы обязательно есть подлежащее, и для погоды это пустое it: It's hot. It's raining. It's windy.",
+        "Без It's получается фраза без глагола: «In Cyprus every day very hot». Правильно: It's very hot in Cyprus every day.",
+        "Признаки погоды: sunny, cloudy, windy, rainy, snowy, stormy — с -y на конце. Не путай: sun — солнце, sunny — солнечно; wind — ветер, windy — ветрено, а winter — зима.",
+        "Прошлое — It was sunny. Будущее — It will be sunny. Дождь идёт прямо сейчас — It's raining. Спросить про погоду — How's the weather?"
+      ],
+      "forms": [
+        {
+          "left": "It's sunny / hot / cold",
+          "right": "сейчас"
+        },
+        {
+          "left": "It's raining / snowing",
+          "right": "идёт прямо сейчас"
+        },
+        {
+          "left": "It was stormy",
+          "right": "было"
+        },
+        {
+          "left": "It will be sunny",
+          "right": "будет"
+        },
+        {
+          "left": "How's the weather?",
+          "right": "какая погода?"
+        }
+      ],
+      "examples": [
+        {
+          "good": "It's very hot in Cyprus every day.",
+          "bad": "In Cyprus every day very hot.",
+          "ru": "На Кипре каждый день очень жарко."
+        },
+        {
+          "good": "It was stormy in Cyprus last week.",
+          "bad": "In Cyprus have stormy last week.",
+          "ru": "На прошлой неделе на Кипре был шторм."
+        },
+        {
+          "good": "It's windy — let's fly a kite!",
+          "bad": "Today it's winter.",
+          "ru": "Ветрено — давай запустим змея!"
+        }
+      ]
+    },
+    "need-to": {
+      "id": "need-to",
+      "title": "can, need to, want to",
+      "subtitle": "После need и want — to. После can, can't и will — сразу глагол.",
+      "body": [
+        "need и want перед действием требуют to: I need to eat. I want to go surfing. Без to — «I need eat» — ошибка.",
+        "Если нужна ВЕЩЬ, to не ставят: I need an umbrella. I want a coffee.",
+        "can, can't, will, must, should — наоборот, без to: I can speak, I can't see, you should go.",
+        "После всех этих слов глагол в начальной форме: не «can't saw», не «can't going», не «will flies». Время и лицо уже показало первое слово."
+      ],
+      "forms": [
+        {
+          "left": "need to + действие",
+          "right": "I need to eat"
+        },
+        {
+          "left": "want to + действие",
+          "right": "I want to go"
+        },
+        {
+          "left": "can / can't + действие",
+          "right": "I can't see"
+        },
+        {
+          "left": "need + вещь",
+          "right": "I need an umbrella"
+        }
+      ],
+      "examples": [
+        {
+          "good": "I need to eat now, I'm very hungry.",
+          "bad": "I need eat now, I very hungry.",
+          "ru": "Мне нужно поесть, я очень голоден."
+        },
+        {
+          "good": "I can't see my phone.",
+          "bad": "I can't saw my phone.",
+          "ru": "Я не вижу свой телефон."
+        },
+        {
+          "good": "I want to go surfing.",
+          "bad": null,
+          "ru": "Я хочу пойти на серф."
+        }
+      ]
+    },
+    "pronouns": {
+      "id": "pronouns",
+      "title": "Я — меня — мой",
+      "subtitle": "Кто делает, кого и чей — три разных слова.",
+      "body": [
+        "Кто делает: I, you, he, she, it, we, they. Они стоят перед действием: She lives in Cyprus.",
+        "Кого, кому: me, you, him, her, it, us, them. Они стоят после действия: Can you help me? I'll call him.",
+        "Чей: my, your, his, her, its, our, their. Они стоят перед вещью: her phone, their dog.",
+        "Две ловушки на слух: their (их) и there (там) звучат одинаково; its (его, про вещь) и it's (= it is) тоже. «It's name» — ошибка: чьё — its name."
+      ],
+      "forms": [
+        {
+          "left": "I / me / my",
+          "right": "я / меня / мой"
+        },
+        {
+          "left": "he / him / his",
+          "right": "он / его / его"
+        },
+        {
+          "left": "she / her / her",
+          "right": "она / её / её"
+        },
+        {
+          "left": "they / them / their",
+          "right": "они / их / их"
+        },
+        {
+          "left": "it / it / its",
+          "right": "про вещь"
+        }
+      ],
+      "examples": [
+        {
+          "good": "Alina forgot her phone.",
+          "bad": null,
+          "ru": "Алина забыла свой телефон."
+        },
+        {
+          "good": "Its name is Lego Batman.",
+          "bad": "It's name Batman Lego.",
+          "ru": "Она называется «Лего Бэтмен»."
+        },
+        {
+          "good": "My neighbours love their dog.",
+          "bad": "My neighbours love there dog.",
+          "ru": "Соседи любят свою собаку."
+        }
+      ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q-have-has-01",
+      "en": "I have a scooter.",
+      "ru": "У меня есть скутер.",
+      "topic": "have-has",
+      "prompt": "I ____ a scooter.",
+      "focus": "have",
+      "distractors": [
+        "has",
+        "am"
+      ],
+      "slip": null,
+      "note": "С I, you, we, they — всегда have.",
+      "rule": "have-has",
+      "whyWrong": {
+        "has": "has — только когда речь про одного ДРУГОГО: he, she, Алина, брат. Про себя всегда have.",
+        "am": "am — «я есть (какой-то)»: I am tired. «У меня есть» — have."
+      },
+      "words": 4,
+      "ask": "Про себя. Как сказать «у меня есть»?",
+      "lesson": null
+    },
+    {
+      "id": "q-have-has-02",
+      "en": "Alina has a new MacBook.",
+      "ru": "У Алины новый макбук.",
+      "topic": "have-has",
+      "prompt": "Alina ____ a new MacBook.",
+      "focus": "has",
+      "distractors": [
+        "have",
+        "is"
+      ],
+      "slip": "Alina have MacBook.",
+      "note": "Один человек — he, she, Алина, брат — has.",
+      "rule": "have-has",
+      "whyWrong": {
+        "have": "have — для I, you, we, they и для нескольких. Алина одна — has.",
+        "is": "is — «является, находится»: Alina is at home. «У неё есть» — has."
+      },
+      "words": 5,
+      "ask": "Она одна (Алина). Как сказать «у неё есть»?",
+      "lesson": null
+    },
+    {
+      "id": "q-have-has-03",
+      "en": "My friends have a boat in Bali.",
+      "ru": "У моих друзей есть лодка на Бали.",
+      "topic": "have-has",
+      "prompt": "My friends ____ a boat in Bali.",
+      "focus": "have",
+      "distractors": [
+        "has",
+        "are"
+      ],
+      "slip": null,
+      "note": "Несколько человек (they) — have.",
+      "rule": "have-has",
+      "whyWrong": {
+        "has": "has — только для одного. Друзей несколько — have.",
+        "are": "are — «являются, находятся»: my friends are in Bali. «У них есть» — have."
+      },
+      "words": 7,
+      "ask": "Их несколько (друзья). Как сказать «у них есть»?",
+      "lesson": null
+    },
+    {
+      "id": "q-have-has-04",
+      "en": "My phone has a good camera.",
+      "ru": "У моего телефона хорошая камера.",
+      "topic": "have-has",
+      "prompt": "My phone ____ a good camera.",
+      "focus": "has",
+      "distractors": [
+        "have",
+        "is"
+      ],
+      "slip": null,
+      "note": "Одна вещь — это it, а it тоже has.",
+      "rule": "have-has",
+      "whyWrong": {
+        "have": "have — для I, you, we, they. Телефон один — has.",
+        "is": "is — «является»: my phone is new. «У него есть» — has."
+      },
+      "words": 6,
+      "ask": "Одна вещь (телефон). Как сказать «у него есть»?",
+      "lesson": null
+    },
+    {
+      "id": "q-have-has-05",
+      "en": "I don't have a taxi.",
+      "ru": "У меня нет такси.",
+      "topic": "have-has",
+      "prompt": "____ a taxi.",
+      "focus": "I don't have",
+      "distractors": [
+        "I'm not have",
+        "I no have"
+      ],
+      "slip": "I'm not have taxi.",
+      "note": "«Не» с have делает помощник don't: I don't have.",
+      "rule": "have-has",
+      "whyWrong": {
+        "I'm not have": "I'm not have — смесь двух способов. «Не иметь» — через помощника: I don't have.",
+        "I no have": "«I no have» — прямой перевод «я не иметь». Нужен помощник: I don't have."
+      },
+      "words": 5,
+      "ask": "Отрицание про себя. Как сказать «у меня нет такси»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-have-has-06",
+      "en": "Alina doesn't have a broomstick.",
+      "ru": "У Алины нет метлы.",
+      "topic": "have-has",
+      "prompt": "Alina ____ a broomstick.",
+      "focus": "doesn't have",
+      "distractors": [
+        "doesn't has",
+        "don't have"
+      ],
+      "slip": "My girlfriend no have this.",
+      "note": "Одна — doesn't. После doesn't всегда have, а не has.",
+      "rule": "have-has",
+      "whyWrong": {
+        "doesn't has": "Окончание -s уже забрал doesn't. После него глагол в начальной форме: have.",
+        "don't have": "don't — для I, you, we, they. Алина одна — doesn't."
+      },
+      "words": 5,
+      "ask": "Отрицание, она одна. Как сказать «у Алины нет метлы»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-have-has-07",
+      "en": "She can have a dog in this flat.",
+      "ru": "Ей можно держать собаку в этой квартире.",
+      "topic": "have-has",
+      "prompt": "She can ____ a dog in this flat.",
+      "focus": "have",
+      "distractors": [
+        "has",
+        "having"
+      ],
+      "slip": null,
+      "note": "После can, can't, will, must глагол в начальной форме: have.",
+      "rule": "have-has",
+      "whyWrong": {
+        "has": "После can глагол всегда в начальной форме, без -s: she can have.",
+        "having": "having после can не бывает. Только начальная форма: can have."
+      },
+      "words": 8,
+      "ask": "После can. Как сказать «ей можно держать собаку»?",
+      "lesson": null
+    },
+    {
+      "id": "q-have-has-08",
+      "en": "Do you have a charger?",
+      "ru": "У тебя есть зарядка?",
+      "topic": "have-has",
+      "prompt": "____ you have a charger?",
+      "focus": "Do",
+      "distractors": [
+        "Are",
+        "Does"
+      ],
+      "slip": null,
+      "note": "Вопрос с have начинается с помощника: Do you have…?",
+      "rule": "have-has",
+      "whyWrong": {
+        "Are": "Are you…? — «ты какой? ты где?»: Are you tired? «Есть ли у тебя» — Do you have…?",
+        "Does": "Does — для одного другого: he, she, Алина. С you — Do."
+      },
+      "words": 5,
+      "ask": "Вопрос. Как спросить «у тебя есть зарядка?»",
+      "lesson": null
+    },
+    {
+      "id": "q-have-has-09",
+      "en": "Does your brother have a jacket?",
+      "ru": "У твоего брата есть куртка?",
+      "topic": "have-has",
+      "prompt": "____ your brother have a jacket?",
+      "focus": "Does",
+      "distractors": [
+        "Do",
+        "Is"
+      ],
+      "slip": null,
+      "note": "Один человек в вопросе — Does. После Does — have.",
+      "rule": "have-has",
+      "whyWrong": {
+        "Do": "Do — для I, you, we, they. Брат один — Does.",
+        "Is": "Is your brother…? — «брат какой? где?». «Есть ли у него» — Does he have…?"
+      },
+      "words": 6,
+      "ask": "Вопрос про одного (брат). Как спросить «у него есть куртка?»",
+      "lesson": null
+    },
+    {
+      "id": "q-have-has-10",
+      "en": "Yesterday I had a headache.",
+      "ru": "Вчера у меня болела голова.",
+      "topic": "have-has",
+      "prompt": "Yesterday I ____ a headache.",
+      "focus": "had",
+      "distractors": [
+        "have",
+        "was"
+      ],
+      "slip": null,
+      "note": "Прошлое от have и has — одно слово на всех: had.",
+      "rule": "past-irregular",
+      "whyWrong": {
+        "have": "have — сейчас. Вчера — had.",
+        "was": "was — «был (каким-то, где-то)». «У меня было» — had."
+      },
+      "words": 5,
+      "ask": "Прошлое. Как сказать «вчера у меня болела голова»?",
+      "lesson": null
+    },
+    {
+      "id": "q-have-has-11",
+      "en": "Alina has a cat.",
+      "ru": "У Алины есть кот.",
+      "topic": "have-has",
+      "prompt": "Alina ____ a cat.",
+      "focus": "has",
+      "distractors": [
+        "there is",
+        "is"
+      ],
+      "slip": null,
+      "note": "Есть хозяин — Алина. Значит has.",
+      "rule": "have-has",
+      "whyWrong": {
+        "there is": "there is — когда хозяина нет, а есть место: There is a cat in the garden.",
+        "is": "Alina is a cat — «Алина — кошка». Обладание — has."
+      },
+      "words": 4,
+      "ask": "У человека есть — или где-то есть? «У Алины есть кот».",
+      "lesson": null
+    },
+    {
+      "id": "q-have-has-12",
+      "en": "You have a nice accent.",
+      "ru": "У тебя приятный акцент.",
+      "topic": "have-has",
+      "prompt": "You ____ a nice accent.",
+      "focus": "have",
+      "distractors": [
+        "has",
+        "are"
+      ],
+      "slip": null,
+      "note": "you — всегда have, даже если человек один.",
+      "rule": "have-has",
+      "whyWrong": {
+        "has": "has — только he, she, it. С you — have.",
+        "are": "You are… — «ты (какой-то)». «У тебя есть» — have."
+      },
+      "words": 5,
+      "ask": "Собеседнику. Как сказать «у тебя хороший акцент»?",
+      "lesson": null
+    },
+    {
+      "id": "q-there-is-01",
+      "en": "There is a ghost in my house.",
+      "ru": "В моём доме есть призрак.",
+      "topic": "there-is",
+      "prompt": "____ a ghost in my house.",
+      "focus": "There is",
+      "distractors": [
+        "Have",
+        "It is"
+      ],
+      "slip": "In my house have a ghost.",
+      "note": "«Где-то есть» — There is. Хозяина нет, есть место.",
+      "rule": "there-is-are",
+      "whyWrong": {
+        "Have": "have без хозяина не работает: непонятно, КТО имеет. «Где-то есть» — There is.",
+        "It is": "It is a ghost — «это призрак», когда показываешь на него. Сообщить, что он есть, — There is."
+      },
+      "words": 7,
+      "ask": "Где-то что-то есть. Как сказать «в моём доме есть призрак»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-there-is-02",
+      "en": "There are good cafes in Paphos.",
+      "ru": "В Пафосе есть хорошие кафе.",
+      "topic": "there-is",
+      "prompt": "____ good cafes in Paphos.",
+      "focus": "There are",
+      "distractors": [
+        "There is",
+        "Have"
+      ],
+      "slip": null,
+      "note": "Много — There are. Смотри на сам предмет: cafes — много.",
+      "rule": "there-is-are",
+      "whyWrong": {
+        "There is": "There is — для одного. Кафе много — There are.",
+        "Have": "have без хозяина не работает. «Где-то есть» — There are."
+      },
+      "words": 6,
+      "ask": "Где-то есть, и их много. Как сказать «в Пафосе есть хорошие кафе»?",
+      "lesson": null
+    },
+    {
+      "id": "q-there-is-03",
+      "en": "There is a city in Russia called St. Petersburg.",
+      "ru": "В России есть город Санкт-Петербург.",
+      "topic": "there-is",
+      "prompt": "____ a city in Russia called St. Petersburg.",
+      "focus": "There is",
+      "distractors": [
+        "Have",
+        "It is"
+      ],
+      "slip": "Russia have city, its name is St. Petersburg.",
+      "note": "Один город где-то есть — There is.",
+      "rule": "there-is-are",
+      "whyWrong": {
+        "Have": "Have a city… — непонятно, у кого. Можно Russia has a city… (страна — хозяин), но здесь место стоит в конце, значит There is.",
+        "It is": "It is a city — «это город», когда уже ясно, о чём речь."
+      },
+      "words": 9,
+      "ask": "Где-то есть. Как сказать «в России есть город Санкт-Петербург»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-there-is-04",
+      "en": "There was a storm in Cyprus last week.",
+      "ru": "На прошлой неделе на Кипре был шторм.",
+      "topic": "there-is",
+      "prompt": "____ a storm in Cyprus last week.",
+      "focus": "There was",
+      "distractors": [
+        "There is",
+        "Have"
+      ],
+      "slip": "In Cyprus have stormy last week.",
+      "note": "Прошлое от There is — There was.",
+      "rule": "there-is-are",
+      "whyWrong": {
+        "There is": "There is — сейчас. Прошлая неделя — There was.",
+        "Have": "have без хозяина не работает, да и прошлого в нём нет. There was a storm."
+      },
+      "words": 8,
+      "ask": "Где-то было — в прошлом. Как сказать «на прошлой неделе был шторм»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-there-is-05",
+      "en": "There were a lot of people on the beach.",
+      "ru": "На пляже было много людей.",
+      "topic": "there-is",
+      "prompt": "____ a lot of people on the beach.",
+      "focus": "There were",
+      "distractors": [
+        "There was",
+        "Was"
+      ],
+      "slip": null,
+      "note": "Прошлое и много — There were.",
+      "rule": "there-is-are",
+      "whyWrong": {
+        "There was": "There was — для одного. Людей много — There were.",
+        "Was": "Одного was мало: нужно there. There were…"
+      },
+      "words": 9,
+      "ask": "Было много — в прошлом. Как сказать «на пляже было много людей»?",
+      "lesson": null
+    },
+    {
+      "id": "q-there-is-06",
+      "en": "There isn't any food in my fridge.",
+      "ru": "В моём холодильнике нет еды.",
+      "topic": "there-is",
+      "prompt": "____ any food in my fridge.",
+      "focus": "There isn't",
+      "distractors": [
+        "Not have",
+        "It isn't"
+      ],
+      "slip": null,
+      "note": "«Где-то нет» — There isn't. Еда не считается поштучно — isn't.",
+      "rule": "there-is-are",
+      "whyWrong": {
+        "Not have": "«Not have» — нет ни хозяина, ни помощника. «Где-то нет» — There isn't.",
+        "It isn't": "It isn't — «это не…»: It isn't my phone. Сообщить, что еды нет, — There isn't."
+      },
+      "words": 7,
+      "ask": "Где-то нет. Как сказать «в холодильнике нет еды»?",
+      "lesson": null
+    },
+    {
+      "id": "q-there-is-07",
+      "en": "Is there a pharmacy near here?",
+      "ru": "Здесь рядом есть аптека?",
+      "topic": "there-is",
+      "prompt": "____ a pharmacy near here?",
+      "focus": "Is there",
+      "distractors": [
+        "There is",
+        "Have"
+      ],
+      "slip": null,
+      "note": "В вопросе is и there меняются местами: Is there…?",
+      "rule": "there-is-are",
+      "whyWrong": {
+        "There is": "There is… — это утверждение. В вопросе порядок обратный: Is there…?",
+        "Have": "«Have pharmacy?» — у кого? Правильно: Is there a pharmacy…?"
+      },
+      "words": 6,
+      "ask": "Вопрос. Как спросить «здесь рядом есть аптека?»",
+      "lesson": null
+    },
+    {
+      "id": "q-there-is-08",
+      "en": "There is a candy event in Dota 2.",
+      "ru": "В Доте есть событие с конфетами.",
+      "topic": "there-is",
+      "prompt": "____ a candy event in Dota 2.",
+      "focus": "There is",
+      "distractors": [
+        "Have",
+        "It's"
+      ],
+      "slip": "In Dota 2 have event.",
+      "note": "Что-то есть где-то (в игре) — There is.",
+      "rule": "there-is-are",
+      "whyWrong": {
+        "Have": "have без хозяина не работает. «Где-то есть» — There is.",
+        "It's": "It's a candy event — «это событие с конфетами», когда уже ясно, о чём речь."
+      },
+      "words": 7,
+      "ask": "Где-то есть — в игре. Как сказать «в Доте есть событие с конфетами»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-there-is-09",
+      "en": "There is a spider web on the ceiling.",
+      "ru": "На потолке паутина.",
+      "topic": "there-is",
+      "prompt": "____ a spider web on the ceiling.",
+      "focus": "There is",
+      "distractors": [
+        "There are",
+        "Have"
+      ],
+      "slip": "My home have a spider web.",
+      "note": "Одна вещь где-то есть — There is.",
+      "rule": "there-is-are",
+      "whyWrong": {
+        "There are": "There are — для нескольких. Паутина одна — There is.",
+        "Have": "have без хозяина не работает. «Где-то есть» — There is."
+      },
+      "words": 8,
+      "ask": "Где-то есть, одна вещь. Как сказать «на потолке паутина»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-there-is-10",
+      "en": "There are a lot of bones in a skeleton.",
+      "ru": "В скелете много костей.",
+      "topic": "there-is",
+      "prompt": "____ a lot of bones in a skeleton.",
+      "focus": "There are",
+      "distractors": [
+        "There is",
+        "It is"
+      ],
+      "slip": null,
+      "note": "Много (bones) — There are.",
+      "rule": "there-is-are",
+      "whyWrong": {
+        "There is": "There is — для одного. Костей много — There are.",
+        "It is": "It is — «это». Сообщить, что где-то много чего-то, — There are."
+      },
+      "words": 9,
+      "ask": "Где-то много. Как сказать «в скелете много костей»?",
+      "lesson": null
+    },
+    {
+      "id": "q-to-be-01",
+      "en": "I am very hungry.",
+      "ru": "Я очень голоден.",
+      "topic": "to-be",
+      "prompt": "I ____ very hungry.",
+      "focus": "am",
+      "distractors": [
+        "—",
+        "have"
+      ],
+      "slip": "I very hungry.",
+      "note": "«Я какой-то» = I am … Без am у фразы нет глагола.",
+      "rule": "to-be-present",
+      "whyWrong": {
+        "—": "Без am выходит «я очень голодный» без глагола. В английском глагол обязателен: I am hungry.",
+        "have": "«have hungry» не говорят: голод — это состояние, а не вещь. I am hungry."
+      },
+      "words": 4,
+      "ask": "Про себя, состояние. Как сказать «я очень голоден»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-to-be-02",
+      "en": "Alina is at home now.",
+      "ru": "Алина сейчас дома.",
+      "topic": "to-be",
+      "prompt": "Alina ____ at home now.",
+      "focus": "is",
+      "distractors": [
+        "are",
+        "am"
+      ],
+      "slip": null,
+      "note": "he, she, Алина — is.",
+      "rule": "to-be-present",
+      "whyWrong": {
+        "are": "are — для you, we, they. Алина одна — is.",
+        "am": "am — только с I."
+      },
+      "words": 5,
+      "ask": "Она одна (Алина). Как сказать «Алина сейчас дома»?",
+      "lesson": null
+    },
+    {
+      "id": "q-to-be-03",
+      "en": "My friends are in Bali.",
+      "ru": "Мои друзья на Бали.",
+      "topic": "to-be",
+      "prompt": "My friends ____ in Bali.",
+      "focus": "are",
+      "distractors": [
+        "is",
+        "am"
+      ],
+      "slip": null,
+      "note": "Несколько (they) — are.",
+      "rule": "to-be-present",
+      "whyWrong": {
+        "is": "is — для одного. Друзей несколько — are.",
+        "am": "am — только с I."
+      },
+      "words": 5,
+      "ask": "Их несколько (друзья). Как сказать «мои друзья на Бали»?",
+      "lesson": null
+    },
+    {
+      "id": "q-to-be-04",
+      "en": "I am scared of spiders.",
+      "ru": "Я боюсь пауков.",
+      "topic": "to-be",
+      "prompt": "I ____ scared of spiders.",
+      "focus": "am",
+      "distractors": [
+        "very",
+        "have"
+      ],
+      "slip": "I very scared.",
+      "note": "Страх — это состояние: I am scared.",
+      "rule": "to-be-present",
+      "whyWrong": {
+        "very": "very — только усиление, глагола в нём нет. Можно I am very scared, но am обязателен.",
+        "have": "I have scared of… — так не говорят. Страх — состояние: I am scared."
+      },
+      "words": 5,
+      "ask": "Про себя, чувство. Как сказать «я боюсь пауков» (= я напуган)?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-to-be-05",
+      "en": "Yesterday I was tired.",
+      "ru": "Вчера я устал.",
+      "topic": "to-be",
+      "prompt": "Yesterday I ____ tired.",
+      "focus": "was",
+      "distractors": [
+        "were",
+        "am"
+      ],
+      "slip": null,
+      "note": "Прошлое от am и is — was.",
+      "rule": "was-were",
+      "whyWrong": {
+        "were": "were — для you, we, they. С I — was.",
+        "am": "am — сейчас. Вчера — was."
+      },
+      "words": 4,
+      "ask": "Про себя, в прошлом. Как сказать «вчера я устал»?",
+      "lesson": null
+    },
+    {
+      "id": "q-to-be-06",
+      "en": "We were in Bali last year.",
+      "ru": "Мы были на Бали в прошлом году.",
+      "topic": "to-be",
+      "prompt": "We ____ in Bali last year.",
+      "focus": "were",
+      "distractors": [
+        "was",
+        "are"
+      ],
+      "slip": null,
+      "note": "Прошлое для we, you, they — were.",
+      "rule": "was-were",
+      "whyWrong": {
+        "was": "was — для I, he, she, it. С we — were.",
+        "are": "are — сейчас. В прошлом году — were."
+      },
+      "words": 6,
+      "ask": "Мы, в прошлом. Как сказать «мы были на Бали в прошлом году»?",
+      "lesson": null
+    },
+    {
+      "id": "q-to-be-07",
+      "en": "Are you tired?",
+      "ru": "Ты устал?",
+      "topic": "to-be",
+      "prompt": "____ you tired?",
+      "focus": "Are",
+      "distractors": [
+        "Do",
+        "Is"
+      ],
+      "slip": null,
+      "note": "Вопрос про состояние: Are you…? — are встаёт вперёд.",
+      "rule": "to-be-present",
+      "whyWrong": {
+        "Do": "Do — для вопросов про действие: Do you like…? Устал — состояние: Are you tired?",
+        "Is": "Is — для he, she, it. С you — are."
+      },
+      "words": 3,
+      "ask": "Вопрос про состояние. Как спросить «ты устал?»",
+      "lesson": null
+    },
+    {
+      "id": "q-to-be-08",
+      "en": "I understand you.",
+      "ru": "Я тебя понимаю.",
+      "topic": "to-be",
+      "prompt": "____ you.",
+      "focus": "I understand",
+      "distractors": [
+        "I am understand",
+        "I understanding"
+      ],
+      "slip": "I'm understand.",
+      "note": "Действие идёт сразу после I. Am тут не нужен.",
+      "rule": "dont-doesnt",
+      "whyWrong": {
+        "I am understand": "am + голый глагол — ошибка. Действие без помощника: I understand.",
+        "I understanding": "Одно -ing без am не работает. Просто I understand."
+      },
+      "words": 3,
+      "ask": "Действие «понимать». Как сказать «я тебя понимаю»?",
+      "lesson": null
+    },
+    {
+      "id": "q-to-be-09",
+      "en": "A house with ghosts is called a haunted house.",
+      "ru": "Дом с привидениями называется haunted house.",
+      "topic": "to-be",
+      "prompt": "A house with ghosts ____ called a haunted house.",
+      "focus": "is",
+      "distractors": [
+        "—",
+        "has"
+      ],
+      "slip": "My house name haunted house.",
+      "note": "«Называется» = is called. Без is не работает.",
+      "rule": "to-be-present",
+      "whyWrong": {
+        "—": "Без is получается «дом с призраками позвал…». «Называется» — is called.",
+        "has": "has called — «позвал» (уже сделал). «Называется» — is called."
+      },
+      "words": 9,
+      "ask": "Название. Как сказать «дом с призраками называется haunted house»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-to-be-10",
+      "en": "My brother is 25 years old.",
+      "ru": "Моему брату 25 лет.",
+      "topic": "to-be",
+      "prompt": "My brother ____ 25 years old.",
+      "focus": "is",
+      "distractors": [
+        "has",
+        "—"
+      ],
+      "slip": null,
+      "note": "Возраст по-английски — «брат есть 25 лет»: he is 25.",
+      "rule": "height-is",
+      "whyWrong": {
+        "has": "«has 25 years» — прямой перевод с русского. Возраст — через is.",
+        "—": "Без is у фразы нет глагола. My brother is 25."
+      },
+      "words": 5,
+      "ask": "Возраст. Как сказать «моему брату 25 лет»?",
+      "lesson": null
+    },
+    {
+      "id": "q-negation-01",
+      "en": "I don't understand.",
+      "ru": "Я не понимаю.",
+      "topic": "negation",
+      "prompt": "I ____ understand.",
+      "focus": "don't",
+      "distractors": [
+        "am not",
+        "no"
+      ],
+      "slip": "I'm not understand.",
+      "note": "«Не» с действием делает помощник don't: I don't understand.",
+      "rule": "dont-doesnt",
+      "whyWrong": {
+        "am not": "am not — когда действия нет: I'm not tired. Понимать — действие: I don't understand.",
+        "no": "«I no understand» так говорят только иностранцы в кино. Нужен помощник don't."
+      },
+      "words": 3,
+      "ask": "«Не» с действием. Как сказать «я не понимаю»?",
+      "lesson": null
+    },
+    {
+      "id": "q-negation-02",
+      "en": "Alina doesn't drink coffee.",
+      "ru": "Алина не пьёт кофе.",
+      "topic": "negation",
+      "prompt": "Alina ____ drink coffee.",
+      "focus": "doesn't",
+      "distractors": [
+        "don't",
+        "isn't"
+      ],
+      "slip": null,
+      "note": "he, she, Алина — doesn't.",
+      "rule": "dont-doesnt",
+      "whyWrong": {
+        "don't": "don't — для I, you, we, they. Алина одна — doesn't.",
+        "isn't": "isn't — когда действия нет: she isn't tired. Пить — действие: doesn't drink."
+      },
+      "words": 4,
+      "ask": "«Не», она одна. Как сказать «Алина не пьёт кофе»?",
+      "lesson": null
+    },
+    {
+      "id": "q-negation-03",
+      "en": "I didn't go to the gym yesterday.",
+      "ru": "Вчера я не ходил в зал.",
+      "topic": "negation",
+      "prompt": "I ____ go to the gym yesterday.",
+      "focus": "didn't",
+      "distractors": [
+        "don't",
+        "wasn't"
+      ],
+      "slip": null,
+      "note": "«Не» с действием в прошлом — didn't, одно на всех.",
+      "rule": "did-didnt",
+      "whyWrong": {
+        "don't": "don't — сейчас или обычно. Вчера — didn't.",
+        "wasn't": "wasn't — когда действия нет: I wasn't at home. Ходить — действие: didn't go."
+      },
+      "words": 7,
+      "ask": "«Не» в прошлом. Как сказать «вчера я не ходил в зал»?",
+      "lesson": null
+    },
+    {
+      "id": "q-negation-04",
+      "en": "I didn't see the message.",
+      "ru": "Я не видел сообщение.",
+      "topic": "negation",
+      "prompt": "I didn't ____ the message.",
+      "focus": "see",
+      "distractors": [
+        "saw",
+        "seeing"
+      ],
+      "slip": null,
+      "note": "Прошлое уже показал didn't. Дальше — начальная форма: see.",
+      "rule": "did-didnt",
+      "whyWrong": {
+        "saw": "Два прошедших подряд не ставят: didn't saw — ошибка.",
+        "seeing": "-ing после didn't не бывает."
+      },
+      "words": 5,
+      "ask": "После didn't. Как сказать «я не видел сообщение»?",
+      "lesson": null
+    },
+    {
+      "id": "q-negation-05",
+      "en": "I am not tired.",
+      "ru": "Я не устал.",
+      "topic": "negation",
+      "prompt": "I ____ tired.",
+      "focus": "am not",
+      "distractors": [
+        "don't",
+        "no"
+      ],
+      "slip": null,
+      "note": "Состояние (tired, hungry, at home) — am not, isn't, aren't.",
+      "rule": "dont-doesnt",
+      "whyWrong": {
+        "don't": "don't — для действий: I don't know. Устал — состояние: I'm not tired.",
+        "no": "«I no tired» — нет глагола. Нужно am not."
+      },
+      "words": 4,
+      "ask": "«Не» без действия. Как сказать «я не устал»?",
+      "lesson": null
+    },
+    {
+      "id": "q-negation-06",
+      "en": "I don't know how to get home.",
+      "ru": "Я не знаю, как добраться домой.",
+      "topic": "negation",
+      "prompt": "____ know how to get home.",
+      "focus": "I don't",
+      "distractors": [
+        "I'm not",
+        "I not"
+      ],
+      "slip": "I'm not understand what I need in go to my house.",
+      "note": "Знать — действие, значит don't know.",
+      "rule": "dont-doesnt",
+      "whyWrong": {
+        "I'm not": "I'm not know — смесь двух способов. С действием — don't.",
+        "I not": "«I not know» — нет помощника. Нужно don't."
+      },
+      "words": 7,
+      "ask": "«Не» с действием «знать». Как сказать «я не знаю, как добраться домой»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-negation-07",
+      "en": "I can't see my phone.",
+      "ru": "Я не вижу свой телефон.",
+      "topic": "negation",
+      "prompt": "I can't ____ my phone.",
+      "focus": "see",
+      "distractors": [
+        "saw",
+        "to see"
+      ],
+      "slip": "I can't saw my phone.",
+      "note": "После can't — начальная форма глагола.",
+      "rule": "need-to",
+      "whyWrong": {
+        "saw": "После can't прошедшего не бывает. «Не смог увидеть» — I couldn't see.",
+        "to see": "После can't to не ставят: can't see."
+      },
+      "words": 5,
+      "ask": "После can't. Как сказать «я не вижу свой телефон»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-negation-08",
+      "en": "Don't go into the haunted house!",
+      "ru": "Не заходи в дом с привидениями!",
+      "topic": "negation",
+      "prompt": "____ go into the haunted house!",
+      "focus": "Don't",
+      "distractors": [
+        "No",
+        "Not"
+      ],
+      "slip": null,
+      "note": "«Не делай!» — Don't + действие.",
+      "rule": "dont-doesnt",
+      "whyWrong": {
+        "No": "«No go» так не говорят. Запрет — Don't go.",
+        "Not": "«Not go» — нет помощника. Don't go."
+      },
+      "words": 6,
+      "ask": "Запрет. Как сказать «не заходи в дом с привидениями!»?",
+      "lesson": null
+    },
+    {
+      "id": "q-negation-09",
+      "en": "It wasn't cold yesterday.",
+      "ru": "Вчера было не холодно.",
+      "topic": "negation",
+      "prompt": "It ____ cold yesterday.",
+      "focus": "wasn't",
+      "distractors": [
+        "didn't",
+        "isn't"
+      ],
+      "slip": null,
+      "note": "Нет действия + прошлое — wasn't.",
+      "rule": "was-were",
+      "whyWrong": {
+        "didn't": "didn't — для действий: I didn't go. Холодно — состояние: It wasn't cold.",
+        "isn't": "isn't — сейчас. Вчера — wasn't."
+      },
+      "words": 4,
+      "ask": "«Не» без действия, в прошлом. Как сказать «вчера было не холодно»?",
+      "lesson": null
+    },
+    {
+      "id": "q-questions-01",
+      "en": "Do you like surfing?",
+      "ru": "Ты любишь серфинг?",
+      "topic": "questions",
+      "prompt": "____ you like surfing?",
+      "focus": "Do",
+      "distractors": [
+        "Are",
+        "Is"
+      ],
+      "slip": null,
+      "note": "Вопрос с обычным действием начинается с Do.",
+      "rule": "do-does",
+      "whyWrong": {
+        "Are": "Are you like… — смесь. Are — для состояний: Are you tired?",
+        "Is": "Is — для he, she, it, и то только про состояние. Про действие с you — Do."
+      },
+      "words": 4,
+      "ask": "Вопрос про действие. Как спросить «ты любишь серфинг?»",
+      "lesson": null
+    },
+    {
+      "id": "q-questions-02",
+      "en": "Does your brother work in Almaty?",
+      "ru": "Твой брат работает в Алматы?",
+      "topic": "questions",
+      "prompt": "____ your brother work in Almaty?",
+      "focus": "Does",
+      "distractors": [
+        "Do",
+        "Is"
+      ],
+      "slip": null,
+      "note": "Один человек в вопросе — Does.",
+      "rule": "do-does",
+      "whyWrong": {
+        "Do": "Do — для I, you, we, they. Брат один — Does.",
+        "Is": "Is your brother work… — смесь. С действием — Does."
+      },
+      "words": 6,
+      "ask": "Вопрос про одного (брат). Как спросить «твой брат работает в Алматы?»",
+      "lesson": null
+    },
+    {
+      "id": "q-questions-03",
+      "en": "Where do you live?",
+      "ru": "Где ты живёшь?",
+      "topic": "questions",
+      "prompt": "Where ____ you live?",
+      "focus": "do",
+      "distractors": [
+        "are",
+        "—"
+      ],
+      "slip": null,
+      "note": "Where, What, When + do + you + действие.",
+      "rule": "do-does",
+      "whyWrong": {
+        "are": "Where are you? — «где ты сейчас?». Где живёшь (действие) — Where do you live?",
+        "—": "Where you live? — пропущен помощник do."
+      },
+      "words": 4,
+      "ask": "Вопрос со словом «где». Как спросить «где ты живёшь?»",
+      "lesson": null
+    },
+    {
+      "id": "q-questions-04",
+      "en": "Are you hungry?",
+      "ru": "Ты голоден?",
+      "topic": "questions",
+      "prompt": "____ you hungry?",
+      "focus": "Are",
+      "distractors": [
+        "Do",
+        "Have"
+      ],
+      "slip": null,
+      "note": "Голоден — состояние, значит Are you…?",
+      "rule": "to-be-present",
+      "whyWrong": {
+        "Do": "Do you hungry? — do только для действий. Голоден — Are you hungry?",
+        "Have": "Have you hungry? — так не говорят."
+      },
+      "words": 3,
+      "ask": "Вопрос про состояние. Как спросить «ты голоден?»",
+      "lesson": null
+    },
+    {
+      "id": "q-questions-05",
+      "en": "Did you see the storm yesterday?",
+      "ru": "Ты видел вчера шторм?",
+      "topic": "questions",
+      "prompt": "____ you see the storm yesterday?",
+      "focus": "Did",
+      "distractors": [
+        "Do",
+        "Were"
+      ],
+      "slip": null,
+      "note": "Вопрос в прошлом — Did. Дальше глагол в начальной форме: see.",
+      "rule": "did-didnt",
+      "whyWrong": {
+        "Do": "Do — сейчас или обычно. Вчера — Did.",
+        "Were": "Were you see — смесь. С действием — Did you see…?"
+      },
+      "words": 6,
+      "ask": "Вопрос про прошлое. Как спросить «ты видел вчера шторм?»",
+      "lesson": null
+    },
+    {
+      "id": "q-questions-06",
+      "en": "Does Alina have a scooter?",
+      "ru": "У Алины есть скутер?",
+      "topic": "questions",
+      "prompt": "Does Alina ____ a scooter?",
+      "focus": "have",
+      "distractors": [
+        "has",
+        "having"
+      ],
+      "slip": null,
+      "note": "-s уже стоит в Does. Дальше — have.",
+      "rule": "do-does",
+      "whyWrong": {
+        "has": "Does … has — «третье лицо» дважды. После Does — have.",
+        "having": "-ing после Does не ставят."
+      },
+      "words": 5,
+      "ask": "После Does. Как спросить «у Алины есть скутер?»",
+      "lesson": null
+    },
+    {
+      "id": "q-questions-07",
+      "en": "What do you do on weekends?",
+      "ru": "Что ты делаешь на выходных?",
+      "topic": "questions",
+      "prompt": "What ____ you do on weekends?",
+      "focus": "do",
+      "distractors": [
+        "are",
+        "—"
+      ],
+      "slip": null,
+      "note": "What + do + you + do. Первое do — помощник, второе — «делать».",
+      "rule": "do-does",
+      "whyWrong": {
+        "are": "What are you doing? — «что ты делаешь прямо сейчас». Про выходные вообще — What do you do?",
+        "—": "What you do? — пропущен помощник do."
+      },
+      "words": 6,
+      "ask": "Вопрос со словом «что». Как спросить «что ты делаешь на выходных?»",
+      "lesson": null
+    },
+    {
+      "id": "q-questions-08",
+      "en": "How much is this kite?",
+      "ru": "Сколько стоит этот воздушный змей?",
+      "topic": "questions",
+      "prompt": "How much ____ this kite?",
+      "focus": "is",
+      "distractors": [
+        "are",
+        "does"
+      ],
+      "slip": null,
+      "note": "Цена одной вещи — How much is…?",
+      "rule": "to-be-present",
+      "whyWrong": {
+        "are": "are — для нескольких: How much are these? Змей один — is.",
+        "does": "How much does… требует в конце cost: How much does it cost? Коротко — How much is…?"
+      },
+      "words": 5,
+      "ask": "Цена одной вещи. Как спросить «сколько стоит этот змей?»",
+      "lesson": null
+    },
+    {
+      "id": "q-past-01",
+      "en": "Yesterday I saw a black cat.",
+      "ru": "Вчера я увидел чёрного кота.",
+      "topic": "past",
+      "prompt": "Yesterday I ____ a black cat.",
+      "focus": "saw",
+      "distractors": [
+        "show",
+        "see"
+      ],
+      "slip": "In game, I show it bats.",
+      "note": "see → saw. Неправильный глагол, меняется целиком.",
+      "rule": "past-irregular",
+      "whyWrong": {
+        "show": "show — «показывать», это другое слово. Прошлое от see — saw.",
+        "see": "see — сейчас. Вчера — saw."
+      },
+      "words": 6,
+      "ask": "Прошлое от see (видеть). Как сказать «вчера я увидел чёрного кота»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-past-02",
+      "en": "Last night I went to the supermarket.",
+      "ru": "Вчера вечером я ходил в супермаркет.",
+      "topic": "past",
+      "prompt": "Last night I ____ to the supermarket.",
+      "focus": "went",
+      "distractors": [
+        "go",
+        "goed"
+      ],
+      "slip": "I go into supermarket.",
+      "note": "go → went.",
+      "rule": "past-irregular",
+      "whyWrong": {
+        "go": "go — сейчас или обычно. Вчера — went.",
+        "goed": "goed не бывает: go неправильный, прошлое — went."
+      },
+      "words": 7,
+      "ask": "Прошлое от go (идти, ехать). Как сказать «вчера вечером я ходил в супермаркет»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-past-03",
+      "en": "Yesterday I bought a pumpkin for Halloween.",
+      "ru": "Вчера я купил тыкву на Хэллоуин.",
+      "topic": "past",
+      "prompt": "Yesterday I ____ a pumpkin for Halloween.",
+      "focus": "bought",
+      "distractors": [
+        "buy",
+        "am buy"
+      ],
+      "slip": "I am by pumpkin.",
+      "note": "buy → bought.",
+      "rule": "past-irregular",
+      "whyWrong": {
+        "buy": "buy — сейчас. Уже купил — bought.",
+        "am buy": "am + глагол — ошибка. Прошлое от buy — bought."
+      },
+      "words": 7,
+      "ask": "Прошлое от buy (покупать). Как сказать «я купил тыкву на Хэллоуин»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-past-04",
+      "en": "Last night I watched a scary film on Netflix.",
+      "ru": "Вчера вечером я смотрел страшный фильм на Netflix.",
+      "topic": "past",
+      "prompt": "Last night I ____ a scary film on Netflix.",
+      "focus": "watched",
+      "distractors": [
+        "showed",
+        "watch"
+      ],
+      "slip": "I show a movie on Netflix.",
+      "note": "watch → watched: правильный глагол, просто + ed.",
+      "rule": "past-ed",
+      "whyWrong": {
+        "showed": "showed — «показал». Смотреть фильм — watch, в прошлом watched.",
+        "watch": "watch — сейчас. В прошлом — watched."
+      },
+      "words": 9,
+      "ask": "Прошлое от watch (смотреть фильм). Как сказать «я смотрел страшный фильм»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-past-05",
+      "en": "Yesterday I waited for an hour.",
+      "ru": "Вчера я ждал целый час.",
+      "topic": "past",
+      "prompt": "Yesterday I ____ for an hour.",
+      "focus": "waited",
+      "distractors": [
+        "wait",
+        "was wait"
+      ],
+      "slip": null,
+      "note": "Правильный глагол: wait → waited. Одна форма для всех.",
+      "rule": "past-ed",
+      "whyWrong": {
+        "wait": "wait — сейчас.",
+        "was wait": "was + глагол — ошибка. Просто waited."
+      },
+      "words": 6,
+      "ask": "Прошлое от wait (ждать). Как сказать «я ждал час»?",
+      "lesson": null
+    },
+    {
+      "id": "q-past-06",
+      "en": "It was very sunny yesterday.",
+      "ru": "Вчера было очень солнечно.",
+      "topic": "past",
+      "prompt": "It ____ very sunny yesterday.",
+      "focus": "was",
+      "distractors": [
+        "is",
+        "were"
+      ],
+      "slip": null,
+      "note": "It + прошлое — was.",
+      "rule": "was-were",
+      "whyWrong": {
+        "is": "is — сейчас. Вчера — was.",
+        "were": "were — для you, we, they. С it — was."
+      },
+      "words": 5,
+      "ask": "Погода в прошлом. Как сказать «вчера было очень солнечно»?",
+      "lesson": null
+    },
+    {
+      "id": "q-past-07",
+      "en": "Yesterday I lost my phone on the beach.",
+      "ru": "Вчера я потерял телефон на пляже.",
+      "topic": "past",
+      "prompt": "Yesterday I ____ my phone on the beach.",
+      "focus": "lost",
+      "distractors": [
+        "lose",
+        "losed"
+      ],
+      "slip": null,
+      "note": "lose → lost.",
+      "rule": "past-irregular",
+      "whyWrong": {
+        "lose": "lose — сейчас.",
+        "losed": "losed не бывает. lose → lost."
+      },
+      "words": 8,
+      "ask": "Прошлое от lose (терять). Как сказать «я потерял телефон на пляже»?",
+      "lesson": null
+    },
+    {
+      "id": "q-past-08",
+      "en": "Last week I made a video about Bali.",
+      "ru": "На прошлой неделе я сделал видео про Бали.",
+      "topic": "past",
+      "prompt": "Last week I ____ a video about Bali.",
+      "focus": "made",
+      "distractors": [
+        "make",
+        "maked"
+      ],
+      "slip": null,
+      "note": "make → made.",
+      "rule": "past-irregular",
+      "whyWrong": {
+        "make": "make — сейчас.",
+        "maked": "maked не бывает. make → made."
+      },
+      "words": 8,
+      "ask": "Прошлое от make (делать). Как сказать «я сделал видео про Бали»?",
+      "lesson": null
+    },
+    {
+      "id": "q-past-09",
+      "en": "Today I ate yogurt for breakfast.",
+      "ru": "Сегодня на завтрак я съел йогурт.",
+      "topic": "past",
+      "prompt": "Today I ____ yogurt for breakfast.",
+      "focus": "ate",
+      "distractors": [
+        "eat",
+        "eated"
+      ],
+      "slip": null,
+      "note": "eat → ate.",
+      "rule": "past-irregular",
+      "whyWrong": {
+        "eat": "eat — сейчас или обычно.",
+        "eated": "eated не бывает. eat → ate."
+      },
+      "words": 6,
+      "ask": "Прошлое от eat (есть). Как сказать «на завтрак я съел йогурт»?",
+      "lesson": null
+    },
+    {
+      "id": "q-past-10",
+      "en": "Last night I came home at midnight.",
+      "ru": "Вчера я пришёл домой в полночь.",
+      "topic": "past",
+      "prompt": "Last night I ____ home at midnight.",
+      "focus": "came",
+      "distractors": [
+        "come",
+        "comed"
+      ],
+      "slip": null,
+      "note": "come → came.",
+      "rule": "past-irregular",
+      "whyWrong": {
+        "come": "come — сейчас или обычно. В прошлом — came.",
+        "comed": "comed не бывает. come → came."
+      },
+      "words": 7,
+      "ask": "Прошлое от come (приходить). Как сказать «я пришёл домой в полночь»?",
+      "lesson": null
+    },
+    {
+      "id": "q-past-11",
+      "en": "She said it was bad luck.",
+      "ru": "Она сказала, что это к несчастью.",
+      "topic": "past",
+      "prompt": "She ____ it was bad luck.",
+      "focus": "said",
+      "distractors": [
+        "say",
+        "sayed"
+      ],
+      "slip": null,
+      "note": "say → said.",
+      "rule": "past-irregular",
+      "whyWrong": {
+        "say": "say — сейчас, и то с she было бы says. Вчера — said.",
+        "sayed": "sayed не бывает. say → said."
+      },
+      "words": 6,
+      "ask": "Прошлое от say (сказать). Как сказать «она сказала, что это к несчастью»?",
+      "lesson": null
+    },
+    {
+      "id": "q-past-12",
+      "en": "I went to the beach and saw a cat.",
+      "ru": "Я пошёл на пляж и увидел кота.",
+      "topic": "past",
+      "prompt": "I went to the beach and ____ a cat.",
+      "focus": "saw",
+      "distractors": [
+        "see",
+        "was see"
+      ],
+      "slip": "I go to the beach and I see a black cat.",
+      "note": "Начал рассказ в прошлом — продолжай в прошлом: went … saw.",
+      "rule": "past-irregular",
+      "whyWrong": {
+        "see": "see — сейчас. Рассказ про вчера — saw.",
+        "was see": "was + глагол — ошибка. Просто saw."
+      },
+      "words": 9,
+      "ask": "Рассказ про вчера. Как сказать «я пошёл на пляж и увидел кота»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-polite-01",
+      "en": "It's sunny! Let's go to the beach.",
+      "ru": "Солнечно! Пошли на пляж.",
+      "topic": "polite",
+      "prompt": "It's sunny! ____ go to the beach.",
+      "focus": "Let's",
+      "distractors": [
+        "—",
+        "We"
+      ],
+      "slip": null,
+      "note": "Let's = «давай мы». Позвать с собой — Let's go.",
+      "rule": "lets-would",
+      "whyWrong": {
+        "—": "Просто Go to the beach — это «иди на пляж». Друг пойдёт один, без тебя.",
+        "We": "We go to the beach — «мы ходим на пляж» (обычно). Позвать — Let's go."
+      },
+      "words": 7,
+      "ask": "Позвать друга пойти ВМЕСТЕ. Как сказать «пошли на пляж!»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-polite-02",
+      "en": "Would you like to go to the museum?",
+      "ru": "Хочешь пойти в музей?",
+      "topic": "polite",
+      "prompt": "____ like to go to the museum?",
+      "focus": "Would you",
+      "distractors": [
+        "Maybe you would",
+        "You would"
+      ],
+      "slip": "Maybe you would like go to the museum today.",
+      "note": "Would you like to…? — вежливое «хочешь…?».",
+      "rule": "lets-would",
+      "whyWrong": {
+        "Maybe you would": "Maybe you would like… — «может, ты хотел бы…», догадка вслух, а не вопрос. В вопросе would встаёт вперёд.",
+        "You would": "You would like — утверждение, а не вопрос. Would you like…?"
+      },
+      "words": 8,
+      "ask": "Вежливо спросить, хочет ли человек. Как спросить «хочешь пойти в музей?»",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-polite-03",
+      "en": "Would you like to fly a kite?",
+      "ru": "Хочешь запустить воздушного змея?",
+      "topic": "polite",
+      "prompt": "Would you like ____ fly a kite?",
+      "focus": "to",
+      "distractors": [
+        "—",
+        "for"
+      ],
+      "slip": "Maybe you would like let's go to the beach and we use kite.",
+      "note": "would like to + действие.",
+      "rule": "lets-would",
+      "whyWrong": {
+        "—": "«would like fly» — без to нельзя. Would you like to fly…",
+        "for": "for — «для». Перед действием после like — to."
+      },
+      "words": 7,
+      "ask": "После would like — действие. Как спросить «хочешь запустить змея?»",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-polite-04",
+      "en": "Let's go surfing!",
+      "ru": "Пошли на серф!",
+      "topic": "polite",
+      "prompt": "Let's ____ surfing!",
+      "focus": "go",
+      "distractors": [
+        "to go",
+        "going"
+      ],
+      "slip": null,
+      "note": "Let's + начальная форма: Let's go.",
+      "rule": "lets-would",
+      "whyWrong": {
+        "to go": "После Let's to не ставят: Let's go.",
+        "going": "Let's going — неверно. Let's go."
+      },
+      "words": 3,
+      "ask": "После Let's. Как сказать «пошли на серф!»?",
+      "lesson": null
+    },
+    {
+      "id": "q-polite-05",
+      "en": "Can you please give me your jacket?",
+      "ru": "Можешь, пожалуйста, дать мне свою куртку?",
+      "topic": "polite",
+      "prompt": "____ please give me your jacket?",
+      "focus": "Can you",
+      "distractors": [
+        "Please you",
+        "You can"
+      ],
+      "slip": "Yaroslav, give me your jacket.",
+      "note": "Просьба — Can you please…? Так звучит вежливо.",
+      "rule": "polite-order",
+      "whyWrong": {
+        "Please you": "«Please you give…» так не строят. Can you please give…?",
+        "You can": "You can give me — «ты можешь дать» (утверждение, почти приказ). Просьба — Can you…?"
+      },
+      "words": 7,
+      "ask": "Вежливая просьба. Как сказать «можешь, пожалуйста, дать мне куртку?»",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-polite-06",
+      "en": "Can you take me home, please?",
+      "ru": "Отвезёшь меня домой, пожалуйста?",
+      "topic": "polite",
+      "prompt": "Can you ____ me home, please?",
+      "focus": "take",
+      "distractors": [
+        "go",
+        "come"
+      ],
+      "slip": "Please take me in your bike and go to my house.",
+      "note": "take someone home — отвезти или проводить кого-то домой.",
+      "rule": "lets-would",
+      "whyWrong": {
+        "go": "go me home — нельзя: go не берёт «кого». Take me home.",
+        "come": "come me home — так не говорят. Take me home."
+      },
+      "words": 6,
+      "ask": "Попросить подвезти. Как сказать «отвезёшь меня домой?»",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-polite-07",
+      "en": "I would like a coffee, please.",
+      "ru": "Я бы хотел кофе, пожалуйста.",
+      "topic": "polite",
+      "prompt": "I ____ like a coffee, please.",
+      "focus": "would",
+      "distractors": [
+        "want",
+        "am"
+      ],
+      "slip": null,
+      "note": "I would like = «я бы хотел». В речи — I'd like.",
+      "rule": "polite-order",
+      "whyWrong": {
+        "want": "«I want like» — два глагола подряд. Или I want a coffee (грубовато), или I would like.",
+        "am": "I am like — «я похож». Вежливо — I would like."
+      },
+      "words": 6,
+      "ask": "Вежливо попросить в кафе. Как сказать «я бы хотел кофе»?",
+      "lesson": null
+    },
+    {
+      "id": "q-much-many-01",
+      "en": "I saw a lot of spiders in my house.",
+      "ru": "Я видел в доме много пауков.",
+      "topic": "much-many",
+      "prompt": "I saw ____ spiders in my house.",
+      "focus": "a lot of",
+      "distractors": [
+        "a lot of more",
+        "very"
+      ],
+      "slip": "I saw a lot of more spiders.",
+      "note": "a lot of = «много». Подходит всегда, больше ничего не нужно.",
+      "rule": "much-many",
+      "whyWrong": {
+        "a lot of more": "Два «много» подряд. Или a lot of spiders (много), или many more spiders (ещё больше).",
+        "very": "very — «очень» перед признаком: very big. «Много пауков» — a lot of."
+      },
+      "words": 9,
+      "ask": "Просто «много» чего угодно. Как сказать «я видел много пауков»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-much-many-02",
+      "en": "How many bones does a skeleton have?",
+      "ru": "Сколько костей в скелете?",
+      "topic": "much-many",
+      "prompt": "How ____ bones does a skeleton have?",
+      "focus": "many",
+      "distractors": [
+        "much",
+        "more"
+      ],
+      "slip": null,
+      "note": "Считается поштучно — many.",
+      "rule": "much-many",
+      "whyWrong": {
+        "much": "much — для того, что не считается: water, money, time. Кости — many.",
+        "more": "How more — так не спрашивают. «Сколько» — How many или How much."
+      },
+      "words": 7,
+      "ask": "«Сколько?» про то, что считается штуками. Как спросить «сколько костей в скелете?»",
+      "lesson": null
+    },
+    {
+      "id": "q-much-many-03",
+      "en": "I don't have much money.",
+      "ru": "У меня не так много денег.",
+      "topic": "much-many",
+      "prompt": "I don't have ____ money.",
+      "focus": "much",
+      "distractors": [
+        "many",
+        "a lot"
+      ],
+      "slip": null,
+      "note": "Деньги не считаются поштучно — much.",
+      "rule": "much-many",
+      "whyWrong": {
+        "many": "many — для того, что считается: many coins. Money — much.",
+        "a lot": "a lot без of перед словом не ставят: a lot of money."
+      },
+      "words": 5,
+      "ask": "То, что не считается (деньги). Как сказать «у меня не так много денег»?",
+      "lesson": null
+    },
+    {
+      "id": "q-much-many-04",
+      "en": "There are too many people in Bali.",
+      "ru": "На Бали слишком много людей.",
+      "topic": "much-many",
+      "prompt": "There are too ____ people in Bali.",
+      "focus": "many",
+      "distractors": [
+        "much",
+        "more"
+      ],
+      "slip": null,
+      "note": "People считаются поштучно — many.",
+      "rule": "much-many",
+      "whyWrong": {
+        "much": "much — для того, что не считается. People — many.",
+        "more": "too more — так не говорят. «Слишком много» — too many."
+      },
+      "words": 7,
+      "ask": "То, что считается (люди). Как сказать «на Бали слишком много людей»?",
+      "lesson": null
+    },
+    {
+      "id": "q-much-many-05",
+      "en": "I really miss the snow.",
+      "ru": "Я очень скучаю по снегу.",
+      "topic": "much-many",
+      "prompt": "I ____ miss the snow.",
+      "focus": "really",
+      "distractors": [
+        "very",
+        "much"
+      ],
+      "slip": "I very miss at the snow.",
+      "note": "С действием (miss, like, want) «очень» — really.",
+      "rule": "much-many",
+      "whyWrong": {
+        "very": "very не ставят перед действием. very — только перед признаком: very cold.",
+        "much": "«I much miss» — неверно. Можно I miss the snow very much, но это в конце."
+      },
+      "words": 5,
+      "ask": "«Очень» с действием. Как сказать «я очень скучаю по снегу»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-much-many-06",
+      "en": "It's very cold today.",
+      "ru": "Сегодня очень холодно.",
+      "topic": "much-many",
+      "prompt": "It's ____ cold today.",
+      "focus": "very",
+      "distractors": [
+        "a lot",
+        "much"
+      ],
+      "slip": null,
+      "note": "Перед признаком (cold, big, hungry) — very.",
+      "rule": "much-many",
+      "whyWrong": {
+        "a lot": "a lot — «много» или после действия. Перед признаком — very.",
+        "much": "much cold — так не говорят. Very cold."
+      },
+      "words": 4,
+      "ask": "«Очень» с признаком. Как сказать «сегодня очень холодно»?",
+      "lesson": null
+    },
+    {
+      "id": "q-much-many-07",
+      "en": "Can I have a little water?",
+      "ru": "Можно мне немного воды?",
+      "topic": "much-many",
+      "prompt": "Can I have ____ water?",
+      "focus": "a little",
+      "distractors": [
+        "a few",
+        "little"
+      ],
+      "slip": null,
+      "note": "Вода не считается — a little.",
+      "rule": "much-many",
+      "whyWrong": {
+        "a few": "a few — для того, что считается: a few friends.",
+        "little": "little без a — «мало, почти нет». «Немного» — a little."
+      },
+      "words": 6,
+      "ask": "«Немного» того, что не считается. Как сказать «можно немного воды?»",
+      "lesson": null
+    },
+    {
+      "id": "q-much-many-08",
+      "en": "I have a few friends in Paphos.",
+      "ru": "У меня есть несколько друзей в Пафосе.",
+      "topic": "much-many",
+      "prompt": "I have ____ friends in Paphos.",
+      "focus": "a few",
+      "distractors": [
+        "a little",
+        "few"
+      ],
+      "slip": null,
+      "note": "Друзья считаются — a few.",
+      "rule": "much-many",
+      "whyWrong": {
+        "a little": "a little — для того, что не считается: a little water.",
+        "few": "few без a — «мало, почти нет». «Несколько» — a few."
+      },
+      "words": 7,
+      "ask": "«Несколько» того, что считается. Как сказать «у меня есть несколько друзей в Пафосе»?",
+      "lesson": null
+    },
+    {
+      "id": "q-see-watch-01",
+      "en": "I watch Netflix every evening.",
+      "ru": "Я смотрю Netflix каждый вечер.",
+      "topic": "see-watch",
+      "prompt": "I ____ Netflix every evening.",
+      "focus": "watch",
+      "distractors": [
+        "show",
+        "see"
+      ],
+      "slip": null,
+      "note": "watch — смотреть долго и специально: фильм, видео, футбол.",
+      "rule": "see-watch-show",
+      "whyWrong": {
+        "show": "show — «показывать» кому-то.",
+        "see": "see — «видеть, замечать». Смотреть сериал — watch."
+      },
+      "words": 5,
+      "ask": "Смотреть фильм или видео — долго и специально. Какое слово?",
+      "lesson": null
+    },
+    {
+      "id": "q-see-watch-02",
+      "en": "Can you show me your new video?",
+      "ru": "Покажешь мне своё новое видео?",
+      "topic": "see-watch",
+      "prompt": "Can you ____ me your new video?",
+      "focus": "show",
+      "distractors": [
+        "see",
+        "watch"
+      ],
+      "slip": null,
+      "note": "show — показывать кому-то.",
+      "rule": "see-watch-show",
+      "whyWrong": {
+        "see": "see не берёт «кому»: «see me your video» — нельзя. Показать — show.",
+        "watch": "«watch me your video» — нельзя. Показать — show."
+      },
+      "words": 7,
+      "ask": "Показать кому-то. Как сказать «покажешь мне своё видео?»",
+      "lesson": null
+    },
+    {
+      "id": "q-see-watch-03",
+      "en": "I saw bats in the game yesterday.",
+      "ru": "Вчера я видел в игре летучих мышей.",
+      "topic": "see-watch",
+      "prompt": "I ____ bats in the game yesterday.",
+      "focus": "saw",
+      "distractors": [
+        "showed",
+        "show"
+      ],
+      "slip": "In game, I show it bats.",
+      "note": "see → saw: увидел, заметил.",
+      "rule": "see-watch-show",
+      "whyWrong": {
+        "showed": "showed — «показал». Увидел — saw.",
+        "show": "show — «показывать», да ещё и сейчас."
+      },
+      "words": 7,
+      "ask": "Увидеть глазами, заметить. Как сказать «вчера я видел в игре летучих мышей»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-see-watch-04",
+      "en": "Look at this spider!",
+      "ru": "Посмотри на этого паука!",
+      "topic": "see-watch",
+      "prompt": "____ at this spider!",
+      "focus": "Look",
+      "distractors": [
+        "See",
+        "Show"
+      ],
+      "slip": null,
+      "note": "look at — посмотреть на что-то, направить взгляд.",
+      "rule": "see-watch-show",
+      "whyWrong": {
+        "See": "See at — так не говорят. See — «видеть». «Посмотри на» — Look at.",
+        "Show": "Show at — нет. Show — «показывать»."
+      },
+      "words": 4,
+      "ask": "Направить взгляд. Как сказать «посмотри на этого паука!»?",
+      "lesson": null
+    },
+    {
+      "id": "q-see-watch-05",
+      "en": "I can't see you.",
+      "ru": "Я тебя не вижу.",
+      "topic": "see-watch",
+      "prompt": "I can't ____ you.",
+      "focus": "see",
+      "distractors": [
+        "saw",
+        "look"
+      ],
+      "slip": null,
+      "note": "see — видеть глазами. can't see — не вижу.",
+      "rule": "see-watch-show",
+      "whyWrong": {
+        "saw": "После can't прошедшего не бывает: can't see.",
+        "look": "look — направить взгляд, и ему нужен at. «Не вижу» — can't see."
+      },
+      "words": 4,
+      "ask": "Видеть глазами. Как сказать «я тебя не вижу» (камера выключена)?",
+      "lesson": null
+    },
+    {
+      "id": "q-see-watch-06",
+      "en": "She showed me a photo of a kite.",
+      "ru": "Она показала мне фото воздушного змея.",
+      "topic": "see-watch",
+      "prompt": "She ____ me a photo of a kite.",
+      "focus": "showed",
+      "distractors": [
+        "saw",
+        "show"
+      ],
+      "slip": null,
+      "note": "show → showed: показала.",
+      "rule": "see-watch-show",
+      "whyWrong": {
+        "saw": "saw — «видел». Показала — showed.",
+        "show": "show — сейчас, и то с she было бы shows. Показала — showed."
+      },
+      "words": 8,
+      "ask": "Прошлое от show. Как сказать «она показала мне фото змея»?",
+      "lesson": null
+    },
+    {
+      "id": "q-feelings-01",
+      "en": "I'm scared of haunted houses.",
+      "ru": "Я боюсь домов с привидениями.",
+      "topic": "feelings",
+      "prompt": "I'm ____ of haunted houses.",
+      "focus": "scared",
+      "distractors": [
+        "scary",
+        "fear"
+      ],
+      "slip": "Haunted house, it's very fear.",
+      "note": "scared — «напуган»: так говорят о том, КТО боится.",
+      "rule": "feelings-ed",
+      "whyWrong": {
+        "scary": "scary — про то, ЧТО пугает: a scary film. Про себя — scared.",
+        "fear": "fear — «страх», это предмет, а не признак. I'm fear нельзя."
+      },
+      "words": 5,
+      "ask": "Про себя, когда страшно. Как сказать «я боюсь домов с привидениями»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-feelings-02",
+      "en": "This film is very scary.",
+      "ru": "Этот фильм очень страшный.",
+      "topic": "feelings",
+      "prompt": "This film is very ____.",
+      "focus": "scary",
+      "distractors": [
+        "scared",
+        "fear"
+      ],
+      "slip": null,
+      "note": "scary — страшный: про то, что пугает.",
+      "rule": "feelings-ed",
+      "whyWrong": {
+        "scared": "scared — про того, кто боится: I'm scared. Фильм не боится, он пугает: scary.",
+        "fear": "fear — «страх». The film is fear — нельзя."
+      },
+      "words": 5,
+      "ask": "Про вещь, которая пугает. Как сказать «этот фильм очень страшный»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-feelings-03",
+      "en": "I have a fear of heights.",
+      "ru": "Я боюсь высоты.",
+      "topic": "feelings",
+      "prompt": "I have a ____ of heights.",
+      "focus": "fear",
+      "distractors": [
+        "scary",
+        "scared"
+      ],
+      "slip": null,
+      "note": "fear — страх (предмет): a fear of…",
+      "rule": "feelings-ed",
+      "whyWrong": {
+        "scary": "scary — «страшный», это признак вещи.",
+        "scared": "scared — «напуганный», это признак человека."
+      },
+      "words": 6,
+      "ask": "Сам страх как предмет. Как сказать «у меня страх высоты»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-feelings-04",
+      "en": "I'm bored — let's go to the beach.",
+      "ru": "Мне скучно — пошли на пляж.",
+      "topic": "feelings",
+      "prompt": "I'm ____ — let's go to the beach.",
+      "focus": "bored",
+      "distractors": [
+        "boring",
+        "bore"
+      ],
+      "slip": null,
+      "note": "-ed — что чувствуешь ты: bored.",
+      "rule": "feelings-ed",
+      "whyWrong": {
+        "boring": "boring — «скучный» (про то, что вызывает скуку). I'm boring — «я зануда».",
+        "bore": "bore — «зануда» или «надоедать». Мне скучно — I'm bored."
+      },
+      "words": 7,
+      "ask": "Про себя, когда скучно. Как сказать «мне скучно»?",
+      "lesson": null
+    },
+    {
+      "id": "q-feelings-05",
+      "en": "The film was boring.",
+      "ru": "Фильм был скучный.",
+      "topic": "feelings",
+      "prompt": "The film was ____.",
+      "focus": "boring",
+      "distractors": [
+        "bored",
+        "bore"
+      ],
+      "slip": null,
+      "note": "-ing — что вызывает чувство: boring.",
+      "rule": "feelings-ed",
+      "whyWrong": {
+        "bored": "bored — про того, кому скучно. Фильму не скучно — он скучный: boring.",
+        "bore": "bore — «зануда». Скучный фильм — boring."
+      },
+      "words": 4,
+      "ask": "Про вещь, которая вызывает скуку. Как сказать «фильм был скучный»?",
+      "lesson": null
+    },
+    {
+      "id": "q-feelings-06",
+      "en": "I'm interested in history.",
+      "ru": "Мне интересна история.",
+      "topic": "feelings",
+      "prompt": "I'm ____ in history.",
+      "focus": "interested",
+      "distractors": [
+        "interesting",
+        "interest"
+      ],
+      "slip": null,
+      "note": "-ed — что чувствуешь ты: interested in.",
+      "rule": "feelings-ed",
+      "whyWrong": {
+        "interesting": "I'm interesting — «я интересный человек». Тебе интересно — interested.",
+        "interest": "interest — «интерес», это предмет. I'm interested."
+      },
+      "words": 4,
+      "ask": "Про себя, интерес. Как сказать «мне интересна история»?",
+      "lesson": null
+    },
+    {
+      "id": "q-weather-01",
+      "en": "It's very hot in Cyprus.",
+      "ru": "На Кипре очень жарко.",
+      "topic": "weather",
+      "prompt": "____ very hot in Cyprus.",
+      "focus": "It's",
+      "distractors": [
+        "—",
+        "Is"
+      ],
+      "slip": "In Cyprus every day very hot.",
+      "note": "У английской фразы всегда есть подлежащее. Для погоды это it: It's hot.",
+      "rule": "weather-it",
+      "whyWrong": {
+        "—": "Без It's нет ни подлежащего, ни глагола: «very hot in Cyprus». Нужно It's.",
+        "Is": "Is very hot — нет подлежащего. It's hot."
+      },
+      "words": 5,
+      "ask": "Погода. Как сказать «на Кипре очень жарко»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-weather-02",
+      "en": "It's sunny today.",
+      "ru": "Сегодня солнечно.",
+      "topic": "weather",
+      "prompt": "It's ____ today.",
+      "focus": "sunny",
+      "distractors": [
+        "sun",
+        "sunshine"
+      ],
+      "slip": null,
+      "note": "sunny — солнечно (признак погоды).",
+      "rule": "weather-it",
+      "whyWrong": {
+        "sun": "sun — «солнце», предмет. It's sun — «это солнце». Солнечно — sunny.",
+        "sunshine": "sunshine — «солнечный свет». Про погоду — sunny."
+      },
+      "words": 3,
+      "ask": "Солнечно. Какое слово после It's?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-weather-03",
+      "en": "It's windy — let's fly a kite!",
+      "ru": "Ветрено — давай запустим змея!",
+      "topic": "weather",
+      "prompt": "It's ____ — let's fly a kite!",
+      "focus": "windy",
+      "distractors": [
+        "winter",
+        "wind"
+      ],
+      "slip": "Today it's winter.",
+      "note": "windy — ветрено (от wind — ветер). И змея «запускают» — fly a kite.",
+      "rule": "weather-it",
+      "whyWrong": {
+        "winter": "winter — «зима». Ветрено — windy.",
+        "wind": "wind — «ветер», предмет. Ветрено — windy."
+      },
+      "words": 6,
+      "ask": "Ветрено. Как сказать «ветрено — давай запустим змея!»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-weather-04",
+      "en": "It's raining — take an umbrella.",
+      "ru": "Идёт дождь — возьми зонт.",
+      "topic": "weather",
+      "prompt": "It's ____ — take an umbrella.",
+      "focus": "raining",
+      "distractors": [
+        "rain",
+        "rained"
+      ],
+      "slip": null,
+      "note": "Прямо сейчас — It's raining (is + -ing).",
+      "rule": "continuous-am-ing",
+      "whyWrong": {
+        "rain": "It's rain — «это дождь». Идёт дождь — It's raining.",
+        "rained": "rained — прошлое. Сейчас — raining."
+      },
+      "words": 5,
+      "ask": "Дождь прямо сейчас. Как сказать «идёт дождь — возьми зонт»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-weather-05",
+      "en": "It was stormy last week.",
+      "ru": "На прошлой неделе был шторм.",
+      "topic": "weather",
+      "prompt": "It ____ stormy last week.",
+      "focus": "was",
+      "distractors": [
+        "have",
+        "is"
+      ],
+      "slip": "In Cyprus have stormy last week.",
+      "note": "Прошлое про погоду — It was…",
+      "rule": "weather-it",
+      "whyWrong": {
+        "have": "have stormy — у погоды нет хозяина. It was stormy.",
+        "is": "is — сейчас. На прошлой неделе — was."
+      },
+      "words": 5,
+      "ask": "Погода в прошлом. Как сказать «на прошлой неделе был шторм» через It?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-weather-06",
+      "en": "How's the weather today?",
+      "ru": "Какая сегодня погода?",
+      "topic": "weather",
+      "prompt": "How's the ____ today?",
+      "focus": "weather",
+      "distractors": [
+        "whether",
+        "climate"
+      ],
+      "slip": null,
+      "note": "weather — погода.",
+      "rule": "weather-it",
+      "whyWrong": {
+        "whether": "whether — «ли». Звучит так же, пишется иначе.",
+        "climate": "climate — климат, погода за многие годы. Погода сегодня — weather."
+      },
+      "words": 4,
+      "ask": "Спросить про погоду. Как спросить «какая сегодня погода?»",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-weather-07",
+      "en": "Tomorrow it will be sunny.",
+      "ru": "Завтра будет солнечно.",
+      "topic": "weather",
+      "prompt": "Tomorrow it will ____ sunny.",
+      "focus": "be",
+      "distractors": [
+        "—",
+        "is"
+      ],
+      "slip": null,
+      "note": "will be + признак: It will be sunny.",
+      "rule": "will-be",
+      "whyWrong": {
+        "—": "It will sunny — не хватает be. Признаку нужен глагол: will be sunny.",
+        "is": "will is — так нельзя. После will — be."
+      },
+      "words": 5,
+      "ask": "Погода завтра. Как сказать «завтра будет солнечно»?",
+      "lesson": null
+    },
+    {
+      "id": "q-weather-08",
+      "en": "It was cloudy in Astana yesterday.",
+      "ru": "Вчера в Астане было облачно.",
+      "topic": "weather",
+      "prompt": "It was ____ in Astana yesterday.",
+      "focus": "cloudy",
+      "distractors": [
+        "cloud",
+        "clouds"
+      ],
+      "slip": null,
+      "note": "cloudy — облачно (от cloud — облако).",
+      "rule": "weather-it",
+      "whyWrong": {
+        "cloud": "cloud — «облако», предмет. Облачно — cloudy.",
+        "clouds": "clouds — «облака». Про погоду — cloudy."
+      },
+      "words": 6,
+      "ask": "Облачно. Какое слово?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-he-she-s-01",
+      "en": "Alina lives in Cyprus.",
+      "ru": "Алина живёт на Кипре.",
+      "topic": "he-she-s",
+      "prompt": "Alina ____ in Cyprus.",
+      "focus": "lives",
+      "distractors": [
+        "live",
+        "living"
+      ],
+      "slip": "Danny live in Bali.",
+      "note": "he, she, Алина — глагол с -s: lives.",
+      "rule": "third-person-s",
+      "whyWrong": {
+        "live": "live — для I, you, we, they. Алина одна — lives.",
+        "living": "Одно -ing без is не работает."
+      },
+      "words": 4,
+      "ask": "Она одна (Алина), действие сейчас. Как сказать «Алина живёт на Кипре»?",
+      "lesson": null
+    },
+    {
+      "id": "q-he-she-s-02",
+      "en": "My brother works in a restaurant.",
+      "ru": "Мой брат работает в ресторане.",
+      "topic": "he-she-s",
+      "prompt": "My brother ____ in a restaurant.",
+      "focus": "works",
+      "distractors": [
+        "work",
+        "is work"
+      ],
+      "slip": null,
+      "note": "Один человек — works.",
+      "rule": "third-person-s",
+      "whyWrong": {
+        "work": "work — для I, you, we, they.",
+        "is work": "is + глагол — ошибка. Просто works."
+      },
+      "words": 6,
+      "ask": "Он один (брат), действие. Как сказать «мой брат работает в ресторане»?",
+      "lesson": null
+    },
+    {
+      "id": "q-he-she-s-03",
+      "en": "My friends like surfing.",
+      "ru": "Мои друзья любят серф.",
+      "topic": "he-she-s",
+      "prompt": "My friends ____ surfing.",
+      "focus": "like",
+      "distractors": [
+        "likes",
+        "is like"
+      ],
+      "slip": null,
+      "note": "they, друзья — без -s: like.",
+      "rule": "third-person-s",
+      "whyWrong": {
+        "likes": "likes — только для одного. Друзей несколько — like.",
+        "is like": "is like — «похож на». Любят — like."
+      },
+      "words": 4,
+      "ask": "Их несколько (друзья), действие. Как сказать «мои друзья любят серф»?",
+      "lesson": null
+    },
+    {
+      "id": "q-he-she-s-04",
+      "en": "She goes to the gym every day.",
+      "ru": "Она каждый день ходит в зал.",
+      "topic": "he-she-s",
+      "prompt": "She ____ to the gym every day.",
+      "focus": "goes",
+      "distractors": [
+        "go",
+        "gos"
+      ],
+      "slip": null,
+      "note": "go → goes: после o добавляют -es.",
+      "rule": "third-person-s",
+      "whyWrong": {
+        "go": "go — для I, you, we, they.",
+        "gos": "gos — нет такого написания. goes."
+      },
+      "words": 7,
+      "ask": "Она одна, глагол go. Как сказать «она каждый день ходит в зал»?",
+      "lesson": null
+    },
+    {
+      "id": "q-he-she-s-05",
+      "en": "My grandmother watches TV series.",
+      "ru": "Бабушка смотрит сериалы.",
+      "topic": "he-she-s",
+      "prompt": "My grandmother ____ TV series.",
+      "focus": "watches",
+      "distractors": [
+        "watch",
+        "watchs"
+      ],
+      "slip": null,
+      "note": "watch → watches: после ch пишут -es.",
+      "rule": "third-person-s",
+      "whyWrong": {
+        "watch": "watch — для I, you, we, they.",
+        "watchs": "После ch пишут -es: watches."
+      },
+      "words": 5,
+      "ask": "Она одна (бабушка), глагол watch. Как сказать «бабушка смотрит сериалы»?",
+      "lesson": null
+    },
+    {
+      "id": "q-he-she-s-06",
+      "en": "I edit videos at night.",
+      "ru": "Я монтирую видео по ночам.",
+      "topic": "he-she-s",
+      "prompt": "I ____ videos at night.",
+      "focus": "edit",
+      "distractors": [
+        "edits",
+        "am edit"
+      ],
+      "slip": null,
+      "note": "С I — без -s.",
+      "rule": "third-person-s",
+      "whyWrong": {
+        "edits": "-s только для he, she, it. С I — edit.",
+        "am edit": "am + глагол — ошибка. I edit."
+      },
+      "words": 5,
+      "ask": "Про себя, действие. Как сказать «я монтирую видео по ночам»?",
+      "lesson": null
+    },
+    {
+      "id": "q-articles-01",
+      "en": "I need an umbrella.",
+      "ru": "Мне нужен зонт.",
+      "topic": "articles",
+      "prompt": "I need ____ umbrella.",
+      "focus": "an",
+      "distractors": [
+        "a",
+        "—"
+      ],
+      "slip": "I need umbrella.",
+      "note": "umbrella начинается с гласного звука — an.",
+      "rule": "article-a-an",
+      "whyWrong": {
+        "a": "a — перед согласным звуком: a car. Umbrella начинается с гласного — an.",
+        "—": "Одну вещь без артикля не называют: an umbrella."
+      },
+      "words": 4,
+      "ask": "Одна вещь, какая-нибудь. Что поставить перед umbrella — «мне нужен зонт»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-articles-02",
+      "en": "I have a scooter.",
+      "ru": "У меня есть скутер.",
+      "topic": "articles",
+      "prompt": "I have ____ scooter.",
+      "focus": "a",
+      "distractors": [
+        "an",
+        "—"
+      ],
+      "slip": null,
+      "note": "Одна вещь, какая-то — a. Scooter начинается с согласного.",
+      "rule": "article-a-an",
+      "whyWrong": {
+        "an": "an — перед гласным звуком: an apple.",
+        "—": "Одну вещь без артикля не называют: a scooter."
+      },
+      "words": 4,
+      "ask": "Одна вещь, первый раз. Что поставить — «у меня есть скутер»?",
+      "lesson": null
+    },
+    {
+      "id": "q-articles-03",
+      "en": "The sun is shining.",
+      "ru": "Светит солнце.",
+      "topic": "articles",
+      "prompt": "____ sun is shining.",
+      "focus": "The",
+      "distractors": [
+        "A",
+        "—"
+      ],
+      "slip": null,
+      "note": "Солнце одно на всех — the sun.",
+      "rule": "article-the",
+      "whyWrong": {
+        "A": "a sun — «какое-то солнце». Солнце одно — the.",
+        "—": "Без артикля нельзя: the sun."
+      },
+      "words": 4,
+      "ask": "Одно на всех, все знают какое. Что поставить — «светит солнце»?",
+      "lesson": null
+    },
+    {
+      "id": "q-articles-04",
+      "en": "Alina has long hair.",
+      "ru": "У Алины длинные волосы.",
+      "topic": "articles",
+      "prompt": "Alina has ____ long hair.",
+      "focus": "—",
+      "distractors": [
+        "a",
+        "the"
+      ],
+      "slip": null,
+      "note": "hair не считается поштучно: ни a, ни -s.",
+      "rule": "hair-uncountable",
+      "whyWrong": {
+        "a": "a long hair — «один длинный волос». Про причёску — просто long hair.",
+        "the": "the long hair — «те самые длинные волосы». Просто long hair."
+      },
+      "words": 4,
+      "ask": "Про волосы (hair). Что поставить перед long hair — «у Алины длинные волосы»?",
+      "lesson": null
+    },
+    {
+      "id": "q-articles-05",
+      "en": "I have a headache.",
+      "ru": "У меня болит голова.",
+      "topic": "articles",
+      "prompt": "I have ____ headache.",
+      "focus": "a",
+      "distractors": [
+        "—",
+        "the"
+      ],
+      "slip": null,
+      "note": "Частые мелкие болячки — с a: a headache, a cold, a cough.",
+      "rule": "illness-a",
+      "whyWrong": {
+        "—": "Без a нельзя: I have a headache.",
+        "the": "the headache — «та самая головная боль»."
+      },
+      "words": 4,
+      "ask": "Болячка. Что поставить — «у меня болит голова»?",
+      "lesson": null
+    },
+    {
+      "id": "q-articles-06",
+      "en": "My brother is a police officer.",
+      "ru": "Мой брат — полицейский.",
+      "topic": "articles",
+      "prompt": "My brother is ____ police officer.",
+      "focus": "a",
+      "distractors": [
+        "—",
+        "the"
+      ],
+      "slip": null,
+      "note": "Профессия — всегда с a или an: a police officer, an editor.",
+      "rule": "job-article",
+      "whyWrong": {
+        "—": "Без a фраза ломается: He is a teacher.",
+        "the": "the police officer — «тот самый полицейский»."
+      },
+      "words": 6,
+      "ask": "Профессия. Что поставить — «мой брат — полицейский»?",
+      "lesson": null
+    },
+    {
+      "id": "q-articles-07",
+      "en": "I saw spiders in my room.",
+      "ru": "Я видел пауков в своей комнате.",
+      "topic": "articles",
+      "prompt": "I saw ____ spiders in my room.",
+      "focus": "—",
+      "distractors": [
+        "a",
+        "an"
+      ],
+      "slip": null,
+      "note": "Во множественном a не бывает.",
+      "rule": "article-zero",
+      "whyWrong": {
+        "a": "a — «один». a spiders — противоречие.",
+        "an": "an — тоже «один», и spider начинается с согласного."
+      },
+      "words": 6,
+      "ask": "Много предметов. Что поставить — «я видел пауков»?",
+      "lesson": null
+    },
+    {
+      "id": "q-articles-08",
+      "en": "It was a very good day.",
+      "ru": "Это был очень хороший день.",
+      "topic": "articles",
+      "prompt": "It was ____ very good day.",
+      "focus": "a",
+      "distractors": [
+        "—",
+        "an"
+      ],
+      "slip": null,
+      "note": "Одна вещь — a, даже если перед ней very good.",
+      "rule": "article-a-an",
+      "whyWrong": {
+        "—": "Без a нельзя: a good day.",
+        "an": "an — перед гласным звуком. Very начинается с v — a."
+      },
+      "words": 6,
+      "ask": "Одна вещь с «очень хороший». Что поставить — «это был очень хороший день»?",
+      "lesson": null
+    },
+    {
+      "id": "q-articles-09",
+      "en": "I waited for an hour.",
+      "ru": "Я ждал час.",
+      "topic": "articles",
+      "prompt": "I waited for ____ hour.",
+      "focus": "an",
+      "distractors": [
+        "a",
+        "—"
+      ],
+      "slip": null,
+      "note": "hour звучит «ауэр»: h не читается, звук гласный — an.",
+      "rule": "article-a-an",
+      "whyWrong": {
+        "a": "a — перед согласным звуком. H в hour не читается — an.",
+        "—": "«for hour» без артикля — ошибка."
+      },
+      "words": 5,
+      "ask": "Одна вещь — hour (час). Что поставить — «я ждал час»?",
+      "lesson": null
+    },
+    {
+      "id": "q-articles-10",
+      "en": "Please close the door.",
+      "ru": "Закрой, пожалуйста, дверь.",
+      "topic": "articles",
+      "prompt": "Please close ____ door.",
+      "focus": "the",
+      "distractors": [
+        "a",
+        "—"
+      ],
+      "slip": null,
+      "note": "Понятно, какая дверь — the.",
+      "rule": "article-the",
+      "whyWrong": {
+        "a": "a door — «какую-нибудь дверь». Понятно какую — the.",
+        "—": "«close door» без артикля — ошибка."
+      },
+      "words": 4,
+      "ask": "Оба знают, какая именно. Что поставить — «закрой дверь»?",
+      "lesson": null
+    },
+    {
+      "id": "q-prepositions-01",
+      "en": "There is a spider web on the ceiling.",
+      "ru": "На потолке паутина.",
+      "topic": "prepositions",
+      "prompt": "There is a spider web ____ the ceiling.",
+      "focus": "on",
+      "distractors": [
+        "in",
+        "at"
+      ],
+      "slip": null,
+      "note": "on — на поверхности: on the table, on the wall, on the ceiling.",
+      "rule": "prep-place",
+      "whyWrong": {
+        "in": "in — внутри чего-то: in the box. Потолок — поверхность: on.",
+        "at": "at — в точке, у места: at the door."
+      },
+      "words": 8,
+      "ask": "На поверхности (стол, стена, потолок). Как сказать «паутина на потолке»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-prepositions-02",
+      "en": "There is a ghost in my house.",
+      "ru": "В моём доме призрак.",
+      "topic": "prepositions",
+      "prompt": "There is a ghost ____ my house.",
+      "focus": "in",
+      "distractors": [
+        "on",
+        "into"
+      ],
+      "slip": null,
+      "note": "in — внутри.",
+      "rule": "prep-place",
+      "whyWrong": {
+        "on": "on — на поверхности.",
+        "into": "into — движение внутрь: go into the house. Просто «находится внутри» — in."
+      },
+      "words": 7,
+      "ask": "Внутри чего-то. Как сказать «призрак в моём доме»?",
+      "lesson": null
+    },
+    {
+      "id": "q-prepositions-03",
+      "en": "Let's go to the beach.",
+      "ru": "Пошли на пляж.",
+      "topic": "prepositions",
+      "prompt": "Let's go ____ the beach.",
+      "focus": "to",
+      "distractors": [
+        "in",
+        "at"
+      ],
+      "slip": null,
+      "note": "Движение куда-то — to.",
+      "rule": "prep-for-to",
+      "whyWrong": {
+        "in": "in — «внутри», без движения.",
+        "at": "at — «где»: at the beach = на пляже. «Куда» — to."
+      },
+      "words": 5,
+      "ask": "Движение куда-то. Как сказать «пошли на пляж»?",
+      "lesson": null
+    },
+    {
+      "id": "q-prepositions-04",
+      "en": "I want to go home.",
+      "ru": "Я хочу домой.",
+      "topic": "prepositions",
+      "prompt": "I want to go ____.",
+      "focus": "home",
+      "distractors": [
+        "to home",
+        "to the home"
+      ],
+      "slip": "I go to the home.",
+      "note": "С home после go предлог не нужен: go home.",
+      "rule": "prep-for-to",
+      "whyWrong": {
+        "to home": "go to home — частая ошибка. Просто go home.",
+        "to the home": "the home — «тот дом», например дом престарелых. Домой — go home."
+      },
+      "words": 5,
+      "ask": "Домой. Как сказать «я хочу домой»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-prepositions-05",
+      "en": "I wake up at 8 o'clock.",
+      "ru": "Я просыпаюсь в 8 часов.",
+      "topic": "prepositions",
+      "prompt": "I wake up ____ 8 o'clock.",
+      "focus": "at",
+      "distractors": [
+        "in",
+        "on"
+      ],
+      "slip": null,
+      "note": "Точное время — at.",
+      "rule": "prep-time",
+      "whyWrong": {
+        "in": "in — для месяцев и частей дня: in May, in the morning.",
+        "on": "on — для дней: on Monday."
+      },
+      "words": 5,
+      "ask": "Время по часам. Как сказать «я просыпаюсь в 8»?",
+      "lesson": null
+    },
+    {
+      "id": "q-prepositions-06",
+      "en": "I have a lesson on Monday.",
+      "ru": "У меня урок в понедельник.",
+      "topic": "prepositions",
+      "prompt": "I have a lesson ____ Monday.",
+      "focus": "on",
+      "distractors": [
+        "in",
+        "at"
+      ],
+      "slip": null,
+      "note": "Дни — on.",
+      "rule": "prep-time",
+      "whyWrong": {
+        "in": "in — месяцы и годы.",
+        "at": "at — точное время."
+      },
+      "words": 6,
+      "ask": "День недели. Как сказать «урок в понедельник»?",
+      "lesson": null
+    },
+    {
+      "id": "q-prepositions-07",
+      "en": "Halloween is in October.",
+      "ru": "Хэллоуин — в октябре.",
+      "topic": "prepositions",
+      "prompt": "Halloween is ____ October.",
+      "focus": "in",
+      "distractors": [
+        "on",
+        "at"
+      ],
+      "slip": null,
+      "note": "Месяцы и годы — in.",
+      "rule": "prep-time",
+      "whyWrong": {
+        "on": "on — дни и даты: on October 31.",
+        "at": "at — точное время: at 8 o'clock."
+      },
+      "words": 4,
+      "ask": "Месяц. Как сказать «Хэллоуин в октябре»?",
+      "lesson": null
+    },
+    {
+      "id": "q-prepositions-08",
+      "en": "Can you take me home on your bike?",
+      "ru": "Отвезёшь меня домой на своём байке?",
+      "topic": "prepositions",
+      "prompt": "Can you take me home ____ your bike?",
+      "focus": "on",
+      "distractors": [
+        "in",
+        "by"
+      ],
+      "slip": "Please take me in your bike.",
+      "note": "Байк, скутер, автобус — on. Машина и такси — in.",
+      "rule": "prep-place",
+      "whyWrong": {
+        "in": "in — для машины и такси: in a taxi.",
+        "by": "by — без «твой»: by bike. С your — on your bike."
+      },
+      "words": 8,
+      "ask": "Транспорт, на котором сидишь сверху (байк, скутер). Как сказать «на твоём байке»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-prepositions-09",
+      "en": "Alina is at work.",
+      "ru": "Алина на работе.",
+      "topic": "prepositions",
+      "prompt": "Alina is ____ work.",
+      "focus": "at",
+      "distractors": [
+        "in",
+        "on"
+      ],
+      "slip": null,
+      "note": "at work, at home, at school — всегда с at.",
+      "rule": "prep-place",
+      "whyWrong": {
+        "in": "in work — по-британски «есть работа, трудоустроен». Сейчас на месте работы — at work.",
+        "on": "on work — нет. At work."
+      },
+      "words": 4,
+      "ask": "Работа, дом, школа — «в точке». Как сказать «Алина на работе»?",
+      "lesson": null
+    },
+    {
+      "id": "q-prepositions-10",
+      "en": "I'm scared of spiders.",
+      "ru": "Я боюсь пауков.",
+      "topic": "prepositions",
+      "prompt": "I'm scared ____ spiders.",
+      "focus": "of",
+      "distractors": [
+        "from",
+        "for"
+      ],
+      "slip": null,
+      "note": "scared of — бояться чего-то.",
+      "rule": "prep-for-to",
+      "whyWrong": {
+        "from": "from — «из, от» (откуда). Бояться — scared of.",
+        "for": "scared for — «боюсь ЗА кого-то»: I'm scared for you. Бояться самих пауков — scared of."
+      },
+      "words": 4,
+      "ask": "Бояться чего-то. Какой предлог после scared — «я боюсь пауков»?",
+      "lesson": null
+    },
+    {
+      "id": "q-this-that-01",
+      "en": "This is my new microphone.",
+      "ru": "Это мой новый микрофон.",
+      "topic": "this-that",
+      "prompt": "____ is my new microphone.",
+      "focus": "This",
+      "distractors": [
+        "That",
+        "These"
+      ],
+      "slip": null,
+      "note": "Рядом и одно — this.",
+      "rule": "this-that",
+      "whyWrong": {
+        "That": "that — про то, что далеко: вон тот.",
+        "These": "these — рядом, но много."
+      },
+      "words": 5,
+      "ask": "Рядом, в руках, одна вещь. Как сказать «это мой новый микрофон»?",
+      "lesson": null
+    },
+    {
+      "id": "q-this-that-02",
+      "en": "That car over there is mine.",
+      "ru": "Вон та машина — моя.",
+      "topic": "this-that",
+      "prompt": "____ car over there is mine.",
+      "focus": "That",
+      "distractors": [
+        "This",
+        "Those"
+      ],
+      "slip": null,
+      "note": "Далеко и одно — that.",
+      "rule": "this-that",
+      "whyWrong": {
+        "This": "this — рядом.",
+        "Those": "those — далеко, но много."
+      },
+      "words": 6,
+      "ask": "Далеко, одна вещь. Как сказать «вон та машина — моя»?",
+      "lesson": null
+    },
+    {
+      "id": "q-this-that-03",
+      "en": "These headphones are too loud.",
+      "ru": "Эти наушники слишком громкие.",
+      "topic": "this-that",
+      "prompt": "____ headphones are too loud.",
+      "focus": "These",
+      "distractors": [
+        "This",
+        "Those"
+      ],
+      "slip": null,
+      "note": "Рядом и много — these. Headphones — всегда много.",
+      "rule": "this-that",
+      "whyWrong": {
+        "This": "this — одно. Headphones — много: these.",
+        "Those": "those — далеко."
+      },
+      "words": 5,
+      "ask": "Рядом, много. Как сказать «эти наушники слишком громкие»?",
+      "lesson": null
+    },
+    {
+      "id": "q-this-that-04",
+      "en": "Those clouds over the sea look dark.",
+      "ru": "Вон те облака над морем тёмные.",
+      "topic": "this-that",
+      "prompt": "____ clouds over the sea look dark.",
+      "focus": "Those",
+      "distractors": [
+        "These",
+        "That"
+      ],
+      "slip": null,
+      "note": "Далеко и много — those.",
+      "rule": "this-that",
+      "whyWrong": {
+        "These": "these — рядом.",
+        "That": "that — одно."
+      },
+      "words": 7,
+      "ask": "Далеко, много. Как сказать «вон те облака над морем тёмные»?",
+      "lesson": null
+    },
+    {
+      "id": "q-this-that-05",
+      "en": "That's why I don't drink coffee after six.",
+      "ru": "Вот почему я не пью кофе после шести.",
+      "topic": "this-that",
+      "prompt": "____ why I don't drink coffee after six.",
+      "focus": "That's",
+      "distractors": [
+        "There's",
+        "This's"
+      ],
+      "slip": null,
+      "note": "That's why — «вот почему». Готовое выражение.",
+      "rule": "this-that",
+      "whyWrong": {
+        "There's": "There's why — так не говорят.",
+        "This's": "This's — такой формы нет."
+      },
+      "words": 8,
+      "ask": "Готовое выражение «вот почему». Как сказать «вот почему я не пью кофе после шести»?",
+      "lesson": null
+    },
+    {
+      "id": "q-will-01",
+      "en": "It's raining. I will take a taxi.",
+      "ru": "Идёт дождь. Я возьму такси.",
+      "topic": "will",
+      "prompt": "It's raining. I ____ take a taxi.",
+      "focus": "will",
+      "distractors": [
+        "am",
+        "going"
+      ],
+      "slip": null,
+      "note": "Решение в момент речи — will.",
+      "rule": "will-form",
+      "whyWrong": {
+        "am": "I am take — am + глагол — ошибка.",
+        "going": "going без am и to не работает. Или I will take, или I'm going to take."
+      },
+      "words": 7,
+      "ask": "Решил прямо сейчас. Как сказать «идёт дождь — я возьму такси»?",
+      "lesson": null
+    },
+    {
+      "id": "q-will-02",
+      "en": "Alina will fly to Bali in May.",
+      "ru": "Алина полетит на Бали в мае.",
+      "topic": "will",
+      "prompt": "Alina will ____ to Bali in May.",
+      "focus": "fly",
+      "distractors": [
+        "flies",
+        "flying"
+      ],
+      "slip": null,
+      "note": "will + начальная форма: fly, без -s.",
+      "rule": "will-form",
+      "whyWrong": {
+        "flies": "После will -s не ставят: will fly.",
+        "flying": "will flying — нет. will fly."
+      },
+      "words": 7,
+      "ask": "После will. Как сказать «Алина полетит на Бали в мае»?",
+      "lesson": null
+    },
+    {
+      "id": "q-will-03",
+      "en": "I won't drink coffee tonight.",
+      "ru": "Я не буду пить кофе сегодня вечером.",
+      "topic": "will",
+      "prompt": "I ____ drink coffee tonight.",
+      "focus": "won't",
+      "distractors": [
+        "don't will",
+        "not will"
+      ],
+      "slip": null,
+      "note": "won't = will not.",
+      "rule": "will-form",
+      "whyWrong": {
+        "don't will": "don't will — два помощника подряд. Won't.",
+        "not will": "not will — не тот порядок: will not или won't."
+      },
+      "words": 5,
+      "ask": "«Не буду». Как сказать «я не буду пить кофе вечером»?",
+      "lesson": null
+    },
+    {
+      "id": "q-will-04",
+      "en": "Will you come to my birthday?",
+      "ru": "Ты придёшь на мой день рождения?",
+      "topic": "will",
+      "prompt": "____ you come to my birthday?",
+      "focus": "Will",
+      "distractors": [
+        "Do",
+        "Are"
+      ],
+      "slip": null,
+      "note": "Вопрос о будущем — Will you…?",
+      "rule": "will-form",
+      "whyWrong": {
+        "Do": "Do you come — «ты (обычно) приходишь?». Про будущее — Will.",
+        "Are": "Are you come — смесь. Will you come?"
+      },
+      "words": 6,
+      "ask": "Вопрос о будущем. Как спросить «ты придёшь на мой день рождения?»",
+      "lesson": null
+    },
+    {
+      "id": "q-will-05",
+      "en": "I'm going to buy a new microphone.",
+      "ru": "Я собираюсь купить новый микрофон.",
+      "topic": "will",
+      "prompt": "I'm ____ to buy a new microphone.",
+      "focus": "going",
+      "distractors": [
+        "will",
+        "go"
+      ],
+      "slip": null,
+      "note": "Решённый план — I'm going to…",
+      "rule": "will-form",
+      "whyWrong": {
+        "will": "I'm will — два помощника подряд.",
+        "go": "I'm go to — нет -ing. Going to."
+      },
+      "words": 7,
+      "ask": "План уже решён. Как сказать «я собираюсь купить новый микрофон»?",
+      "lesson": null
+    },
+    {
+      "id": "q-can-need-01",
+      "en": "I need to eat now.",
+      "ru": "Мне нужно поесть.",
+      "topic": "can-need",
+      "prompt": "I need ____ eat now.",
+      "focus": "to",
+      "distractors": [
+        "—",
+        "for"
+      ],
+      "slip": "I need eat now.",
+      "note": "need to + действие.",
+      "rule": "need-to",
+      "whyWrong": {
+        "—": "need eat — без to нельзя.",
+        "for": "for — «для». Перед действием — to."
+      },
+      "words": 5,
+      "ask": "После need (нужно) — действие. Как сказать «мне нужно поесть»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-can-need-02",
+      "en": "I can speak English a little.",
+      "ru": "Я немного говорю по-английски.",
+      "topic": "can-need",
+      "prompt": "I can ____ English a little.",
+      "focus": "speak",
+      "distractors": [
+        "to speak",
+        "speaking"
+      ],
+      "slip": null,
+      "note": "can + глагол без to.",
+      "rule": "need-to",
+      "whyWrong": {
+        "to speak": "После can to не ставят: can speak.",
+        "speaking": "can speaking — нет. can speak."
+      },
+      "words": 6,
+      "ask": "После can — действие. Как сказать «я немного говорю по-английски»?",
+      "lesson": null
+    },
+    {
+      "id": "q-can-need-03",
+      "en": "I want to go surfing.",
+      "ru": "Я хочу пойти на серф.",
+      "topic": "can-need",
+      "prompt": "I want ____ go surfing.",
+      "focus": "to",
+      "distractors": [
+        "—",
+        "for"
+      ],
+      "slip": null,
+      "note": "want to + действие.",
+      "rule": "need-to",
+      "whyWrong": {
+        "—": "want go — без to нельзя.",
+        "for": "for — «для». Перед действием — to."
+      },
+      "words": 5,
+      "ask": "После want — действие. Как сказать «я хочу пойти на серф»?",
+      "lesson": null
+    },
+    {
+      "id": "q-can-need-04",
+      "en": "Can I have the menu, please?",
+      "ru": "Можно мне меню, пожалуйста?",
+      "topic": "can-need",
+      "prompt": "Can I ____ the menu, please?",
+      "focus": "have",
+      "distractors": [
+        "to have",
+        "has"
+      ],
+      "slip": null,
+      "note": "Can I have…? — «можно мне…?».",
+      "rule": "polite-order",
+      "whyWrong": {
+        "to have": "После can to не ставят.",
+        "has": "has после can — нельзя."
+      },
+      "words": 6,
+      "ask": "Вежливо попросить через can. Как сказать «можно мне меню?»",
+      "lesson": null
+    },
+    {
+      "id": "q-can-need-05",
+      "en": "I can't go to the supermarket.",
+      "ru": "Я не могу пойти в супермаркет.",
+      "topic": "can-need",
+      "prompt": "I can't ____ to the supermarket.",
+      "focus": "go",
+      "distractors": [
+        "going",
+        "to go"
+      ],
+      "slip": null,
+      "note": "can't + начальная форма.",
+      "rule": "need-to",
+      "whyWrong": {
+        "going": "can't going — нет.",
+        "to go": "После can't to не ставят."
+      },
+      "words": 6,
+      "ask": "После can't — действие. Как сказать «я не могу пойти в супермаркет»?",
+      "lesson": null
+    },
+    {
+      "id": "q-pronouns-01",
+      "en": "Alina forgot her phone.",
+      "ru": "Алина забыла свой телефон.",
+      "topic": "pronouns",
+      "prompt": "Alina forgot ____ phone.",
+      "focus": "her",
+      "distractors": [
+        "his",
+        "she"
+      ],
+      "slip": null,
+      "note": "Алина (she) → её: her.",
+      "rule": "pronouns",
+      "whyWrong": {
+        "his": "his — «его», про мужчину.",
+        "she": "she — «она» (кто делает), а не «чья»."
+      },
+      "words": 4,
+      "ask": "Чей? — её (Алины). Как сказать «Алина забыла свой телефон»?",
+      "lesson": null
+    },
+    {
+      "id": "q-pronouns-02",
+      "en": "Can you help me?",
+      "ru": "Можешь мне помочь?",
+      "topic": "pronouns",
+      "prompt": "Can you help ____?",
+      "focus": "me",
+      "distractors": [
+        "I",
+        "my"
+      ],
+      "slip": null,
+      "note": "После глагола — me, him, her, them.",
+      "rule": "pronouns",
+      "whyWrong": {
+        "I": "I — «я» (кто делает). После глагола — me.",
+        "my": "my — «мой». Помоги мне — help me."
+      },
+      "words": 4,
+      "ask": "После действия — «меня». Как сказать «можешь мне помочь?»",
+      "lesson": null
+    },
+    {
+      "id": "q-pronouns-03",
+      "en": "My neighbours love their dog.",
+      "ru": "Соседи любят свою собаку.",
+      "topic": "pronouns",
+      "prompt": "My neighbours love ____ dog.",
+      "focus": "their",
+      "distractors": [
+        "there",
+        "they"
+      ],
+      "slip": null,
+      "note": "they → их: their.",
+      "rule": "pronouns",
+      "whyWrong": {
+        "there": "there — «там». Звучит так же, значит другое.",
+        "they": "they — «они» (кто делает)."
+      },
+      "words": 5,
+      "ask": "Чей? — их (соседей). Как сказать «соседи любят свою собаку»?",
+      "lesson": null
+    },
+    {
+      "id": "q-pronouns-04",
+      "en": "Its name is Lego Batman.",
+      "ru": "Она называется «Лего Бэтмен».",
+      "topic": "pronouns",
+      "prompt": "____ name is Lego Batman.",
+      "focus": "Its",
+      "distractors": [
+        "It's",
+        "It"
+      ],
+      "slip": "It's name Batman Lego.",
+      "note": "its — «его, её» про вещь. Без апострофа.",
+      "rule": "pronouns",
+      "whyWrong": {
+        "It's": "It's = it is. «It is name» — бессмыслица.",
+        "It": "«It name» — нет слова «чей». Нужно its."
+      },
+      "words": 5,
+      "ask": "Чьё? — про вещь (игру). Как сказать «её название — Lego Batman»?",
+      "lesson": "2026-09-23"
+    },
+    {
+      "id": "q-pronouns-05",
+      "en": "I'll call him tomorrow.",
+      "ru": "Я позвоню ему завтра.",
+      "topic": "pronouns",
+      "prompt": "I'll call ____ tomorrow.",
+      "focus": "him",
+      "distractors": [
+        "he",
+        "his"
+      ],
+      "slip": null,
+      "note": "После глагола — him.",
+      "rule": "pronouns",
+      "whyWrong": {
+        "he": "he — «он» (кто делает).",
+        "his": "his — «его» (чей)."
+      },
+      "words": 4,
+      "ask": "После действия — «ему». Как сказать «я позвоню ему завтра»?",
+      "lesson": null
+    }
+  ],
+  "questionOrder": [
+    "have-has",
+    "there-is",
+    "to-be",
+    "negation",
+    "questions",
+    "past",
+    "polite",
+    "much-many",
+    "see-watch",
+    "feelings",
+    "weather",
+    "he-she-s",
+    "articles",
+    "prepositions",
+    "this-that",
+    "will",
+    "can-need",
+    "pronouns"
+  ]
 }
